@@ -1,0 +1,46 @@
+[
+  {
+    "id": "asset-0",
+    "sha256": "6b0cfbe74641d39f0f01569c63d5870c167c6b77f87bd416f219c267a1e75dbd",
+    "sections": 1,
+    "bytes": 53,
+    "import_ms": 1.3334999966900796,
+    "url": "/p/asset-0/v1.html",
+    "filename": "gpt.md",
+    "kind": "gpt-report",
+    "import_to_search_ms": 343.6832499864977
+  },
+  {
+    "id": "asset-1",
+    "sha256": "7b7cd1f67f7b0ec3162fbbee4da69378c98f861c32f944d2ad26be6499e2a33a",
+    "sections": 1,
+    "bytes": 64,
+    "import_ms": 0.5763749941252172,
+    "url": "/p/asset-1/v1.html",
+    "filename": "claude.html",
+    "kind": "claude-artifact",
+    "import_to_search_ms": 52.176583994878456
+  },
+  {
+    "id": "asset-2",
+    "sha256": "b20a358e0ad761d4b6ec8c0f0dab7f7fa40562e7a08db85ae5b439f812c9e197",
+    "sections": 1,
+    "bytes": 20,
+    "import_ms": 0.44633299694396555,
+    "url": "/p/asset-2/v1.html",
+    "filename": "plain.txt",
+    "kind": "document",
+    "import_to_search_ms": 52.164833003189415
+  },
+  {
+    "id": "asset-3",
+    "sha256": "1affeb94437866e88841754f423e3d568a22eb5fa9f7db8f9f8b76963297b870",
+    "sections": 2,
+    "bytes": 2094,
+    "import_ms": 35.984667018055916,
+    "url": "/p/asset-3/v1.html",
+    "filename": "control.pdf",
+    "kind": "document",
+    "import_to_search_ms": 138.51720897946507
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "client_sha256": "9e14cc095cd903dcb7057b98ade28c7ec9c76271062c7e7302f5f3c8ed4e9eac",
+  "model_filename": "Qwen3-4B-Q4_K_M.gguf",
+  "build_info": "b12541-76f186df7",
+  "context": 8192,
+  "parallel_slots": 1,
+  "temperature": 0,
+  "seed": 73,
+  "parallel_tool_calls": false,
+  "cache_prompt": false,
+  "reasoning": "off",
+  "max_output_per_call": 1000,
+  "model_file": "Qwen3-4B-Q4_K_M.gguf",
+  "model_sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5",
+  "llama_build": "b12541-76f186df7",
+  "chat_template_sha256": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361",
+  "archive_sha256": "9d1174928696ad08bc15f3f104739519de633c1605a4ec2034e0e3c0087bc5cd"
+}

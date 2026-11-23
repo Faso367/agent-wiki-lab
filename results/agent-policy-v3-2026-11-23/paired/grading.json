@@ -1,0 +1,388 @@
+{
+  "qst_0150": {
+    "id": "qst_0150",
+    "query": "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?",
+    "gold": [
+      "confluence:dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+    ],
+    "gold_answer": "The API key must include the permission scopes: inference:invoke and metrics:read.",
+    "answer_facts": [
+      "The API key must include the permission scopes inference:invoke and metrics:read."
+    ]
+  },
+  "qst_0031": {
+    "id": "qst_0031",
+    "query": "What is the operator procedure to put a private deployment tenant into local-only telemetry mode and how can you verify the mode afterward?",
+    "gold": [
+      "confluence:dsid_c198dbbcf28a4c73ad1d705809634176"
+    ],
+    "gold_answer": "To switch a tenant to local-only telemetry mode, in the control plane open the tenant config, go to Telemetry, select \"no-external-telemetry\" and apply; if needed, use the CLI fallback: `redwoodctl tenant update --id <TENANT> --telemetry-mode local-only`. Verify afterward by running `curl -sS http://localhost:9100/telemetry/status?tenant=<TENANT> | jq '.mode'`, which should return \"local-only\".",
+    "answer_facts": [
+      "To put a tenant into local-only telemetry mode in the control plane, open the tenant config, go to Telemetry, select no-external-telemetry, and apply the change.",
+      "As a CLI fallback, you can set local-only telemetry mode with: redwoodctl tenant update --id <TENANT> --telemetry-mode local-only.",
+      "You can verify the telemetry mode by querying http://localhost:9100/telemetry/status?tenant=<TENANT> and checking the returned mode field.",
+      "After switching successfully, the reported mode should be local-only."
+    ]
+  },
+  "qst_0272": {
+    "id": "qst_0272",
+    "query": "What is the default time window the company targets for routine internal approvals across operational requests?",
+    "gold": [
+      "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+    ],
+    "gold_answer": "The target SLA for routine internal approvals is 72 business hours.",
+    "answer_facts": [
+      "The company targets a default SLA of 72 business hours for routine internal approvals across operational requests."
+    ]
+  },
+  "qst_0259": {
+    "id": "qst_0259",
+    "query": "In the disconnected installer package for the on prem product, what are the mandatory items that must exist at the top level of the extracted folder before the installer will accept it (including the signed inventory files and the human instructions file)?",
+    "gold": [
+      "confluence:dsid_fc009de77554459b89e6b4340e8eca82"
+    ],
+    "gold_answer": "At the bundle root (the single directory you extract to), the installer expects these top-level files: `manifest.json` (required), `manifest.sig` (required for signed/normal bundles; only optional for explicitly approved break-glass bundles), and `README.txt` (required).",
+    "answer_facts": [
+      "The installer checks the bundle root (the single top-level directory you extract to) for required items before accepting the package.",
+      "manifest.json must exist at the top level of the extracted bundle and is required.",
+      "manifest.sig must exist at the top level for signed or normal bundles, and is only optional for explicitly approved break-glass bundles.",
+      "README.txt must exist at the top level of the extracted bundle and is required."
+    ]
+  },
+  "qst_0382": {
+    "id": "qst_0382",
+    "query": "In the Feb 12, 2026 incident where daily usage exports briefly overstated output tokens (while invoices stayed correct), what was the root cause and what mitigation + follow-up steps were taken to prevent a repeat?",
+    "gold": [
+      "confluence:dsid_7d347905549f4456b0d2226b47e4aa68"
+    ],
+    "gold_answer": "Root cause was a deduplication bug in the usage exporter that counted retried streaming chunks as separate completions when the request_id changed across retry boundaries, inflating output_tokens in daily usage exports. Mitigation was to pause export generation, fix the exporter logic, then backfill and resume exports. Follow-ups were to add a daily reconciliation job comparing invoice vs export counters with paging on drift, change dedup to use a stable trace id across retries, and add a contract test covering streaming retry semantics.",
+    "answer_facts": [
+      "The root cause was a deduplication bug in the usage exporter.",
+      "The bug counted retried streaming chunks as separate completions when the request_id changed across retry boundaries.",
+      "This bug inflated output_tokens in daily usage exports.",
+      "Mitigation included pausing daily usage export generation.",
+      "Mitigation included fixing the usage exporter deduplication logic.",
+      "Mitigation included backfilling corrected exports and then resuming export generation.",
+      "A follow-up step was adding a daily reconciliation job comparing invoice counters vs export counters and paging on drift.",
+      "A follow-up step was changing deduplication to use a stable trace id across retries.",
+      "A follow-up step was adding a contract test covering streaming retry semantics.",
+      "The answer must not describe a streaming metering undercount bug (where only the last chunk or a missing final flush causes output_tokens to be too low); this incident was about overstatement in exports on 2026-02-12.",
+      "The answer must not attribute the issue to a streaming include_usage schema parsing failure that produced output_tokens=0 or required parsing multiple schemas; that is a different streaming-handler problem.",
+      "The answer must not claim the discrepancy was caused by UTC vs local-time day boundaries in daily CSV exports; the Feb 12, 2026 incident was a token overcounting bug, not timezone semantics.",
+      "The answer must not say billing exports were delayed due to Kafka consumer lag or a large schema change (prompt preview field) as in the 2026-03-05 SEV-2; Feb 12 was incorrect export counts with correct invoices.",
+      "The answer must not state invoices were incorrect or required regeneration/credits for this incident; invoices stayed correct because they used a separate validated counter."
+    ]
+  },
+  "qst_0104": {
+    "id": "qst_0104",
+    "query": "What is the standard amount of time a new hire buddy is expected to spend per day during the first two weeks when a long-term contractor is converted to a full-time employee?",
+    "gold": [
+      "confluence:dsid_005f7a937cad4b3cbb30d9d93199e22a"
+    ],
+    "gold_answer": "The buddy is expected to spend about 1 hour per day with the new hire during the first two weeks.",
+    "answer_facts": [
+      "During the first two weeks, the new hire buddy is expected to spend about 1 hour per day with the new hire."
+    ]
+  },
+  "qst_0252": {
+    "id": "qst_0252",
+    "query": "In our incident response process, what is the rule for when a quick time-boxed after-action review is acceptable instead of writing the full formal analysis, based on impact duration and whether the issue hit one customer versus many?",
+    "gold": [
+      "confluence:dsid_01eaeaf6045941beaeaf74e6170aceea"
+    ],
+    "gold_answer": "A quick Deferred Postmortem (DPM) is acceptable when the incident is single-tenant and had less than 30 minutes of customer-visible impact (with a known cause and effective mitigation applied at resolution). If it impacted multiple tenants (e.g., multi-tenant Sev2) or is Sev1, a full postmortem is required.",
+    "answer_facts": [
+      "A quick Deferred Postmortem is acceptable when the incident is single-tenant and had less than 30 minutes of customer-visible impact.",
+      "A quick Deferred Postmortem is acceptable only if the cause is known and an effective mitigation was applied at resolution.",
+      "If an incident impacted multiple tenants, a full postmortem is required.",
+      "If an incident is Sev1, a full postmortem is required."
+    ]
+  },
+  "qst_0183": {
+    "id": "qst_0183",
+    "query": "What are the specific gate thresholds used to automatically decide whether a compressed model variant is allowed, canaried, or blocked, including the limits for chat similarity drop, code pass rate change, retrieval embedding quality, and acceptable latency and cost changes?",
+    "gold": [
+      "confluence:dsid_693c023c88264795a7e98c7737e6459e"
+    ],
+    "gold_answer": "The Lab gates compressed variants on primary-metric thresholds: for chat/completion, mean embedding-cosine drop must be ≤ 0.012 and the 99th-percentile semantic delta must be ≤ 0.02; for code generation, pass@1 drop must be ≤ 1.5 percentage points and compilation-failure delta must be ≤ 0.5pp; for embeddings, mean cosine-similarity drop must be ≤ 0.015 and downstream retrieval MAP drop must be ≤ 0.8%. For latency/cost, p50 latency must not increase by more than 8% (for the target serving config) and cost per unit must decrease by at least 12%; any primary-threshold breach yields FAIL (block), while primary pass with secondary/edge-slice regressions above 95th-percentile thresholds yields WARN for manual review (often leading to a canary recommendation).",
+    "answer_facts": [
+      "For chat or completion, mean embedding cosine drop must be 0.012 or less and the 99th percentile semantic delta must be 0.02 or less.",
+      "For code generation, pass@1 drop must be 1.5 percentage points or less and compilation failure delta must be 0.5 percentage points or less.",
+      "For embeddings, mean cosine similarity drop must be 0.015 or less and downstream retrieval MAP drop must be 0.8 percent or less.",
+      "For latency and cost, p50 latency must not increase by more than 8 percent for the target serving configuration and cost per unit must decrease by at least 12 percent.",
+      "Any breach of a primary threshold results in FAIL and the variant is blocked.",
+      "If primary thresholds pass but secondary or edge slice regressions exceed 95th percentile thresholds, the gate result is WARN for manual review and this often leads to a canary recommendation."
+    ]
+  },
+  "qst_0442": {
+    "id": "qst_0442",
+    "query": "What is Redwood Inference's end-to-end process for making a production change (definition, required approvals, pre-deploy verification, deploy execution, customer/internal communications, and rollback/post-change requirements) for the Hosted API and Console?",
+    "gold": [
+      "confluence:dsid_319db001cae246bbbb16f441b64d9b82",
+      "confluence:dsid_eca097630e444b2d8e30da4b08fcbc4e",
+      "confluence:dsid_2ee4c1a35c5f4dba9b49efd3e97dd265",
+      "confluence:dsid_2db615f2f6f14cbfae67c62b3c976b27",
+      "confluence:dsid_914d75cb27ee4a06b3f69e445d715ab4",
+      "confluence:dsid_81a7e3e0204d4c6984e0a503d5423314",
+      "confluence:dsid_bf7e0df04c8748458b5515c864c48609",
+      "confluence:dsid_190d9732b59b411d8a6bcc59fd61b309"
+    ],
+    "gold_answer": "For the **Hosted API and Console**, a **production change** is **any change in any environment serving external customer traffic (including canary/regional prod)** that could affect **confidentiality, integrity, availability, latency, cost, or correctness** (e.g., prod deploys, routing/model-selection policies, auth/RBAC/quotas/billing, schema migrations/backfills, capacity/failover, or observability changes that reduce visibility). The change owner must create a durable **change record** (ticket) with **summary + customer impact assessment, risk checklist, verification plan, explicit rollback plan, links to PRs/builds/dashboards/runbooks/migration plan, and captured approvals**, and schedule within the default **weekday 09:00-16:00 local** window while obeying **error-budget/incident change control** (Green: normal approvals; Yellow: add **SRE on-call**; Red: freeze except incident/security fixes requiring **IC + service owner + SRE on-call**).\n\n**Required approvals depend on change type and risk:** *Standard* needs **1 peer**; *Normal* (most deploys) needs **peer + service owner** and additionally **SRE gate** for capacity/SLO-sensitive/traffic routing/failover changes and **Security review** for auth/session/RBAC/secrets/encryption/audit logging/PII/retention/network exposure or security-relevant dependency upgrades (with threat summary, affected assets, security verification, safe rollback, and reviewer approval recorded); *Emergency* changes require **IC + service owner (as available)** and a completed change record/retrospective within **24 hours**.\n\n**Pre-deploy verification (gates) for every release (unless an approved, documented exemption):** provide build identifiers (image digest/build #), release-notes snippet, change record link, PR/test links; ensure **green unit + integration tests** (exceptions approved by service owner), **perf sanity** when request-path/caching/batching changes, confirm **current SLO posture** (p95 latency/error rate normal), **capacity headroom ≥20%** or an **SRE-approved** plan when changing scaling/concurrency/batching, ensure **backward-compatible migrations** with rollback/forward plan, and complete any required **security gate** checks.\n\n**Deploy execution:** always follow the relevant runbook and **announce internally in `#eng-releases`** (change record, owner/approvers, services/regions, canary plan, rollback trigger). For **Hosted API**, perform pre-deploy checks (dashboards, no conflicting incidents, error-budget posture), deploy a **mandatory canary** (typically **1 region or 1% traffic**) and hold **≥15 minutes** steady-state; pass criteria include **≤0.2% absolute error-rate regression**, **≤10% p95 latency regression**, and no sustained saturation (GPU/CPU/memory/queue depth), plus smoke tests (e.g., **/v1/chat/completions** streaming & non-streaming, **/v1/embeddings**) and metering validation if billing changed; then roll out region-by-region (default order **us-west-2 canary → us-east-1 → eu-central-1**) avoiding concurrent multi-region/router+gateway rollouts unless explicitly approved. For the **Console**, deploy **console-api first, then console-web**, prefer **feature-flag dark launches** and (when feasible) canary to an **internal staff cohort**; validate key workflows (login, org switching, API key creation, usage dashboard, settings), flag evaluation health, and watch for auth errors (401/403); publish the new web bundle with cache invalidation while keeping the prior bundle available for fast revert.\n\n**Customer and internal communications:** internal heads-up in `#eng-releases` is **always required**; **customer comms** (status page notice and, for major impact, direct email) are required for expected downtime/degradation, breaking API/SDK/auth/quota changes, billing/usage reporting risk, or maintenance reducing redundancy-using **≥24h lead** for minor and **≥72h + email** for major maintenance (emergency: ASAP), including what/impact/times/regions/products/mitigations/status-page link/support contact, with updates at least **hourly** during the window and a final completion update.\n\n**Rollback and post-change requirements:** \"stop the line\" and **rollback immediately** if canary/post-deploy gates fail or if there's plausible Sev2+ impact (including the explicit triggers: **>0.2%** sustained error-rate increase, **>10%** sustained p95 latency increase, saturation/timeouts, or customer reports); rollback by **pausing further rollout**, reverting **highest-leverage toggles first** (feature flags, routing/policy bundles), then **redeploying the last known-good image digest/bundle** (Hosted API typically region-by-region starting with the most impacted), with special handling/escalation for **schema migrations** and validation of **positive/negative authz** for auth/RBAC changes. After any change (successful or rolled back), perform **functional smoke tests**, verify **observability** (dashboards/logs/alerts), validate **billing integrity** if relevant, and keep **enhanced monitoring for ≥60 minutes**; only close the change record once it documents final build state (or rollback), evidence/links of observed outcomes, timestamps, and any follow-up tickets.",
+    "answer_facts": [
+      "For Hosted API and Console, a production change is any change in any environment serving external customer traffic, including canary or regional prod.",
+      "A production change includes changes that could affect confidentiality, integrity, availability, latency, cost, or correctness.",
+      "The change owner must create a durable change record (ticket) for the production change.",
+      "The change record must include a summary, customer impact assessment, risk checklist, verification plan, explicit rollback plan, links to relevant PRs/builds/dashboards/runbooks/migration plan, and captured approvals.",
+      "Production changes should be scheduled within the default weekday 09:00 to 16:00 local window.",
+      "Production changes must obey error-budget or incident change control: Green allows normal approvals, Yellow adds SRE on-call involvement, and Red freezes changes except incident or security fixes requiring IC plus service owner plus SRE on-call.",
+      "Standard changes require approval from one peer.",
+      "Normal changes require approval from a peer and the service owner.",
+      "Normal changes also require an SRE gate for capacity, SLO-sensitive, traffic routing, or failover changes.",
+      "Normal changes require Security review for auth, session, RBAC, secrets, encryption, audit logging, PII, retention, network exposure, or security-relevant dependency upgrades, with the review recorded.",
+      "Emergency changes require IC approval and service owner involvement as available, and a completed change record or retrospective within 24 hours.",
+      "Pre-deploy verification is required for every release unless there is an approved, documented exemption.",
+      "Pre-deploy verification includes providing build identifiers and links to release notes, change record, and PRs or tests.",
+      "Pre-deploy verification requires green unit and integration tests unless exceptions are approved by the service owner.",
+      "Pre-deploy verification requires a performance sanity check when request-path, caching, or batching changes are made.",
+      "Pre-deploy verification includes confirming current SLO posture such as p95 latency and error rate being normal.",
+      "Pre-deploy verification requires at least 20 percent capacity headroom or an SRE-approved plan when changing scaling, concurrency, or batching.",
+      "Pre-deploy verification requires backward-compatible migrations with rollback and forward plans for schema changes.",
+      "Pre-deploy verification requires completing any required security gate checks.",
+      "Deploy execution must follow the relevant runbook.",
+      "Deploy execution requires an internal announcement in #eng-releases including change record, owner and approvers, services and regions, canary plan, and rollback trigger.",
+      "For Hosted API deploys, pre-deploy checks include dashboards review, confirming no conflicting incidents, and checking error-budget posture.",
+      "For Hosted API deploys, a mandatory canary is required, typically one region or 1 percent traffic, held for at least 15 minutes at steady state.",
+      "Hosted API canary pass criteria include no more than 0.2 percent absolute error-rate regression, no more than 10 percent p95 latency regression, and no sustained resource saturation.",
+      "Hosted API deploy verification includes smoke tests and metering validation when billing is changed.",
+      "After Hosted API canary success, rollout proceeds region-by-region in the default order us-west-2 canary, then us-east-1, then eu-central-1.",
+      "Hosted API deploys should avoid concurrent multi-region or router-plus-gateway rollouts unless explicitly approved.",
+      "For Console deploys, console-api is deployed first and then console-web.",
+      "Console deploys should prefer feature-flag dark launches and, when feasible, canary to an internal staff cohort.",
+      "Console deploy verification includes validating key workflows such as login, org switching, API key creation, usage dashboard, and settings, and watching for auth errors like 401 or 403.",
+      "Console deploys publish the new web bundle with cache invalidation while keeping the prior bundle available for fast revert.",
+      "Internal communication in #eng-releases is always required for production changes.",
+      "Customer communications (status page notice and for major impact direct email) are required for expected downtime or degradation, breaking API or SDK or auth or quota changes, billing or usage reporting risk, or maintenance that reduces redundancy.",
+      "Customer communications should provide at least 24 hours lead time for minor maintenance and at least 72 hours lead time plus email for major maintenance, with emergency communications sent as soon as possible.",
+      "Customer communications should include what is changing, impact, timing, regions, products, mitigations, a status-page link, and a support contact.",
+      "During the maintenance window, customer communications should be updated at least hourly and include a final completion update.",
+      "Rollback is required immediately if canary or post-deploy gates fail or if there is plausible Sev2 or higher impact.",
+      "Explicit rollback triggers include sustained error-rate increase greater than 0.2 percent, sustained p95 latency increase greater than 10 percent, saturation or timeouts, or customer reports.",
+      "Rollback execution includes pausing further rollout, reverting highest-leverage toggles first such as feature flags or routing or policy bundles, and redeploying the last known-good build.",
+      "Hosted API rollback typically proceeds region-by-region starting with the most impacted region.",
+      "Rollback requires special handling and escalation for schema migrations and validating authorization behavior for auth or RBAC changes.",
+      "After any change, successful or rolled back, functional smoke tests must be performed.",
+      "After any change, observability must be verified, including dashboards, logs, and alerts.",
+      "After any change, billing integrity must be validated when relevant.",
+      "After any change, enhanced monitoring must be maintained for at least 60 minutes.",
+      "The change record can be closed only after documenting the final build state or rollback, evidence and links of outcomes, timestamps, and any follow-up tickets."
+    ]
+  },
+  "qst_0381": {
+    "id": "qst_0381",
+    "query": "In the planned controlled failover game day on 2026-01-15 (Hosted API us-east → eu-west), what caused the routing automation to oscillate (flip/rollback), and what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects?",
+    "gold": [
+      "confluence:dsid_d844cc30147b49c69ea5275b4993b571",
+      "confluence:dsid_865449ae95b044768f33773263bfeaad"
+    ],
+    "gold_answer": "The flip/rollback oscillation was caused by noisy/false-positive reachability health signals (including a premature \"recovery\" signal) combined with overly permissive hold-down/anti-flap and rollback guardrails, letting the controller fail over and then roll back repeatedly. The streaming redirect disconnect/reconnect follow-up was ticket ENG-2422, targeting a production ship (behind a flag) by 2026-02-07.",
+    "answer_facts": [
+      "The routing automation oscillation (flip/rollback) was caused by noisy or false-positive reachability health signals, including a premature recovery signal.",
+      "The routing automation oscillation was also enabled by overly permissive hold-down or anti-flap and rollback guardrails, which allowed repeated failover and rollback.",
+      "The follow-up ticket created to fix the streaming redirect disconnect/reconnect behavior was ENG-2422.",
+      "The target ship date for the ENG-2422 fix was 2026-02-07 (production ship behind a flag).",
+      "The answer must not attribute the event to the 2025-02-19 us-east-1 incident or a failover to us-west-2 (different date and regions).",
+      "The answer must not claim the streaming issue was an SSE stall/freeze mid-response fixed by upgrading to runtime 2.18.3; that is a different known issue than cross-region redirect reconnect.",
+      "The answer must not name ENG-2426 as the specific follow-up ticket for the streaming redirect reconnect fix; ENG-2426 is an action-item tracker, not the ticket called out for that fix.",
+      "The answer must not give 2026-02-28 as the target ship date for the streaming redirect reconnect fix; the game day follow-up ticket specifies 2026-02-07.",
+      "The answer must not cite SUP-25310 (support macro for transient 5xx) as the engineering follow-up ticket to fix streaming reconnect behavior.",
+      "The answer must not describe the resolution as a manual traffic shift/weight change procedure from the manual failover runbook; the question asks what caused automation oscillation and the specific follow-up ticket/date."
+    ]
+  },
+  "qst_0439": {
+    "id": "qst_0439",
+    "query": "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?",
+    "gold": [
+      "confluence:dsid_4e016427a93c49ffadd31fcdc1dca792",
+      "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+      "confluence:dsid_faf3246a6ce845e6b5df0ae52f439399",
+      "confluence:dsid_bf7e79dc1331447598c4eebdc5d2897d",
+      "confluence:dsid_a277ed2dc74c4bad82bc71b534b6356f"
+    ],
+    "gold_answer": "4 internal incident writeups describe activating automatic fallback as part of mitigation (2025-02-11, 2025-03-03, 2025-06-08, and 2025-07-22).",
+    "answer_facts": [
+      "4 internal incident writeups at Redwood Inference describe activating automatic fallback as part of mitigation",
+      "The incident writeup dated 2025-02-11 describes activating automatic fallback as part of mitigation",
+      "The incident writeup dated 2025-03-03 describes activating automatic fallback as part of mitigation",
+      "The incident writeup dated 2025-06-08 describes activating automatic fallback as part of mitigation",
+      "The incident writeup dated 2025-07-22 describes activating automatic fallback as part of mitigation"
+    ]
+  },
+  "qst_0433": {
+    "id": "qst_0433",
+    "query": "What is Redwood Inference's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?",
+    "gold": [
+      "confluence:dsid_8c92178c254d467c9854db67aac7c9be",
+      "confluence:dsid_a898d2541b944cdebeec03ec9d9ba130",
+      "confluence:dsid_cf06e75be4f94156ac338f62e3ee028b",
+      "confluence:dsid_97b25b6f83c542e7b81d6504b5653dcb",
+      "confluence:dsid_3e991a24c7bc4e91b99eb5846b927558",
+      "confluence:dsid_74ebb73359364bc791707a92a3227e3a"
+    ],
+    "gold_answer": "For planned rotation, the owning service team identifies the secret (Vault path) and **all consumers** via the Credential Dependencies inventory, confirms tier/cadence and access, then rotates using a repeatable pattern: preferably **dual-valid overlap** (generate new credential → write as a new Vault version without deleting old → deploy/update consumers to read latest and, if applicable, accept old+new → monitor auth/health for ≥30 minutes (≥60 for Tier 0) → disable/deprecate the old credential at the issuer → remove the old Vault version after the overlap window, default 7 days) or, if overlap isn't possible, a **cutover** (scheduled change window → change issuer-side credential → immediately update Vault → restart/redeploy all consumers → validate/rollback if needed). After any rotation, they complete the verification checklist (ensure all rollouts/reloads completed, monitor auth/dependency metrics, run critical canaries, confirm audit logs and that any break-glass access is revoked) and record the event in a change record.\n\nFor **emergency rotation** (suspected compromise/exposure/anomalies), an incident is opened and \"emergency secret rotation\" is declared (secret names/paths only), break-glass may be used via the approved workflow for **time-limited (60 min)** Tier 0/1 rotate access with full audit logging; the IC/Security/SRE prioritize and rotate **Tier 0 then Tier 1**, selecting dual-valid where possible or cutover otherwise, updating issuer + Vault and restarting/redeploying all consumers, pausing to reassess if impact worsens, recording exact timestamps, then revoking break-glass immediately and documenting rotated secrets/services plus any follow-up rotations (derived/cached tokens) in the incident timeline and post-incident summary for Security review.",
+    "answer_facts": [
+      "For planned rotation, the owning service team identifies the secret (Vault path) and all consumers via the Credential Dependencies inventory.",
+      "For planned rotation, the owning service team confirms tier and cadence and access before rotating.",
+      "Preferred planned rotation method is dual-valid overlap: generate a new credential, write it as a new Vault version without deleting the old, deploy/update consumers to read the latest and if applicable accept both old and new, monitor authentication and service health for at least 30 minutes (at least 60 minutes for Tier 0), then disable or deprecate the old credential at the issuer, and remove the old Vault version after the overlap window (default 7 days).",
+      "If overlap is not possible, planned rotation uses a cutover: schedule a change window, change the credential at the issuer, immediately update Vault, restart or redeploy all consumers, and validate with rollback if needed.",
+      "After any rotation, the team completes a verification checklist that includes ensuring all rollouts/reloads completed, monitoring auth/dependency metrics, running critical canaries, confirming audit logs, and revoking any break-glass access.",
+      "After any rotation, the rotation event is recorded in a change record.",
+      "For emergency rotation (suspected compromise, exposure, or anomalies), an incident is opened and emergency secret rotation is declared using secret names/paths only.",
+      "During emergency rotation, break-glass access may be used via the approved workflow for time-limited (60 minute) Tier 0/1 rotate access with full audit logging.",
+      "During emergency rotation, IC/Security/SRE prioritize rotating Tier 0 then Tier 1.",
+      "During emergency rotation, they use dual-valid overlap where possible or cutover otherwise, update the issuer and Vault, and restart/redeploy all consumers.",
+      "During emergency rotation, they pause to reassess if impact worsens and record exact timestamps.",
+      "After emergency rotation, break-glass access is revoked immediately and the rotated secrets/services and any follow-up rotations (derived/cached tokens) are documented in the incident timeline and post-incident summary for Security review."
+    ]
+  },
+  "qst_0440": {
+    "id": "qst_0440",
+    "query": "What is the complete SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments-including required prerequisites, security approvals, configuration steps, validation, customer communication, and ongoing operations/ownership?",
+    "gold": [
+      "confluence:dsid_385fd2388669469e87964b25d6428871",
+      "confluence:dsid_50f47a9662ea40858feb7bd975071c96",
+      "confluence:dsid_03042cec7a2344769bca5a624091092e",
+      "confluence:dsid_b96ce0f550a9437e902636a7628160ca",
+      "confluence:dsid_eba5d122d7244ffbb6c20a2487aa1017",
+      "confluence:dsid_dd0fe40a2c71489793d566e46e95bb93"
+    ],
+    "gold_answer": "1) **Intake & scoping (CS/Support)**: Open an **internal-support Jira** (Support Request; prioritize P2 standard, P1 if audit deadline <14 days), and record **customer + org_id (Hosted) / dedicated_cluster_id (Dedicated) / Private cluster**, deployment mode, regions, sink (**S3/GCS/Azure Blob**), **bucket/container + prefix + destination region**, identity method (**assume-role/IRSA/workload identity/Azure federated identity**), desired audit-log categories (**platform audit logs only-no prompt/completion logging**), retention intent, and **ops/escalation contacts + target date**; CS confirms entitlement and that export is **regional by default** (cross-region only by exception).  \n\n2) **Prerequisites & mandatory security controls (must be satisfied before enablement)**: Treat logs as **Customer-Sensitive Metadata** and ensure **no request bodies/model outputs/token strings**; require **TLS 1.2+ in transit** and **encryption at rest** on the customer destination (S3 SSE-S3/SSE-KMS, GCS managed keys/CMEK, Azure managed keys/CMK) and encrypt any Redwood staging with Redwood KMS; enforce **least privilege** using **assume-role/workload identity only** (no long-lived customer keys stored by Redwood) scoped to **write to a specific bucket/container prefix** (and list only if required for health checks); confirm **destination ownership/allowed account** and appropriate **egress controls/allowlisting** (private endpoints preferred; for Private, customer constrains egress); align/confirm **retention** (recommend 90 days; <30 days allowed but noted; >1 year requires CS contract confirmation); ensure \"**logging about logging**\" is enabled (events for enable/disable, destination/auth changes, failures/retries visible in internal dashboards). Attach required evidence in the Jira: **policy/trust/binding snippet, encryption confirmation, proof of ownership IDs, and (Private) network diagram/egress statement**.  \n\n3) **Approvals (gates)**:  \n- **Gate A (CS/Support)**: request completeness + scope validation (platform audit logs only, region alignment).  \n- **Gate B (Security-required for all modes)**: Security reviews encryption/least privilege/region rules and leaves a Jira comment: **\"Approved for enablement\"** (name/date) before production changes.  \n- **Gate C (Legal/Privacy-conditional)**: required for **cross-region export**, **additional PII fields beyond standard schema**, or **bespoke contract clauses**; cross-region additionally requires **Security approval + explicit customer acknowledgement**. If controls can't be met, file a **Security exception** and link it.  \n\n4) **Configuration & enablement (route by deployment mode)**:  \n- **Hosted (Eng Platform oncall via `rdw-admin`)**: `audit-export destination upsert` (sink/region/bucket-or-container/prefix/auth-mode/role or binding) → `audit-export enable` → ensure tenant flag **`audit_export_customer_sink_enabled=true`**.  \n- **Dedicated (Eng Infra)**: Decide connector placement (**Redwood-managed default** vs **dedicated-placed** exception requiring **SRE review**). Default path: update per-tenant **Terraform `dedicated-config`** `audit_export` (enabled, sink, region, destination, prefix, auth_reference) and **plan/apply**. Exception path: deploy `audit-export-connector` into the dedicated cluster (Helm), use **short-lived identity**, and configure private endpoints/egress as required.  \n- **Private (Customer operator with Private Deployments guidance; bundle v2.8.0+)**: Configure `redwood-private` Helm values `auditExport.enabled=true` with sink/region/destination/prefix/format and **workload identity** (AWS IRSA, GCP Workload Identity, Azure Workload Identity) plus any private-endpoint DNS/egress settings; redeploy and restart the connector.  \n\n5) **Validation (Redwood + customer)**: Redwood verifies connector health (**delivery_success_rate**, **delivery_lag_seconds**, **write_errors_total**) and that the tenant/cluster consumer is active; customer (coordinated by CS) confirms objects land in the agreed prefix (e.g., Hosted `org=<ORG_ID>/region=<REGION>/dt=.../hr=.../*.jsonl.gz`, Dedicated `dedicated_cluster=<ID>/region=.../...`) within ~10 minutes, and both sides spot-check one file for required fields (e.g., `event_id`, `source_service`) and **absence of inference payload fields**; remind customer delivery is **at-least-once** and they must **deduplicate by `event_id`**.  \n\n6) **Closeout documentation & customer communication (CS owns comms)**: Update the Jira with destination identifiers, auth reference, connector placement (Dedicated), approvals, enablement timestamp, and validation evidence; CS sends/updates the customer with confirmation, expected delivery semantics/latency, and reiterates the customer owns **storage cost, retention/lifecycle, SIEM ingestion, and destination access control**.  \n\n7) **Ongoing operations/ownership & rollback**: Redwood owns connector operation/monitoring in **Hosted/Dedicated** (and provides troubleshooting support for **Private** if customer shares logs/metrics); paging/alerting follows policy (enterprise Dedicated/Private: page on sustained failure >30 min; Hosted: alert unless multi-tenant impact). Customers should alert on **no new objects >30 min** and sustained **4xx/5xx** from storage and must notify Redwood before rotating identity/policies. If issues occur (403/trust drift, throttling, DNS/TLS/private endpoint failures), coordinate Eng + Security/CS; to stop export, **disable** (Hosted `rdw-admin audit-export disable`; Dedicated set `audit_export.enabled=false` in Terraform; Private `auditExport.enabled=false` and redeploy). If a **data-boundary/security concern** is suspected, **disable immediately** and escalate per incident process.",
+    "answer_facts": [
+      "Enablement starts with CS/Support opening an internal-support Jira ticket and recording customer identity plus org_id for Hosted, dedicated_cluster_id for Dedicated, or the Private cluster identifier.",
+      "The intake ticket must capture deployment mode, regions, destination sink type (S3, GCS, or Azure Blob), bucket or container name, prefix, destination region, identity method (assume-role, IRSA, workload identity, or Azure federated identity), desired audit-log categories, retention intent, ops escalation contacts, and target date.",
+      "CS must confirm entitlement and that export is regional by default, with cross-region export only by exception.",
+      "Before enablement, Redwood must treat audit logs as Customer-Sensitive Metadata and ensure logs do not include request bodies, model outputs, or token strings.",
+      "Before enablement, data in transit must use TLS 1.2 or higher and the customer destination must have encryption at rest enabled (for example SSE-S3 or SSE-KMS on S3, managed keys or CMEK on GCS, managed keys or CMK on Azure).",
+      "Any Redwood staging involved in export must be encrypted using Redwood KMS.",
+      "Authentication must use least privilege via assume-role or workload identity only, with no long-lived customer keys stored by Redwood.",
+      "The destination permissions must be scoped to writing to a specific bucket or container prefix, with list permission only if required for health checks.",
+      "Redwood must confirm destination ownership or allowed account and required egress controls or allowlisting (private endpoints preferred; for Private deployments the customer constrains egress).",
+      "Retention expectations must be aligned during prerequisites (recommend 90 days; more than 1 year requires CS contract confirmation).",
+      "Redwood must ensure logging about logging is enabled so enable or disable actions, destination or auth changes, and failures or retries are visible in internal dashboards.",
+      "The Jira must include evidence such as the destination policy or trust or binding snippet, encryption confirmation, proof of ownership identifiers, and for Private deployments a network diagram or egress statement.",
+      "Gate A approval is CS/Support confirming request completeness and scope validation (platform audit logs only and region alignment).",
+      "Gate B approval is Security review for all deployment modes, and Security must comment Approved for enablement with name and date before production changes.",
+      "Gate C approval from Legal or Privacy is required when export is cross-region, when adding PII fields beyond the standard schema, or when bespoke contract clauses apply, and cross-region export also requires explicit customer acknowledgement.",
+      "If required controls cannot be met, a Security exception must be filed and linked in the Jira.",
+      "Hosted enablement is performed by Engineering Platform oncall using rdw-admin to upsert the audit-export destination, enable audit export, and ensure the tenant flag audit_export_customer_sink_enabled is set to true.",
+      "Dedicated enablement is performed by Engineering Infra either by updating per-tenant Terraform dedicated-config audit_export settings and applying, or by deploying an audit-export connector into the dedicated cluster as an exception that requires SRE review.",
+      "Private enablement is performed by the customer operator using Private deployment guidance (bundle v2.8.0 or later) by setting Helm values auditExport.enabled=true with sink, region, destination, prefix, format, and workload identity, then redeploying and restarting the connector.",
+      "Validation requires Redwood to verify connector health metrics including delivery_success_rate, delivery_lag_seconds, and write_errors_total and confirm the tenant or cluster consumer is active.",
+      "Validation requires the customer to confirm objects land in the agreed prefix within about 10 minutes and to spot-check a file for required fields and for absence of inference payload fields.",
+      "Customers must be told delivery is at-least-once and they must deduplicate using event_id.",
+      "Closeout requires updating the Jira with destination identifiers, auth reference, connector placement for Dedicated, approvals, enablement timestamp, and validation evidence.",
+      "Customer communication is owned by CS and must confirm enablement, expected delivery latency and semantics, and that the customer owns storage cost, retention and lifecycle, SIEM ingestion, and destination access control.",
+      "Ongoing operations ownership is Redwood monitoring and operating the connector for Hosted and Dedicated, and providing troubleshooting support for Private when the customer shares logs or metrics.",
+      "Customers should alert on no new objects for more than 30 minutes and sustained 4xx or 5xx from storage, and must notify Redwood before rotating identity or policies.",
+      "Rollback or stop procedures are: Hosted run rdw-admin audit-export disable, Dedicated set audit_export.enabled=false in Terraform, and Private set auditExport.enabled=false and redeploy.",
+      "If a data-boundary or security concern is suspected, export must be disabled immediately and escalated per the incident process."
+    ]
+  },
+  "qst_0441": {
+    "id": "qst_0441",
+    "query": "For an enterprise Redwood Private deployment upgrade, what is the complete go/no-go gate (required validations, required approvals, and required customer communications) mandated by Redwood's internal standards?",
+    "gold": [
+      "confluence:dsid_4bb945f3de9b4f6aa834d2941fae625f",
+      "confluence:dsid_89889daf6b89426ca90049f313d4324f",
+      "confluence:dsid_e2327ad35ceb466489dad854770739bf",
+      "confluence:dsid_871b6712caf44f8bbfea4d8a15e436b6",
+      "confluence:dsid_80e095c2dc1745af86b80d24e27a9857",
+      "confluence:dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+    ],
+    "gold_answer": "Redwood's internal go/no-go gate for an enterprise Redwood Private production deployment upgrade requires that, at least 24h before the maintenance window, there is a change record created from the Private Upgrade Change Request template with a single named Change Owner and confirmed customer-side Change Approver and Operator contacts who will be present. The change record must document current and target versions (installer, operator/controller, runtime images, charts), the exact supported upgrade path (default N-1 to N; no unsupported major skips), and any model/runtime compatibility notes for pinned models. Rollback readiness must be demonstrated with recent backups (control-plane config state such as values/helm releases/operator CRs, any Redwood-managed PVs if present, and documentation of customer external dependencies like DB/SSO/KMS), locally available rollback artifacts (previous installer bundle, prior image tags, prior values files), a written rollback plan with commands and a time-to-rollback/time-to-restore estimate, and an explicit rollback decision point in the window plan. Preflight validations must be run and attached as evidence (standard preflight output) covering cluster capacity and node readiness, storage class/PV health, DNS and egress reachability for image pulls (or offline bundle availability where applicable), TLS/certificate status, and required Kubernetes API versions present (no deprecated APIs that will break charts). Observability readiness must be confirmed: Redwood has dashboard/alert visibility during the window (temporary access if needed) and the watch signals are available at minimum for control plane API error rate, inference 5xx, P95 latency on primary routes, and GPU utilization plus OOM/restart rates.\n\nAt window start, the Change Owner may record GO in the change record only after all required sign-offs are linked and complete: Change Management approvals per risk level (Private production upgrades are at least High), SRE SLO/error budget impact review is completed with evidence (30-day error budget remaining and explicit risk acceptance if below 25%, capacity/headroom check, monitoring watch list and alert routing to active on-call, rollback feasibility and the decision point, and confirmation of no overlapping high-risk changes), Security and Compliance sign-off is completed if triggered (auth/SSO/JWT/mTLS, RBAC/privileged accounts, TLS/cert management/trust stores, audit logging pipeline/retention/integrity, new third-party images/dependencies with digests and scan summary, or network boundary changes), and Customer Success acknowledges customer readiness and the comms plan. Final technical readiness at T=0 must be reconfirmed: preflight has no red blockers (and any yellow warnings have an owner and mitigation), there are no open Redwood-side P0/P1 incidents that would reduce ability to respond or rollback, and any change-freeze exception is approved and linked.\n\nCustomer communications must also be ready at GO time per the Planned Maintenance Comms SOP: a Customer Success-approved maintenance notice has been sent via the agreed channel with the required lead time (minimum 48h for enterprise; longer lead times may apply per risk tier), including the window in the customers timezone, expected impact, rollback posture/thresholds, required customer participation, and escalation contacts; internal heads-up has been posted at least 48h prior in #eng-oncall and #customer-success with customer name, window, change owner, link to the change record, and whether security sign-off is required (and per Private release gating, internal comms also go to #eng-releases); the window-start message is prepared to confirm backout plan and next update time; progress updates are planned at a 30-minute cadence with immediate updates for rollback or risk escalation; and an all-clear message is drafted for after the post-upgrade verification window. For Private upgrades, customer-specific maintenance is communicated directly to the customer and not posted to the public status page unless contractually required.",
+    "answer_facts": [
+      "At least 24 hours before the maintenance window, a change record must be created using the Private Upgrade Change Request template.",
+      "The change record must name a single Change Owner.",
+      "The change record must include confirmed customer-side Change Approver and Operator contacts who will be present during the window.",
+      "The change record must document current and target versions for installer, operator/controller, runtime images, and charts.",
+      "The change record must document the exact supported upgrade path (default N-1 to N) and disallow unsupported major version skips.",
+      "The change record must document any model/runtime compatibility notes for pinned models.",
+      "Rollback readiness must include recent backups of control-plane config state (such as values, helm releases, and operator CRs).",
+      "Rollback readiness must include backups of any Redwood-managed persistent volumes if present.",
+      "Rollback readiness must include documentation of customer external dependencies such as DB, SSO, and KMS.",
+      "Rollback readiness must include locally available rollback artifacts such as the previous installer bundle, prior image tags, and prior values files.",
+      "Rollback readiness must include a written rollback plan with commands and an estimate for time to rollback or restore.",
+      "Rollback readiness must include an explicit rollback decision point in the window plan.",
+      "Preflight validations must be run and attached as evidence (standard preflight output).",
+      "Preflight validations must cover cluster capacity and node readiness.",
+      "Preflight validations must cover storage class and PV health.",
+      "Preflight validations must cover DNS and egress reachability for image pulls or confirm offline bundle availability where applicable.",
+      "Preflight validations must cover TLS and certificate status.",
+      "Preflight validations must confirm required Kubernetes API versions are present and that no deprecated APIs will break charts.",
+      "Observability readiness must be confirmed such that Redwood has dashboard and alert visibility during the window (including temporary access if needed).",
+      "At minimum, watch signals must be available for control plane API error rate, inference 5xx rate, P95 latency on primary routes, and GPU utilization plus OOM and restart rates.",
+      "At window start, GO can be recorded by the Change Owner only after all required sign-offs are linked and complete.",
+      "Change Management approvals per risk level are required and Private production upgrades are at least High risk.",
+      "An SRE SLO and error budget impact review must be completed with evidence before GO.",
+      "The SRE review must include the 30-day error budget remaining and explicit risk acceptance if it is below 25 percent.",
+      "The SRE review must include a capacity and headroom check.",
+      "The SRE review must confirm monitoring watch list and alert routing to active on-call.",
+      "The SRE review must cover rollback feasibility and the rollback decision point.",
+      "The SRE review must confirm there are no overlapping high-risk changes.",
+      "Security and Compliance sign-off is required if triggered by relevant scope changes.",
+      "Security and Compliance triggers include changes involving auth/SSO/JWT/mTLS, RBAC or privileged accounts, TLS/cert management or trust stores, audit logging pipeline/retention/integrity, new third-party images/dependencies (with digests and scan summary), or network boundary changes.",
+      "Customer Success must acknowledge customer readiness and the communications plan before GO.",
+      "At T=0, final technical readiness must reconfirm that preflight has no red blockers and that any yellow warnings have an owner and mitigation.",
+      "At T=0, it must be confirmed there are no open Redwood-side P0 or P1 incidents that would reduce the ability to respond or roll back.",
+      "Any required change-freeze exception must be approved and linked before GO.",
+      "Before GO time, a Customer Success-approved maintenance notice must be sent via the agreed channel with the required lead time (minimum 48 hours for enterprise).",
+      "The customer maintenance notice must include the maintenance window in the customers timezone, expected impact, rollback posture/thresholds, required customer participation, and escalation contacts.",
+      "At least 48 hours prior, an internal heads-up must be posted in #eng-oncall and #customer-success with customer name, window, change owner, link to the change record, and whether security sign-off is required.",
+      "Internal communications for Private release gating must also go to #eng-releases.",
+      "A window-start message must be prepared that confirms the backout plan and the next update time.",
+      "Progress updates must be planned at a 30-minute cadence with immediate updates for rollback or risk escalation.",
+      "An all-clear message must be drafted for after the post-upgrade verification window.",
+      "For Private upgrades, customer-specific maintenance is communicated directly to the customer and is not posted to the public status page unless contractually required.",
+      "An SRE SLO and error-budget impact review must be attached, including 30-day error budget status with explicit risk acceptance if below 25 percent, capacity headroom, alert routing and on-call coverage, rollback feasibility and decision point, and confirmation of no overlapping high-risk changes.",
+      "Before declaring GO, the Change Owner must confirm there are no Redwood-side P0 or P1 incidents that would impair response or rollback.",
+      "At least 24 hours before the maintenance window, preflight validations must be completed with evidence, covering cluster or node capacity and readiness, PV or storage health, DNS or egress for image pulls, TLS or certificate expiry, and required Kubernetes APIs or lack of breaking deprecations."
+    ]
+  },
+  "qst_0400": {
+    "id": "qst_0400",
+    "query": "For a shadow evaluation running in a private deployment using an evaluator sidecar, what fields are required in each shadow probe telemetry record, and which run-lifecycle telemetry events must the evaluator emit?",
+    "gold": [
+      "confluence:dsid_10a7359bb6ad4b959ad2171abdb9f620",
+      "confluence:dsid_b52a8760cae1451a9504edcf9ff58e31"
+    ],
+    "gold_answer": "Each shadow probe telemetry record must include: probe_id, tenant_id, deployed_model, deployment_variant, quant_profile, hardware_tag, prompt_family, seed_context_hash, latency_ms, tokens_input, tokens_generated, top_level_metrics, error_code, timestamp_utc. The evaluator must emit these run-lifecycle telemetry events: eval.run.start, eval.run.progress, eval.run.complete.",
+    "answer_facts": [
+      "Each shadow probe telemetry record must include probe_id, tenant_id, deployed_model, deployment_variant, quant_profile, hardware_tag, prompt_family, seed_context_hash, latency_ms, tokens_input, tokens_generated, top_level_metrics, error_code, and timestamp_utc.",
+      "The evaluator must emit the eval.run.start run-lifecycle telemetry event.",
+      "The evaluator must emit the eval.run.progress run-lifecycle telemetry event.",
+      "The evaluator must emit the eval.run.complete run-lifecycle telemetry event.",
+      "Do not include optional probe fields like raw_response_snippet, annotator_score, or kv_cache_hit as required fields.",
+      "Do not use the anchored shadow fleet per-request fields (e.g., request_id, origin_route, model_variant, tokens_in/tokens_out, scorer_metrics, exposure_tag) in place of the private shadow probe record fields.",
+      "Do not use the slice handoff/shadow fields (e.g., bundle_id, slice_id, token_count, perplexity_window, rsi, safety_flag) as the required fields for each private shadow probe telemetry record.",
+      "Do not list non-lifecycle telemetry such as backpressure decision events/metrics (e.g., eval.backpressure.* or telemetry/backpressure schema) as required run-lifecycle events.",
+      "Do not replace the required run-lifecycle events with artifact/index output requirements (e.g., index.json fields like started_at, completed_at, checksums, telemetry_digest)."
+    ]
+  },
+  "qst_0404": {
+    "id": "qst_0404",
+    "query": "We saw quality regressions after enabling an INT8/mixed-precision variant and suspect KV-cache rounding on long-context requests. What request header can we set as a quick mitigation to bypass the KV cache, and in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant?",
+    "gold": [
+      "confluence:dsid_ad70fa7335294e2988193e2a6645a5ba",
+      "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+    ],
+    "gold_answer": "Set the request header X-RW-Cache-Mode: bypass to bypass the KV cache. For the interactive-chat dynamic quant handoff policy, only route to a quant variant when KV-cache hit-rate is at least 60% and the request sequence length is at most 2048 tokens.",
+    "answer_facts": [
+      "Setting the request header X-RW-Cache-Mode: bypass bypasses the KV cache.",
+      "For the interactive-chat dynamic quant handoff policy, routing to a quant variant requires a KV-cache hit-rate of at least 60%.",
+      "For the interactive-chat dynamic quant handoff policy, routing to a quant variant requires the request sequence length to be at most 2048 tokens.",
+      "The answer must not use a different cache-bypass header name (e.g., anything other than X-RW-Cache-Mode: bypass).",
+      "The answer must not claim the interactive-chat route's minimum KV-cache hit-rate is 30% or 0% (those appear for other routes in the routing matrix).",
+      "The answer must not claim the interactive-chat route's max sequence length for quant routing is 8192 or 1024 (those limits belong to other routes in the routing matrix).",
+      "The answer must not substitute general quantization rollback/eval thresholds (RSI, fidelity deltas, etc.) in place of the routing requirements requested."
+    ]
+  }
+}

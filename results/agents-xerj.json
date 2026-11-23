@@ -1,0 +1,532 @@
+[
+  {
+    "service": "atlas",
+    "engine": "xerj",
+    "checks": {
+      "unit": true,
+      "one_revision": true,
+      "new_value": true,
+      "old_removed": true,
+      "scope": false,
+      "source": true,
+      "neighbor_intact": true,
+      "visible": true,
+      "reader_value": true,
+      "reader_unit": true,
+      "reader_link": true,
+      "writer_read_source": true,
+      "reader_searched": true,
+      "reader_read_target": false
+    },
+    "passed": false,
+    "writer": {
+      "answer": "Регион: Европейский союз, число: 2, единица: попытка. Ссылка на сохранённый раздел: [атлас-гайд](/p/atlas-guide/v2.html#s1).",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "EU event delivery frequency",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 1,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU webhook delivery is capped at 2 retries after initial failure.\",\n  \"url\": \"/p/atlas-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 1,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU gateway requests must time out after 45 seconds.\",\n  \"url\": \"/p/orbit-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 2,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/orbit-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"lumen-decision\",\n  \"sec\": 2,\n  \"title\": \"Lumen | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/lumen-decision/v1.html#s2\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "atlas-decision",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"atlas-decision\",\n  \"title\": \"Atlas | Approved EU decision\",\n  \"lang\": \"en\",\n  \"revision\": 1,\n  \"url\": \"/p/atlas-decision/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Approved policy\",\n      \"body\": \"EU webhook delivery is capped at 2 retries after initial failure.\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "outline",
+          "args": {
+            "doc": "atlas-guide"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"atlas-guide\",\n  \"title\": \"Atlas · Доставка событий\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/atlas-guide/v1.html\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Количество повторных попыток\"\n    },\n    {\n      \"sec\": 2,\n      \"heading\": \"Эскалация\"\n    }\n  ]\n}"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "atlas-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Количество повторных попыток: 2 раза. Единица: попытка.",
+            "source": "/p/atlas-decision/v1.html#s1",
+            "request_id": "update-ru-1"
+          },
+          "error": true,
+          "result": "Error executing tool update_section: Expected source in page@revision#sN format"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "atlas-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Количество повторных попыток: 2 раза. Единица: попытка.",
+            "source": "atlas-decision@1#s1",
+            "request_id": "update-ru-1"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"atlas-guide\",\n  \"revision\": 2,\n  \"section\": 1,\n  \"url\": \"/p/atlas-guide/v2.html#s1\",\n  \"source\": \"atlas-decision@1#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8169,
+        "completion_tokens": 313
+      },
+      "elapsed_s": 31.647
+    },
+    "reader": {
+      "answer": "Согласно действующей русской инструкции, количество повторных попыток доставки событий в регионе EU составляет **2 раза**. Это указано в разделе **\"Количество повторных попыток\"** (раздел 1) документа **\"atlas-guide\"**.\n\nОтносительный URL для этого раздела: `/p/atlas-guide/v2.html#s1`",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "доставка событий в регионе EU",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"atlas-guide\",\n  \"sec\": 2,\n  \"title\": \"Atlas · Доставка событий\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 2,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/atlas-guide/v2.html#s2\"\n}\n{\n  \"doc\": \"atlas-guide\",\n  \"sec\": 1,\n  \"title\": \"Atlas · Доставка событий\",\n  \"heading\": \"Количество повторных попыток\",\n  \"revision\": 2,\n  \"excerpt\": \"Количество повторных попыток: 2 раза. Единица: попытка.\",\n  \"url\": \"/p/atlas-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"lumen-guide\",\n  \"sec\": 1,\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"heading\": \"Срок хранения\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 30 (дней).\",\n  \"url\": \"/p/lumen-guide/v1.html#s1\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"vega-guide\",\n  \"sec\": 1,\n  \"title\": \"Vega · Частота опроса\",\n  \"heading\": \"Интервал опроса\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 20 (минут).\",\n  \"url\": \"/p/vega-guide/v1.html#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1601,
+        "completion_tokens": 131
+      },
+      "elapsed_s": 17.018
+    }
+  },
+  {
+    "service": "lumen",
+    "engine": "xerj",
+    "checks": {
+      "unit": true,
+      "one_revision": true,
+      "new_value": true,
+      "old_removed": false,
+      "scope": true,
+      "source": true,
+      "neighbor_intact": true,
+      "visible": true,
+      "reader_value": true,
+      "reader_unit": true,
+      "reader_link": true,
+      "writer_read_source": true,
+      "reader_searched": true,
+      "reader_read_target": true
+    },
+    "passed": false,
+    "writer": {
+      "answer": "Ссылка на обновлённый раздел: [https://p/lumen-guide/v2.html#s1](https://p/lumen-guide/v2.html#s1)  \nРегион: Европейский  \nЧисло: 14  \nЕдиница: день",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "when to delete daily exports in EU region",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"lumen-decision\",\n  \"sec\": 1,\n  \"title\": \"Lumen | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU daily exports must expire after 14 days.\",\n  \"url\": \"/p/lumen-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 1,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU gateway requests must time out after 45 seconds.\",\n  \"url\": \"/p/orbit-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"lumen-decision\",\n  \"sec\": 2,\n  \"title\": \"Lumen | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/lumen-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"vega-decision\",\n  \"sec\": 2,\n  \"title\": \"Vega | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/vega-decision/v1.html#s2\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "lumen-decision",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"lumen-decision\",\n  \"title\": \"Lumen | Approved EU decision\",\n  \"lang\": \"en\",\n  \"revision\": 1,\n  \"url\": \"/p/lumen-decision/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Approved policy\",\n      \"body\": \"EU daily exports must expire after 14 days.\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "outline",
+          "args": {
+            "doc": "lumen-guide"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"lumen-guide\",\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/lumen-guide/v1.html\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Срок хранения\"\n    },\n    {\n      \"sec\": 2,\n      \"heading\": \"Эскалация\"\n    }\n  ]\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "lumen-guide",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"lumen-guide\",\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/lumen-guide/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Срок хранения\",\n      \"body\": \"Для EU действует значение 30 (дней).\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "lumen-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 30 (дней). Удалять ежедневные выгрузки в регионе EU необходимо после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней.",
+            "source": "/p/lumen-decision/v1.html#s1",
+            "request_id": "update-ru-lumen-guide-1"
+          },
+          "error": true,
+          "result": "Error executing tool update_section: Expected source in page@revision#sN format"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "lumen-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 30 (дней). Удалять ежедневные выгрузки в регионе EU необходимо после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней.",
+            "source": "lumen-decision@1#s1",
+            "request_id": "update-ru-lumen-guide-1"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"lumen-guide\",\n  \"revision\": 2,\n  \"section\": 1,\n  \"url\": \"/p/lumen-guide/v2.html#s1\",\n  \"source\": \"lumen-decision@1#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 10293,
+        "completion_tokens": 431
+      },
+      "elapsed_s": 44.652
+    },
+    "reader": {
+      "answer": "Ежедневные выгрузки в регионе EU должны удаляться после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней. Действующая русская инструкция: [Lumen · Хранение выгрузок](/p/lumen-guide/v2.html#s1).",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "удалять ежедневные выгрузки в регионе EU",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"lumen-guide\",\n  \"sec\": 1,\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"heading\": \"Срок хранения\",\n  \"revision\": 2,\n  \"excerpt\": \"Для EU действует значение 30 (дней). Удалять ежедневные выгрузки в регионе EU необходимо после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней.\",\n  \"url\": \"/p/lumen-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"lumen-decision\",\n  \"sec\": 1,\n  \"title\": \"Lumen | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU daily exports must expire after 14 days.\",\n  \"url\": \"/p/lumen-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"vega-decision\",\n  \"sec\": 1,\n  \"title\": \"Vega | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU health probes must be scheduled every 12 minutes.\",\n  \"url\": \"/p/vega-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 1,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU gateway requests must time out after 45 seconds.\",\n  \"url\": \"/p/orbit-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "lumen-guide",
+            "sec": 1,
+            "revision": 2
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"lumen-guide\",\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"lang\": \"ru\",\n  \"revision\": 2,\n  \"url\": \"/p/lumen-guide/v2.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Срок хранения\",\n      \"body\": \"Для EU действует значение 30 (дней). Удалять ежедневные выгрузки в регионе EU необходимо после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней.\",\n      \"source\": \"lumen-decision@1#s1\",\n      \"changed\": 2\n    }\n  ]\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2899,
+        "completion_tokens": 158
+      },
+      "elapsed_s": 22.89
+    }
+  },
+  {
+    "service": "orbit",
+    "engine": "xerj",
+    "checks": {
+      "unit": true,
+      "one_revision": true,
+      "new_value": true,
+      "old_removed": false,
+      "scope": true,
+      "source": true,
+      "neighbor_intact": true,
+      "visible": true,
+      "reader_value": true,
+      "reader_unit": true,
+      "reader_link": false,
+      "writer_read_source": true,
+      "reader_searched": true,
+      "reader_read_target": false
+    },
+    "passed": false,
+    "writer": {
+      "answer": "Ссылка на обновлённый раздел: [orbit-guide](/p/orbit-guide/v2.html#s1).  \nРегион: EU, число: 90, единица: секунды.",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "EU, Orbit, response time",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 1,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU gateway requests must time out after 45 seconds.\",\n  \"url\": \"/p/orbit-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 2,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/orbit-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"orbit-guide\",\n  \"sec\": 1,\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"heading\": \"Время ожидания ответа\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 90 (секунд).\",\n  \"url\": \"/p/orbit-guide/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-draft\",\n  \"sec\": 1,\n  \"title\": \"Orbit | US proposal\",\n  \"heading\": \"Draft\",\n  \"revision\": 1,\n  \"excerpt\": \"Unapproved proposal, US only. Suggested value: 90.\",\n  \"url\": \"/p/orbit-draft/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-guide\",\n  \"sec\": 2,\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 1,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/orbit-guide/v1.html#s2\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "orbit-decision",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"orbit-decision\",\n  \"title\": \"Orbit | Approved EU decision\",\n  \"lang\": \"en\",\n  \"revision\": 1,\n  \"url\": \"/p/orbit-decision/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Approved policy\",\n      \"body\": \"EU gateway requests must time out after 45 seconds.\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "outline",
+          "args": {
+            "doc": "orbit-guide"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"orbit-guide\",\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/orbit-guide/v1.html\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Время ожидания ответа\"\n    },\n    {\n      \"sec\": 2,\n      \"heading\": \"Эскалация\"\n    }\n  ]\n}"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "orbit-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 90 (секунд). Согласно решению EU, шлюз должен отвечать в течение 45 секунд. Регион: EU, число: 90, единица: секунды.",
+            "source": "/p/orbit-decision/v1.html#s1",
+            "request_id": "update-123"
+          },
+          "error": true,
+          "result": "Error executing tool update_section: Expected source in page@revision#sN format"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "orbit-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 90 (секунд). Согласно решению EU, шлюз должен отвечать в течение 45 секунд. Регион: EU, число: 90, единица: секунды.",
+            "source": "orbit-decision@1#s1",
+            "request_id": "update-123"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"orbit-guide\",\n  \"revision\": 2,\n  \"section\": 1,\n  \"url\": \"/p/orbit-guide/v2.html#s1\",\n  \"source\": \"orbit-decision@1#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8444,
+        "completion_tokens": 376
+      },
+      "elapsed_s": 37.408
+    },
+    "reader": {
+      "answer": "Согласно действующей русской инструкции, в регионе EU время ожидания ответа шлюза составляет **45 секунд**. Это значение указано в решении EU, которое имеет приоритет над проектными документами.\n\nРаздел с информацией: `/p/orbit-decision/v1.html#s1`",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "Orbit, ответ шлюза в регионе EU",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"orbit-guide\",\n  \"sec\": 1,\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"heading\": \"Время ожидания ответа\",\n  \"revision\": 2,\n  \"excerpt\": \"Для EU действует значение 90 (секунд). Согласно решению EU, шлюз должен отвечать в течение 45 секунд. Регион: EU, число: 90, единица: секунды.\",\n  \"url\": \"/p/orbit-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 2,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/orbit-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"orbit-guide\",\n  \"sec\": 2,\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 2,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/orbit-guide/v2.html#s2\"\n}\n{\n  \"doc\": \"orbit-decision\",\n  \"sec\": 1,\n  \"title\": \"Orbit | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU gateway requests must time out after 45 seconds.\",\n  \"url\": \"/p/orbit-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"orbit-draft\",\n  \"sec\": 1,\n  \"title\": \"Orbit | US proposal\",\n  \"heading\": \"Draft\",\n  \"revision\": 1,\n  \"excerpt\": \"Unapproved proposal, US only. Suggested value: 90.\",\n  \"url\": \"/p/orbit-draft/v1.html#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1627,
+        "completion_tokens": 119
+      },
+      "elapsed_s": 15.389
+    }
+  },
+  {
+    "service": "mira",
+    "engine": "xerj",
+    "checks": {
+      "unit": true,
+      "one_revision": true,
+      "new_value": true,
+      "old_removed": true,
+      "scope": true,
+      "source": true,
+      "neighbor_intact": true,
+      "visible": true,
+      "reader_value": true,
+      "reader_unit": true,
+      "reader_link": true,
+      "writer_read_source": true,
+      "reader_searched": true,
+      "reader_read_target": false
+    },
+    "passed": false,
+    "writer": {
+      "answer": "Согласно решению, для региона EU в пакетах допускается 80 записей. Обновленный раздел русской статьи mira-guide: [ссылка на сохранённый раздел](/p/mira-guide/v2.html#s1).",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "EU, Mira, records per package",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"mira-decision\",\n  \"sec\": 1,\n  \"title\": \"Mira | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU ingestion batches accept at most 80 records.\",\n  \"url\": \"/p/mira-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"mira-decision\",\n  \"sec\": 2,\n  \"title\": \"Mira | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/mira-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"mira-guide\",\n  \"sec\": 1,\n  \"title\": \"Mira · Пакетная загрузка\",\n  \"heading\": \"Максимальный размер пакета\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 100 (записей).\",\n  \"url\": \"/p/mira-guide/v1.html#s1\"\n}\n{\n  \"doc\": \"mira-guide\",\n  \"sec\": 2,\n  \"title\": \"Mira · Пакетная загрузка\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 1,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/mira-guide/v1.html#s2\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "mira-decision",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"mira-decision\",\n  \"title\": \"Mira | Approved EU decision\",\n  \"lang\": \"en\",\n  \"revision\": 1,\n  \"url\": \"/p/mira-decision/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Approved policy\",\n      \"body\": \"EU ingestion batches accept at most 80 records.\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "mira-guide",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"mira-guide\",\n  \"title\": \"Mira · Пакетная загрузка\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/mira-guide/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Максимальный размер пакета\",\n      \"body\": \"Для EU действует значение 100 (записей).\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "mira-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 80 (записей).",
+            "source": "/p/mira-decision/v1.html#s1",
+            "request_id": "update_mira_guide_eu_records"
+          },
+          "error": true,
+          "result": "Error executing tool update_section: Expected source in page@revision#sN format"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "mira-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "Для EU действует значение 80 (записей).",
+            "source": "mira-decision@1#s1",
+            "request_id": "update_mira_guide_eu_records"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"mira-guide\",\n  \"revision\": 2,\n  \"section\": 1,\n  \"url\": \"/p/mira-guide/v2.html#s1\",\n  \"source\": \"mira-decision@1#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8403,
+        "completion_tokens": 318
+      },
+      "elapsed_s": 36.725
+    },
+    "reader": {
+      "answer": "Согласно действующей русской инструкции, для региона EU в пакете может помещаться **80 записей**. Это указано в разделе **\"Максимальный размер пакета\"** (раздел 1, страница mira-guide). \n\nОтносительный URL из инструмента для прочитанной редакции: `/p/mira-guide/v2.html#s1`",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "Mira, пакет для региона EU",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"mira-guide\",\n  \"sec\": 1,\n  \"title\": \"Mira · Пакетная загрузка\",\n  \"heading\": \"Максимальный размер пакета\",\n  \"revision\": 2,\n  \"excerpt\": \"Для EU действует значение 80 (записей).\",\n  \"url\": \"/p/mira-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"mira-decision\",\n  \"sec\": 2,\n  \"title\": \"Mira | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/mira-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"vega-guide\",\n  \"sec\": 1,\n  \"title\": \"Vega · Частота опроса\",\n  \"heading\": \"Интервал опроса\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 20 (минут).\",\n  \"url\": \"/p/vega-guide/v1.html#s1\"\n}\n{\n  \"doc\": \"mira-decision\",\n  \"sec\": 1,\n  \"title\": \"Mira | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU ingestion batches accept at most 80 records.\",\n  \"url\": \"/p/mira-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"mira-guide\",\n  \"sec\": 2,\n  \"title\": \"Mira · Пакетная загрузка\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 2,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/mira-guide/v2.html#s2\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1587,
+        "completion_tokens": 130
+      },
+      "elapsed_s": 19.188
+    }
+  },
+  {
+    "service": "vega",
+    "engine": "xerj",
+    "checks": {
+      "unit": true,
+      "one_revision": true,
+      "new_value": true,
+      "old_removed": true,
+      "scope": true,
+      "source": true,
+      "neighbor_intact": true,
+      "visible": true,
+      "reader_value": true,
+      "reader_unit": true,
+      "reader_link": false,
+      "writer_read_source": true,
+      "reader_searched": true,
+      "reader_read_target": false
+    },
+    "passed": false,
+    "writer": {
+      "answer": "Регион: EU, число: 12, единица: минут. Ссылка на сохранённый раздел: [https://example.com/p/vega-guide/v2.html#s1](https://example.com/p/vega-guide/v2.html#s1)",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "EU, Vega, check frequency",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"vega-decision\",\n  \"sec\": 2,\n  \"title\": \"Vega | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/vega-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"vega-guide\",\n  \"sec\": 1,\n  \"title\": \"Vega · Частота опроса\",\n  \"heading\": \"Интервал опроса\",\n  \"revision\": 1,\n  \"excerpt\": \"Для EU действует значение 20 (минут).\",\n  \"url\": \"/p/vega-guide/v1.html#s1\"\n}\n{\n  \"doc\": \"vega-decision\",\n  \"sec\": 1,\n  \"title\": \"Vega | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU health probes must be scheduled every 12 minutes.\",\n  \"url\": \"/p/vega-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"vega-guide\",\n  \"sec\": 2,\n  \"title\": \"Vega · Частота опроса\",\n  \"heading\": \"Эскалация\",\n  \"revision\": 1,\n  \"excerpt\": \"При расхождении с договором обратитесь к дежурному инженеру.\",\n  \"url\": \"/p/vega-guide/v1.html#s2\"\n}\n{\n  \"doc\": \"vega-draft\",\n  \"sec\": 1,\n  \"title\": \"Vega | US proposal\",\n  \"heading\": \"Draft\",\n  \"revision\": 1,\n  \"excerpt\": \"Unapproved proposal, US only. Suggested value: 20.\",\n  \"url\": \"/p/vega-draft/v1.html#s1\"\n}"
+        },
+        {
+          "tool": "read_section",
+          "args": {
+            "doc": "vega-decision",
+            "sec": 1
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"vega-decision\",\n  \"title\": \"Vega | Approved EU decision\",\n  \"lang\": \"en\",\n  \"revision\": 1,\n  \"url\": \"/p/vega-decision/v1.html#s1\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Approved policy\",\n      \"body\": \"EU health probes must be scheduled every 12 minutes.\",\n      \"source\": null,\n      \"changed\": 1\n    }\n  ]\n}"
+        },
+        {
+          "tool": "outline",
+          "args": {
+            "doc": "vega-guide"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"vega-guide\",\n  \"title\": \"Vega · Частота опроса\",\n  \"lang\": \"ru\",\n  \"revision\": 1,\n  \"url\": \"/p/vega-guide/v1.html\",\n  \"sections\": [\n    {\n      \"sec\": 1,\n      \"heading\": \"Интервал опроса\"\n    },\n    {\n      \"sec\": 2,\n      \"heading\": \"Эскалация\"\n    }\n  ]\n}"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "vega-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "EU: 12 минут (12 минут).",
+            "source": "/p/vega-decision/v1.html#s1",
+            "request_id": "update-vega-guide-1"
+          },
+          "error": true,
+          "result": "Error executing tool update_section: Expected source in page@revision#sN format"
+        },
+        {
+          "tool": "update_section",
+          "args": {
+            "doc": "vega-guide",
+            "sec": 1,
+            "base_revision": 1,
+            "body": "EU: 12 минут (12 минут).",
+            "source": "vega-decision@1#s1",
+            "request_id": "update-vega-guide-1"
+          },
+          "error": false,
+          "result": "{\n  \"id\": \"vega-guide\",\n  \"revision\": 2,\n  \"section\": 1,\n  \"url\": \"/p/vega-guide/v2.html#s1\",\n  \"source\": \"vega-decision@1#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8345,
+        "completion_tokens": 302
+      },
+      "elapsed_s": 36.584
+    },
+    "reader": {
+      "answer": "Согласно действующей русской инструкции, проверки состояния в регионе EU должны запускаться каждые 12 минут. Это указано в разделе 1 документа \"Vega | Approved EU decision\" (документ: vega-decision, раздел: 1). Относительный URL: `/p/vega-decision/v1.html#s1`.",
+      "trace": [
+        {
+          "tool": "search_sections",
+          "args": {
+            "query": "проверки состояния в регионе EU",
+            "limit": 5
+          },
+          "error": false,
+          "result": "{\n  \"doc\": \"lumen-guide\",\n  \"sec\": 1,\n  \"title\": \"Lumen · Хранение выгрузок\",\n  \"heading\": \"Срок хранения\",\n  \"revision\": 2,\n  \"excerpt\": \"Для EU действует значение 30 (дней). Удалять ежедневные выгрузки в регионе EU необходимо после истечения срока хранения, установленного решением. Срок хранения составляет 14 дней.\",\n  \"url\": \"/p/lumen-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"orbit-guide\",\n  \"sec\": 1,\n  \"title\": \"Orbit · Тайм-аут запроса\",\n  \"heading\": \"Время ожидания ответа\",\n  \"revision\": 2,\n  \"excerpt\": \"Для EU действует значение 90 (секунд). Согласно решению EU, шлюз должен отвечать в течение 45 секунд. Регион: EU, число: 90, единица: секунды.\",\n  \"url\": \"/p/orbit-guide/v2.html#s1\"\n}\n{\n  \"doc\": \"vega-decision\",\n  \"sec\": 1,\n  \"title\": \"Vega | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU health probes must be scheduled every 12 minutes.\",\n  \"url\": \"/p/vega-decision/v1.html#s1\"\n}\n{\n  \"doc\": \"atlas-decision\",\n  \"sec\": 2,\n  \"title\": \"Atlas | Approved EU decision\",\n  \"heading\": \"Applicability\",\n  \"revision\": 1,\n  \"excerpt\": \"Only applies to customer-facing EU production.\",\n  \"url\": \"/p/atlas-decision/v1.html#s2\"\n}\n{\n  \"doc\": \"lumen-decision\",\n  \"sec\": 1,\n  \"title\": \"Lumen | Approved EU decision\",\n  \"heading\": \"Approved policy\",\n  \"revision\": 1,\n  \"excerpt\": \"EU daily exports must expire after 14 days.\",\n  \"url\": \"/p/lumen-decision/v1.html#s1\"\n}"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1664,
+        "completion_tokens": 125
+      },
+      "elapsed_s": 20.345
+    }
+  }
+]

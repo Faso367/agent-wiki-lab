@@ -1,0 +1,4331 @@
+{
+  "corpus_pages": 512,
+  "questions": 64,
+  "scope": {
+    "xerj": "512 documents",
+    "rovo": "site Confluence, no server-side space filter"
+  },
+  "settings": {
+    "questions_sha256": "ff8aa9cce7902fad736fb096e1eebd899d5926af8b7da052c9683b9f8ed7be40",
+    "shuffle_seed": 20261122,
+    "timeout_s": 90,
+    "parallelism": 1,
+    "rovo_limit": 10,
+    "scored_depth": 5
+  },
+  "rows": [
+    {
+      "id": "qst_0259",
+      "query": "In the disconnected installer package for the on prem product, what are the mandatory items that must exist at the top level of the extracted folder before the installer will accept it (including the signed inventory files and the human instructions file)?",
+      "gold": [
+        "confluence:dsid_fc009de77554459b89e6b4340e8eca82"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.9555830114986748,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_5e3f4795283b450fa87df01d141c253b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fc009de77554459b89e6b4340e8eca82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bcd64eef5c3746eb8842ab0776b2b47a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_662978747ddb47338b62f7d87c391ca2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bb945f3de9b4f6aa834d2941fae625f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1447.9601669881959,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_fc009de77554459b89e6b4340e8eca82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5e3f4795283b450fa87df01d141c253b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bcd64eef5c3746eb8842ab0776b2b47a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8957abc2e7284e90afd84091c34f6be1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_541249fb272d45c5af40deb081b13422"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0384",
+      "query": "In Runtime 1.22 on Hosted (Shared) pools, we're seeing burst-time p99 latency spikes that correlate with KV compaction activity. Which two compaction knobs should oncall tune first (and by roughly what amount), and what's the emergency kill-switch plus the specific counters/metrics to check to confirm the disable took effect?",
+      "gold": [
+        "confluence:dsid_f877499fe0e946199ceb2486f0ad5ec3",
+        "confluence:dsid_f8b651a683044ad8964f34f881c63152"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 2073.744000022998,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f8b651a683044ad8964f34f881c63152"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f877499fe0e946199ceb2486f0ad5ec3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3a16481691294f0ab3c79061ef479e8c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e960a27631cd4a7a96b6cd5496b46842"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1cbe3508430147b8bbbd8e4cdbc0d395"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 4.631625022739172,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f8b651a683044ad8964f34f881c63152"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f877499fe0e946199ceb2486f0ad5ec3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3a16481691294f0ab3c79061ef479e8c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e960a27631cd4a7a96b6cd5496b46842"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2619d808a84f469e96acb6934752a177"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0013",
+      "query": "What is the recommended two-stage process for rotating the signing credentials used by GPU image build and promotion pipelines, including how to cut over safely and roll back if something goes wrong?",
+      "gold": [
+        "confluence:dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.3489579800516367,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f1b208f3637e4987aeab371242a5bea5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a043ee4ad3a64469b4ec9e385cd7a292"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5e3f4795283b450fa87df01d141c253b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_190f09dc9b954d4da2f8c5e7f60efc03"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1428.2010420283768,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f1b208f3637e4987aeab371242a5bea5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9d31196b6f0a44cb9ebdf0c2dbc7bff4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_00df430ce40342daaf2da4c532c7b9ac"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4ae828d202524c8c844882dbb5ea0ffc"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_610d2c74a60441e886fcc39e351a4176"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0174",
+      "query": "What are the required fields that each entry in the contract conformance results ledger must include?",
+      "gold": [
+        "confluence:dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1084.521125012543,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_04b24bf957c047f4b7d8ceefdfde8290"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_726584c8258a49908de16829114291d7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0a506b5c95f8413ba17b81f9967948be"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ea93dc80bb1b49e79fb522f4d64cb786"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 13.036040996666998,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_04b24bf957c047f4b7d8ceefdfde8290"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_117e5a150aa94adc86295786bd6b7843"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ea93dc80bb1b49e79fb522f4d64cb786"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e3d7de5b970d47f09b4707963a67671d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0458",
+      "query": "How often should facilities water common-area snake plants and ZZ plants in the office?",
+      "gold": [
+        "confluence:dsid_8cb8070d41604b67901e60da07713d92"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.373290991177782,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_8cb8070d41604b67901e60da07713d92"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c1a652436b2e4c949f5de9f5da227cd7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_be4b992c9bd941c5942e600ef769f6e4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5323aeb9f89042c9a62505d409c4d94a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1009.3181249976624,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_8cb8070d41604b67901e60da07713d92"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_be4b992c9bd941c5942e600ef769f6e4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_190f09dc9b954d4da2f8c5e7f60efc03"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c1a652436b2e4c949f5de9f5da227cd7"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0442",
+      "query": "What is Redwood Inference's end-to-end process for making a production change (definition, required approvals, pre-deploy verification, deploy execution, customer/internal communications, and rollback/post-change requirements) for the Hosted API and Console?",
+      "gold": [
+        "confluence:dsid_319db001cae246bbbb16f441b64d9b82",
+        "confluence:dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "confluence:dsid_2ee4c1a35c5f4dba9b49efd3e97dd265",
+        "confluence:dsid_2db615f2f6f14cbfae67c62b3c976b27",
+        "confluence:dsid_914d75cb27ee4a06b3f69e445d715ab4",
+        "confluence:dsid_81a7e3e0204d4c6984e0a503d5423314",
+        "confluence:dsid_bf7e0df04c8748458b5515c864c48609",
+        "confluence:dsid_190d9732b59b411d8a6bcc59fd61b309"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1093.3655830158386,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_81a7e3e0204d4c6984e0a503d5423314"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_319db001cae246bbbb16f441b64d9b82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eca097630e444b2d8e30da4b08fcbc4e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2db615f2f6f14cbfae67c62b3c976b27"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        },
+        "xerj": {
+          "ms": 4.985833016689867,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_319db001cae246bbbb16f441b64d9b82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2db615f2f6f14cbfae67c62b3c976b27"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f369fbb45ff5487aa85c4a186e8d2418"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ee4c1a35c5f4dba9b49efd3e97dd265"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.375
+        }
+      }
+    },
+    {
+      "id": "qst_0183",
+      "query": "What are the specific gate thresholds used to automatically decide whether a compressed model variant is allowed, canaried, or blocked, including the limits for chat similarity drop, code pass rate change, retrieval embedding quality, and acceptable latency and cost changes?",
+      "gold": [
+        "confluence:dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.5238330019637942,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_693c023c88264795a7e98c7737e6459e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7716a1855b944c280d2e5be2ea360e9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_80a4e96eed2942be93c328964e1d327f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1e37b56bf2414fb38b31bf4a14b8c7de"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1628.6280839995015,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_80a4e96eed2942be93c328964e1d327f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7716a1855b944c280d2e5be2ea360e9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_837220266405423a92a18a9c0f9ead44"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_693c023c88264795a7e98c7737e6459e"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0142",
+      "query": "What uptime and latency service level targets are stated for the hosted versus reserved/dedicated LLM inference offering in the SaaS go-to-market brief?",
+      "gold": [
+        "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1093.3347920072265,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab890e8c9e5f4e2b9aff04bdfb4c47b7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_67716cf2ec8a417fa97c4360765e686a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e851421837a3469eb91263bf8bc4009c"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.583375001559034,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab890e8c9e5f4e2b9aff04bdfb4c47b7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e851421837a3469eb91263bf8bc4009c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_53ee475f4ec3415593d36fcb47f6dc71"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_67716cf2ec8a417fa97c4360765e686a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0110",
+      "query": "What is the rollout ramp schedule and time window used for the canary phase when validating adaptive degradation behavior in the Redwood serving runtime?",
+      "gold": [
+        "confluence:dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 5.904791003558785,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_2e4183d040b341cf843366e2c15402af"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c58b2e202f484b83e46ea092bc5d92"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_871ba5ad74e841978453faa38e578e65"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d8a2e9ad3e6d49dc8d6fad709bfa80a9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1e37b56bf2414fb38b31bf4a14b8c7de"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1036.535291990731,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_2e4183d040b341cf843366e2c15402af"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_05ddb5e264cc45628d0c5e96ccf369f3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4c4655caa0b044579c0660bbe0aedaee"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c58b2e202f484b83e46ea092bc5d92"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0216",
+      "query": "In our cross team outage process, what is the expected update rhythm for the shared incident channel from the first message through containment, including when the interval should be shortened?",
+      "gold": [
+        "confluence:dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1282.8042919863947,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_c175ab6b52fe4226baac85697c562c7d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_46c5b1be508c4871bd3451925a690a46"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6120bc11462d4180a63a20a4ab10cae1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 8.163416991010308,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_46c5b1be508c4871bd3451925a690a46"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f414575e1be3419f81264a2a479c40bc"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c175ab6b52fe4226baac85697c562c7d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0386",
+      "query": "In the Feb 2026 SEV-2 incident where the Dedicated autoscaler in us-west stopped scaling above minimum because its metrics query returned no data, what was the underlying cause and what hotfix restored scale-out?",
+      "gold": [
+        "confluence:dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 5.126709002070129,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f369fbb45ff5487aa85c4a186e8d2418"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eea56bf657db4ee59d2f2e7f234ae077"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1499.3842919939198,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ad148b222d31473f8a3d279d679935eb"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5456aa0adea747a583372fad17ee7fd2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ec406aef8d0342c78ae27025670daedf"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f369fbb45ff5487aa85c4a186e8d2418"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0358",
+      "query": "Finance is seeing QTD blended $/1M output tokens jump. How do we verify whether its a rate card change or a streaming output token undercount, and what is the backfill and escalation path?",
+      "gold": [
+        "confluence:dsid_330be20dd4224d8dad24eb633121ba06",
+        "confluence:dsid_c70d63e14aa84195aec43820c018f8b9",
+        "confluence:dsid_f952b60df24d4736b831a643993aee67",
+        "confluence:dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1090.0252089777496,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_330be20dd4224d8dad24eb633121ba06"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f952b60df24d4736b831a643993aee67"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c70d63e14aa84195aec43820c018f8b9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7d347905549f4456b0d2226b47e4aa68"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 8.280292007839307,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_330be20dd4224d8dad24eb633121ba06"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c70d63e14aa84195aec43820c018f8b9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f952b60df24d4736b831a643993aee67"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0294",
+      "query": "In the internal workshop where we deliberately sabotage a client library via a local proxy to test resiliency, what exact fields are required in the saved run trace file format (the per-span identifiers, timestamps, and the single flattened attributes string) so our baseline and failure runs are comparable?",
+      "gold": [
+        "confluence:dsid_77351104a57140ac8e065d0a6bcf2046"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.2397920119110495,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_77351104a57140ac8e065d0a6bcf2046"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0523364d9c71413f918c55b771e1df8a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c58b2e202f484b83e46ea092bc5d92"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_04b24bf957c047f4b7d8ceefdfde8290"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac19aec588004fb8805388cc92c6a667"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 811.2690840207506,
+          "positions": [],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0404",
+      "query": "We saw quality regressions after enabling an INT8/mixed-precision variant and suspect KV-cache rounding on long-context requests. What request header can we set as a quick mitigation to bypass the KV cache, and in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant?",
+      "gold": [
+        "confluence:dsid_ad70fa7335294e2988193e2a6645a5ba",
+        "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1371.5637080022134,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eeef92a8a13d4ece8551037c576abb07"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a1a962c966a147d1a43c3ce2db546167"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9d7b751d01b94c28b33faed656150a40"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2bdebf14c5ba4015a1ed46fdb02308ea"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        },
+        "xerj": {
+          "ms": 8.895250008208677,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ad70fa7335294e2988193e2a6645a5ba"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_008a3dc1bf7f4e278de0012ad8d402d3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_05051735be2a4063af1426477a048601"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0236",
+      "query": "In our multi-customer GPU inference environment, what is the CI-based tool that spins up a sandbox network setup and drives synthetic traffic patterns to catch regressions in outbound routing and bandwidth fairness before infrastructure changes land?",
+      "gold": [
+        "confluence:dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.357292004395276,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_189583d1a5ed4513a4d709a037098a24"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3061a2cbe8704ba18cde65da33546cd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_06682ba9559b4b2192ffe6dee7a7abba"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007cbc5fb0fd42a49290950884e2b72a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c30f1dd9b6604c93b3145ba8d245eef3"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1316.9115829805378,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_189583d1a5ed4513a4d709a037098a24"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7e310efb4b9547b9a2bf5b3854089aa6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e20b3fecb4334e258ff067e9d2fb5578"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9d31196b6f0a44cb9ebdf0c2dbc7bff4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_06682ba9559b4b2192ffe6dee7a7abba"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0040",
+      "query": "What are the retention time windows for these lightweight kernel state snapshots (in-memory cache, indexed store, and any cold archive) used for post-incident diagnostics?",
+      "gold": [
+        "confluence:dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1160.5116249993443,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_43ecb807903f46848e8d099b6c8beb04"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_91bfc763b506488e8d7206f039d717cc"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3b132442b47b45aaa7fbe3e87bab0040"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9d7b751d01b94c28b33faed656150a40"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2bdebf14c5ba4015a1ed46fdb02308ea"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 3.1920830078888685,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_43ecb807903f46848e8d099b6c8beb04"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2bdebf14c5ba4015a1ed46fdb02308ea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_91bfc763b506488e8d7206f039d717cc"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9afe19eed10e47368e88935fb9441ce0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6381dec9177748658f392e8600d7cf1d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0128",
+      "query": "When are production changes normally allowed to be deployed, and what are the default business hours change window?",
+      "gold": [
+        "confluence:dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.458958013448864,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_fd4e3fe51764479eb9012d643b8949c0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a043ee4ad3a64469b4ec9e385cd7a292"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bcd64eef5c3746eb8842ab0776b2b47a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_806f8c24a1424a20a99e5ba1f8734aa9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "rovo": {
+          "ms": 992.9637500026729,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_452dc45d76754cbca8a3674170599633"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eca097630e444b2d8e30da4b08fcbc4e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2b7848a8491749f8b9b9a8c13f78445f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_81a7e3e0204d4c6984e0a503d5423314"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0011",
+      "query": "How long is the validity period for the telemetry driven runbook author certification from the operator training bootcamp?",
+      "gold": [
+        "confluence:dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1016.9839159934781,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_46a4cb87db414e769f2df86f01626948"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3d2d8d7033f544ba8c422b8f64b3a1ae"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f3d829bcab7447309b6227c2197f7920"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_968fe8069f9f4e00ae2f9c36bdea4340"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d016a04fc8904e778dd3f97d50574a58"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 9.620666009141132,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_46a4cb87db414e769f2df86f01626948"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b6405388375640ac9d2906f55579d584"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ba7e9853fa0d4617b2042229de159531"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_04b24bf957c047f4b7d8ceefdfde8290"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a9118793128f43b4851b7bddf49bfd5f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0016",
+      "query": "What is the company policy for how long contractor access should last by default before it expires, according to the access and permissions playbook?",
+      "gold": [
+        "confluence:dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.998042023042217,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_be4b992c9bd941c5942e600ef769f6e4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f74a0b9d21dd40bca0f1c01166fd7ecb"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d55a579cafe240a49ca391f7516dea35"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "rovo": {
+          "ms": 1013.1277919863351,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_944280d3e953446ead301635c5cf5823"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0431",
+      "query": "What is the procedure for an emergency rollback of a Serving Runtime release (Hosted and Dedicated)?",
+      "gold": [
+        "confluence:dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "confluence:dsid_840703a1cc37438a84e9beb68029d80b"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 972.4607499956619,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6e3b7ad413142019dbb5a5fed07f548"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_840703a1cc37438a84e9beb68029d80b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6807c651b55546559733c7c6f8dc133d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_452dc45d76754cbca8a3674170599633"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.180000015068799,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_840703a1cc37438a84e9beb68029d80b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6e3b7ad413142019dbb5a5fed07f548"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_452dc45d76754cbca8a3674170599633"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6807c651b55546559733c7c6f8dc133d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0150",
+      "query": "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?",
+      "gold": [
+        "confluence:dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 5.568291991949081,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_366c1b7dff3845ea8b3df3296fa2ef90"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0d3b94e48caf4e9fba2cca266ae162cb"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a5968363fce4f79af38d7702465a121"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_50fb7015e24548cfb1a9d47efdb18a02"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1131.1193339934107,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_39ef64d769cf4386809c6d714e927a1b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_15122caf4c5945f78b2ee95f2c4fd77b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_cf1ca3d134e14f09847fea9cb8e647ef"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0400",
+      "query": "For a shadow evaluation running in a private deployment using an evaluator sidecar, what fields are required in each shadow probe telemetry record, and which run-lifecycle telemetry events must the evaluator emit?",
+      "gold": [
+        "confluence:dsid_10a7359bb6ad4b959ad2171abdb9f620",
+        "confluence:dsid_b52a8760cae1451a9504edcf9ff58e31"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1234.5849169942085,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_10a7359bb6ad4b959ad2171abdb9f620"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b52a8760cae1451a9504edcf9ff58e31"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5377b11074ee40e8901e71c83148b4a4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9d31196b6f0a44cb9ebdf0c2dbc7bff4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb2dfc0082b640e498b19444447ba77a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.693958003073931,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_b52a8760cae1451a9504edcf9ff58e31"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5377b11074ee40e8901e71c83148b4a4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c64184524aa34fba926dd6d436f8fbe7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_321eee36f1ba4c32bec31bb014f55fd4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ff61636ea5404a558646474711a50460"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        }
+      }
+    },
+    {
+      "id": "qst_0441",
+      "query": "For an enterprise Redwood Private deployment upgrade, what is the complete go/no-go gate (required validations, required approvals, and required customer communications) mandated by Redwood's internal standards?",
+      "gold": [
+        "confluence:dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "confluence:dsid_89889daf6b89426ca90049f313d4324f",
+        "confluence:dsid_e2327ad35ceb466489dad854770739bf",
+        "confluence:dsid_871b6712caf44f8bbfea4d8a15e436b6",
+        "confluence:dsid_80e095c2dc1745af86b80d24e27a9857",
+        "confluence:dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.4453329832758754,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bb945f3de9b4f6aa834d2941fae625f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab890e8c9e5f4e2b9aff04bdfb4c47b7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_80e095c2dc1745af86b80d24e27a9857"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.6666666666666666
+        },
+        "rovo": {
+          "ms": 959.147874993505,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bb945f3de9b4f6aa834d2941fae625f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_80e095c2dc1745af86b80d24e27a9857"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9c8cb10d65324c03a8ededbd98c1b058"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "qst_0023",
+      "query": "In the customer docs plan for the opt-in quantization profile feature, what are the review roles required before the documentation can be merged?",
+      "gold": [
+        "confluence:dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 988.0873330112081,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a2983978ba0d4d70a795eb7e13de8670"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_73e736d5c25a4695832347cba3d99118"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_008a3dc1bf7f4e278de0012ad8d402d3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7e2f04f426574c4d884d9413fe1c53ef"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_693c023c88264795a7e98c7737e6459e"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 3.2521249959245324,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a2983978ba0d4d70a795eb7e13de8670"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_349368e5db344128829fcb8bb5a2db8c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_73e736d5c25a4695832347cba3d99118"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_985f34ae9acc4db19d73629b61f19a0b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_662978747ddb47338b62f7d87c391ca2"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0353",
+      "query": "Before we re-enable paging and hook perf-canary into rollout gates, what exact baseline key, min-sample requirements, and incident-bot dedupe key should we enforce to avoid another false-positive alert storm?",
+      "gold": [
+        "confluence:dsid_a3f94972391244f38ef773c05926af83",
+        "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.830875018844381,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3014a0f5bca247e6bccce760322f4eb9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_101b296f5f194f308c142270369b63a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8e13a9abd85f4e808e47a3f690ce63da"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1320.8019580051769,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4c4655caa0b044579c0660bbe0aedaee"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_101b296f5f194f308c142270369b63a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_48fa74f556aa4f0c9996b53170693e8f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0234",
+      "query": "During the rollout of the new version of our inference cost optimizer, what is the suggested traffic ramp schedule for moving from a small canary to full production, including the minimum stabilization wait between increases?",
+      "gold": [
+        "confluence:dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1507.2497079963796,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_05ddb5e264cc45628d0c5e96ccf369f3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ad58457891774bd7ba480e0bcd13df3a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4c4655caa0b044579c0660bbe0aedaee"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a54a2f8553804d34986f42a49907b9d0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ce26a1937a3405d9d041a48bddf3a61"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 3.389374993275851,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ce26a1937a3405d9d041a48bddf3a61"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c0f157e3c1f4fe6a6d3cb64584793d0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5bee7dd9c25a4e5bac61f7629961da21"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab6467c257164916b30b89f1a1cc1b0f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_25b0de9bfa854d3c9acfa961555c9d45"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0338",
+      "query": "Who owns the mixed-priority cgroup and soft-quota playbook for multi-tenant inference, and what is the best email or Slack channel to contact for rollout coordination?",
+      "gold": [
+        "confluence:dsid_06682ba9559b4b2192ffe6dee7a7abba"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.704208018258214,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_06682ba9559b4b2192ffe6dee7a7abba"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a45508ed7957443e80d0708d9325e517"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_76eb1a75a6044eac815a050378f9d214"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6120bc11462d4180a63a20a4ab10cae1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_498f1031f7214a13a5b85110b2156870"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1081.66154200444,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_06682ba9559b4b2192ffe6dee7a7abba"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4c4655caa0b044579c0660bbe0aedaee"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_498f1031f7214a13a5b85110b2156870"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c49fd9692342db94d06b25194b38ff"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6cdb6ea1cb644d16a70147a462efc46f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0035",
+      "query": "For regulated customer private VPC deployments, what is the tenant-facing monthly availability target for the inference endpoint?",
+      "gold": [
+        "confluence:dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1030.4348339850549,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c73cb76b80a41edb4959db4b1e7308b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_078bc16cda264477a369ab95fd6c97c6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_541249fb272d45c5af40deb081b13422"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_370aa37572db4327bebd334f1929514c"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.949749997351319,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c73cb76b80a41edb4959db4b1e7308b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_67716cf2ec8a417fa97c4360765e686a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_078bc16cda264477a369ab95fd6c97c6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0022",
+      "query": "What is the recommended liability cap language in the procurement legal triage SOP for vendor contracts (including the key exceptions and how the cap amount is determined)?",
+      "gold": [
+        "confluence:dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.369874987285584,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f2f019c122154edc8b21f56879661043"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_df1a8c93d30649c49212a293a11ef76b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d2aab63a16084496bc2a35b85403d1f7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1019.3650830187835,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_f2f019c122154edc8b21f56879661043"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fd91c991108243199826352dd4c5983d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0bc316a6010c40b3a630b013f07e3a21"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0210",
+      "query": "What is the numeric rule that turns recent automated test slice failure patterns plus latency and vector drift into a single 0 to 100 release risk score that decides whether to proceed, slow down, pause, or revert a staged model change?",
+      "gold": [
+        "confluence:dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1373.5294170037378,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_b4bd83b46612452e858bc02b380082e2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_543ca6caa93c4591a882241c9e22b8c6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fb0b3f81e17f4ee5907ca16fa40255c4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_80a4e96eed2942be93c328964e1d327f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ce26a1937a3405d9d041a48bddf3a61"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 4.443875019205734,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_b4bd83b46612452e858bc02b380082e2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f895236521014020b010bb8ec68be05c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3014a0f5bca247e6bccce760322f4eb9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4aa972d3a0114014abe09dc539ef6db3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ea2a8779110d4f08addd4f875d98afe6"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0439",
+      "query": "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?",
+      "gold": [
+        "confluence:dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "confluence:dsid_faf3246a6ce845e6b5df0ae52f439399",
+        "confluence:dsid_bf7e79dc1331447598c4eebdc5d2897d",
+        "confluence:dsid_a277ed2dc74c4bad82bc71b534b6356f"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.618124988861382,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_4e016427a93c49ffadd31fcdc1dca792"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b812119f69234a43941a34b2f3c9527b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_699c1e62f55643d1a344be92afe48dd3"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.4
+        },
+        "rovo": {
+          "ms": 993.4540829854086,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a277ed2dc74c4bad82bc71b534b6356f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6d87679242a842b08571001f0b3d2dc1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f0ca40bae00b41b597b95f5a6ecbd29f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c0f157e3c1f4fe6a6d3cb64584793d0"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.2
+        }
+      }
+    },
+    {
+      "id": "qst_0102",
+      "query": "What are the default significance threshold and minimum sample size guidelines for deciding whether a model regression is actionable in the causal regression investigation handbook?",
+      "gold": [
+        "confluence:dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1025.3714160062373,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8debffaf177f4158b9ffb8d7488bd4e3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_80a4e96eed2942be93c328964e1d327f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fb0b3f81e17f4ee5907ca16fa40255c4"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 4.8846660065464675,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8debffaf177f4158b9ffb8d7488bd4e3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fb0b3f81e17f4ee5907ca16fa40255c4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_39e95dd057f948c69f01bf24bc925339"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0327",
+      "query": "In the Unified Inference Consumption Paradigm overview, what are the two unit primitives used for billing, and where is the referenced Confluence file that contains the pricing catalog and token definitions for them?",
+      "gold": [
+        "confluence:dsid_69e745b76aa34eab8721ba0c88482ec0"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.7882500037085265,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_69e745b76aa34eab8721ba0c88482ec0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_245eff82c42a47c98cb2d4bde4d06b05"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7aa5bdaebe44ce2a2401a1568f27a08"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1041.5119170211256,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_69e745b76aa34eab8721ba0c88482ec0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_83be3d4049ea4f32bed7639766454683"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_245eff82c42a47c98cb2d4bde4d06b05"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab890e8c9e5f4e2b9aff04bdfb4c47b7"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0447",
+      "query": "What is Redwood Inference's complete end-to-end process for shipping an emergency serving-runtime hotfix to production (Hosted + Dedicated), including required approvals, checklists, rollout/rollback steps, and mandatory customer communications?",
+      "gold": [
+        "confluence:dsid_452dc45d76754cbca8a3674170599633",
+        "confluence:dsid_e5fe3fd0cf444668a64970ec00818f46",
+        "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c",
+        "confluence:dsid_8c3d5e26a1c841199d3bcd7aea5d495e",
+        "confluence:dsid_6807c651b55546559733c7c6f8dc133d",
+        "confluence:dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 977.698083006544,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_452dc45d76754cbca8a3674170599633"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6e3b7ad413142019dbb5a5fed07f548"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6807c651b55546559733c7c6f8dc133d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_840703a1cc37438a84e9beb68029d80b"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        },
+        "xerj": {
+          "ms": 3.874333982821554,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_452dc45d76754cbca8a3674170599633"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_319db001cae246bbbb16f441b64d9b82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c0f157e3c1f4fe6a6d3cb64584793d0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ac2fdba09cc24cd98ba60f5da114780c"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "qst_0435",
+      "query": "How many weekly status updates for Project Orion marked the project as 'At Risk'?",
+      "gold": [
+        "confluence:dsid_7fc490f8522b486c8f4b665d5189066c",
+        "confluence:dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "confluence:dsid_ce60931a1aea428b8186228ee40bb497",
+        "confluence:dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "confluence:dsid_431b0713c42847bbac15f3354776db68",
+        "confluence:dsid_8116cb3e580543d7bde1c57df351a3f3"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.765124983852729,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a134a3fd3c244a52a8d3e1ff515fdf58"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7fc490f8522b486c8f4b665d5189066c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ce60931a1aea428b8186228ee40bb497"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_03e22d519f9b40a5ac61a03e5c4620d3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_431b0713c42847bbac15f3354776db68"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.8333333333333334
+        },
+        "rovo": {
+          "ms": 2090.0750840082765,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_ce60931a1aea428b8186228ee40bb497"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_431b0713c42847bbac15f3354776db68"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a134a3fd3c244a52a8d3e1ff515fdf58"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_03e22d519f9b40a5ac61a03e5c4620d3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8116cb3e580543d7bde1c57df351a3f3"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "id": "qst_0221",
+      "query": "When someone new starts at Redwood Inference, what is the target turnaround time for getting them fully set up with accounts and tools in North America versus Europe/Asia-Pacific?",
+      "gold": [
+        "confluence:dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1081.9453749863897,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_370aa37572db4327bebd334f1929514c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_53ee475f4ec3415593d36fcb47f6dc71"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c52f59a57b9405a9fd26c83d43bd2f9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8acd787b4e0645e49caf3a0bead09a8f"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 3.232000017305836,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c52f59a57b9405a9fd26c83d43bd2f9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6ce9da58805d4e8db736bf312ac39bd5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8e13a9abd85f4e808e47a3f690ce63da"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ae08c300c49b44048c7820966e9561e2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e7c1187b2f06432d975b797c8334c58b"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0397",
+      "query": "In the March 2025 incident where eu-west-1 ran short on GPUs and the router temporarily failed eligible traffic over to us-east-1, what conditions/thresholds triggered enabling region fallback and which traffic was excluded? Also, per the region pinning policy, what kinds of request/response data are considered 'customer content' that must stay in-region for residency-strict traffic?",
+      "gold": [
+        "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "confluence:dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.0803330009803176,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2f9fc4d58a7040d5be8929c9c2ef7d48"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1194.5073340029921,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d3edd63b9ec54523ad12bd9be3d7e996"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb2dfc0082b640e498b19444447ba77a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0197",
+      "query": "During a major production outage, what is the prescribed sequence of actions for the first 60 to 90 minutes, from opening the live coordination call through confirming the service is healthy again?",
+      "gold": [
+        "confluence:dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1149.1326249961276,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_158f9bbb596d4f9aa267d5ff4f24513b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_46c5b1be508c4871bd3451925a690a46"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a45508ed7957443e80d0708d9325e517"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_79be362c5f9c4b43bc6d8d623e28866c"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 7.7234579948708415,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_46c5b1be508c4871bd3451925a690a46"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ba7e9853fa0d4617b2042229de159531"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6120bc11462d4180a63a20a4ab10cae1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0437",
+      "query": "Across all incident postmortems, which Redwood team was assigned the most follow-up action items?",
+      "gold": [
+        "confluence:dsid_15a9d93cc59c4241a97a7e72f749a216",
+        "confluence:dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "confluence:dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "confluence:dsid_ac94dcaf2e1e4674b2351a8b4177db9e",
+        "confluence:dsid_98943148c00b42db859ec2d84649fe04",
+        "confluence:dsid_ed145ed8c9234a6681359188e2f43345",
+        "confluence:dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "confluence:dsid_d373a0708d4144d684e495c52c16448a",
+        "confluence:dsid_ec406aef8d0342c78ae27025670daedf"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.313333025900647,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_1000f44d69e1459c9e4d67233f7481b1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_01eaeaf6045941beaeaf74e6170aceea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c175ab6b52fe4226baac85697c562c7d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_67c969aea3dd43b19d22580a09eba2a1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "rovo": {
+          "ms": 1060.2042090031318,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ff703ca648084e8c90eb628f2a4e650a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_64928bf38d764e21aa3300e67ee461b7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_79be362c5f9c4b43bc6d8d623e28866c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c0f157e3c1f4fe6a6d3cb64584793d0"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0433",
+      "query": "What is Redwood Inference's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?",
+      "gold": [
+        "confluence:dsid_8c92178c254d467c9854db67aac7c9be",
+        "confluence:dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "confluence:dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "confluence:dsid_97b25b6f83c542e7b81d6504b5653dcb",
+        "confluence:dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "confluence:dsid_74ebb73359364bc791707a92a3227e3a"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 935.3141659812536,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_8c92178c254d467c9854db67aac7c9be"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_cf06e75be4f94156ac338f62e3ee028b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a043ee4ad3a64469b4ec9e385cd7a292"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3e991a24c7bc4e91b99eb5846b927558"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_610d2c74a60441e886fcc39e351a4176"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        },
+        "xerj": {
+          "ms": 7.9825839784462005,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_a043ee4ad3a64469b4ec9e385cd7a292"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1e5b33d8f1ef4f89bfcc7e0fa785e827"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3e991a24c7bc4e91b99eb5846b927558"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_cf06e75be4f94156ac338f62e3ee028b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_74ebb73359364bc791707a92a3227e3a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        }
+      }
+    },
+    {
+      "id": "qst_0382",
+      "query": "In the Feb 12, 2026 incident where daily usage exports briefly overstated output tokens (while invoices stayed correct), what was the root cause and what mitigation + follow-up steps were taken to prevent a repeat?",
+      "gold": [
+        "confluence:dsid_7d347905549f4456b0d2226b47e4aa68"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 7.211332995211706,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7d347905549f4456b0d2226b47e4aa68"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c49fd9692342db94d06b25194b38ff"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e3d7de5b970d47f09b4707963a67671d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3014a0f5bca247e6bccce760322f4eb9"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1198.7436250201426,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7d347905549f4456b0d2226b47e4aa68"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_190f09dc9b954d4da2f8c5e7f60efc03"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f6c49fd9692342db94d06b25194b38ff"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1cbe3508430147b8bbbd8e4cdbc0d395"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0445",
+      "query": "\"What is the complete required content of a production rollout plan for introducing a new LLM model version on Redwood Inference (hosted, dedicated, and private), including required metrics/thresholds, approvals, rollback/fallback rules, and customer-facing communications?\"",
+      "gold": [
+        "confluence:dsid_2b7848a8491749f8b9b9a8c13f78445f",
+        "confluence:dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "confluence:dsid_a54a2f8553804d34986f42a49907b9d0",
+        "confluence:dsid_e82eadf0700f4e6db8eecc460c4cac44",
+        "confluence:dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "confluence:dsid_04e98bd61eac4ec89e3fc13c38de1b8e",
+        "confluence:dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "confluence:dsid_2dab968306594149a14ef27b2a1641d1"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1255.552374990657,
+          "positions": [],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 8.316833002027124,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_cb0d800639e84d68ae035596c7f6f1f8"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2b7848a8491749f8b9b9a8c13f78445f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_319db001cae246bbbb16f441b64d9b82"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.375
+        }
+      }
+    },
+    {
+      "id": "qst_0406",
+      "query": "In the Feb 25, 2026 incident where Redwood Console traces showed missing child spans/incomplete request graphs for about two hours while the underlying services were healthy, what caused the span drops in the ingestion pipeline, and what immediate mitigation was used to bring drop rates back to baseline?",
+      "gold": [
+        "confluence:dsid_3638bd02227d4882ad0605f1e8b767c0"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 8.212334010750055,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_3638bd02227d4882ad0605f1e8b767c0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3b132442b47b45aaa7fbe3e87bab0040"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1e37b56bf2414fb38b31bf4a14b8c7de"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1100.9419579932,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_3638bd02227d4882ad0605f1e8b767c0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3b132442b47b45aaa7fbe3e87bab0040"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_64928bf38d764e21aa3300e67ee461b7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ff703ca648084e8c90eb628f2a4e650a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0025",
+      "query": "In the enterprise tenant cutover go-live runbook, what latency threshold triggers escalation based on the 95th percentile being too high, and how long does it need to be sustained?",
+      "gold": [
+        "confluence:dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1064.2435000045225,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9c8cb10d65324c03a8ededbd98c1b058"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_421474f920f146dd8d5b1edb489c396b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8598a77dcbb3497db4253de9ef7883f3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab6467c257164916b30b89f1a1cc1b0f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b812119f69234a43941a34b2f3c9527b"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.649042003322393,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_421474f920f146dd8d5b1edb489c396b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab6467c257164916b30b89f1a1cc1b0f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9c8cb10d65324c03a8ededbd98c1b058"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ab890e8c9e5f4e2b9aff04bdfb4c47b7"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0408",
+      "query": "After the Feb 22, 2026 SEV-2 where Console rollout actions caused a rollback loop, which HTTP status code was wrongly treated as retryable, what server-side idempotency change was added for rollback requests, and (per the Dedicated staged rollouts audit-log spec) which service must emit the canonical audit events and what identifiers are used to de-duplicate retries?",
+      "gold": [
+        "confluence:dsid_e190b0de0d27466fa91bfc18b0815311",
+        "confluence:dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 7.128833007300273,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_e190b0de0d27466fa91bfc18b0815311"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_53035d2eb5024effac3aafd3e6ca6e70"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3dc50b90703947d7a94413da6242fbcf"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_23e0b66b3b5049358d086fa8325cacb0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 930.0477920041885,
+          "positions": [],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0222",
+      "query": "Where can I find the internal one stop reference page that summarizes how our company handles approvals and SLAs for access requests, production changes, data retention, purchasing thresholds, vendor onboarding, and business travel, including links to the standard request templates?",
+      "gold": [
+        "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1245.762874983484,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d55a579cafe240a49ca391f7516dea35"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_81a533587f6b41709240eb5b9b7d70e0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bf88f82eb834852af83864bb6a02462"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_944280d3e953446ead301635c5cf5823"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 7.478375016944483,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_5bb8a925b2414de78011566238f8e4a8"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_81a533587f6b41709240eb5b9b7d70e0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bf88f82eb834852af83864bb6a02462"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0457",
+      "query": "Do I need approval to add a large planter or wall mounted art in a Redwood office, and what details should I include in the request?",
+      "gold": [
+        "confluence:dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.4747089927550405,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8e13a9abd85f4e808e47a3f690ce63da"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5323aeb9f89042c9a62505d409c4d94a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_662978747ddb47338b62f7d87c391ca2"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2d8ce004940447d7bec7baffcc07e1ca"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1014.9051659973338,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bf88f82eb834852af83864bb6a02462"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8cb8070d41604b67901e60da07713d92"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c52f59a57b9405a9fd26c83d43bd2f9"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0421",
+      "query": "Default TTL for the cross-account GPU warm-pool handoff handshake token?",
+      "gold": [
+        "confluence:dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "confluence:dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 917.190208012471,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b8ab9778e36543159da49dba3ad9c76d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1a22e40be91e44b8ab29d0f0ad0475a6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_932d6ca2348647c7ab5f03a005483881"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4315d193d4884a39a42ac42758b2a73a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 4.809125006431714,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b8ab9778e36543159da49dba3ad9c76d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_77bfa3002112422a92d0b13df83253e0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2bdebf14c5ba4015a1ed46fdb02308ea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f1b208f3637e4987aeab371242a5bea5"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0444",
+      "query": "What is Redwood Inference's end-to-end internal process for launching a new third-party LLM into the Hosted API model catalog-from intake to post-launch monitoring-including every required gate, owner, and artifact?",
+      "gold": [
+        "confluence:dsid_117e5a150aa94adc86295786bd6b7843",
+        "confluence:dsid_5cde26f232454906879617dab1800fae",
+        "confluence:dsid_92d0d471ddc941288bcb51b3ded6ec36",
+        "confluence:dsid_d8d194e311b9482cb38c61134b6d26fa",
+        "confluence:dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "confluence:dsid_2ad75f27c36b492f847d5b9c63492e4b"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.3215830044355243,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_117e5a150aa94adc86295786bd6b7843"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5cde26f232454906879617dab1800fae"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ad75f27c36b492f847d5b9c63492e4b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f2f019c122154edc8b21f56879661043"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_40471ba4cd3b430eab3ac0877eef0972"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.6666666666666666
+        },
+        "rovo": {
+          "ms": 1042.5518339907285,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_117e5a150aa94adc86295786bd6b7843"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5cde26f232454906879617dab1800fae"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_40471ba4cd3b430eab3ac0877eef0972"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2ad75f27c36b492f847d5b9c63492e4b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_92d0d471ddc941288bcb51b3ded6ec36"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "id": "qst_0381",
+      "query": "In the planned controlled failover game day on 2026-01-15 (Hosted API us-east → eu-west), what caused the routing automation to oscillate (flip/rollback), and what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects?",
+      "gold": [
+        "confluence:dsid_d844cc30147b49c69ea5275b4993b571",
+        "confluence:dsid_865449ae95b044768f33773263bfeaad"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1151.6248330008239,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_865449ae95b044768f33773263bfeaad"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bee22c4510914356a0763b68ece7920a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_82b66d69f7e94496a97fe9204724d66d"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 8.035584003664553,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_865449ae95b044768f33773263bfeaad"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f369fbb45ff5487aa85c4a186e8d2418"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bee22c4510914356a0763b68ece7920a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_58bdb9f3bb4241e089f4f2b102765db4"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0248",
+      "query": "In our hiring workflow, what happens when a candidate is strong but the pay we want to offer is about 20 percent above the middle of the internal range, specifically who has to approve it?",
+      "gold": [
+        "confluence:dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.7965830094181,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c52f59a57b9405a9fd26c83d43bd2f9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c81cfe79018468491a12ce869b228e7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_06464e95b7cc44de8a9677f3260c336e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8e13a9abd85f4e808e47a3f690ce63da"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_62621b87dc61431d83a122c5dc14af6f"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "rovo": {
+          "ms": 1067.4892919778358,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c52f59a57b9405a9fd26c83d43bd2f9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c81cfe79018468491a12ce869b228e7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_349368e5db344128829fcb8bb5a2db8c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_fc93ff2833a949baa8132404a86bd482"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0190",
+      "query": "In the February 2026 update to our inference tuning product, what change caused older route configuration payloads to start getting rejected with a 400 error, and what field needs to be removed to fix it?",
+      "gold": [
+        "confluence:dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1150.0959580007475,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_bc489e26e9cb4896979b10301e6d6c12"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_498f1031f7214a13a5b85110b2156870"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_23e0b66b3b5049358d086fa8325cacb0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4cab47d0bd7e47689e067d9d2b33479f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_79be362c5f9c4b43bc6d8d623e28866c"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 4.271915997378528,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_50fb7015e24548cfb1a9d47efdb18a02"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e4a14b7975ee40a7a7514baba72a734b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b02e6ce0d9814b35af846c309c25e551"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e851421837a3469eb91263bf8bc4009c"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0405",
+      "query": "For the hosted API rollout in late June 2026 that introduced the Cost-Fallback policy engine and Telemetry Normalization v1, what HTTP response header was added for downstream billing/webhook consumers to understand the fallback reason, and which fields are required in the standardized per-fallback telemetry event envelope used for cost reconciliation?",
+      "gold": [
+        "confluence:dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "confluence:dsid_9964e71da61e4a92bf3f53699cabbf95"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.429542004596442,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_b41df051e6dc46c48b36a99c366ee5c5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_928a300efbc14961a02a79404fd6d597"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2995c19427744884bbd5e6bb32759dea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9964e71da61e4a92bf3f53699cabbf95"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1080.712416995084,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_b41df051e6dc46c48b36a99c366ee5c5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9964e71da61e4a92bf3f53699cabbf95"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7716a1855b944c280d2e5be2ea360e9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_769218983da044139a1fc5a713f73249"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0270",
+      "query": "Which bank client got a temporary signoff to keep normal processing in Europe but let traffic switch to a US site only during disaster recovery drills or when the EU cluster is degraded, with payload logging turned off, and what were the start and end dates of that allowance?",
+      "gold": [
+        "confluence:dsid_33de625fcfc045dd967dbc9bdde3a8b4"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1663.8371250010096,
+          "positions": [],
+          "hit5": false,
+          "recall5": 0.0
+        },
+        "xerj": {
+          "ms": 9.206500020809472,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_33de625fcfc045dd967dbc9bdde3a8b4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d844cc30147b49c69ea5275b4993b571"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6ce9da58805d4e8db736bf312ac39bd5"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0440",
+      "query": "What is the complete SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments-including required prerequisites, security approvals, configuration steps, validation, customer communication, and ongoing operations/ownership?",
+      "gold": [
+        "confluence:dsid_385fd2388669469e87964b25d6428871",
+        "confluence:dsid_50f47a9662ea40858feb7bd975071c96",
+        "confluence:dsid_03042cec7a2344769bca5a624091092e",
+        "confluence:dsid_b96ce0f550a9437e902636a7628160ca",
+        "confluence:dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "confluence:dsid_dd0fe40a2c71489793d566e46e95bb93"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 6.813500018324703,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_dd0fe40a2c71489793d566e46e95bb93"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eba5d122d7244ffbb6c20a2487aa1017"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_610d2c74a60441e886fcc39e351a4176"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_50f47a9662ea40858feb7bd975071c96"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_89889daf6b89426ca90049f313d4324f"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.5
+        },
+        "rovo": {
+          "ms": 1635.3024170093704,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_385fd2388669469e87964b25d6428871"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dd0fe40a2c71489793d566e46e95bb93"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_50f47a9662ea40858feb7bd975071c96"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_eba5d122d7244ffbb6c20a2487aa1017"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_03042cec7a2344769bca5a624091092e"
+            }
+          ],
+          "hit5": true,
+          "recall5": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "id": "qst_0118",
+      "query": "How do we turn observed production workload patterns for inference routes into defensible latency SLO targets and cost sensitivity guidance, including clustering and profiling steps?",
+      "gold": [
+        "confluence:dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1647.7600840153173,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a0982d498384adeb435a2b3938bfd76"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dff3a886bff447ad827c10c5ae3354cc"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e20b3fecb4334e258ff067e9d2fb5578"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bc489e26e9cb4896979b10301e6d6c12"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8f0301d7b2414031b392da5566f98ce6"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 2.8687090089078993,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a0982d498384adeb435a2b3938bfd76"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5999498b04d14aaabe9dde54668fab3c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a67ade8985db4315b5bccbf30f58b0d9"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1fe64995cf124ac2ac05b5818290f33d"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8debffaf177f4158b9ffb8d7488bd4e3"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0031",
+      "query": "What is the operator procedure to put a private deployment tenant into local-only telemetry mode and how can you verify the mode afterward?",
+      "gold": [
+        "confluence:dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 2.8267909947317094,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_c198dbbcf28a4c73ad1d705809634176"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_77ac34ff7201489291a9e96cd473a698"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4142c208e3cf4acdacd0191552749ee7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007cbc5fb0fd42a49290950884e2b72a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_bcd64eef5c3746eb8842ab0776b2b47a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1055.1559160230681,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_c198dbbcf28a4c73ad1d705809634176"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_b2ba1988c02f4a67a4f91ae9c7a1f94e"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_e4a14b7975ee40a7a7514baba72a734b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_47c1ae3e429c46769e022968b19d0797"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9afe19eed10e47368e88935fb9441ce0"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0117",
+      "query": "In the PRD about adding managed orchestration for multi-model inference pipelines, what are the rollout milestones and target quarters for alpha, beta, and general availability?",
+      "gold": [
+        "confluence:dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1012.0387919887435,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_40e1a761f7644c388c1bccb73d6bd427"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4c4655caa0b044579c0660bbe0aedaee"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c5f09029b83b4b4a85850bf69a9f276c"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 3.7316670059226453,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_40e1a761f7644c388c1bccb73d6bd427"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1e37b56bf2414fb38b31bf4a14b8c7de"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a8479d80b0ab464791d538de52e2c3a0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_871ba5ad74e841978453faa38e578e65"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_92289c54d6b046c0b8495394f4951acb"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0272",
+      "query": "What is the default time window the company targets for routine internal approvals across operational requests?",
+      "gold": [
+        "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.139916982036084,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5bb8a925b2414de78011566238f8e4a8"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f74a0b9d21dd40bca0f1c01166fd7ecb"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 960.3273329848889,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_f74a0b9d21dd40bca0f1c01166fd7ecb"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4bf88f82eb834852af83864bb6a02462"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0104",
+      "query": "What is the standard amount of time a new hire buddy is expected to spend per day during the first two weeks when a long-term contractor is converted to a full-time employee?",
+      "gold": [
+        "confluence:dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1058.476125006564,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_005f7a937cad4b3cbb30d9d93199e22a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_985f34ae9acc4db19d73629b61f19a0b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_2c81cfe79018468491a12ce869b228e7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_8acd787b4e0645e49caf3a0bead09a8f"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_be4b992c9bd941c5942e600ef769f6e4"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 4.879958025412634,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_005f7a937cad4b3cbb30d9d93199e22a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_985f34ae9acc4db19d73629b61f19a0b"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5323aeb9f89042c9a62505d409c4d94a"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_be4b992c9bd941c5942e600ef769f6e4"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0021",
+      "query": "What is the expected turnaround time for security to approve access to a high risk internal tool role in Redwood's tool access governance process?",
+      "gold": [
+        "confluence:dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 3.8771250110585243,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7f0edbaa28147da807b5b85ea495bd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_961517e385ee4f2581a7ecc59a5f8037"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5bb8a925b2414de78011566238f8e4a8"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_ca6fcd21949e4dc5b0c4652ab44c454a"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1146.8540839850903,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d7f0edbaa28147da807b5b85ea495bd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_36d7605113204cdca94405cb30fc2c10"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_5aa8bd572f79433d8a972ff0d6de6ad0"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0469",
+      "query": "What noise range is considered normal in the company cafeteria during the day, and what short-term maximum is allowed at lunch?",
+      "gold": [
+        "confluence:dsid_c1a652436b2e4c949f5de9f5da227cd7"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1011.7740829882678,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_c1a652436b2e4c949f5de9f5da227cd7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_329e7ecd6b304c30b61a30e07919e008"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_dbd0e2a056a24786bf25d69d372aebd1"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_3869c2dc4f2d41fd9d6e489544d6eb16"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 7.838499994250014,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_c1a652436b2e4c949f5de9f5da227cd7"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a5968363fce4f79af38d7702465a121"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_6b51e718d41748f2831d3cd637ad9fea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a3f94972391244f38ef773c05926af83"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    },
+    {
+      "id": "qst_0252",
+      "query": "In our incident response process, what is the rule for when a quick time-boxed after-action review is acceptable instead of writing the full formal analysis, based on impact duration and whether the issue hit one customer versus many?",
+      "gold": [
+        "confluence:dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "order": [
+        "xerj",
+        "rovo"
+      ],
+      "arms": {
+        "xerj": {
+          "ms": 5.868750013178214,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_2619d808a84f469e96acb6934752a177"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_01eaeaf6045941beaeaf74e6170aceea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_00e12b6aa8814869bfaede4152d2e2e6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_4b4fa7bab8a24d2b8a14bc227bda8dea"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d6aca85bfff24f7a99cbbb971da678e6"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "rovo": {
+          "ms": 1588.860374991782,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_d62660544d75427a86018c045c16d2f4"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a45508ed7957443e80d0708d9325e517"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_d6aca85bfff24f7a99cbbb971da678e6"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_64928bf38d764e21aa3300e67ee461b7"
+            }
+          ],
+          "hit5": false,
+          "recall5": 0.0
+        }
+      }
+    },
+    {
+      "id": "qst_0394",
+      "query": "For Incident Bot v2, when responders use break-glass during a Sev0/Sev1 incident to view tenant-scoped config diffs or run privileged telemetry queries, which audit events must be emitted and how long are those audit events retained (SIEM vs immutable archive)? Also, what baseline vs break-glass permission scopes does the bot use for these reads?",
+      "gold": [
+        "confluence:dsid_9a5968363fce4f79af38d7702465a121",
+        "confluence:dsid_7c08ef109c804c0bb165184b7d78b18c"
+      ],
+      "order": [
+        "rovo",
+        "xerj"
+      ],
+      "arms": {
+        "rovo": {
+          "ms": 1141.0498330078553,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c08ef109c804c0bb165184b7d78b18c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a5968363fce4f79af38d7702465a121"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a898d2541b944cdebeec03ec9d9ba130"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_44b11e967a5f4029aebb720891f66450"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_007d2326d0824ad59bc24aa9464b8825"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        },
+        "xerj": {
+          "ms": 2.851500001270324,
+          "positions": [
+            {
+              "type": "page",
+              "id": "confluence:dsid_9a5968363fce4f79af38d7702465a121"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_7c08ef109c804c0bb165184b7d78b18c"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_a043ee4ad3a64469b4ec9e385cd7a292"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_44b11e967a5f4029aebb720891f66450"
+            },
+            {
+              "type": "page",
+              "id": "confluence:dsid_1816bc5f2784455f9150b371ddf7f9ef"
+            }
+          ],
+          "hit5": true,
+          "recall5": 1.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "xerj": {
+      "attempts": 64,
+      "hit5": 56,
+      "recall5": 0.79921875,
+      "errors": {},
+      "outside_or_unmapped": 0,
+      "positions": 320,
+      "successful_calls": {
+        "p50_ms": 5.718521002563648,
+        "p95_ms": 8.895250008208677
+      },
+      "failed_calls": {}
+    },
+    "rovo": {
+      "attempts": 64,
+      "hit5": 52,
+      "recall5": 0.7557291666666667,
+      "errors": {},
+      "outside_or_unmapped": 0,
+      "positions": 300,
+      "successful_calls": {
+        "p50_ms": 1087.2731669951463,
+        "p95_ms": 1647.7600840153173
+      },
+      "failed_calls": {}
+    },
+    "paired": {
+      "attempted": 64,
+      "without_error": 64,
+      "xerj_only": 6,
+      "rovo_only": 2,
+      "hit5_xerj_minus_rovo_pp": 6.25,
+      "hit5_delta_ci95_pp": [
+        -1.5625,
+        14.0625
+      ]
+    }
+  }
+}

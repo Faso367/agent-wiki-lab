@@ -1,0 +1,130 @@
+{
+  "A01": {
+    "task": "qst_0272",
+    "arm": "xerj"
+  },
+  "A02": {
+    "task": "qst_0382",
+    "arm": "rovo"
+  },
+  "A03": {
+    "task": "qst_0382",
+    "arm": "xerj"
+  },
+  "A04": {
+    "task": "qst_0104",
+    "arm": "rovo"
+  },
+  "A05": {
+    "task": "qst_0031",
+    "arm": "rovo"
+  },
+  "A06": {
+    "task": "qst_0150",
+    "arm": "xerj"
+  },
+  "A07": {
+    "task": "qst_0031",
+    "arm": "xerj"
+  },
+  "A08": {
+    "task": "qst_0400",
+    "arm": "rovo"
+  },
+  "A09": {
+    "task": "qst_0259",
+    "arm": "xerj"
+  },
+  "A10": {
+    "task": "qst_0442",
+    "arm": "xerj"
+  },
+  "A11": {
+    "task": "qst_0439",
+    "arm": "rovo"
+  },
+  "A12": {
+    "task": "qst_0150",
+    "arm": "rovo"
+  },
+  "A13": {
+    "task": "qst_0400",
+    "arm": "xerj"
+  },
+  "A14": {
+    "task": "qst_0433",
+    "arm": "rovo"
+  },
+  "A15": {
+    "task": "qst_0441",
+    "arm": "rovo"
+  },
+  "A16": {
+    "task": "qst_0404",
+    "arm": "xerj"
+  },
+  "A17": {
+    "task": "qst_0183",
+    "arm": "xerj"
+  },
+  "A18": {
+    "task": "qst_0259",
+    "arm": "rovo"
+  },
+  "A19": {
+    "task": "qst_0252",
+    "arm": "rovo"
+  },
+  "A20": {
+    "task": "qst_0433",
+    "arm": "xerj"
+  },
+  "A21": {
+    "task": "qst_0272",
+    "arm": "rovo"
+  },
+  "A22": {
+    "task": "qst_0104",
+    "arm": "xerj"
+  },
+  "A23": {
+    "task": "qst_0442",
+    "arm": "rovo"
+  },
+  "A24": {
+    "task": "qst_0381",
+    "arm": "xerj"
+  },
+  "A25": {
+    "task": "qst_0439",
+    "arm": "xerj"
+  },
+  "A26": {
+    "task": "qst_0381",
+    "arm": "rovo"
+  },
+  "A27": {
+    "task": "qst_0440",
+    "arm": "xerj"
+  },
+  "A28": {
+    "task": "qst_0441",
+    "arm": "xerj"
+  },
+  "A29": {
+    "task": "qst_0183",
+    "arm": "rovo"
+  },
+  "A30": {
+    "task": "qst_0252",
+    "arm": "xerj"
+  },
+  "A31": {
+    "task": "qst_0440",
+    "arm": "rovo"
+  },
+  "A32": {
+    "task": "qst_0404",
+    "arm": "rovo"
+  }
+}

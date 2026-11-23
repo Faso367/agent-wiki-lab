@@ -1,0 +1,66 @@
+{
+  "qst_0381": {
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Указаны шумные сигналы и недостаточные ограничения, ENG-2422 и 2026-02-07. E1/E3 подтверждают ответ. Отдельной короткой дословной опоры на каждое утверждение нет."
+    }
+  },
+  "qst_0400": {
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": true,
+      "reason": "Все 14 требуемых полей и три события с их исходными пояснениями или параметрами скопированы из соответствующих E1/E2. Необязательные поля не включены."
+    }
+  },
+  "qst_0404": {
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Все три значения правильны и имеют ссылки. Дополнительные tiers действительно есть в E2, но пользователь их не запрашивал. Заголовки столбцов и значения приведены отдельно, цитата не связывает их со строкой маршрута."
+    }
+  },
+  "qst_0439": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Получено шесть вместо четырёх. E1/E2 и E3/E4 посчитаны раздельно, хотя это две пары выдержек из одних и тех же документов. E5 описывает fallback как причину сбоя. Июльская статья пропущена. Цитаты не обосновывают число подходящих статей."
+    }
+  },
+  "qst_0433": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Охвачены приоритет Tier 0/1, переоценка при ухудшении, отметки времени, производные токены и отзыв доступа. Не задан семидневный срок перекрытия. Модель исчерпала 2000 токенов; часть пунктов пересказана со ссылками."
+    }
+  },
+  "qst_0440": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Версия 2.8.0+ теперь правильно отнесена к Private. Пропущены открытие и закрытие внутренней Jira-заявки с необходимыми идентификаторами и подтверждениями, а также TLS 1.2+. В ответе появились незапрошенные вопросы о времени действий заказчика."
+    }
+  },
+  "qst_0441": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Модель вернула 30-дневный бюджет и #eng-releases. Оставила общую ссылку на принятие риска и пропустила обязательное условие ниже 25%. Полное дословное обоснование каждого утверждения отсутствует."
+    }
+  },
+  "qst_0442": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Приведены 20% запаса ёмкости, пороги rollback и час наблюдения. Пропущены порядок регионов, продолжительность canary и отдельные действия Console, поэтому полный процесс не восстановлен. Только определение явно процитировано целиком."
+    }
+  }
+}

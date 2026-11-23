@@ -1,0 +1,130 @@
+{
+  "A06": {
+    "pass": false,
+    "reason": "The two required scopes are correct. Its additional claim diagnoses this 401 log pattern as indicating a scope problem. The cited runbook lists an unset or expired key as root causes, so the stronger diagnostic claim is unsupported."
+  },
+  "A12": {
+    "pass": false,
+    "reason": "Both permission scopes are missing. The answer confuses credential locations with permission scopes."
+  },
+  "A05": {
+    "pass": false,
+    "reason": "The CLI and verification are correct. The required control-plane procedure is missing."
+  },
+  "A07": {
+    "pass": false,
+    "reason": "The answer mentions applying configuration but omits the required control-plane selection no-external-telemetry."
+  },
+  "A01": {
+    "pass": true,
+    "reason": "The cited SLA lists exactly 72 business hours for routine approvals."
+  },
+  "A21": {
+    "pass": false,
+    "reason": "Six months is the delegation term. The required approval service level is 72 business hours."
+  },
+  "A09": {
+    "pass": false,
+    "reason": "All three filenames appear, but the signed-bundle condition and approved break-glass exception are missing."
+  },
+  "A18": {
+    "pass": false,
+    "reason": "The response describes a different bundle checklist and omits all three required top-level filenames."
+  },
+  "A02": {
+    "pass": false,
+    "reason": "The cause and follow-up actions are identified, but pausing exports, backfilling corrected exports and resuming generation are missing."
+  },
+  "A03": {
+    "pass": false,
+    "reason": "The cause and follow-up actions are identified, but pausing exports, backfilling corrected exports and resuming generation are missing."
+  },
+  "A04": {
+    "pass": false,
+    "reason": "The attempt timed out without returning a final answer."
+  },
+  "A22": {
+    "pass": false,
+    "reason": "A role-competency milestone of 60 days is unrelated to the required buddy allocation of one hour per day."
+  },
+  "A19": {
+    "pass": false,
+    "reason": "The exact under-30-minute threshold, known cause, effective mitigation and Sev1 rule are absent. The cited passages are status-update examples."
+  },
+  "A30": {
+    "pass": false,
+    "reason": "The answer treats 72 hours as impact duration, omitting the under-30-minute criterion, known cause, effective mitigation and Sev1 rule."
+  },
+  "A17": {
+    "pass": false,
+    "reason": "All numerical thresholds are present. The stated decision rule omits that any primary breach blocks release and that a secondary warning after passing primaries requires manual review."
+  },
+  "A29": {
+    "pass": false,
+    "reason": "The retrieval threshold is wrong; required compilation, MAP, latency and cost limits and release decisions are missing. The cited S9 only describes versioning."
+  },
+  "A10": {
+    "pass": false,
+    "reason": "Timed out before returning the required end-to-end procedure."
+  },
+  "A23": {
+    "pass": false,
+    "reason": "The response names process stages but omits their operational requirements, including the weekday window, approval rules, capacity headroom, deployment and rollback criteria."
+  },
+  "A24": {
+    "pass": false,
+    "reason": "No final answer before the 180-second deadline."
+  },
+  "A26": {
+    "pass": false,
+    "reason": "No final answer before the 180-second deadline."
+  },
+  "A11": {
+    "pass": false,
+    "reason": "Only one incident is counted. The frozen corpus contains four qualifying writeups."
+  },
+  "A25": {
+    "pass": false,
+    "reason": "Only one incident is counted. The frozen corpus contains four qualifying writeups."
+  },
+  "A14": {
+    "pass": false,
+    "reason": "The response focuses on cadence and storage. The planned cutover and overlap procedures, verification window and emergency sequence are missing."
+  },
+  "A20": {
+    "pass": false,
+    "reason": "The outline omits the cutover sequence, tier-specific monitoring windows, old-credential retirement, and emergency break-glass duration and tier order."
+  },
+  "A27": {
+    "pass": false,
+    "reason": "Intake, approvals and private deployment configuration are covered, but Hosted/Dedicated configuration, validation, customer handoff and ongoing ownership are missing."
+  },
+  "A31": {
+    "pass": false,
+    "reason": "No final answer before the 180-second deadline."
+  },
+  "A15": {
+    "pass": false,
+    "reason": "The partial checklist omits supported upgrade path, customer-side approver/operator, local rollback artifacts and concrete customer communications."
+  },
+  "A28": {
+    "pass": false,
+    "reason": "Sign-offs and a GO record are described, but specific preflight validations, supported version path and required customer communications are missing."
+  },
+  "A08": {
+    "pass": false,
+    "reason": "The field list comes from a different schema and workflow stages replace the required eval.run.start, eval.run.progress and eval.run.complete events."
+  },
+  "A13": {
+    "pass": false,
+    "reason": "The answer gives probe registration fields and an artifacts envelope rather than the full telemetry record and three named run events."
+  },
+  "A16": {
+    "pass": false,
+    "reason": "The header is incorrect and the maximum sequence length is missing."
+  },
+  "A32": {
+    "pass": false,
+    "reason": "Both routing thresholds are correct. The required cache-bypass header X-RW-Cache-Mode: bypass is wrong."
+  }
+}

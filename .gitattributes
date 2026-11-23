@@ -1,0 +1,5 @@
+# Keep the frozen CSV byte-for-byte for the recorded manifest digest.
+benchmarks/pages.csv -text whitespace=cr-at-eol
+# Preserve whitespace from verbatim synthetic source material.
+results/**/sources/*.html -text whitespace=-blank-at-eol
+*.pdf binary

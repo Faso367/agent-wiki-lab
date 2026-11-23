@@ -1,0 +1,18 @@
+{
+  "A06": {
+    "task": "qst_0150",
+    "arm": "xerj"
+  },
+  "A09": {
+    "task": "qst_0259",
+    "arm": "xerj"
+  },
+  "A12": {
+    "task": "qst_0150",
+    "arm": "rovo"
+  },
+  "A18": {
+    "task": "qst_0259",
+    "arm": "rovo"
+  }
+}

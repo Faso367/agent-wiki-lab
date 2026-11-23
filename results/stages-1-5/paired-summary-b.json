@@ -1,0 +1,180 @@
+{
+  "tasks": {
+    "read": {
+      "arms": {
+        "xerj": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 1825,
+          "completion_tokens": 113,
+          "tokens_per_success": 1938.0,
+          "p50_ms": 14265.470667014597,
+          "p95_ms": 14265.470667014597
+        },
+        "confluence": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 1468,
+          "completion_tokens": 106,
+          "tokens_per_success": 1574.0,
+          "p50_ms": 13884.725417010486,
+          "p95_ms": 13884.725417010486
+        }
+      },
+      "shared_successes": 1,
+      "token_totals_shared_successes": {
+        "xerj": 1938,
+        "confluence": 1574
+      },
+      "shared_success_xerj": {
+        "p50_ms": 14265.470667014597,
+        "p95_ms": 14265.470667014597
+      },
+      "shared_success_confluence": {
+        "p50_ms": 13884.725417010486,
+        "p95_ms": 13884.725417010486
+      },
+      "p50_difference_ci95_ms": null
+    },
+    "edit": {
+      "arms": {
+        "xerj": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 6869,
+          "completion_tokens": 307,
+          "tokens_per_success": 7176.0,
+          "p50_ms": 102246.2934590003,
+          "p95_ms": 102246.2934590003
+        },
+        "confluence": {
+          "attempts": 1,
+          "successful": 0,
+          "prompt_tokens": 5370,
+          "completion_tokens": 371,
+          "tokens_per_success": null,
+          "p50_ms": 65074.73287501489,
+          "p95_ms": 65074.73287501489
+        }
+      },
+      "shared_successes": 0,
+      "token_totals_shared_successes": {},
+      "shared_success_xerj": {},
+      "shared_success_confluence": {},
+      "p50_difference_ci95_ms": null
+    }
+  },
+  "search": {
+    "xerj": {
+      "queries": 3,
+      "errors": 0,
+      "hit5": 3,
+      "mean_recall5": 1.0,
+      "p50_ms": 9.608082997146994,
+      "p95_ms": 11.254958022618666
+    },
+    "confluence": {
+      "queries": 3,
+      "errors": 0,
+      "hit5": 3,
+      "mean_recall5": 1.0,
+      "p50_ms": 688.1667079869658,
+      "p95_ms": 823.4434590267483
+    }
+  },
+  "attempts": [
+    {
+      "fixture": "orbitbench26n22b",
+      "case": "orbit-eu",
+      "source_file": "paired-english-b.json",
+      "arm": "xerj",
+      "task": "read",
+      "passed": true,
+      "ms": 14265.470667014597,
+      "prompt_tokens": 1825,
+      "completion_tokens": 113,
+      "tool_payloads": {
+        "search": {
+          "calls": 1,
+          "tokens": 357
+        },
+        "read": {
+          "calls": 1,
+          "tokens": 127
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22b",
+      "case": "orbit-eu",
+      "source_file": "paired-english-b.json",
+      "arm": "xerj",
+      "task": "edit",
+      "passed": true,
+      "ms": 102246.2934590003,
+      "prompt_tokens": 6869,
+      "completion_tokens": 307,
+      "tool_payloads": {
+        "search": {
+          "calls": 2,
+          "tokens": 800
+        },
+        "read": {
+          "calls": 3,
+          "tokens": 399
+        },
+        "update": {
+          "calls": 1,
+          "tokens": 68
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22b",
+      "case": "orbit-eu",
+      "source_file": "paired-english-b.json",
+      "arm": "confluence",
+      "task": "read",
+      "passed": true,
+      "ms": 13884.725417010486,
+      "prompt_tokens": 1468,
+      "completion_tokens": 106,
+      "tool_payloads": {
+        "search": {
+          "calls": 1,
+          "tokens": 188
+        },
+        "read": {
+          "calls": 1,
+          "tokens": 110
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22b",
+      "case": "orbit-eu",
+      "source_file": "paired-english-b.json",
+      "arm": "confluence",
+      "task": "edit",
+      "passed": false,
+      "ms": 65074.73287501489,
+      "prompt_tokens": 5370,
+      "completion_tokens": 371,
+      "tool_payloads": {
+        "search": {
+          "calls": 2,
+          "tokens": 376
+        },
+        "read": {
+          "calls": 3,
+          "tokens": 325
+        },
+        "update": {
+          "calls": 1,
+          "tokens": 55
+        }
+      }
+    }
+  ],
+  "tool_payload_tokens_counted_separately": true
+}

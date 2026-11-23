@@ -1,0 +1,305 @@
+{
+  "complete_pairs": 16,
+  "attempts": 32,
+  "timing_checks": {
+    "checked": 32,
+    "invalid": 0,
+    "max_unattributed_ms": 5000,
+    "negative_rounding_tolerance_ms": 1,
+    "timeout_cleanup_tolerance_ms": 5000,
+    "attempts": [
+      {
+        "task": "qst_0150",
+        "arm": "xerj",
+        "ms": 42026.81745798327,
+        "model_ms": 41995.64725000528,
+        "tools_ms": 30.880000937031582,
+        "unattributed_ms": 0.2902070409618318,
+        "valid": true
+      },
+      {
+        "task": "qst_0150",
+        "arm": "rovo",
+        "ms": 50643.53566701175,
+        "model_ms": 48365.300376026426,
+        "tools_ms": 2277.915792015847,
+        "unattributed_ms": 0.3194989694748074,
+        "valid": true
+      },
+      {
+        "task": "qst_0031",
+        "arm": "rovo",
+        "ms": 180005.15212499886,
+        "model_ms": 178010.56400002562,
+        "tools_ms": 1993.8640830223449,
+        "unattributed_ms": 0.7240419508889318,
+        "valid": true
+      },
+      {
+        "task": "qst_0031",
+        "arm": "xerj",
+        "ms": 97987.88749999949,
+        "model_ms": 97954.09079093952,
+        "tools_ms": 33.28724799212068,
+        "unattributed_ms": 0.5094610678497702,
+        "valid": true
+      },
+      {
+        "task": "qst_0272",
+        "arm": "xerj",
+        "ms": 104652.51791701303,
+        "model_ms": 104609.4806669862,
+        "tools_ms": 42.34366602031514,
+        "unattributed_ms": 0.6935840065125376,
+        "valid": true
+      },
+      {
+        "task": "qst_0272",
+        "arm": "rovo",
+        "ms": 161125.11079199612,
+        "model_ms": 159033.5645810119,
+        "tools_ms": 2090.115374972811,
+        "unattributed_ms": 1.430836011422798,
+        "valid": true
+      },
+      {
+        "task": "qst_0259",
+        "arm": "rovo",
+        "ms": 180001.60454097204,
+        "model_ms": 177976.1098329618,
+        "tools_ms": 2023.9322080160491,
+        "unattributed_ms": 1.562499994179234,
+        "valid": true
+      },
+      {
+        "task": "qst_0259",
+        "arm": "xerj",
+        "ms": 180010.61658398248,
+        "model_ms": 179818.07599999593,
+        "tools_ms": 188.65720901521854,
+        "unattributed_ms": 3.8833749713376164,
+        "valid": true
+      },
+      {
+        "task": "qst_0382",
+        "arm": "xerj",
+        "ms": 180009.09516599495,
+        "model_ms": 179785.18537405762,
+        "tools_ms": 220.49204201903194,
+        "unattributed_ms": 3.417749918298796,
+        "valid": true
+      },
+      {
+        "task": "qst_0382",
+        "arm": "rovo",
+        "ms": 98066.5511249972,
+        "model_ms": 93935.89254198014,
+        "tools_ms": 4124.785584019264,
+        "unattributed_ms": 5.872998997801915,
+        "valid": true
+      },
+      {
+        "task": "qst_0104",
+        "arm": "rovo",
+        "ms": 180005.84016702487,
+        "model_ms": 177447.85704195965,
+        "tools_ms": 2548.502290941542,
+        "unattributed_ms": 9.480834123678505,
+        "valid": true
+      },
+      {
+        "task": "qst_0104",
+        "arm": "xerj",
+        "ms": 70602.0902080054,
+        "model_ms": 70389.31925100042,
+        "tools_ms": 211.5352920081932,
+        "unattributed_ms": 1.2356649967841804,
+        "valid": true
+      },
+      {
+        "task": "qst_0252",
+        "arm": "xerj",
+        "ms": 180001.65358302183,
+        "model_ms": 179924.06191604096,
+        "tools_ms": 76.33899903157726,
+        "unattributed_ms": 1.252667949302122,
+        "valid": true
+      },
+      {
+        "task": "qst_0252",
+        "arm": "rovo",
+        "ms": 180001.82358399616,
+        "model_ms": 177367.77174996678,
+        "tools_ms": 2632.8958759841044,
+        "unattributed_ms": 1.1559580452740192,
+        "valid": true
+      },
+      {
+        "task": "qst_0183",
+        "arm": "rovo",
+        "ms": 180001.7107920139,
+        "model_ms": 177549.65050000465,
+        "tools_ms": 2451.3662090175785,
+        "unattributed_ms": 0.6940829916857183,
+        "valid": true
+      },
+      {
+        "task": "qst_0183",
+        "arm": "xerj",
+        "ms": 180016.21741600684,
+        "model_ms": 179968.06833302253,
+        "tools_ms": 46.50237501482479,
+        "unattributed_ms": 1.6467079694848508,
+        "valid": true
+      },
+      {
+        "task": "qst_0442",
+        "arm": "xerj",
+        "ms": 180002.45083298068,
+        "model_ms": 179959.36183497543,
+        "tools_ms": 40.71079200366512,
+        "unattributed_ms": 2.3782060015946627,
+        "valid": true
+      },
+      {
+        "task": "qst_0442",
+        "arm": "rovo",
+        "ms": 180002.19900000957,
+        "model_ms": 177308.38287604274,
+        "tools_ms": 2692.2351659741253,
+        "unattributed_ms": 1.58095799270086,
+        "valid": true
+      },
+      {
+        "task": "qst_0381",
+        "arm": "rovo",
+        "ms": 180127.68175001838,
+        "model_ms": 176171.73999999068,
+        "tools_ms": 3953.037875035079,
+        "unattributed_ms": 2.903874992625788,
+        "valid": true
+      },
+      {
+        "task": "qst_0381",
+        "arm": "xerj",
+        "ms": 180007.07533300738,
+        "model_ms": 179546.31537597743,
+        "tools_ms": 459.0032920241356,
+        "unattributed_ms": 1.756665005814284,
+        "valid": true
+      },
+      {
+        "task": "qst_0439",
+        "arm": "xerj",
+        "ms": 65790.99695800687,
+        "model_ms": 65733.10774800484,
+        "tools_ms": 57.101375015918165,
+        "unattributed_ms": 0.7878349861130118,
+        "valid": true
+      },
+      {
+        "task": "qst_0439",
+        "arm": "rovo",
+        "ms": 46541.89925000537,
+        "model_ms": 42431.11174899968,
+        "tools_ms": 4110.236667009303,
+        "unattributed_ms": 0.5508339963853359,
+        "valid": true
+      },
+      {
+        "task": "qst_0433",
+        "arm": "rovo",
+        "ms": 180001.518709003,
+        "model_ms": 177645.91087505687,
+        "tools_ms": 2354.260207968764,
+        "unattributed_ms": 1.3476259773597121,
+        "valid": true
+      },
+      {
+        "task": "qst_0433",
+        "arm": "xerj",
+        "ms": 180002.20283400267,
+        "model_ms": 179950.72683304898,
+        "tools_ms": 49.645082966890186,
+        "unattributed_ms": 1.8309179868083447,
+        "valid": true
+      },
+      {
+        "task": "qst_0440",
+        "arm": "xerj",
+        "ms": 180006.72516599298,
+        "model_ms": 179945.56524898508,
+        "tools_ms": 59.922915970673785,
+        "unattributed_ms": 1.2370010372251272,
+        "valid": true
+      },
+      {
+        "task": "qst_0440",
+        "arm": "rovo",
+        "ms": 180002.66425000154,
+        "model_ms": 173105.97933502868,
+        "tools_ms": 6894.460665964289,
+        "unattributed_ms": 2.224249008577317,
+        "valid": true
+      },
+      {
+        "task": "qst_0441",
+        "arm": "rovo",
+        "ms": 180004.53720899532,
+        "model_ms": 177471.3870010164,
+        "tools_ms": 2531.3682490668725,
+        "unattributed_ms": 1.7819589120335877,
+        "valid": true
+      },
+      {
+        "task": "qst_0441",
+        "arm": "xerj",
+        "ms": 180005.59637500555,
+        "model_ms": 179859.2455420585,
+        "tools_ms": 144.25408304668963,
+        "unattributed_ms": 2.0967499003745615,
+        "valid": true
+      },
+      {
+        "task": "qst_0400",
+        "arm": "xerj",
+        "ms": 56997.029041987844,
+        "model_ms": 56839.27029100596,
+        "tools_ms": 156.5757089992985,
+        "unattributed_ms": 1.1830419825855643,
+        "valid": true
+      },
+      {
+        "task": "qst_0400",
+        "arm": "rovo",
+        "ms": 53439.67479100684,
+        "model_ms": 50904.42583299591,
+        "tools_ms": 2534.477124980185,
+        "unattributed_ms": 0.7718330307397991,
+        "valid": true
+      },
+      {
+        "task": "qst_0404",
+        "arm": "rovo",
+        "ms": 74131.53616597992,
+        "model_ms": 71309.20554202748,
+        "tools_ms": 2820.771414990304,
+        "unattributed_ms": 1.559208962135017,
+        "valid": true
+      },
+      {
+        "task": "qst_0404",
+        "arm": "xerj",
+        "ms": 180005.92695901287,
+        "model_ms": 179850.6442089856,
+        "tools_ms": 151.91145698190667,
+        "unattributed_ms": 3.3712930453475565,
+        "valid": true
+      }
+    ]
+  },
+  "completed_before_sleep": 14,
+  "completed_after_resume": 18,
+  "discarded_partial_attempt": "qst_0183/rovo",
+  "resumed_exit": 0
+}

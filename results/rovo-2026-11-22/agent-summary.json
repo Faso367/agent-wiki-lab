@@ -1,0 +1,61 @@
+{
+  "xerj": {
+    "attempts": 16,
+    "passed": 1,
+    "task_errors": {},
+    "attempts_with_citations": 7,
+    "search_calls": 16,
+    "read_calls": 34,
+    "prompt_tokens": 80220,
+    "completion_tokens": 6589,
+    "tokens_per_success": 86809.0,
+    "all_attempts": {
+      "p50_ms": 48754.233124505845,
+      "p95_ms": 115590.50529199885
+    },
+    "passed_attempts": {
+      "p50_ms": 23622.094540973194,
+      "p95_ms": 23622.094540973194
+    }
+  },
+  "rovo": {
+    "attempts": 16,
+    "passed": 1,
+    "task_errors": {},
+    "attempts_with_citations": 7,
+    "search_calls": 17,
+    "read_calls": 46,
+    "prompt_tokens": 115689,
+    "completion_tokens": 7789,
+    "tokens_per_success": 123478.0,
+    "all_attempts": {
+      "p50_ms": 65579.35179199558,
+      "p95_ms": 169894.98079099576
+    },
+    "passed_attempts": {
+      "p50_ms": 25874.911666003754,
+      "p95_ms": 25874.911666003754
+    }
+  },
+  "pairs": 16,
+  "shared_passes": 1,
+  "recovery": {
+    "completed_before_interruption": 2,
+    "host": "Apple M4 (16 GiB)",
+    "replica": "runtime depended on internal disk after external volume interrupted",
+    "restarted_from_completed_attempts": true
+  },
+  "settings": {
+    "model": "Qwen3-4B Q4_K_M",
+    "llama_cpp": "b12541",
+    "context_tokens": 8192,
+    "temperature": 0,
+    "seed": 73,
+    "max_model_output_tokens": 1000,
+    "task_timeout_s": 180,
+    "search_calls_max": 2,
+    "read_calls_max": 5,
+    "max_read_excerpt_chars_per_call": 2700,
+    "grading_order_seed": 491
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-22",
+  "client": "Codex in-app browser",
+  "page": "/p/orbit-guide/v2.html#s1",
+  "result": {
+    "doc": "orbit-guide",
+    "revision": 2,
+    "section": 1,
+    "selected_text": "Для EU действует тайм-аут 45 секу"
+  },
+  "source_opened": "/p/orbit-decision/v1.html#s1",
+  "source_text": "EU gateway requests must time out after 45 seconds.",
+  "archived_confluence_value": "90 seconds",
+  "archived_confluence_version_verified": 1
+}

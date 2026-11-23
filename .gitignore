@@ -1,0 +1,10 @@
+.state/
+.venv/
+__pycache__/
+.DS_Store
+.env
+.env.*
+*.sqlite*
+*.sock
+*.gguf
+*.pyc

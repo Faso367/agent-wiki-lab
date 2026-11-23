@@ -1,0 +1,28 @@
+{
+  "client_version": 3,
+  "client_sha256": "9e14cc095cd903dcb7057b98ade28c7ec9c76271062c7e7302f5f3c8ed4e9eac",
+  "tasks": [
+    "qst_0150",
+    "qst_0031",
+    "qst_0272",
+    "qst_0259",
+    "qst_0382",
+    "qst_0104",
+    "qst_0252",
+    "qst_0183",
+    "qst_0442",
+    "qst_0381",
+    "qst_0439",
+    "qst_0433",
+    "qst_0440",
+    "qst_0441",
+    "qst_0400",
+    "qst_0404"
+  ],
+  "max_searches": 5,
+  "max_reads": 5,
+  "timeout_s": 180,
+  "model": "Qwen3-4B Q4_K_M",
+  "inventory_sha256": "e2e4184973ea5ae5fee45d53b00e1539bb8c3ae6e238d70341415c1c9063e920",
+  "manifest_sha256": "c2b4040c804421e197bd414c1e3159bebda009105b05ad6396ab7938f4fdc60d"
+}

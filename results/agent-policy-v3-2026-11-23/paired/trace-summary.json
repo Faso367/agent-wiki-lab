@@ -1,0 +1,307 @@
+{
+  "xerj": {
+    "counts": {
+      "search_events": 16,
+      "successful_reads": 37,
+      "finish_events": 20,
+      "extra_searches_before_first_read": 0,
+      "questions_with_multiple_searches_before_first_read": 0,
+      "questions_with_any_gold_read": 10,
+      "questions_with_all_gold_read": 6,
+      "questions_with_all_gold_returned": 9,
+      "submitted": 6,
+      "not_fully_answered_flags": 0,
+      "accepted_claims": 11
+    },
+    "finish_rejections": {
+      "copy_exact_quote_from_source": 13,
+      "cite_read_ids": 1
+    },
+    "median_model_request_sum_ms": 179801.63068702677,
+    "median_successful_search_ms": 56.228916510008276,
+    "median_successful_read_ms": 4.41858300473541,
+    "tasks": {
+      "qst_0150": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0031": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 2
+      },
+      "qst_0272": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0259": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 2,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0382": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0104": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 4
+      },
+      "qst_0252": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0183": {
+        "gold_documents": 1,
+        "returned_gold": 0,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0442": {
+        "gold_documents": 8,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0381": {
+        "gold_documents": 2,
+        "returned_gold": 2,
+        "read_gold": 2,
+        "read_distinct": 2,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0439": {
+        "gold_documents": 5,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0433": {
+        "gold_documents": 6,
+        "returned_gold": 3,
+        "read_gold": 2,
+        "read_distinct": 2,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0440": {
+        "gold_documents": 6,
+        "returned_gold": 5,
+        "read_gold": 3,
+        "read_distinct": 3,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0441": {
+        "gold_documents": 6,
+        "returned_gold": 2,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0400": {
+        "gold_documents": 2,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 2
+      },
+      "qst_0404": {
+        "gold_documents": 2,
+        "returned_gold": 2,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      }
+    }
+  },
+  "rovo": {
+    "counts": {
+      "search_events": 16,
+      "successful_reads": 50,
+      "finish_events": 19,
+      "extra_searches_before_first_read": 0,
+      "questions_with_multiple_searches_before_first_read": 0,
+      "questions_with_any_gold_read": 11,
+      "questions_with_all_gold_read": 4,
+      "questions_with_all_gold_returned": 8,
+      "submitted": 6,
+      "not_fully_answered_flags": 0,
+      "accepted_claims": 9
+    },
+    "finish_rejections": {
+      "copy_exact_quote_from_source": 10,
+      "copy_literal_from_quote": 1,
+      "cite_read_ids": 2
+    },
+    "median_model_request_sum_ms": 176740.0614380167,
+    "median_successful_search_ms": 1289.4493124913424,
+    "median_successful_read_ms": 1.7449789884267375,
+    "tasks": {
+      "qst_0150": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0031": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0272": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0259": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0382": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 2
+      },
+      "qst_0104": {
+        "gold_documents": 1,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0252": {
+        "gold_documents": 1,
+        "returned_gold": 0,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0183": {
+        "gold_documents": 1,
+        "returned_gold": 0,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0442": {
+        "gold_documents": 8,
+        "returned_gold": 4,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0381": {
+        "gold_documents": 2,
+        "returned_gold": 2,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0439": {
+        "gold_documents": 5,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 2,
+        "searches_before_first_read": 1,
+        "accepted_claims": 1
+      },
+      "qst_0433": {
+        "gold_documents": 6,
+        "returned_gold": 2,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0440": {
+        "gold_documents": 6,
+        "returned_gold": 5,
+        "read_gold": 4,
+        "read_distinct": 4,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0441": {
+        "gold_documents": 6,
+        "returned_gold": 3,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 0
+      },
+      "qst_0400": {
+        "gold_documents": 2,
+        "returned_gold": 2,
+        "read_gold": 0,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 2
+      },
+      "qst_0404": {
+        "gold_documents": 2,
+        "returned_gold": 1,
+        "read_gold": 1,
+        "read_distinct": 1,
+        "searches_before_first_read": 1,
+        "accepted_claims": 2
+      }
+    }
+  }
+}

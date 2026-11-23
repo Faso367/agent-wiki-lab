@@ -1,0 +1,114 @@
+{
+  "qst_0381": {
+    "baseline": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Названы шумные сигналы, недостаточные ограничения отката, ENG-2422 и дата 2026-02-07. E1 и E3 подтверждают ответ."
+    },
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Причина, механизм, номер и дата подтверждаются E1/E3. Текст передаёт смысл, отдельные дословные цитаты для каждого вывода отсутствуют."
+    }
+  },
+  "qst_0400": {
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": true,
+      "reason": "Все 14 полей перечислены дословно с исходными описаниями из E1, три необязательных поля отмечены отдельно, все три события со значениями из E2."
+    },
+    "baseline": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Перечислены все 14 полей и три события. Обязательные поля отделены от необязательных. Оба источника указаны в конце как общая ссылка для двух списков."
+    }
+  },
+  "qst_0404": {
+    "baseline": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Названы точный заголовок X-RW-Cache-Mode: bypass и пороги 60% и 2048 для interactive-chat. Ссылки ведут к нужным выдержкам."
+    },
+    "by_part": {
+      "facts_complete": true,
+      "claims_supported_by_cited_passages": true,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Все три значения и E1/E2 верны. Заголовок процитирован. Для чисел есть метки, но нет цитаты, показывающей их привязку к строке interactive-chat."
+    }
+  },
+  "qst_0439": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Получено три вместо четырёх. E1 и E2 взяты из одной статьи от 11 февраля. Отброшены инциденты 8 июня и 22 июля, которые удовлетворяют критериям. Точные цитаты отдельных предложений не подтверждают этот подсчёт."
+    },
+    "baseline": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Учтены только февральский и мартовский инциденты. Ответ два противоречит двум другим подходящим документам в пакете E7–E10."
+    }
+  },
+  "qst_0433": {
+    "baseline": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Не названы контрольные окна при переключении 30 минут или 60 для Tier 0. Ответ называет семь дней одновременно указанным и неизвестным сроком. Ссылки E отсутствуют."
+    },
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Добавлены окна 30/60 минут и отзыв доступа. Пропущены 7 дней по умолчанию и остановка для повторной оценки при ухудшении. Для operational safety ослаблено условие E2 о срочности и невозможности дождаться обычного одобрения. Многие фразы пересказаны вместо цитирования."
+    }
+  },
+  "qst_0440": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Требование Private bundle v2.8.0+ ошибочно приписано Dedicated. Ответ без меток E не позволяет проверить утверждения по ссылкам."
+    },
+    "baseline": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Требование версии Private ошибочно применено к Dedicated. Пропущено требование дедупликации по event_id. Не указаны источники."
+    }
+  },
+  "qst_0441": {
+    "baseline": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Ответ охватил порог 25% и внутренний канал релизов, но пропустил правило прямого уведомления клиента без публикации на публичной status page, кроме договорного исключения. Полная проверка всех второстепенных утверждений не потребовалась для решения."
+    },
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Не указаны 30-дневный остаток бюджета ошибок, обязательный порог 25%, канал #eng-releases и правило о публичной status page. Несколько разделов пересказаны со ссылкой без отдельной дословной опоры."
+    }
+  },
+  "qst_0442": {
+    "by_part": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": null,
+      "verbatim_support_shown_for_each_claim": false,
+      "reason": "Разделы по вопросу присутствуют, но пропущены обязательные пороги прохождения canary и очерёдность регионов Hosted API. В ответе есть списки с одной общей ссылкой, без подтверждающей цитаты для каждого утверждения."
+    },
+    "baseline": {
+      "facts_complete": false,
+      "claims_supported_by_cited_passages": false,
+      "verbatim_support_shown_for_each_claim": null,
+      "reason": "Нет численных порогов canary и последовательности регионов. Не приведены ID источников."
+    }
+  }
+}

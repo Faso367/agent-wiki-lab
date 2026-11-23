@@ -1,0 +1,69 @@
+{
+  "xerj": {
+    "attempts": 2,
+    "passed": 1,
+    "success_rate": 0.5,
+    "correct_by_deadline": {
+      "30": {
+        "passed": 0,
+        "attempts": 2
+      },
+      "60": {
+        "passed": 1,
+        "attempts": 2
+      },
+      "180": {
+        "passed": 1,
+        "attempts": 2
+      }
+    },
+    "task_errors": {
+      "TimeoutError": 1
+    },
+    "attempts_with_citations": 1,
+    "search_calls": 3,
+    "read_calls": 4,
+    "prompt_tokens": 15051,
+    "completion_tokens": 516,
+    "tokens_per_success": 15567.0,
+    "all_attempts": {
+      "p50_ms": 109361.27579149615,
+      "p95_ms": 180010.58679100242
+    },
+    "passed_attempts": {
+      "p50_ms": 38711.964791989885,
+      "p95_ms": 38711.964791989885
+    }
+  },
+  "rovo": {
+    "attempts": 2,
+    "passed": 0,
+    "success_rate": 0.0,
+    "correct_by_deadline": {
+      "30": {
+        "passed": 0,
+        "attempts": 2
+      },
+      "60": {
+        "passed": 0,
+        "attempts": 2
+      },
+      "180": {
+        "passed": 0,
+        "attempts": 2
+      }
+    },
+    "task_errors": {},
+    "attempts_with_citations": 2,
+    "search_calls": 4,
+    "read_calls": 4,
+    "prompt_tokens": 23334,
+    "completion_tokens": 1047,
+    "tokens_per_success": null,
+    "all_attempts": {
+      "p50_ms": 151348.7087294925,
+      "p95_ms": 155405.0862499862
+    },
+    "passed_attempts": {}
+  }
+}

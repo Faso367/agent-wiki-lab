@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка правки</title>
+<style>
+body { font: 15px system-ui, sans-serif; margin: 16px; color: CanvasText; background: Canvas; }
+pre { padding: 10px; border: 1px solid GrayText; border-radius: 6px; white-space: pre-wrap; }
+button { margin: 8px 8px 0 0; }
+</style>
+<h1 id="title">Проверка правки</h1>
+<h2>Было</h2>
+<pre id="before"></pre>
+<h2>Предложение</h2>
+<pre id="after"></pre>
+<p id="source"></p>
+<button id="approve" disabled>Принять</button>
+<button id="reject" disabled>Отклонить</button>
+<p id="status" role="status"></p>
+<script>
+const byId = id => document.getElementById(id);
+const pending = new Map();
+let id = 0;
+let draft;
+function post(message) {
+  window.parent.postMessage({jsonrpc: "2.0", ...message}, "*");
+}
+function request(method, params) {
+  const key = ++id;
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      pending.delete(key);
+      reject(new Error("Нет ответа от клиента MCP"));
+    }, 10000);
+    pending.set(key, {resolve, reject, timeout});
+    post({id: key, method, params});
+  });
+}
+function render(value) {
+  draft = value;
+  byId("title").textContent = value.title;
+  byId("before").textContent = value.before;
+  byId("after").textContent = value.body;
+  byId("source").textContent = "Основание — " + value.source;
+  byId("status").textContent = {pending:"На проверке", approved:"Правка принята",
+    rejected:"Правка отклонена"}[value.state] || value.state;
+  for (const action of ["approve", "reject"]) byId(action).disabled = !value.can_decide;
+}
+window.addEventListener("message", ({source, data}) => {
+  if (source !== window.parent || !data || data.jsonrpc !== "2.0") return;
+  if (pending.has(data.id)) {
+    const reply = pending.get(data.id);
+    pending.delete(data.id);
+    clearTimeout(reply.timeout);
+    if (data.error) reply.reject(new Error(data.error.message));
+    else reply.resolve(data.result);
+  } else if (data.method === "ui/notifications/tool-result" && data.params?.structuredContent?.can_decide !== undefined) {
+    render(data.params.structuredContent);
+  }
+});
+for (const action of ["approve", "reject"]) byId(action).onclick = async () => {
+  byId("approve").disabled = byId("reject").disabled = true;
+  try {
+    const result = await request("tools/call", {name:"decide_draft", arguments:{draft_id:draft.id, decision:action}});
+    if (result.isError) throw new Error(result.content?.[0]?.text || "Изменение отклонено");
+    render({...draft, state:result.structuredContent.state, can_decide:false});
+  } catch (error) {
+    byId("status").textContent = error.message;
+    byId("approve").disabled = byId("reject").disabled = !draft.can_decide;
+  }
+};
+request("ui/initialize", {
+  appInfo:{name:"Wiki Review", version:"0.1.0"}, appCapabilities:{}, protocolVersion:"2026-01-26"
+}).then(() => post({method:"ui/notifications/initialized", params:{}}))
+  .catch(error => { byId("status").textContent = error.message; });
+</script>
+</html>

@@ -1,0 +1,558 @@
+{
+  "A01": {
+    "task": "qst_0272",
+    "answer": "What is the default time window the company targets for routine internal approvals across operational requests? [S13]",
+    "sources": {
+      "S13": "- Change Windows and Freeze Periods:\n  - Regular maintenance window: Saturdays 02:00–06:00 UTC for low-risk infra work.\n  - Freeze windows: critical product launches and major customer migrations as communicated by Product."
+    },
+    "error": null,
+    "parts": [
+      "What is the default time window the company targets for routine internal approvals across operational requests?"
+    ],
+    "claims": [
+      {
+        "text": "What is the default time window the company targets for routine internal approvals across operational requests?",
+        "source": "S13",
+        "quote": "Regular maintenance window: Saturdays 02:00–06:00 UTC for low-risk infra work.",
+        "part": 1
+      }
+    ]
+  },
+  "A02": {
+    "task": "qst_0382",
+    "answer": "The root cause of the Feb 12, 2026 incident was a deduplication bug in the usage exporter that treated retried streaming chunks as distinct completions when a request id changed across retry boundaries. [S6]\nThe mitigation and follow-up steps included pausing export generation, backfilling after the fix, adding a reconciliation job comparing invoice counter vs export counter per workspace per day, fixing the usage exporter dedup logic to use a stable trace id across retries, and adding a contract test in the usage pipeline for streaming retry semantics. [S8]",
+    "sources": {
+      "S6": "## Root cause\nA deduplication bug in the usage exporter treated retried streaming chunks as distinct completions when a request id changed across retry boundaries.",
+      "S8": "## Follow-up action items (count these)\n1) Add reconciliation job comparing invoice counter vs export counter per workspace per day; page on drift > 0.5%. Owning team: Eng SRE.\n2) Fix usage exporter dedup logic to use stable trace id across retries. Owning team: Eng Platform.\n3) Add contract test in the usage pipeline for streaming retry semantics. Owning team: Eng Platform."
+    },
+    "error": null,
+    "parts": [
+      "root cause",
+      "mitigation + follow-up steps"
+    ],
+    "claims": [
+      {
+        "text": "The root cause of the Feb 12, 2026 incident was a deduplication bug in the usage exporter that treated retried streaming chunks as distinct completions when a request id changed across retry boundaries.",
+        "source": "S6",
+        "quote": "## Root cause\nA deduplication bug in the usage exporter treated retried streaming chunks as distinct completions when a request id changed across retry boundaries.",
+        "part": 1
+      },
+      {
+        "text": "The mitigation and follow-up steps included pausing export generation, backfilling after the fix, adding a reconciliation job comparing invoice counter vs export counter per workspace per day, fixing the usage exporter dedup logic to use a stable trace id across retries, and adding a contract test in the usage pipeline for streaming retry semantics.",
+        "source": "S8",
+        "quote": "## Follow-up action items (count these)\n1) Add reconciliation job comparing invoice counter vs export counter per workspace per day; page on drift > 0.5%. Owning team: Eng SRE.\n2) Fix usage exporter dedup logic to use stable trace id across retries. Owning team: Eng Platform.\n3) Add contract test in the usage pipeline for streaming retry semantics. Owning team: Eng Platform.",
+        "part": 2
+      }
+    ]
+  },
+  "A03": {
+    "task": "qst_0382",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "root cause",
+      "mitigation + follow-up steps"
+    ],
+    "claims": []
+  },
+  "A04": {
+    "task": "qst_0104",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "standard amount of time",
+      "new hire buddy",
+      "first two weeks",
+      "converted to full-time employee"
+    ],
+    "claims": []
+  },
+  "A05": {
+    "task": "qst_0031",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "operator procedure to put a private deployment tenant into local-only telemetry mode",
+      "how to verify the mode after putting a private deployment tenant into local-only telemetry mode"
+    ],
+    "claims": []
+  },
+  "A06": {
+    "task": "qst_0150",
+    "answer": "The required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding are [inference:invoke, metrics:read]. [S7]",
+    "sources": {
+      "S7": "Canonical Support Issues and Fixes (top issues during onramp)\nIssue A: SDK example fails to authenticate (401)\n- Detection: error pattern in logs: \"error=unauthorized, code=401, hint=apiKey\"; Support: run reproduction script with -v flag.\n- Root cause: sample uses environment variable REDWOOD_API_KEY unset or using expired demo key.\n- Canonical fix steps:\n  1. Confirm env var exists: echo $REDWOOD_API_KEY\n  2. If missing, instruct customer to create API key via console (link: internal:product-docs/create-api-key).\n  3. For expired keys, rotate and confirm permission scopes: scopes must include: [inference:invoke, metrics:read].\n  4. Add small code snippet to sample that fails fast with helpful error message (example below).\n- Owner: Support -> escalate to SDK owner if repro fails."
+    },
+    "error": null,
+    "parts": [
+      "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?"
+    ],
+    "claims": [
+      {
+        "text": "The required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding are [inference:invoke, metrics:read].",
+        "source": "S7",
+        "quote": "scopes must include: [inference:invoke, metrics:read].",
+        "part": 1
+      }
+    ]
+  },
+  "A07": {
+    "task": "qst_0031",
+    "answer": "The operator procedure to put a private deployment tenant into local-only telemetry mode involves verifying the consent manifest, switching the deployment to 'local-only' in the control plane or using the CLI, and validating the mode with a curl command. [S1]\nTo verify the mode after putting a private deployment tenant into local-only telemetry mode, the operator should check the telemetry status using a curl command to ensure the mode is set to 'local-only'. [S1]",
+    "sources": {
+      "S1": "and Emergency Redaction\\n\\n1) Verify consent manifest\\n   - Command: sudo cat /etc/redwood/telemetry/consent.json\\\\   - Expected: valid JSON with keys: tenant_id, profile_id, retention_days, sample_rate, approved_by\\n\\\\2) Switch deployment to 'local-only' for a tenant (example, safe mode for regulatory hold)\\\\   - Steps:\\n     a) In the control plane: open tenant config -> Telemetry -> select 'no-external-telemetry' -> apply\\n     b) CLI fallback: redwoodctl tenant update --id <TENANT> --telemetry-mode local-only\\n     c) Validate: curl -sS http://localhost:9100/telemetry/status?tenant=<TENANT> | jq '.mode' should return \\\"local-only\\\"\\n\\n3) Enforce emergency redaction for a window\\n   - Purpose: immediate purge or redaction when a customer requests removal for an incident\\n   - Steps (operator):\\n     1) Create a redaction job: redwoodctl telemetry redact --tenant <TENANT> --pattern \\\"/request/payload\\\" --mode truncate --reason \\\"DSAR\\\" --until 2026-07-01\\n     2) Monitor job: redwoodctl telemetry jobs get --id <JOB_ID>\\n     3) Generate evidence bundle: redwoodctl telemetry jobs export --id <JOB_ID> --output /tmp/evidence-<TENANT>.tar.gz\\n\\n4) Audit logs and evidence retention\\n   - All toggle and redaction operations must be logged to the restricted audit log (immutable) with fields: operator_id, action, tenant_id, timestamp, justification_id.\\n\\nAcceptance Tests & Evidence Requirements\\n\\nBefore handoff to customer, run the following checks and attach evidence to the onboarding package:\\n\\n- Acceptance checklist (automated):\\n  1) consent.json present and schema-valid\\n  2) sample_rate applied (verify by synthetic trace generator with 1K requests)\\n  3) redaction profile enforced (submit synthetic PII and assert it is removed)\\n  4) local-only mode test (if"
+    },
+    "error": null,
+    "parts": [
+      "operator procedure to put a private deployment tenant into local-only telemetry mode",
+      "how to verify the mode after putting a private deployment tenant into local-only telemetry mode"
+    ],
+    "claims": [
+      {
+        "text": "The operator procedure to put a private deployment tenant into local-only telemetry mode involves verifying the consent manifest, switching the deployment to 'local-only' in the control plane or using the CLI, and validating the mode with a curl command.",
+        "source": "S1",
+        "quote": "c) Validate: curl -sS http://localhost:9100/telemetry/status?tenant=<TENANT> | jq '.mode' should return \\\"local-only\\\"",
+        "part": 1
+      },
+      {
+        "text": "To verify the mode after putting a private deployment tenant into local-only telemetry mode, the operator should check the telemetry status using a curl command to ensure the mode is set to 'local-only'.",
+        "source": "S1",
+        "quote": "c) Validate: curl -sS http://localhost:9100/telemetry/status?tenant=<TENANT> | jq '.mode' should return \\\"local-only\\\"",
+        "part": 2
+      }
+    ]
+  },
+  "A08": {
+    "task": "qst_0400",
+    "answer": "fields required in each shadow probe telemetry record [S1]\nrun-lifecycle telemetry events that the evaluator must emit [S7]",
+    "sources": {
+      "S1": "Telemetry‑Led Probe Feedback and Onboarding Contract",
+      "S7": "Probe Lifecycle: from Fabrication to Onboarding\n1. Fabrication: probe generator produces probes with required metadata (probe_id, fingerprint, priming_template_id).\n2. Registration: push preview to probe-registry API (see example below). Registry validates metadata and assigns initial priority.\n3. Shadow Execution: probes run in shadow for at least 1k executions or 72h to generate baseline telemetry.\n4. Telemetry Review: eval team inspects response_stability_score, kv_cache_hit distributions, and failure_code rates.\n5. Annotation: prioritized probes are scheduled for incremental annotation. Fast-turn probes (SLA <= 48h) go to internal annotators; others to vendor/contract annotators per privacy gating.\n6. Onboarding Decision: based on acceptance rubric (see table below) the probe set is accepted, requires remediation, or rejected."
+    },
+    "error": null,
+    "parts": [
+      "fields required in each shadow probe telemetry record",
+      "run-lifecycle telemetry events that the evaluator must emit"
+    ],
+    "claims": [
+      {
+        "text": "fields required in each shadow probe telemetry record",
+        "source": "S1",
+        "quote": "Telemetry‑Led Probe Feedback and Onboarding Contract",
+        "part": 1
+      },
+      {
+        "text": "run-lifecycle telemetry events that the evaluator must emit",
+        "source": "S7",
+        "quote": "Shadow Execution: probes run in shadow for at least 1k executions or 72h to generate baseline telemetry",
+        "part": 2
+      }
+    ]
+  },
+  "A09": {
+    "task": "qst_0259",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "mandatory items",
+      "disconnected installer package",
+      "on prem product",
+      "signed inventory files",
+      "human instructions file"
+    ],
+    "claims": []
+  },
+  "A10": {
+    "task": "qst_0442",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "definition of Redwood Inference's end-to-end process for making a production change",
+      "required approvals for making a production change",
+      "pre-deploy verification for making a production change",
+      "deploy execution for making a production change",
+      "customer/internal communications for making a production change",
+      "rollback/post-change requirements for making a production change"
+    ],
+    "claims": []
+  },
+  "A11": {
+    "task": "qst_0439",
+    "answer": "At least 1 distinct cited document(s). Search coverage is partial.\nHow many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation? [S1]",
+    "sources": {
+      "S1": "h2. Summary\nOn 2025-07-22, a networking change in a customer-controlled VPC (Private deployment) disrupted outbound connectivity to one of the inference subnets. As a mitigation, the customer and Redwood jointly activated *automatic region fallback* to a secondary region for non-residency-bound traffic until routing was corrected."
+    },
+    "error": null,
+    "parts": [
+      "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?"
+    ],
+    "claims": [
+      {
+        "text": "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?",
+        "source": "S1",
+        "quote": "As a mitigation, the customer and Redwood jointly activated *automatic region fallback* to a secondary region for non-residency-bound traffic until routing was corrected.",
+        "part": 1
+      }
+    ]
+  },
+  "A12": {
+    "task": "qst_0150",
+    "answer": "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding? [S6]",
+    "sources": {
+      "S6": "Canonical Support Issues and Fixes (top issues during onramp)\nIssue A: SDK example fails to authenticate (401)\n- Detection: error pattern in logs: \"error=unauthorized, code=401, hint=apiKey\"; Support: run reproduction script with -v flag.\n- Root cause: sample uses environment variable REDWOOD_API_KEY unset or using expired demo key.\n- Canonical fix steps:\n 1. Confirm env var exists: echo $REDWOOD_API_KEY\n 2. If missing, instruct customer to create API key via console (link: internal:product-docs/create-api-key).\n 3. For expired keys, rotate and confirm permission scopes: scopes must include: [inference:invoke, metrics:read].\n 4. Add small code snippet to sample that fails fast with helpful error message (example below).\n- Owner: Support -> escalate to SDK owner if repro fails."
+    },
+    "error": null,
+    "parts": [
+      "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?"
+    ],
+    "claims": [
+      {
+        "text": "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?",
+        "source": "S6",
+        "quote": "scopes must include: [inference:invoke, metrics:read]",
+        "part": 1
+      }
+    ]
+  },
+  "A13": {
+    "task": "qst_0400",
+    "answer": "The required fields in each shadow probe telemetry record include probe_id, probe_version, tenant_id, run_id, timestamp_utc, model, seq_len_input, seq_len_output, tokens_consumed, latency_ms_p50, latency_ms_p95, kv_cache_hit, failure_code, response_stability_score, and telemetry_schema_version. [S2]\nThe evaluator must emit run-lifecycle telemetry events including Fabrication, Registration, Shadow Execution, Telemetry Review, Annotation, and Onboarding Decision. [S5]",
+    "sources": {
+      "S2": "- probe_id: string (probe fingerprint, immutable)\n- probe_version: string (semantic version or date stamp)\n- tenant_id: string (or \"system\" for platform probes)\n- run_id: string (unique per execution)\n- timestamp_utc: ISO8601 string\n- model: string (model-name@artifact-hash)\n- seq_len_input: integer\n- seq_len_output: integer (if streaming, final token count)\n- tokens_consumed: integer\n- latency_ms_p50: integer\n- latency_ms_p95: integer\n- kv_cache_hit: boolean\n- failure_code: string | null (see failure taxonomy)\n- response_stability_score: float (0.0-1.0)\n- telemetry_schema_version: \"v1\"",
+      "S5": "Probe Lifecycle: from Fabrication to Onboarding\n1. Fabrication: probe generator produces probes with required metadata (probe_id, fingerprint, priming_template_id).\n2. Registration: push preview to probe-registry API (see example below). Registry validates metadata and assigns initial priority.\n3. Shadow Execution: probes run in shadow for at least 1k executions or 72h to generate baseline telemetry.\n4. Telemetry Review: eval team inspects response_stability_score, kv_cache_hit distributions, and failure_code rates.\n5. Annotation: prioritized probes are scheduled for incremental annotation. Fast-turn probes (SLA <= 48h) go to internal annotators; others to vendor/contract annotators per privacy gating.\n6. Onboarding Decision: based on acceptance rubric (see table below) the probe set is accepted, requires remediation, or rejected."
+    },
+    "error": null,
+    "parts": [
+      "fields required in each shadow probe telemetry record",
+      "run-lifecycle telemetry events that the evaluator must emit"
+    ],
+    "claims": [
+      {
+        "text": "The required fields in each shadow probe telemetry record include probe_id, probe_version, tenant_id, run_id, timestamp_utc, model, seq_len_input, seq_len_output, tokens_consumed, latency_ms_p50, latency_ms_p95, kv_cache_hit, failure_code, response_stability_score, and telemetry_schema_version.",
+        "source": "S2",
+        "quote": "probe_id: string (probe fingerprint, immutable)\n- probe_version: string (semantic version or date stamp)\n- tenant_id: string (or \"system\" for platform probes)\n- run_id: string (unique per execution)\n- timestamp_utc: ISO8601 string\n- model: string (model-name@artifact-hash)\n- seq_len_input: integer\n- seq_len_output: integer (if streaming, final token count)\n- tokens_consumed: integer\n- latency_ms_p",
+        "part": 1
+      },
+      {
+        "text": "The evaluator must emit run-lifecycle telemetry events including Fabrication, Registration, Shadow Execution, Telemetry Review, Annotation, and Onboarding Decision.",
+        "source": "S5",
+        "quote": "Probe Lifecycle: from Fabrication to Onboarding\n1. Fabrication: probe generator produces probes with required metadata (probe_id, fingerprint, priming_template_id).\n2. Registration: push preview to probe-registry API (see example below). Registry validates metadata and assigns initial priority.\n3. Shadow Execution: probes run in shadow for at least 1k executions or 72h to generate baseline te",
+        "part": 2
+      }
+    ]
+  },
+  "A14": {
+    "task": "qst_0433",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "end-to-end process",
+      "rotating secrets",
+      "credentials",
+      "production services",
+      "emergency rotation"
+    ],
+    "claims": []
+  },
+  "A15": {
+    "task": "qst_0441",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "complete go/no-go gate",
+      "required validations",
+      "required approvals",
+      "required customer communications",
+      "Redwood's internal standards"
+    ],
+    "claims": []
+  },
+  "A16": {
+    "task": "qst_0404",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "What request header can we set as a quick mitigation to bypass the KV cache",
+      "in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant"
+    ],
+    "claims": []
+  },
+  "A17": {
+    "task": "qst_0183",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "gate thresholds for compressed model variants",
+      "limits for chat similarity drop",
+      "code pass rate change limits",
+      "retrieval embedding quality limits",
+      "acceptable latency and cost changes"
+    ],
+    "claims": []
+  },
+  "A18": {
+    "task": "qst_0259",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "mandatory items",
+      "disconnected installer package",
+      "on prem product",
+      "signed inventory files",
+      "human instructions file"
+    ],
+    "claims": []
+  },
+  "A19": {
+    "task": "qst_0252",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "rule for quick time-boxed after-action review in incident response",
+      "acceptability of quick time-boxed after-action review over formal analysis",
+      "impact duration consideration in incident response",
+      "customer count consideration in incident response"
+    ],
+    "claims": []
+  },
+  "A20": {
+    "task": "qst_0433",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "end-to-end process",
+      "rotating secrets",
+      "credentials",
+      "production services",
+      "emergency rotation"
+    ],
+    "claims": []
+  },
+  "A21": {
+    "task": "qst_0272",
+    "answer": "What is the default time window the company targets for routine internal approvals across operational requests? [S8]",
+    "sources": {
+      "S8": "Approval matrix and windows:\n- Standard changes: no CAB if they match the Standard Change Catalogue and use a validated automation playbook.\n- Normal changes: submit in OpsChange 72 hours before planned window. CAB meets daily for fast lanes and weekly for large changes.\n- Change window: default maintenance window 02:00–05:00 PST; services with global usage must consult SRE before scheduling."
+    },
+    "error": null,
+    "parts": [
+      "What is the default time window the company targets for routine internal approvals across operational requests?"
+    ],
+    "claims": [
+      {
+        "text": "What is the default time window the company targets for routine internal approvals across operational requests?",
+        "source": "S8",
+        "quote": "Normal changes: submit in OpsChange 72 hours before planned window. CAB meets daily for fast lanes and weekly for large changes.",
+        "part": 1
+      }
+    ]
+  },
+  "A22": {
+    "task": "qst_0104",
+    "answer": "the standard amount of time a new hire buddy is expected to spend per day during the first two weeks [S6]\nnew hire buddy [S6]\nfirst two weeks [S6]\nconverted to full-time employee [S2]",
+    "sources": {
+      "S6": "Buddy program guidance (Peer Sponsor):\n- Buddy time allocation: 1 hour/day for first 2 weeks, tapering to 1-2 hours/week by week 6.\n- Suggested activities: guided walkthroughs, shadowing deploys, calendar clean-up, and culture Q&A.\n- Feedback: buddies submit a short 1-page onboarding summary at day 30 and day 60.",
+      "S2": "Overview:\nThis playbook documents the standardized process for converting embedded contractors, consultants, or long-term vendors into Redwood Inference full-time employees (FTEs). It covers hiring approvals, technical and cultural onboarding, role-level competency checks, IT/security provisioning, compensation calibration, and a 120-day ramp to role parity. The goal is a repeatable, transparent conversion that minimizes disruption to delivery and protects security and compliance posture."
+    },
+    "error": null,
+    "parts": [
+      "standard amount of time",
+      "new hire buddy",
+      "first two weeks",
+      "converted to full-time employee"
+    ],
+    "claims": [
+      {
+        "text": "the standard amount of time a new hire buddy is expected to spend per day during the first two weeks",
+        "source": "S6",
+        "quote": "Buddy time allocation: 1 hour/day for first 2 weeks, tapering to 1-2 hours/week by week 6.",
+        "part": 1
+      },
+      {
+        "text": "new hire buddy",
+        "source": "S6",
+        "quote": "Buddy time allocation: 1 hour/day for first 2 weeks, tapering to 1-2 hours/week by week 6.",
+        "part": 2
+      },
+      {
+        "text": "first two weeks",
+        "source": "S6",
+        "quote": "Buddy time allocation: 1 hour/day for first 2 weeks, tapering to 1-2 hours/week by week 6.",
+        "part": 3
+      },
+      {
+        "text": "converted to full-time employee",
+        "source": "S2",
+        "quote": "This playbook documents the standardized process for converting embedded contractors, consultants, or long-term vendors into Redwood Inference full-time employees (FTEs).",
+        "part": 4
+      }
+    ]
+  },
+  "A23": {
+    "task": "qst_0442",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "definition of Redwood Inference's end-to-end process for making a production change",
+      "required approvals for making a production change",
+      "pre-deploy verification for making a production change",
+      "deploy execution for making a production change",
+      "customer/internal communications for making a production change",
+      "rollback/post-change requirements for making a production change"
+    ],
+    "claims": []
+  },
+  "A24": {
+    "task": "qst_0381",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "what caused the routing automation to oscillate (flip/rollback)",
+      "what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects"
+    ],
+    "claims": []
+  },
+  "A25": {
+    "task": "qst_0439",
+    "answer": "At least 1 distinct cited document(s). Search coverage is partial.\nHow many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation? [S6]",
+    "sources": {
+      "S6": "3) If snapshot errors are present, capture the following artifacts and attach to incident: worker logs, kvcache snapshot traces, profiler sample for the migration window.\n4) Apply mitigation: for hot customer-facing traffic, follow fast mitigation order: (a) route to fallback variant with identical semantics, (b) spin up dedicated worker with same model variant pinned, (c) throttle low-priority batch work to free memory.\n5) Post-incident: run warmup job to pre-populate caches for impacted sessions (see Warmup recipe).\n\\Warmup recipe (automated job)\n- Objective: restore cache state for evicted sessions using stored recent prefix tokens (last 1024 tokens).\n- Steps:\n  1. Lookup recent user prefix from opt-in session-history store (TTL 24h).\n  2. Submit a synthetic generate request with the prefix to a warm worker using 'cache-only' mode to populate KV segments.\n  3. Validate by reading kvcache.hit_rate for the session and confirm > session.hot_hit_rate_threshold.\n\\Profiling guidance and targeted metrics to collect:\n- Always collect these during warmup/migration windows: kvcache.hit_rate (per-session), kvcache.size_bytes, kvcache.snapshot.chunk_latencies, kernel.dispatch.latency_p50/p95, worker.memory.used_mb, and kernel.preempt_events.\n- Recommended profiler captures:\n  - 30s microprofiler (wall-clock) around migration boundary.\n  - Kernel-level GPU traces if dispatch latencies exceed expected thresholds.\n- Useful sampling queries (example CLI):\n  - redwood telemetry query \"kvcache.hit_rate{session_id=\\\"<id>\\\"} | last 1m\"\n  - redwood trace fetch --session <id> --window 00:00:30\n\\Testing and benchmark guidance:\n- Synthetic scenarios to include in the perf-suite:\n  1. High-churn sessions: 100k sessions with TTL=60s to exercise eviction."
+    },
+    "error": null,
+    "parts": [
+      "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?"
+    ],
+    "claims": [
+      {
+        "text": "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?",
+        "source": "S6",
+        "quote": "4) Apply mitigation: for hot customer-facing traffic, follow fast mitigation order: (a) route to fallback variant with identical semantics, (b) spin up dedicated worker with same model variant pinned, (c) throttle low-priority batch work to free memory.",
+        "part": 1
+      }
+    ]
+  },
+  "A26": {
+    "task": "qst_0381",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "what caused the routing automation to oscillate (flip/rollback)",
+      "what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects"
+    ],
+    "claims": []
+  },
+  "A27": {
+    "task": "qst_0440",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "1. Identify the specific SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "2. Determine the required prerequisites for enabling \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "3. Identify the security approvals needed to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "4. Determine the configuration steps required to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted,-Dedicated and Private deployments.",
+      "5. Identify the validation steps needed to ensure \"customer-managed audit log export\" (to the customer's cloud storage) is functioning correctly across Hosted, Dedicated, and Private deployments.",
+      "6. Determine the customer communication steps required to inform customers about \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "7. Identify the ongoing operations and ownership responsibilities related to \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments."
+    ],
+    "claims": []
+  },
+  "A28": {
+    "task": "qst_0441",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "complete go/no-go gate",
+      "required validations",
+      "required approvals",
+      "required customer communications",
+      "Redwood's internal standards"
+    ],
+    "claims": []
+  },
+  "A29": {
+    "task": "qst_0183",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "gate thresholds for compressed model variants",
+      "limits for chat similarity drop",
+      "code pass rate change limits",
+      "retrieval embedding quality limits",
+      "acceptable latency and cost changes"
+    ],
+    "claims": []
+  },
+  "A30": {
+    "task": "qst_0252",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "rule for quick time-boxed after-action review in incident response",
+      "acceptability of quick time-boxed after-action review over formal analysis",
+      "impact duration consideration in incident response",
+      "customer count consideration in incident response"
+    ],
+    "claims": []
+  },
+  "A31": {
+    "task": "qst_0440",
+    "answer": "",
+    "sources": {},
+    "error": "TimeoutError",
+    "parts": [
+      "1. Identify the specific SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "2. Determine the required prerequisites for enabling \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "3. Identify the security approvals needed to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "4. Determine the configuration steps required to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted,-Dedicated and Private deployments.",
+      "5. Identify the validation steps needed to ensure \"customer-managed audit log export\" (to the customer's cloud storage) is functioning correctly across Hosted, Dedicated, and Private deployments.",
+      "6. Determine the customer communication steps required to inform customers about \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments.",
+      "7. Identify the ongoing operations and ownership responsibilities related to \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments."
+    ],
+    "claims": []
+  },
+  "A32": {
+    "task": "qst_0404",
+    "answer": "What request header can we set as a quick mitigation to bypass the KV cache [S1]\nin the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant [S1]",
+    "sources": {
+      "S1": "Dynamic quant handoff and latency budgeting manifest"
+    },
+    "error": null,
+    "parts": [
+      "What request header can we set as a quick mitigation to bypass the KV cache",
+      "in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant"
+    ],
+    "claims": [
+      {
+        "text": "What request header can we set as a quick mitigation to bypass the KV cache",
+        "source": "S1",
+        "quote": "Dynamic quant handoff and latency budgeting manifest",
+        "part": 1
+      },
+      {
+        "text": "in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant",
+        "source": "S1",
+        "quote": "Dynamic quant handoff and latency budgeting manifest",
+        "part": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,5147 @@
+{
+  "documents": 5189,
+  "index": "wikibench-cac448a9a73f",
+  "summary": [
+    {
+      "arm": "SQLite BM25",
+      "lang": "en",
+      "n": 64,
+      "hit5": 44,
+      "recall5": 0.586,
+      "p50_ms": 21.57,
+      "p95_ms": 36.13
+    },
+    {
+      "arm": "SQLite BM25",
+      "lang": "en-paired",
+      "n": 30,
+      "hit5": 14,
+      "recall5": 0.467,
+      "p50_ms": 20.65,
+      "p95_ms": 33.39
+    },
+    {
+      "arm": "SQLite BM25",
+      "lang": "ru",
+      "n": 30,
+      "hit5": 1,
+      "recall5": 0.033,
+      "p50_ms": 0.44,
+      "p95_ms": 3.86
+    },
+    {
+      "arm": "XERJ + E5 RRF",
+      "lang": "en",
+      "n": 64,
+      "hit5": 43,
+      "recall5": 0.58,
+      "p50_ms": 59.55,
+      "p95_ms": 103.62
+    },
+    {
+      "arm": "XERJ + E5 RRF",
+      "lang": "en-paired",
+      "n": 30,
+      "hit5": 15,
+      "recall5": 0.5,
+      "p50_ms": 56.22,
+      "p95_ms": 93.25
+    },
+    {
+      "arm": "XERJ + E5 RRF",
+      "lang": "ru",
+      "n": 30,
+      "hit5": 1,
+      "recall5": 0.033,
+      "p50_ms": 43.07,
+      "p95_ms": 69.02
+    },
+    {
+      "arm": "XERJ lexical",
+      "lang": "en",
+      "n": 64,
+      "hit5": 45,
+      "recall5": 0.606,
+      "p50_ms": 5.63,
+      "p95_ms": 10.91
+    },
+    {
+      "arm": "XERJ lexical",
+      "lang": "en-paired",
+      "n": 30,
+      "hit5": 15,
+      "recall5": 0.5,
+      "p50_ms": 5.61,
+      "p95_ms": 13.32
+    },
+    {
+      "arm": "XERJ lexical",
+      "lang": "ru",
+      "n": 30,
+      "hit5": 1,
+      "recall5": 0.033,
+      "p50_ms": 4.05,
+      "p95_ms": 5.89
+    }
+  ],
+  "rows": [
+    {
+      "id": "qst_0102",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02",
+        "dsid_50a004c55eec403eaddc2fab715e78e4",
+        "dsid_0dc578db03294e5380829bf80bb2fff9",
+        "dsid_07addedddac7414892d3f3e9e6f91525",
+        "dsid_4795acf1b525423a9983561d28ff3f9e"
+      ],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 18.747
+    },
+    {
+      "id": "qst_0210",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_46c1506239064ca99d05ae059e783c0c",
+        "dsid_927a22874bc643449a8e7255d2b97c8d",
+        "dsid_f6fa144362d7412c96d8d4798bda758a",
+        "dsid_101b296f5f194f308c142270369b63a0",
+        "dsid_bcd894434194492f83e388b5588943b6"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.401
+    },
+    {
+      "id": "qst_0469",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7",
+        "dsid_3a16481691294f0ab3c79061ef479e8c",
+        "dsid_7ea720af3a584c7397e8b8ee1c479c70",
+        "dsid_eac14b05fee947639c11f82451aaa8c5",
+        "dsid_6483467a98ed4097b79676e8cf447f13"
+      ],
+      "gold": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 29.745
+    },
+    {
+      "id": "qst_0118",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_5f0df698ae534ef6a66aeb975773c887",
+        "dsid_5f2a023f4ce3453a877661a047717563",
+        "dsid_76a6ed65836744adb04043e68091ff9c",
+        "dsid_0f7de237f25e42c98c53c0924606161d",
+        "dsid_b3c7790a123d4c239607ab1997848b13"
+      ],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 787.486
+    },
+    {
+      "id": "qst_0234",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_7e5744fb69c044fd92ed0a6e85d5cac2",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8"
+      ],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 40.626
+    },
+    {
+      "id": "qst_0011",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_ce473e843d3f45a3bff8c49ebe762421",
+        "dsid_c4e02717d98642bd8e25e4f6239e587e",
+        "dsid_7593970791cf4a518df19b8f62f68332",
+        "dsid_14f34cb9862d4019b0eb92825b15cb79"
+      ],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 73.978
+    },
+    {
+      "id": "qst_0272",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_08dad2eca6254098bf395cfb5ddbd037",
+        "dsid_c03c9a3a983d4fe88ea4e2054c9e9fa3",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_ab6467c257164916b30b89f1a1cc1b0f",
+        "dsid_d1a2ffd106b14743acfd62e901cf7803"
+      ],
+      "gold": [
+        "dsid_329e7ecd6b304c30b61a30e07919e008"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 66.5
+    },
+    {
+      "id": "qst_0013",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d52e8ad65e6b44d58e1dbe08fae07ceb",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc",
+        "dsid_fe8170f0e516419c80cec083157331e8",
+        "dsid_f43915ae436d4d5496b59cda36717f5c",
+        "dsid_284e09095d844346b2eeb05c7e4179c0"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.5
+    },
+    {
+      "id": "qst_0397",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0",
+        "dsid_9a7191d7761642c8b2553184b5664677"
+      ],
+      "gold": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 103.716
+    },
+    {
+      "id": "qst_0035",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_aa774509f1a14b67bf4dfd289c42f80f",
+        "dsid_ebdd324657f6482f9662b9521e65432e",
+        "dsid_ca5fcf454cf042229190143c5b778401",
+        "dsid_c198dbbcf28a4c73ad1d705809634176",
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 19.07
+    },
+    {
+      "id": "qst_0117",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427",
+        "dsid_c8bbecb794624051a18c379abb9021d3",
+        "dsid_5ac21a5a5a684986860e60439bf2bd2c",
+        "dsid_f0ec3922a9524a2ba8be464f49400b75",
+        "dsid_158001a370224c3c8039f88867823da9"
+      ],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 20.218
+    },
+    {
+      "id": "qst_0183",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_80a4e96eed2942be93c328964e1d327f",
+        "dsid_cfa4197e52eb4145a7d91650d0252058",
+        "dsid_5417f2a334854b98aeb525732af10123",
+        "dsid_0c10879aaadf4314bec81aed9961477a",
+        "dsid_ff2f2c0b1e714b42a827115f35a00848"
+      ],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 6.176
+    },
+    {
+      "id": "qst_0150",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_f940e7c95688406cb497b0b1dab44e99",
+        "dsid_0abf8e94f38b4bec9465243d588594fd",
+        "dsid_56e4ebb2bb13497e86d2684fbf9c01a5",
+        "dsid_1727e01bbd2041289c87e318a2223d69",
+        "dsid_d12f733501444870845c48a6c3e42b4e"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.479
+    },
+    {
+      "id": "qst_0394",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "dsid_99c5a8ae5124458ea4cc4345b47a351f",
+        "dsid_7c08ef109c804c0bb165184b7d78b18c",
+        "dsid_dc0882c146414ae6b75c3d755983d8b0",
+        "dsid_9a5968363fce4f79af38d7702465a121"
+      ],
+      "gold": [
+        "dsid_9a5968363fce4f79af38d7702465a121",
+        "dsid_7c08ef109c804c0bb165184b7d78b18c"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 6.241
+    },
+    {
+      "id": "qst_0035",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b",
+        "dsid_3374769d41f54c29a54ed1fc7ea5df0d",
+        "dsid_ebdd324657f6482f9662b9521e65432e",
+        "dsid_55de479e5e3a4d32b3972ddd2b75980b",
+        "dsid_086515f850e54af8bea2473f4d7eafe1"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 82.965
+    },
+    {
+      "id": "qst_0381",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_865449ae95b044768f33773263bfeaad",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_140d90d0c1af492a89a8f6e52230ae5d",
+        "dsid_826be55e005943e8a3de2087e4634bb6"
+      ],
+      "gold": [
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_865449ae95b044768f33773263bfeaad"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.579
+    },
+    {
+      "id": "qst_0259",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_c7926d576d244b9098274778fcc84b87",
+        "dsid_6626042e2e414e7785cd5e4f7fd96f48",
+        "dsid_ccc2727793b541cd9d237dca907a32b6",
+        "dsid_5e3f4795283b450fa87df01d141c253b",
+        "dsid_8aa30532ab3f4ed5adfb7e9ef0c9e808"
+      ],
+      "gold": [
+        "dsid_fc009de77554459b89e6b4340e8eca82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 7.199
+    },
+    {
+      "id": "qst_0353",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4",
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_bc97f9911d9e4cc4bc6efc4db7ca495b",
+        "dsid_221a41090f8045739f494af4938ffec1",
+        "dsid_4795acf1b525423a9983561d28ff3f9e"
+      ],
+      "gold": [
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 6.556
+    },
+    {
+      "id": "qst_0270",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_23dad38118454ee7bc9f821787db550a",
+        "dsid_15e19fe623ad4082bd975784af9ca15f",
+        "dsid_79000f2c91674c0ca3995b5b1f79827a"
+      ],
+      "gold": [
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 35.99
+    },
+    {
+      "id": "qst_0174",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_d8f3f9dc66bc47d3b087f6a772582e0e",
+        "dsid_d1a2239aa5c4467db0f0a09d6ac2440f",
+        "dsid_26a440df2f3d457c815b964eb5080c09",
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_1f2f52f395cb4f3491b17327c0b32e6c"
+      ],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 48.087
+    },
+    {
+      "id": "qst_0435",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_7fc490f8522b486c8f4b665d5189066c"
+      ],
+      "gold": [
+        "dsid_7fc490f8522b486c8f4b665d5189066c",
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_8116cb3e580543d7bde1c57df351a3f3"
+      ],
+      "hit": true,
+      "recall": 0.8333333333333334,
+      "ms": 6.409
+    },
+    {
+      "id": "qst_0128",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_4562cfb019774ba59b7a64d40f38e8ff",
+        "dsid_6fb7558659de4e439da2368d6ad82db0",
+        "dsid_44e3e9bc00b84beb8ada4a8b71db2fcc",
+        "dsid_6d85dd9a7a2a4366ac7707b10421f1a3",
+        "dsid_a8758440f97344aa899987533e37b32e"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 50.871
+    },
+    {
+      "id": "qst_0190",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d4a7cb4d586a49f8a4c2a4ac296928c5",
+        "dsid_9ed385e1cf774dc88c3765209a6ea4cc",
+        "dsid_2dab968306594149a14ef27b2a1641d1",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70",
+        "dsid_78cbb381b43a482b84e26e17abdf7473"
+      ],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 10.987
+    },
+    {
+      "id": "qst_0294",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_154342fa4a3347a796dd43d98b1b91f0",
+        "dsid_56c34591d80e45e2919ed19fed91bb1d",
+        "dsid_ea340c97ba4f48d0aef6e76a7b11bc18",
+        "dsid_7262260de01a4e028321d8fccfb37c36",
+        "dsid_e78c51f152be4f8f81d7afc28c063076"
+      ],
+      "gold": [
+        "dsid_77351104a57140ac8e065d0a6bcf2046"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 79.901
+    },
+    {
+      "id": "qst_0386",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317",
+        "dsid_23dac50a480947cf8015674217eb9c04",
+        "dsid_dcfb08338358403fb7be18607418976b",
+        "dsid_ad148b222d31473f8a3d279d679935eb",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996"
+      ],
+      "gold": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 71.809
+    },
+    {
+      "id": "qst_0457",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_eb71c987a4fb4ece86da8450721e8999",
+        "dsid_8cb8070d41604b67901e60da07713d92",
+        "dsid_662978747ddb47338b62f7d87c391ca2",
+        "dsid_1063628f9f5f4dde879e8da6e5406d94"
+      ],
+      "gold": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 90.88
+    },
+    {
+      "id": "qst_0442",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_81a7e3e0204d4c6984e0a503d5423314",
+        "dsid_6c3cc0eee4074ee9beb0bc03affeeb32",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "dsid_2ee4c1a35c5f4dba9b49efd3e97dd265",
+        "dsid_2db615f2f6f14cbfae67c62b3c976b27",
+        "dsid_914d75cb27ee4a06b3f69e445d715ab4",
+        "dsid_81a7e3e0204d4c6984e0a503d5423314",
+        "dsid_bf7e0df04c8748458b5515c864c48609",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309"
+      ],
+      "hit": true,
+      "recall": 0.375,
+      "ms": 94.123
+    },
+    {
+      "id": "qst_0406",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0",
+        "dsid_e3dfbf214e024bfb9f63963197fcc53a",
+        "dsid_b360d00be3f84b08b1a879d102835d2f",
+        "dsid_245c7108f8884e138aaae0352c90df41",
+        "dsid_0257bdbb401e4b0a80aff76f57ca7ac7"
+      ],
+      "gold": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 69.15
+    },
+    {
+      "id": "qst_0011",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_46a4cb87db414e769f2df86f01626948",
+        "dsid_a0dc6d69d21f4ce89a3e79ad5d49d379",
+        "dsid_1e8af8380ba241acb84554480ae10824",
+        "dsid_8c30aab9c2384348893cafbbdd68baa5",
+        "dsid_eca0cd2771b24821b4805a2ac3bb64e0"
+      ],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 8.551
+    },
+    {
+      "id": "qst_0222",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d20e350b858a48449b60d13ca1c4fbf7",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_642710b85d534283b7ca03587dcee5e9",
+        "dsid_b133193fbee347db93ab70487563e88e",
+        "dsid_b45102be3609421dab4a10c84035f18c"
+      ],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 35.058
+    },
+    {
+      "id": "qst_0433",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_74ebb73359364bc791707a92a3227e3a",
+        "dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_34c3e1ca78c54fec805cb62127b8982c"
+      ],
+      "gold": [
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_97b25b6f83c542e7b81d6504b5653dcb",
+        "dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "dsid_74ebb73359364bc791707a92a3227e3a"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 4.219
+    },
+    {
+      "id": "qst_0102",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_9384397e3c294b0a80d0e74d12178c1f",
+        "dsid_aff1dc99f1af408e819833d35da92f0f",
+        "dsid_90a7a3bcc18d4d369a81caa3b1d76391",
+        "dsid_bd4cfd315c2143a0a1199056b9bc35be",
+        "dsid_9b3ead802ba243248b7cd32da6091240"
+      ],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 62.968
+    },
+    {
+      "id": "qst_0117",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.035
+    },
+    {
+      "id": "qst_0222",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.479
+    },
+    {
+      "id": "qst_0021",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_55984260cebc414888bc5db6eaf8bb70",
+        "dsid_e70c3348c87e48bd8516cc17ef018df2",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.157
+    },
+    {
+      "id": "qst_0190",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_06fa75830cc74d22bd8e6d6fa80ed1de",
+        "dsid_8205407105944677b6eb3167167064a9",
+        "dsid_3c79ace6733f476bb54d1d289894d09c",
+        "dsid_1063628f9f5f4dde879e8da6e5406d94",
+        "dsid_d4a7cb4d586a49f8a4c2a4ac296928c5"
+      ],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 75.318
+    },
+    {
+      "id": "qst_0025",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058",
+        "dsid_6ea36b7e5ad440c8aa5c78b1e715f5e6",
+        "dsid_0b9c38cb424041f5a786e437c671cb38",
+        "dsid_461a0b4330144f4ba82c4da1919f279e",
+        "dsid_9ebf6344727b4a308818ceb9430a38a3"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.503
+    },
+    {
+      "id": "qst_0013",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5",
+        "dsid_4e5aa31e0f6f4fc49457f54b49297cd3",
+        "dsid_95b5d04053894fa69aabdfd517b07777",
+        "dsid_5df32c2cdcc44aaab289e7bfc85eb158",
+        "dsid_64ecf39115e84e249c03cb1c87aa1b46"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 22.575
+    },
+    {
+      "id": "qst_0234",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_7e5744fb69c044fd92ed0a6e85d5cac2",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8"
+      ],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.442
+    },
+    {
+      "id": "qst_0437",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_2c23337bcf5443c1bcca72e3625528ca",
+        "dsid_01f4ce1ac9ca4b85a471d39960e6be37",
+        "dsid_1e8af8380ba241acb84554480ae10824",
+        "dsid_a750d0e612534832acf95d79fba98014",
+        "dsid_9c43bb6b40b5493fbc6e8bbf9cb63f25"
+      ],
+      "gold": [
+        "dsid_15a9d93cc59c4241a97a7e72f749a216",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_ac94dcaf2e1e4674b2351a8b4177db9e",
+        "dsid_98943148c00b42db859ec2d84649fe04",
+        "dsid_ed145ed8c9234a6681359188e2f43345",
+        "dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "dsid_d373a0708d4144d684e495c52c16448a",
+        "dsid_ec406aef8d0342c78ae27025670daedf"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.793
+    },
+    {
+      "id": "qst_0400",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_341df871f39b4c2cb226692e9f850570",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31",
+        "dsid_8b34a9e02b3e44b39e1cd26886fd669e",
+        "dsid_e9c5246734c849a899e29c60e6134988",
+        "dsid_3c368798ac95482a8bef9e28b6f4af96"
+      ],
+      "gold": [
+        "dsid_10a7359bb6ad4b959ad2171abdb9f620",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 62.321
+    },
+    {
+      "id": "qst_0190",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d4a7cb4d586a49f8a4c2a4ac296928c5",
+        "dsid_2dab968306594149a14ef27b2a1641d1",
+        "dsid_fa4c0aae6e824005955b6d898f2d1c54",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 26.057
+    },
+    {
+      "id": "qst_0394",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_7c08ef109c804c0bb165184b7d78b18c",
+        "dsid_bdbd238e5a7749a79d8cf6cea7489dbd",
+        "dsid_9a5968363fce4f79af38d7702465a121",
+        "dsid_dc0882c146414ae6b75c3d755983d8b0",
+        "dsid_5f119369627543848ddc03d6805509dd"
+      ],
+      "gold": [
+        "dsid_9a5968363fce4f79af38d7702465a121",
+        "dsid_7c08ef109c804c0bb165184b7d78b18c"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 103.055
+    },
+    {
+      "id": "qst_0457",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_662978747ddb47338b62f7d87c391ca2",
+        "dsid_eb71c987a4fb4ece86da8450721e8999",
+        "dsid_b13ad5bec57b452ab6e9fa641c8ae7b9",
+        "dsid_438e745853924b8cb66fd71ec1c6ad2e"
+      ],
+      "gold": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 15.847
+    },
+    {
+      "id": "qst_0236",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_7ff85873f28940d0b370583b9fa5042a",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc",
+        "dsid_d2af50e69fa147b2b3e3feae056555cb",
+        "dsid_46de01c7954f45acbcdcde382d2b06b2",
+        "dsid_9ceeb0aca30348799d6a0123166732ac"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.768
+    },
+    {
+      "id": "qst_0435",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_7fc490f8522b486c8f4b665d5189066c"
+      ],
+      "gold": [
+        "dsid_7fc490f8522b486c8f4b665d5189066c",
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_8116cb3e580543d7bde1c57df351a3f3"
+      ],
+      "hit": true,
+      "recall": 0.8333333333333334,
+      "ms": 20.162
+    },
+    {
+      "id": "qst_0023",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.37
+    },
+    {
+      "id": "qst_0190",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.907
+    },
+    {
+      "id": "qst_0437",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_01f4ce1ac9ca4b85a471d39960e6be37",
+        "dsid_b83c94333b424640a913e66e59433410",
+        "dsid_5c5657fbc4ae44d7acc4682f304242c3",
+        "dsid_6a0a3db80fb94f8bb082c5da8d1393c5",
+        "dsid_2c23337bcf5443c1bcca72e3625528ca"
+      ],
+      "gold": [
+        "dsid_15a9d93cc59c4241a97a7e72f749a216",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_ac94dcaf2e1e4674b2351a8b4177db9e",
+        "dsid_98943148c00b42db859ec2d84649fe04",
+        "dsid_ed145ed8c9234a6681359188e2f43345",
+        "dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "dsid_d373a0708d4144d684e495c52c16448a",
+        "dsid_ec406aef8d0342c78ae27025670daedf"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 53.882
+    },
+    {
+      "id": "qst_0031",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_54196869eb9b48a5ab7580b6f406003a",
+        "dsid_5094ef74d2e249919de1aa6db7c5d0e7",
+        "dsid_461a0b4330144f4ba82c4da1919f279e",
+        "dsid_1686f51002f94b99b8c7752013007a22",
+        "dsid_95b5d04053894fa69aabdfd517b07777"
+      ],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 19.241
+    },
+    {
+      "id": "qst_0400",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_341df871f39b4c2cb226692e9f850570",
+        "dsid_3c0a32aa643d46f1ae4ed7823bffb616",
+        "dsid_e357bf00b5434a15a851b095ddff623b",
+        "dsid_a0f70d961ed948588c2d64e4888ed875",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31"
+      ],
+      "gold": [
+        "dsid_10a7359bb6ad4b959ad2171abdb9f620",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 22.705
+    },
+    {
+      "id": "qst_0406",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0",
+        "dsid_245c7108f8884e138aaae0352c90df41",
+        "dsid_7d347905549f4456b0d2226b47e4aa68",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_92390c1133154cd2838f235d803f9156"
+      ],
+      "gold": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 24.624
+    },
+    {
+      "id": "qst_0023",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670",
+        "dsid_a6efecc786c9436499eb000b8489ae52",
+        "dsid_ba9518f1c10344b4a0fb5f7d82ca070b",
+        "dsid_a41836f345874d5398067b39f08302d8",
+        "dsid_9617867f4c3743b0b4f9493573f35185"
+      ],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 68.57
+    },
+    {
+      "id": "qst_0174",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_16c561fb74504b32ad2f7afcc4594727",
+        "dsid_fc77dac56ce4424c98cb7c934d56fa70",
+        "dsid_b87a80b4d1cd4bb79ea5ea87e4e07e0e",
+        "dsid_c0912296aac0438a96a5ef669466c104",
+        "dsid_384800cd88b949a1bb93b6af0d93e092"
+      ],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 43.664
+    },
+    {
+      "id": "qst_0118",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76",
+        "dsid_3cc0c77386ff43d8a8b79c33c4304689",
+        "dsid_d9f77f614f174eeab9e2e48dcc859b5a",
+        "dsid_f3454e1076154940855fabdaf7607cef",
+        "dsid_e506ea0a35814443b8fff2d70169e376"
+      ],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 6.35
+    },
+    {
+      "id": "qst_0439",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_2cfe3f56de90412599f3c7fb1b1df829",
+        "dsid_e3e317dbf4ef42239197576caad0f273",
+        "dsid_c2bbc7d0b3d2480ea96d6074a86b6619",
+        "dsid_8d990a0d64f94f8ca7e7421bc2d5549a",
+        "dsid_6483467a98ed4097b79676e8cf447f13"
+      ],
+      "gold": [
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_faf3246a6ce845e6b5df0ae52f439399",
+        "dsid_bf7e79dc1331447598c4eebdc5d2897d",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 56.183
+    },
+    {
+      "id": "qst_0110",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_1b25490ecd0344d9a627dac16b208192",
+        "dsid_2e4183d040b341cf843366e2c15402af",
+        "dsid_b6f505f3e278417c94ebe7f5200c3ddb",
+        "dsid_6483467a98ed4097b79676e8cf447f13"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 8.722
+    },
+    {
+      "id": "qst_0382",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_ed6d086c9faf4272b0ee20d3fa4b6180",
+        "dsid_b360d00be3f84b08b1a879d102835d2f",
+        "dsid_c92ca731ba554124b3ca10fc1495019c"
+      ],
+      "gold": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 20.152
+    },
+    {
+      "id": "qst_0150",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_f940e7c95688406cb497b0b1dab44e99",
+        "dsid_2227cc62a32547e0a483fd67ac157126",
+        "dsid_b0904f5cce3b492396a7725789b35879",
+        "dsid_d12f733501444870845c48a6c3e42b4e",
+        "dsid_be0a95081e04471e84c43e5f08ce1ad8"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.297
+    },
+    {
+      "id": "qst_0441",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1",
+        "dsid_2a3f915633684276a3e5fb84090ffcec",
+        "dsid_85b941c5ae064ddeaa5bd986d93751e0",
+        "dsid_5e3f4795283b450fa87df01d141c253b"
+      ],
+      "gold": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_e2327ad35ceb466489dad854770739bf",
+        "dsid_871b6712caf44f8bbfea4d8a15e436b6",
+        "dsid_80e095c2dc1745af86b80d24e27a9857",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+      ],
+      "hit": true,
+      "recall": 0.3333333333333333,
+      "ms": 68.763
+    },
+    {
+      "id": "qst_0197",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_d1fb7f13444d4f87b234f97443bd864f",
+        "dsid_9e30caedbe7f40b4928cad7b44f90e39",
+        "dsid_4b257fcc96134cf892efdc9fa98e3cda",
+        "dsid_c471154b3cf64d3b815ad4314c6473b5",
+        "dsid_c98b091148d649e188c56f153a3157b7"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 46.948
+    },
+    {
+      "id": "qst_0248",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_462f37885ea5406284727925ca5ded7d",
+        "dsid_935cde0b517c4925972c711dcf05b3f4",
+        "dsid_bd6b42d4cc6a400e92733027284138a2",
+        "dsid_778bb0e62f3c4ed5af09ea58003c2803",
+        "dsid_650dcfe0b9bb4943b41472e842016c1d"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 40.537
+    },
+    {
+      "id": "qst_0011",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.045
+    },
+    {
+      "id": "qst_0358",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_858fd59a63d64f5e81a2b8482ba64dbf",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_330be20dd4224d8dad24eb633121ba06",
+        "dsid_39ce4410a60a4f2e8d36051312d6a86a",
+        "dsid_69124f39ea764305b331c9ed6aa728b6"
+      ],
+      "gold": [
+        "dsid_330be20dd4224d8dad24eb633121ba06",
+        "dsid_c70d63e14aa84195aec43820c018f8b9",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+      ],
+      "hit": true,
+      "recall": 0.75,
+      "ms": 17.678
+    },
+    {
+      "id": "qst_0440",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_dd0fe40a2c71489793d566e46e95bb93",
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_afcdafea9b2d4097bcbb035ae4416afb",
+        "dsid_03042cec7a2344769bca5a624091092e"
+      ],
+      "gold": [
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_50f47a9662ea40858feb7bd975071c96",
+        "dsid_03042cec7a2344769bca5a624091092e",
+        "dsid_b96ce0f550a9437e902636a7628160ca",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_dd0fe40a2c71489793d566e46e95bb93"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 19.563
+    },
+    {
+      "id": "qst_0234",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_1063628f9f5f4dde879e8da6e5406d94",
+        "dsid_178ff503c6fc4a4db593eace57e6938a",
+        "dsid_45d1dc582cf84e9680e6a69e5a76ffa4",
+        "dsid_826be55e005943e8a3de2087e4634bb6",
+        "dsid_8e895f67a2ee451493354747adc420b6"
+      ],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 41.962
+    },
+    {
+      "id": "qst_0150",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_1727e01bbd2041289c87e318a2223d69",
+        "dsid_2227cc62a32547e0a483fd67ac157126",
+        "dsid_bbd3a03e990b48b38cbf0faad57ee6f3",
+        "dsid_acded13e7fa542958ccb5b211298dd2d",
+        "dsid_ed3ac59506914b128e2fc08538885788"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 59.577
+    },
+    {
+      "id": "qst_0338",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba",
+        "dsid_6cdb6ea1cb644d16a70147a462efc46f",
+        "dsid_85ade33e53334639be778b9c7aabe637",
+        "dsid_8205407105944677b6eb3167167064a9",
+        "dsid_a5b2109e90b14ba6ac841ff8dec11073"
+      ],
+      "gold": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.017
+    },
+    {
+      "id": "qst_0353",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4",
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_bc97f9911d9e4cc4bc6efc4db7ca495b",
+        "dsid_221a41090f8045739f494af4938ffec1",
+        "dsid_4795acf1b525423a9983561d28ff3f9e"
+      ],
+      "gold": [
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 18.168
+    },
+    {
+      "id": "qst_0210",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_927a22874bc643449a8e7255d2b97c8d",
+        "dsid_ce27c99ceee743249e41f15d678c2dfd",
+        "dsid_9e47970be2394699b68d2db6f7ce7471",
+        "dsid_304e36f9ff3349af98ec2ca869b429fc",
+        "dsid_46c1506239064ca99d05ae059e783c0c"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 68.808
+    },
+    {
+      "id": "qst_0408",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_5f119369627543848ddc03d6805509dd",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70",
+        "dsid_5efc026a36144721a82af3dfb2dcdea8",
+        "dsid_927a22874bc643449a8e7255d2b97c8d"
+      ],
+      "gold": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 88.48
+    },
+    {
+      "id": "qst_0447",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_538be95952e64be59c342d9d2c076382",
+        "dsid_42aad55e1b9848b7944b7437e7b8339e",
+        "dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "gold": [
+        "dsid_452dc45d76754cbca8a3674170599633",
+        "dsid_e5fe3fd0cf444668a64970ec00818f46",
+        "dsid_ac2fdba09cc24cd98ba60f5da114780c",
+        "dsid_8c3d5e26a1c841199d3bcd7aea5d495e",
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "hit": true,
+      "recall": 0.3333333333333333,
+      "ms": 7.952
+    },
+    {
+      "id": "qst_0469",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7",
+        "dsid_3a16481691294f0ab3c79061ef479e8c",
+        "dsid_6483467a98ed4097b79676e8cf447f13",
+        "dsid_82532c302a7d43c698b81d621d46c98c",
+        "dsid_9e3a64a2ca0f4b528d969a800318e673"
+      ],
+      "gold": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 49.998
+    },
+    {
+      "id": "qst_0104",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a",
+        "dsid_3848df9a653f4b2da022ecb753587654",
+        "dsid_30345ab013724570a9eb2bab3f4853a9",
+        "dsid_d16a7fb54f43425f9c0fd5038ddf4816",
+        "dsid_30d2617745b74c77967c103b58568800"
+      ],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 20.342
+    },
+    {
+      "id": "qst_0433",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_74ebb73359364bc791707a92a3227e3a",
+        "dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_34c3e1ca78c54fec805cb62127b8982c"
+      ],
+      "gold": [
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_97b25b6f83c542e7b81d6504b5653dcb",
+        "dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "dsid_74ebb73359364bc791707a92a3227e3a"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 18.851
+    },
+    {
+      "id": "qst_0458",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_8cb8070d41604b67901e60da07713d92",
+        "dsid_38a4af67314d46179ae4f3e7ff616661",
+        "dsid_9c7f8d6d2f2b4f0d9c2d3f6a1b8e4a21",
+        "dsid_4926f2f5ea46446f8178e9e0e3733a6e"
+      ],
+      "gold": [
+        "dsid_8cb8070d41604b67901e60da07713d92"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 4.161
+    },
+    {
+      "id": "qst_0035",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d8480d7f1f7344c28b72853b35f9330d",
+        "dsid_017bfb1fae884cdaa6851f6e992b9efe",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d",
+        "dsid_182e48cabc7b45bc873efd9be2acb256",
+        "dsid_c60f1f306789466693e764022ef9784d"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.083
+    },
+    {
+      "id": "qst_0404",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_c85ce50397ba4060941e5ba19ae72890",
+        "dsid_bf21ad0eb49b4029a000ef28cc5ae696",
+        "dsid_72dac7d48d6a4b0685d62070c95b66ed",
+        "dsid_e49106ea674142edabe147d02405af53",
+        "dsid_583556ed29e64654983933c1580b6b09"
+      ],
+      "gold": [
+        "dsid_ad70fa7335294e2988193e2a6645a5ba",
+        "dsid_8f0301d7b2414031b392da5566f98ce6"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 85.069
+    },
+    {
+      "id": "qst_0458",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_9c7f8d6d2f2b4f0d9c2d3f6a1b8e4a21",
+        "dsid_38a4af67314d46179ae4f3e7ff616661",
+        "dsid_8cb8070d41604b67901e60da07713d92",
+        "dsid_5db54d85ce48430da6a1fd434dba4671"
+      ],
+      "gold": [
+        "dsid_8cb8070d41604b67901e60da07713d92"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 61.155
+    },
+    {
+      "id": "qst_0190",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.568
+    },
+    {
+      "id": "qst_0022",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.554
+    },
+    {
+      "id": "qst_0248",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_af07f94d81764b1fa7ddcf8412037685",
+        "dsid_4f2844ba27d9489d882e1a332db2c618",
+        "dsid_915572281921482ca7518df47bb32e34",
+        "dsid_b02e6ce0d9814b35af846c309c25e551",
+        "dsid_4d2b3ab7303347999113d5cb91040722"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.15
+    },
+    {
+      "id": "qst_0381",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_865449ae95b044768f33773263bfeaad",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_140d90d0c1af492a89a8f6e52230ae5d",
+        "dsid_826be55e005943e8a3de2087e4634bb6"
+      ],
+      "gold": [
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_865449ae95b044768f33773263bfeaad"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 21.195
+    },
+    {
+      "id": "qst_0442",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_eac14b05fee947639c11f82451aaa8c5"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "dsid_2ee4c1a35c5f4dba9b49efd3e97dd265",
+        "dsid_2db615f2f6f14cbfae67c62b3c976b27",
+        "dsid_914d75cb27ee4a06b3f69e445d715ab4",
+        "dsid_81a7e3e0204d4c6984e0a503d5423314",
+        "dsid_bf7e0df04c8748458b5515c864c48609",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309"
+      ],
+      "hit": true,
+      "recall": 0.375,
+      "ms": 4.049
+    },
+    {
+      "id": "qst_0023",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.272
+    },
+    {
+      "id": "qst_0021",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_55984260cebc414888bc5db6eaf8bb70",
+        "dsid_e70c3348c87e48bd8516cc17ef018df2",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.578
+    },
+    {
+      "id": "qst_0104",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.903
+    },
+    {
+      "id": "qst_0102",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02",
+        "dsid_50a004c55eec403eaddc2fab715e78e4",
+        "dsid_7f6bfde9e42648979b582c8f257fd42f",
+        "dsid_ccc2727793b541cd9d237dca907a32b6",
+        "dsid_fadab57fce044302af798a476431d3b7"
+      ],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 14.968
+    },
+    {
+      "id": "qst_0118",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76",
+        "dsid_3cc0c77386ff43d8a8b79c33c4304689",
+        "dsid_d9f77f614f174eeab9e2e48dcc859b5a",
+        "dsid_f3454e1076154940855fabdaf7607cef",
+        "dsid_7507a912a31b47b4a78bd5d5c678c487"
+      ],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 15.421
+    },
+    {
+      "id": "qst_0431",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_840703a1cc37438a84e9beb68029d80b",
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_42aad55e1b9848b7944b7437e7b8339e",
+        "dsid_a1c9554c774a401fb87c65bb12f5afb5",
+        "dsid_6807c651b55546559733c7c6f8dc133d"
+      ],
+      "gold": [
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_840703a1cc37438a84e9beb68029d80b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 3.185
+    },
+    {
+      "id": "qst_0221",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_a3a4b5a5689b48e89f0b1f33b7d90f60",
+        "dsid_40b1c36e577d46f5a2f7baf4528d86ef",
+        "dsid_315e559c5115420d8acdb7347ae1a3e3",
+        "dsid_fdc9b77a90a5434d8c576afdcc0c8a72"
+      ],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 25.326
+    },
+    {
+      "id": "qst_0439",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_2cfe3f56de90412599f3c7fb1b1df829",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f",
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_aae85e8fe2584130afd258a0706c9272"
+      ],
+      "gold": [
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_faf3246a6ce845e6b5df0ae52f439399",
+        "dsid_bf7e79dc1331447598c4eebdc5d2897d",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f"
+      ],
+      "hit": true,
+      "recall": 0.6,
+      "ms": 21.305
+    },
+    {
+      "id": "qst_0400",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_341df871f39b4c2cb226692e9f850570",
+        "dsid_3c0a32aa643d46f1ae4ed7823bffb616",
+        "dsid_e9c5246734c849a899e29c60e6134988",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31",
+        "dsid_c97b4d9f2dc74fd3bc0859ffc85b8a4d"
+      ],
+      "gold": [
+        "dsid_10a7359bb6ad4b959ad2171abdb9f620",
+        "dsid_b52a8760cae1451a9504edcf9ff58e31"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 5.935
+    },
+    {
+      "id": "qst_0150",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f940e7c95688406cb497b0b1dab44e99",
+        "dsid_0abf8e94f38b4bec9465243d588594fd",
+        "dsid_56e4ebb2bb13497e86d2684fbf9c01a5",
+        "dsid_1727e01bbd2041289c87e318a2223d69",
+        "dsid_d12f733501444870845c48a6c3e42b4e"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.983
+    },
+    {
+      "id": "qst_0382",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_ed6d086c9faf4272b0ee20d3fa4b6180",
+        "dsid_ee619d1d14534f0ca9ca852ff7d9914f",
+        "dsid_0abf8e94f38b4bec9465243d588594fd"
+      ],
+      "gold": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 52.747
+    },
+    {
+      "id": "qst_0408",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_5efc026a36144721a82af3dfb2dcdea8",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70",
+        "dsid_5f119369627543848ddc03d6805509dd",
+        "dsid_b13ad5bec57b452ab6e9fa641c8ae7b9"
+      ],
+      "gold": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 9.131
+    },
+    {
+      "id": "qst_0013",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d52e8ad65e6b44d58e1dbe08fae07ceb",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc",
+        "dsid_fe8170f0e516419c80cec083157331e8",
+        "dsid_f43915ae436d4d5496b59cda36717f5c",
+        "dsid_284e09095d844346b2eeb05c7e4179c0"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.862
+    },
+    {
+      "id": "qst_0110",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_1b25490ecd0344d9a627dac16b208192",
+        "dsid_2e4183d040b341cf843366e2c15402af",
+        "dsid_b6f505f3e278417c94ebe7f5200c3ddb",
+        "dsid_559a01fdce7646b6938b9917992434c3"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 16.627
+    },
+    {
+      "id": "qst_0142",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_139024dc11964a89a608db08a52913e7",
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_b3e232fad2d341fb8c2abb2831e06e07",
+        "dsid_bfaa7366ccbd49c6a1d2a150d0404f02",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 2.267
+    },
+    {
+      "id": "qst_0013",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5",
+        "dsid_4e5aa31e0f6f4fc49457f54b49297cd3",
+        "dsid_95b5d04053894fa69aabdfd517b07777",
+        "dsid_5df32c2cdcc44aaab289e7bfc85eb158",
+        "dsid_64ecf39115e84e249c03cb1c87aa1b46"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 3.503
+    },
+    {
+      "id": "qst_0023",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670",
+        "dsid_662978747ddb47338b62f7d87c391ca2",
+        "dsid_a41836f345874d5398067b39f08302d8",
+        "dsid_a6efecc786c9436499eb000b8489ae52",
+        "dsid_ba9518f1c10344b4a0fb5f7d82ca070b"
+      ],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 13.361
+    },
+    {
+      "id": "qst_0404",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_8f0301d7b2414031b392da5566f98ce6",
+        "dsid_826a15051f844d6ab1c1ae9bf0b49bf2",
+        "dsid_c85ce50397ba4060941e5ba19ae72890",
+        "dsid_d8d194e311b9482cb38c61134b6d26fa",
+        "dsid_d7ba583bbe604d42ba453c53663f831d"
+      ],
+      "gold": [
+        "dsid_ad70fa7335294e2988193e2a6645a5ba",
+        "dsid_8f0301d7b2414031b392da5566f98ce6"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 36.135
+    },
+    {
+      "id": "qst_0031",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.344
+    },
+    {
+      "id": "qst_0259",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_5e3f4795283b450fa87df01d141c253b",
+        "dsid_c7926d576d244b9098274778fcc84b87",
+        "dsid_ae86d527abd144219f7e3adad356b7af",
+        "dsid_b232d919849d4467a42f95384cafa7e5",
+        "dsid_e8289805c55b4f56afed3be7e1092531"
+      ],
+      "gold": [
+        "dsid_fc009de77554459b89e6b4340e8eca82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 58.088
+    },
+    {
+      "id": "qst_0216",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_dbbeebb87274453e85f5abb97544c508",
+        "dsid_88ceef6df455432692bc7a1292727642",
+        "dsid_d16a7fb54f43425f9c0fd5038ddf4816",
+        "dsid_a9566b41322942fa8fef145f63c2a7ae",
+        "dsid_e5fe3fd0cf444668a64970ec00818f46"
+      ],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 17.384
+    },
+    {
+      "id": "qst_0327",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0",
+        "dsid_db1c1f64721b468dafb35c2e0080a8f8",
+        "dsid_63ff9a2868b444c897f317d9849b94d9",
+        "dsid_62f1a9cc6477452b8946d618690c2195",
+        "dsid_f3f69e0908d44ff9b6dc55ac45ea853a"
+      ],
+      "gold": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 3.528
+    },
+    {
+      "id": "qst_0327",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0",
+        "dsid_db1c1f64721b468dafb35c2e0080a8f8",
+        "dsid_63ff9a2868b444c897f317d9849b94d9",
+        "dsid_62f1a9cc6477452b8946d618690c2195",
+        "dsid_f3f69e0908d44ff9b6dc55ac45ea853a"
+      ],
+      "gold": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 15.987
+    },
+    {
+      "id": "qst_0110",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_55984260cebc414888bc5db6eaf8bb70",
+        "dsid_e70c3348c87e48bd8516cc17ef018df2",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.19
+    },
+    {
+      "id": "qst_0197",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_cee5caab220140cfa4bd1720324ce4da",
+        "dsid_5650ae3bff08466f92289cbc565c7d2b",
+        "dsid_ffa7f082a77c415b9b56218a9933e04f",
+        "dsid_51ea7727376e46b8b14cdd4e48b77aae",
+        "dsid_669e9ffd866e4d6b92bd3cd7c715d84f"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.463
+    },
+    {
+      "id": "qst_0197",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_73178571459f40579cad212c2af5b963",
+        "dsid_8b25872142ed4a09bdfc9526f16a0b66",
+        "dsid_82c0781b50cb47668b5d37a67a9a157d",
+        "dsid_3baaea951b3941d596ed21be946c5075",
+        "dsid_2fede54bdbb24335bf08a65d19d93de7"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 49.696
+    },
+    {
+      "id": "qst_0142",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_139024dc11964a89a608db08a52913e7",
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_b3e232fad2d341fb8c2abb2831e06e07",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40",
+        "dsid_bfaa7366ccbd49c6a1d2a150d0404f02"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 1.305
+    },
+    {
+      "id": "qst_0294",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_ea340c97ba4f48d0aef6e76a7b11bc18",
+        "dsid_24d2650ca788444dbf05177253ed35d0",
+        "dsid_fc009de77554459b89e6b4340e8eca82",
+        "dsid_6381dec9177748658f392e8600d7cf1d",
+        "dsid_e78c51f152be4f8f81d7afc28c063076"
+      ],
+      "gold": [
+        "dsid_77351104a57140ac8e065d0a6bcf2046"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 23.437
+    },
+    {
+      "id": "qst_0439",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_2cfe3f56de90412599f3c7fb1b1df829",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f",
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_e3e317dbf4ef42239197576caad0f273"
+      ],
+      "gold": [
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_faf3246a6ce845e6b5df0ae52f439399",
+        "dsid_bf7e79dc1331447598c4eebdc5d2897d",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f"
+      ],
+      "hit": true,
+      "recall": 0.6,
+      "ms": 3.557
+    },
+    {
+      "id": "qst_0327",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0",
+        "dsid_f3f69e0908d44ff9b6dc55ac45ea853a",
+        "dsid_1cdeab0ff7e54b34a0f7e3b28d91427e",
+        "dsid_63ff9a2868b444c897f317d9849b94d9",
+        "dsid_bffe5847565845288976fe42ea7cb6d9"
+      ],
+      "gold": [
+        "dsid_69e745b76aa34eab8721ba0c88482ec0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 49.746
+    },
+    {
+      "id": "qst_0447",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f",
+        "dsid_538be95952e64be59c342d9d2c076382",
+        "dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "gold": [
+        "dsid_452dc45d76754cbca8a3674170599633",
+        "dsid_e5fe3fd0cf444668a64970ec00818f46",
+        "dsid_ac2fdba09cc24cd98ba60f5da114780c",
+        "dsid_8c3d5e26a1c841199d3bcd7aea5d495e",
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "hit": true,
+      "recall": 0.3333333333333333,
+      "ms": 24.966
+    },
+    {
+      "id": "qst_0021",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1",
+        "dsid_11b4dc5c498c472b9827a245f5a0720e",
+        "dsid_951c6983787c4be28703bbb5b5e5edd9",
+        "dsid_dbbeebb87274453e85f5abb97544c508",
+        "dsid_fdde8c916df1478a86f7382f019a61a5"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.516
+    },
+    {
+      "id": "qst_0444",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_5cde26f232454906879617dab1800fae",
+        "dsid_036427f863ee44a0919827cce14cbca8",
+        "dsid_92d0d471ddc941288bcb51b3ded6ec36"
+      ],
+      "gold": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_5cde26f232454906879617dab1800fae",
+        "dsid_92d0d471ddc941288bcb51b3ded6ec36",
+        "dsid_d8d194e311b9482cb38c61134b6d26fa",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_2ad75f27c36b492f847d5b9c63492e4b"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 21.842
+    },
+    {
+      "id": "qst_0110",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_c9359b8fb7a340f39e820ad9784f696f",
+        "dsid_ab713c73c4934d8899e41dbcd94efe8c",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_0a6243c32ab14733b220c59c93c2b465"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 43.612
+    },
+    {
+      "id": "qst_0222",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d20e350b858a48449b60d13ca1c4fbf7",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_642710b85d534283b7ca03587dcee5e9",
+        "dsid_36d7605113204cdca94405cb30fc2c10",
+        "dsid_b133193fbee347db93ab70487563e88e"
+      ],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 4.648
+    },
+    {
+      "id": "qst_0441",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_80e095c2dc1745af86b80d24e27a9857",
+        "dsid_2a3f915633684276a3e5fb84090ffcec",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1",
+        "dsid_189e917be23f4c2b9618247f2c555774"
+      ],
+      "gold": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_e2327ad35ceb466489dad854770739bf",
+        "dsid_871b6712caf44f8bbfea4d8a15e436b6",
+        "dsid_80e095c2dc1745af86b80d24e27a9857",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 4.643
+    },
+    {
+      "id": "qst_0150",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_c5c58c93f8324f638cde03bc4008bcb8",
+        "dsid_d12f733501444870845c48a6c3e42b4e",
+        "dsid_1727e01bbd2041289c87e318a2223d69",
+        "dsid_f6010e77fb754233ba85d19f3b0596b0",
+        "dsid_0369a77a50ad48748c8dc73933419a0c"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 38.78
+    },
+    {
+      "id": "qst_0025",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058",
+        "dsid_d511c6d8daf94f998ce6a3d97462af2d",
+        "dsid_c2bc10dd66d2461d963253111e7b6df1",
+        "dsid_97e17aff22b744e48ca567f013e5e8e7",
+        "dsid_6ea36b7e5ad440c8aa5c78b1e715f5e6"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 55.571
+    },
+    {
+      "id": "qst_0248",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_18d62b6e0f1d41e3b338977a39a6c963",
+        "dsid_af07f94d81764b1fa7ddcf8412037685",
+        "dsid_4f2844ba27d9489d882e1a332db2c618",
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_915572281921482ca7518df47bb32e34"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 40.832
+    },
+    {
+      "id": "qst_0210",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_46c1506239064ca99d05ae059e783c0c",
+        "dsid_927a22874bc643449a8e7255d2b97c8d",
+        "dsid_f6fa144362d7412c96d8d4798bda758a",
+        "dsid_f071b87d3f1340feac622bc3945f385d",
+        "dsid_d7c1267719e849bc8fdc670a798b6f64"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 29.758
+    },
+    {
+      "id": "qst_0444",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_8af01878fb504132b36f129953e25dd9",
+        "dsid_69055733c7dc464f94a640c7357a30e1",
+        "dsid_5cde26f232454906879617dab1800fae"
+      ],
+      "gold": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_5cde26f232454906879617dab1800fae",
+        "dsid_92d0d471ddc941288bcb51b3ded6ec36",
+        "dsid_d8d194e311b9482cb38c61134b6d26fa",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_2ad75f27c36b492f847d5b9c63492e4b"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 59.451
+    },
+    {
+      "id": "qst_0222",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_642710b85d534283b7ca03587dcee5e9",
+        "dsid_87f5d35ab87f4303b5bedc483264272e",
+        "dsid_36d7605113204cdca94405cb30fc2c10",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_49de3bbfc6ed4792bff1ae2c0ba2ad69"
+      ],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 63.656
+    },
+    {
+      "id": "qst_0216",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_dbbeebb87274453e85f5abb97544c508",
+        "dsid_88ceef6df455432692bc7a1292727642",
+        "dsid_d16a7fb54f43425f9c0fd5038ddf4816",
+        "dsid_a9566b41322942fa8fef145f63c2a7ae",
+        "dsid_de6b49c261c64af3885c8d0603ef134d"
+      ],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 6.12
+    },
+    {
+      "id": "qst_0031",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.232
+    },
+    {
+      "id": "qst_0405",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_e9a8fea5bc9e4ac6abf4e3120a032eba",
+        "dsid_28b445b5d6104d7b947352a9d8f63ca9",
+        "dsid_9964e71da61e4a92bf3f53699cabbf95",
+        "dsid_6483467a98ed4097b79676e8cf447f13"
+      ],
+      "gold": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_9964e71da61e4a92bf3f53699cabbf95"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 69.49
+    },
+    {
+      "id": "qst_0011",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_46a4cb87db414e769f2df86f01626948",
+        "dsid_a0dc6d69d21f4ce89a3e79ad5d49d379",
+        "dsid_1e8af8380ba241acb84554480ae10824",
+        "dsid_8c30aab9c2384348893cafbbdd68baa5",
+        "dsid_eca0cd2771b24821b4805a2ac3bb64e0"
+      ],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 19.934
+    },
+    {
+      "id": "qst_0384",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_1c4594f61ff446a587952bfe86c3717c",
+        "dsid_f8b651a683044ad8964f34f881c63152",
+        "dsid_0c679d20643a4b45a0820e2b36da463b",
+        "dsid_29313788890d45e0bf291ea321e8c5cd",
+        "dsid_1018716404614a168d9583eb75971e9e"
+      ],
+      "gold": [
+        "dsid_f877499fe0e946199ceb2486f0ad5ec3",
+        "dsid_f8b651a683044ad8964f34f881c63152"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 4.631
+    },
+    {
+      "id": "qst_0221",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_426645772b534ac4a6af358830cf7982",
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_69055733c7dc464f94a640c7357a30e1",
+        "dsid_40b1c36e577d46f5a2f7baf4528d86ef",
+        "dsid_67716cf2ec8a417fa97c4360765e686a"
+      ],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 48.212
+    },
+    {
+      "id": "qst_0445",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_e82eadf0700f4e6db8eecc460c4cac44",
+        "dsid_117e5a150aa94adc86295786bd6b7843"
+      ],
+      "gold": [
+        "dsid_2b7848a8491749f8b9b9a8c13f78445f",
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_e82eadf0700f4e6db8eecc460c4cac44",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_04e98bd61eac4ec89e3fc13c38de1b8e",
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_2dab968306594149a14ef27b2a1641d1"
+      ],
+      "hit": true,
+      "recall": 0.25,
+      "ms": 75.042
+    },
+    {
+      "id": "qst_0406",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0",
+        "dsid_245c7108f8884e138aaae0352c90df41",
+        "dsid_7d347905549f4456b0d2226b47e4aa68",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_d84b5c98fffd4e278786cd71a87b48fa"
+      ],
+      "gold": [
+        "dsid_3638bd02227d4882ad0605f1e8b767c0"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 9.589
+    },
+    {
+      "id": "qst_0221",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.658
+    },
+    {
+      "id": "qst_0118",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.796
+    },
+    {
+      "id": "qst_0252",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.617
+    },
+    {
+      "id": "qst_0022",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_c5b919deea7f429c96ccfba5ec746bef",
+        "dsid_22b0e0f6065e4115aff1ab5cf9086946",
+        "dsid_6925189242ff48f9acc6114253508a5e",
+        "dsid_452dc45d76754cbca8a3674170599633",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972"
+      ],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 34.415
+    },
+    {
+      "id": "qst_0011",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_46a4cb87db414e769f2df86f01626948",
+        "dsid_8c30aab9c2384348893cafbbdd68baa5",
+        "dsid_1dbc460fc6b646759b932ab83f5d93d6",
+        "dsid_cec507db844b458c98daa7f18bcbe04b",
+        "dsid_4e4a413bbb8d4debb4f4b48d683735a3"
+      ],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 46.041
+    },
+    {
+      "id": "qst_0102",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.389
+    },
+    {
+      "id": "qst_0210",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_46c1506239064ca99d05ae059e783c0c",
+        "dsid_ee3c2e8d5aa24b0c8338998349eb50e8",
+        "dsid_121309fa4f424b8083455e99974cd00c",
+        "dsid_650dcfe0b9bb4943b41472e842016c1d",
+        "dsid_3594e7b29c724c95a70ade7d13ff17d1"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.424
+    },
+    {
+      "id": "qst_0445",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_89889daf6b89426ca90049f313d4324f"
+      ],
+      "gold": [
+        "dsid_2b7848a8491749f8b9b9a8c13f78445f",
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_e82eadf0700f4e6db8eecc460c4cac44",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_04e98bd61eac4ec89e3fc13c38de1b8e",
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_2dab968306594149a14ef27b2a1641d1"
+      ],
+      "hit": true,
+      "recall": 0.375,
+      "ms": 5.995
+    },
+    {
+      "id": "qst_0294",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_ea340c97ba4f48d0aef6e76a7b11bc18",
+        "dsid_e78c51f152be4f8f81d7afc28c063076",
+        "dsid_60d55ca6ef0e4c029d2086fe7ff68bc4",
+        "dsid_528309ff012c483ea20b54bc9878c94f",
+        "dsid_78b62a2e8dcf44c58cc6fca24311cfd5"
+      ],
+      "gold": [
+        "dsid_77351104a57140ac8e065d0a6bcf2046"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 6.177
+    },
+    {
+      "id": "qst_0142",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40",
+        "dsid_73dc3e15ebff4462ba6ffe3301f83622",
+        "dsid_c6c0bf21c2e04bb4ae02d1864aa0dd4b",
+        "dsid_6ddbb46c266647f4922b8107fd6ea395"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 49.117
+    },
+    {
+      "id": "qst_0272",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_08dad2eca6254098bf395cfb5ddbd037",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_d1a2ffd106b14743acfd62e901cf7803",
+        "dsid_09dd6bc92dfe4209bb47f31603dbf625",
+        "dsid_d20e350b858a48449b60d13ca1c4fbf7"
+      ],
+      "gold": [
+        "dsid_329e7ecd6b304c30b61a30e07919e008"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.277
+    },
+    {
+      "id": "qst_0174",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_d8f3f9dc66bc47d3b087f6a772582e0e",
+        "dsid_c8bbecb794624051a18c379abb9021d3",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70",
+        "dsid_2bb0a4d1958848b0939ed64cc2b911ff"
+      ],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 10.994
+    },
+    {
+      "id": "qst_0025",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_7517b80eb19b439090cc2df26bde7f48",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_a1a79508e9294f3695aea7f118f80fe4",
+        "dsid_29313788890d45e0bf291ea321e8c5cd",
+        "dsid_aac20b177077476eae9bb1ac5548aae6"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.062
+    },
+    {
+      "id": "qst_0025",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_7517b80eb19b439090cc2df26bde7f48",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_a1a79508e9294f3695aea7f118f80fe4",
+        "dsid_29313788890d45e0bf291ea321e8c5cd",
+        "dsid_aac20b177077476eae9bb1ac5548aae6"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.773
+    },
+    {
+      "id": "qst_0022",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.499
+    },
+    {
+      "id": "qst_0469",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7",
+        "dsid_6483467a98ed4097b79676e8cf447f13",
+        "dsid_eac14b05fee947639c11f82451aaa8c5",
+        "dsid_f0ec3922a9524a2ba8be464f49400b75",
+        "dsid_ce9befdefce647ff90c069ec021612c3"
+      ],
+      "gold": [
+        "dsid_c1a652436b2e4c949f5de9f5da227cd7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 4.772
+    },
+    {
+      "id": "qst_0437",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_2c23337bcf5443c1bcca72e3625528ca",
+        "dsid_1e8af8380ba241acb84554480ae10824",
+        "dsid_01f4ce1ac9ca4b85a471d39960e6be37",
+        "dsid_a750d0e612534832acf95d79fba98014",
+        "dsid_9c43bb6b40b5493fbc6e8bbf9cb63f25"
+      ],
+      "gold": [
+        "dsid_15a9d93cc59c4241a97a7e72f749a216",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_ac94dcaf2e1e4674b2351a8b4177db9e",
+        "dsid_98943148c00b42db859ec2d84649fe04",
+        "dsid_ed145ed8c9234a6681359188e2f43345",
+        "dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "dsid_d373a0708d4144d684e495c52c16448a",
+        "dsid_ec406aef8d0342c78ae27025670daedf"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 13.733
+    },
+    {
+      "id": "qst_0197",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_b7cd82122b834b928ec615d788851bd2",
+        "dsid_5650ae3bff08466f92289cbc565c7d2b",
+        "dsid_82c0781b50cb47668b5d37a67a9a157d",
+        "dsid_a15105ac05894880910c15c92024b8b3",
+        "dsid_73178571459f40579cad212c2af5b963"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 30.775
+    },
+    {
+      "id": "qst_0197",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_cee5caab220140cfa4bd1720324ce4da",
+        "dsid_5650ae3bff08466f92289cbc565c7d2b",
+        "dsid_51ea7727376e46b8b14cdd4e48b77aae",
+        "dsid_ae08c300c49b44048c7820966e9561e2",
+        "dsid_ffa7f082a77c415b9b56218a9933e04f"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.081
+    },
+    {
+      "id": "qst_0248",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_462f37885ea5406284727925ca5ded7d",
+        "dsid_5f5f8ee035b142de83852da48520231c",
+        "dsid_935cde0b517c4925972c711dcf05b3f4",
+        "dsid_69055733c7dc464f94a640c7357a30e1",
+        "dsid_778bb0e62f3c4ed5af09ea58003c2803"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 28.754
+    },
+    {
+      "id": "qst_0270",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_79000f2c91674c0ca3995b5b1f79827a",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_140d90d0c1af492a89a8f6e52230ae5d",
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4",
+        "dsid_5e4fced5bea4475c83a105ac26aeb54b"
+      ],
+      "gold": [
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 64.405
+    },
+    {
+      "id": "qst_0405",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_008a3dc1bf7f4e278de0012ad8d402d3",
+        "dsid_2d54f1aabaf549c9b83b3aaf071acc92",
+        "dsid_40ecd61527594814ae4166c67f0909e3",
+        "dsid_7fc490f8522b486c8f4b665d5189066c"
+      ],
+      "gold": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_9964e71da61e4a92bf3f53699cabbf95"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 30.014
+    },
+    {
+      "id": "qst_0252",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.777
+    },
+    {
+      "id": "qst_0234",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.271
+    },
+    {
+      "id": "qst_0174",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_d8f3f9dc66bc47d3b087f6a772582e0e",
+        "dsid_c8bbecb794624051a18c379abb9021d3",
+        "dsid_d1a2239aa5c4467db0f0a09d6ac2440f",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 2.285
+    },
+    {
+      "id": "qst_0221",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_ce473e843d3f45a3bff8c49ebe762421",
+        "dsid_121309fa4f424b8083455e99974cd00c",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_3407ac164f6744d4a2c241e0c5412b59",
+        "dsid_8e895f67a2ee451493354747adc420b6"
+      ],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 38.301
+    },
+    {
+      "id": "qst_0353",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4",
+        "dsid_6d5cbbe19ee94f4c882a2213ed3ab2a8",
+        "dsid_1bad3a8b1a7340269a3f640985f45f42",
+        "dsid_bc97f9911d9e4cc4bc6efc4db7ca495b",
+        "dsid_0962b0f63c784e0cb59b083e8cdfb50d"
+      ],
+      "gold": [
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_58bdb9f3bb4241e089f4f2b102765db4"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 60.111
+    },
+    {
+      "id": "qst_0421",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7",
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_69f06c84b8654bc6b3577e4a3320a48d",
+        "dsid_6c6ecb4c5ddb46329ea58bf949fecfa9",
+        "dsid_eb2c1374b473484499118ee803b51875"
+      ],
+      "gold": [
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 13.146
+    },
+    {
+      "id": "qst_0216",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_de6b49c261c64af3885c8d0603ef134d",
+        "dsid_adba0fff3cf94faba1a64677d66aa19d",
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_06f2ebad2fd04a4fa2f5cd05dbc24ce0",
+        "dsid_7a1c8832d9aa4a2cb830f4824ca8acc7"
+      ],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 36.099
+    },
+    {
+      "id": "qst_0102",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.204
+    },
+    {
+      "id": "qst_0023",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a1bd525bf3ef484d9aa37b4b3f63f98c",
+        "dsid_99b4e35b0ae64767ad9c2d13cde91a33",
+        "dsid_fd66915993574f04b3bd65556256aa0e",
+        "dsid_3e2ab70470a54953ab43cb113ac009e8",
+        "dsid_c2d7554d863f46b695dee98e3ecec587"
+      ],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 40.538
+    },
+    {
+      "id": "qst_0431",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_840703a1cc37438a84e9beb68029d80b",
+        "dsid_42aad55e1b9848b7944b7437e7b8339e",
+        "dsid_8893403fd93845ab8b0f377916472bc1",
+        "dsid_6807c651b55546559733c7c6f8dc133d"
+      ],
+      "gold": [
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_840703a1cc37438a84e9beb68029d80b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 49.39
+    },
+    {
+      "id": "qst_0025",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058",
+        "dsid_6ea36b7e5ad440c8aa5c78b1e715f5e6",
+        "dsid_0b9c38cb424041f5a786e437c671cb38",
+        "dsid_9ebf6344727b4a308818ceb9430a38a3",
+        "dsid_461a0b4330144f4ba82c4da1919f279e"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 26.637
+    },
+    {
+      "id": "qst_0421",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7",
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_69f06c84b8654bc6b3577e4a3320a48d",
+        "dsid_6c6ecb4c5ddb46329ea58bf949fecfa9",
+        "dsid_eb2c1374b473484499118ee803b51875"
+      ],
+      "gold": [
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 3.513
+    },
+    {
+      "id": "qst_0236",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_ede7801c54584e9c962952865e2497df",
+        "dsid_8f979859507f4ea7a19d86382f43664d",
+        "dsid_a69d13b41aa2432fb0f59f20e22a773b",
+        "dsid_f087515742294fc88d59fa4ec8c1349b",
+        "dsid_f48074daf019428fb7aa76877d0e0c0f"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 56.607
+    },
+    {
+      "id": "qst_0444",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_5cde26f232454906879617dab1800fae",
+        "dsid_036427f863ee44a0919827cce14cbca8",
+        "dsid_92d0d471ddc941288bcb51b3ded6ec36"
+      ],
+      "gold": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_5cde26f232454906879617dab1800fae",
+        "dsid_92d0d471ddc941288bcb51b3ded6ec36",
+        "dsid_d8d194e311b9482cb38c61134b6d26fa",
+        "dsid_40471ba4cd3b430eab3ac0877eef0972",
+        "dsid_2ad75f27c36b492f847d5b9c63492e4b"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 9.257
+    },
+    {
+      "id": "qst_0197",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_73178571459f40579cad212c2af5b963",
+        "dsid_82c0781b50cb47668b5d37a67a9a157d",
+        "dsid_b7cd82122b834b928ec615d788851bd2",
+        "dsid_f196f5f350e24d1b9b880da7445a7ffa",
+        "dsid_5650ae3bff08466f92289cbc565c7d2b"
+      ],
+      "gold": [
+        "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.314
+    },
+    {
+      "id": "qst_0236",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_d2af50e69fa147b2b3e3feae056555cb",
+        "dsid_46de01c7954f45acbcdcde382d2b06b2",
+        "dsid_9ceeb0aca30348799d6a0123166732ac",
+        "dsid_8f317f63ef36410eab829c7f85784347",
+        "dsid_e77ca0e1d4774d73a7514a161736b8ee"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 52.172
+    },
+    {
+      "id": "qst_0270",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_23dad38118454ee7bc9f821787db550a",
+        "dsid_79000f2c91674c0ca3995b5b1f79827a",
+        "dsid_15e19fe623ad4082bd975784af9ca15f"
+      ],
+      "gold": [
+        "dsid_33de625fcfc045dd967dbc9bdde3a8b4"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 9.556
+    },
+    {
+      "id": "qst_0358",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_858fd59a63d64f5e81a2b8482ba64dbf",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_330be20dd4224d8dad24eb633121ba06",
+        "dsid_39ce4410a60a4f2e8d36051312d6a86a",
+        "dsid_69124f39ea764305b331c9ed6aa728b6"
+      ],
+      "gold": [
+        "dsid_330be20dd4224d8dad24eb633121ba06",
+        "dsid_c70d63e14aa84195aec43820c018f8b9",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+      ],
+      "hit": true,
+      "recall": 0.75,
+      "ms": 6.193
+    },
+    {
+      "id": "qst_0221",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_40b1c36e577d46f5a2f7baf4528d86ef",
+        "dsid_7359252dd4a647d4b51d51e098d015d1",
+        "dsid_315e559c5115420d8acdb7347ae1a3e3",
+        "dsid_fdc9b77a90a5434d8c576afdcc0c8a72"
+      ],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.743
+    },
+    {
+      "id": "qst_0040",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04",
+        "dsid_91bfc763b506488e8d7206f039d717cc",
+        "dsid_445da511028349faa20c8541db03e5b9",
+        "dsid_9a418bac2737474ba420f8b45683975f",
+        "dsid_b6a80aa93c004b1e959478ff90e300af"
+      ],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 17.842
+    },
+    {
+      "id": "qst_0447",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_fad128b2b0454c329eb8d8607d0a0230",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f",
+        "dsid_42aad55e1b9848b7944b7437e7b8339e"
+      ],
+      "gold": [
+        "dsid_452dc45d76754cbca8a3674170599633",
+        "dsid_e5fe3fd0cf444668a64970ec00818f46",
+        "dsid_ac2fdba09cc24cd98ba60f5da114780c",
+        "dsid_8c3d5e26a1c841199d3bcd7aea5d495e",
+        "dsid_6807c651b55546559733c7c6f8dc133d",
+        "dsid_5d509e588f994166a2ccc6e39cbf6cb5"
+      ],
+      "hit": true,
+      "recall": 0.16666666666666666,
+      "ms": 77.436
+    },
+    {
+      "id": "qst_0358",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_39ce4410a60a4f2e8d36051312d6a86a",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_7c018629d45f4dd7b054564087d8eeaa",
+        "dsid_69124f39ea764305b331c9ed6aa728b6",
+        "dsid_330be20dd4224d8dad24eb633121ba06"
+      ],
+      "gold": [
+        "dsid_330be20dd4224d8dad24eb633121ba06",
+        "dsid_c70d63e14aa84195aec43820c018f8b9",
+        "dsid_f952b60df24d4736b831a643993aee67",
+        "dsid_858fd59a63d64f5e81a2b8482ba64dbf"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 46.857
+    },
+    {
+      "id": "qst_0150",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f940e7c95688406cb497b0b1dab44e99",
+        "dsid_2227cc62a32547e0a483fd67ac157126",
+        "dsid_b0904f5cce3b492396a7725789b35879",
+        "dsid_d12f733501444870845c48a6c3e42b4e",
+        "dsid_be0a95081e04471e84c43e5f08ce1ad8"
+      ],
+      "gold": [
+        "dsid_5af1ed23fd2a4bb3984ec368d0e3b23e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 22.964
+    },
+    {
+      "id": "qst_0117",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427",
+        "dsid_f0ec3922a9524a2ba8be464f49400b75",
+        "dsid_d5887e560e9843a7adae4916608f25ba",
+        "dsid_538df2f0d55d4fc1ae133b540b1dc18b",
+        "dsid_c8bbecb794624051a18c379abb9021d3"
+      ],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 55.636
+    },
+    {
+      "id": "qst_0013",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5",
+        "dsid_5df32c2cdcc44aaab289e7bfc85eb158",
+        "dsid_cfe12a29fabb4cf7a8bf9b487c3b46e9",
+        "dsid_4e5aa31e0f6f4fc49457f54b49297cd3",
+        "dsid_34c3e1ca78c54fec805cb62127b8982c"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 56.516
+    },
+    {
+      "id": "qst_0397",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_826be55e005943e8a3de2087e4634bb6",
+        "dsid_9a7191d7761642c8b2553184b5664677",
+        "dsid_f97a7db5537a4fccbc3e578d9acd6f76",
+        "dsid_eae602f3def843a5ab022d14e9d84ddf"
+      ],
+      "gold": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 28.692
+    },
+    {
+      "id": "qst_0016",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_79e7906ca2404279a8a67c28f4725adc",
+        "dsid_a5646b96187c4c6db01319035f56dc3d",
+        "dsid_2a9f06b57cea4f76b107c09af2a59644",
+        "dsid_c1df83bebd3142bcbd2153c0d9a293b2",
+        "dsid_3bbea346f853491abd6e9615a41f1c77"
+      ],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 59.103
+    },
+    {
+      "id": "qst_0117",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_fa81985b218b489f9490b63d8e7a356a",
+        "dsid_fad79944329144418bfe5c8bc562a5fb",
+        "dsid_45e03befd072470ea10870b73c7ddc77",
+        "dsid_0f7de237f25e42c98c53c0924606161d",
+        "dsid_c6eb5450194c48a8b799fdfaae740890"
+      ],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 44.222
+    },
+    {
+      "id": "qst_0252",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_6f7992198948439fba3b7194cb3f8b4a",
+        "dsid_01f4ce1ac9ca4b85a471d39960e6be37",
+        "dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "dsid_15e23a53f5124b67ac74eec12a9c59a0",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1"
+      ],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 7.955
+    },
+    {
+      "id": "qst_0040",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_91bfc763b506488e8d7206f039d717cc",
+        "dsid_9a418bac2737474ba420f8b45683975f",
+        "dsid_4315d193d4884a39a42ac42758b2a73a",
+        "dsid_25559732edb54a448001fca4da84ce6c",
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 63.203
+    },
+    {
+      "id": "qst_0440",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_dd0fe40a2c71489793d566e46e95bb93",
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_afcdafea9b2d4097bcbb035ae4416afb",
+        "dsid_03042cec7a2344769bca5a624091092e"
+      ],
+      "gold": [
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_50f47a9662ea40858feb7bd975071c96",
+        "dsid_03042cec7a2344769bca5a624091092e",
+        "dsid_b96ce0f550a9437e902636a7628160ca",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_dd0fe40a2c71489793d566e46e95bb93"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 8.827
+    },
+    {
+      "id": "qst_0252",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_6f7992198948439fba3b7194cb3f8b4a",
+        "dsid_2f4fe88d77bc460f8bcfb25027fc07fc",
+        "dsid_b360d00be3f84b08b1a879d102835d2f",
+        "dsid_d8e75effbe37456183c936ee38d3a302",
+        "dsid_d62660544d75427a86018c045c16d2f4"
+      ],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 44.795
+    },
+    {
+      "id": "qst_0236",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_f48074daf019428fb7aa76877d0e0c0f",
+        "dsid_acabec2d8bad41f6bcab555609de04c6",
+        "dsid_a69d13b41aa2432fb0f59f20e22a773b",
+        "dsid_335cee7310c94ed693b6e6ae5932864f",
+        "dsid_4330dee56d8d41e7808616344edcdb7f"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 7.147
+    },
+    {
+      "id": "qst_0104",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.807
+    },
+    {
+      "id": "qst_0386",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317",
+        "dsid_23dac50a480947cf8015674217eb9c04",
+        "dsid_e08cfbff5d6449deb1ec0e1397663e2e",
+        "dsid_140d90d0c1af492a89a8f6e52230ae5d",
+        "dsid_3638bd02227d4882ad0605f1e8b767c0"
+      ],
+      "gold": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 20.204
+    },
+    {
+      "id": "qst_0183",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.207
+    },
+    {
+      "id": "qst_0382",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68",
+        "dsid_955a368cfa8742209346de0b2cd1f7ac",
+        "dsid_b360d00be3f84b08b1a879d102835d2f",
+        "dsid_ed6d086c9faf4272b0ee20d3fa4b6180",
+        "dsid_c92ca731ba554124b3ca10fc1495019c"
+      ],
+      "gold": [
+        "dsid_7d347905549f4456b0d2226b47e4aa68"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.608
+    },
+    {
+      "id": "qst_0102",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02",
+        "dsid_50a004c55eec403eaddc2fab715e78e4",
+        "dsid_14cde462d81149c6b629572f73895dd9",
+        "dsid_a3f94972391244f38ef773c05926af83",
+        "dsid_fc1e895141f04324b69ea0230df0e38b"
+      ],
+      "gold": [
+        "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 168.721
+    },
+    {
+      "id": "qst_0421",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7",
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_69f06c84b8654bc6b3577e4a3320a48d",
+        "dsid_eb2c1374b473484499118ee803b51875",
+        "dsid_6c6ecb4c5ddb46329ea58bf949fecfa9"
+      ],
+      "gold": [
+        "dsid_b8ab9778e36543159da49dba3ad9c76d",
+        "dsid_9f2e6aa7f6c14b1db1c6f922a1d4b4d7"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 35.798
+    },
+    {
+      "id": "qst_0210",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_46c1506239064ca99d05ae059e783c0c",
+        "dsid_ee3c2e8d5aa24b0c8338998349eb50e8",
+        "dsid_121309fa4f424b8083455e99974cd00c",
+        "dsid_650dcfe0b9bb4943b41472e842016c1d",
+        "dsid_cdff99ca5d9d4509b8363cb16f55c207"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.021
+    },
+    {
+      "id": "qst_0031",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_54196869eb9b48a5ab7580b6f406003a",
+        "dsid_41f0c273866441349e1833597c5f786b",
+        "dsid_5094ef74d2e249919de1aa6db7c5d0e7",
+        "dsid_03adf789817842ff9bd58228114bcaec",
+        "dsid_461a0b4330144f4ba82c4da1919f279e"
+      ],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.985
+    },
+    {
+      "id": "qst_0384",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f8b651a683044ad8964f34f881c63152",
+        "dsid_1c4594f61ff446a587952bfe86c3717c",
+        "dsid_0c679d20643a4b45a0820e2b36da463b",
+        "dsid_29313788890d45e0bf291ea321e8c5cd",
+        "dsid_1018716404614a168d9583eb75971e9e"
+      ],
+      "gold": [
+        "dsid_f877499fe0e946199ceb2486f0ad5ec3",
+        "dsid_f8b651a683044ad8964f34f881c63152"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 36.117
+    },
+    {
+      "id": "qst_0222",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_4c3bf863d7774a3abf513d72727af06d",
+        "dsid_a5646b96187c4c6db01319035f56dc3d",
+        "dsid_642710b85d534283b7ca03587dcee5e9",
+        "dsid_38f206e4367045feb1cebf63ffe4f632",
+        "dsid_1d13c8843eda40da9487845d4f9505f5"
+      ],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 54.096
+    },
+    {
+      "id": "qst_0021",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1",
+        "dsid_11b4dc5c498c472b9827a245f5a0720e",
+        "dsid_d35b2ff400d64f94a5ec87108d657a62",
+        "dsid_f35421860eb64655a9b5d62c344b45b3",
+        "dsid_3848df9a653f4b2da022ecb753587654"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 27.324
+    },
+    {
+      "id": "qst_0236",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_7ff85873f28940d0b370583b9fa5042a",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc",
+        "dsid_d2af50e69fa147b2b3e3feae056555cb",
+        "dsid_46de01c7954f45acbcdcde382d2b06b2",
+        "dsid_9ceeb0aca30348799d6a0123166732ac"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.422
+    },
+    {
+      "id": "qst_0440",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_dd0fe40a2c71489793d566e46e95bb93",
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_afcdafea9b2d4097bcbb035ae4416afb",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_50f47a9662ea40858feb7bd975071c96"
+      ],
+      "gold": [
+        "dsid_385fd2388669469e87964b25d6428871",
+        "dsid_50f47a9662ea40858feb7bd975071c96",
+        "dsid_03042cec7a2344769bca5a624091092e",
+        "dsid_b96ce0f550a9437e902636a7628160ca",
+        "dsid_eba5d122d7244ffbb6c20a2487aa1017",
+        "dsid_dd0fe40a2c71489793d566e46e95bb93"
+      ],
+      "hit": true,
+      "recall": 0.6666666666666666,
+      "ms": 76.032
+    },
+    {
+      "id": "qst_0252",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_f1a0c3b10e5544e99673ea4b828be882",
+        "dsid_b8ba5f4d68bb49b48e34b1126748af33",
+        "dsid_0abf8e94f38b4bec9465243d588594fd"
+      ],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 55.628
+    },
+    {
+      "id": "qst_0104",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a",
+        "dsid_04e334668e99493782d75b8c7fc3d293",
+        "dsid_61824ee2448645f79a264fc38cc17673",
+        "dsid_121309fa4f424b8083455e99974cd00c",
+        "dsid_ca3e30d85e98425fa9fb7dc6df9925ee"
+      ],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 59.514
+    },
+    {
+      "id": "qst_0248",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_af07f94d81764b1fa7ddcf8412037685",
+        "dsid_4f2844ba27d9489d882e1a332db2c618",
+        "dsid_915572281921482ca7518df47bb32e34",
+        "dsid_4d2b3ab7303347999113d5cb91040722",
+        "dsid_baab3da0172b43bdaa767b0832252738"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.393
+    },
+    {
+      "id": "qst_0035",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a0149900fc6c4564b1a35ea7c4ed1fcc",
+        "dsid_0ec712fc80e64484a7cfda5e166dba59",
+        "dsid_013d11cc7e4d48ea87ceb90164b41791",
+        "dsid_dcbeb285a63d4ca089b7ad94b59c349c",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 48.231
+    },
+    {
+      "id": "qst_0128",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_eac14b05fee947639c11f82451aaa8c5",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f",
+        "dsid_bf7e0df04c8748458b5515c864c48609",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_a1c9554c774a401fb87c65bb12f5afb5"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 14.694
+    },
+    {
+      "id": "qst_0128",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.957
+    },
+    {
+      "id": "qst_0025",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a1a79508e9294f3695aea7f118f80fe4",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_d32eb5051b554e038222c3bf399acef8",
+        "dsid_4e016427a93c49ffadd31fcdc1dca792",
+        "dsid_7517b80eb19b439090cc2df26bde7f48"
+      ],
+      "gold": [
+        "dsid_9c8cb10d65324c03a8ededbd98c1b058"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 41.725
+    },
+    {
+      "id": "qst_0128",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.193
+    },
+    {
+      "id": "qst_0236",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f48074daf019428fb7aa76877d0e0c0f",
+        "dsid_a69d13b41aa2432fb0f59f20e22a773b",
+        "dsid_a3c3062b27da431b91f138fc780bc398",
+        "dsid_4330dee56d8d41e7808616344edcdb7f",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc"
+      ],
+      "gold": [
+        "dsid_189583d1a5ed4513a4d709a037098a24"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 30.435
+    },
+    {
+      "id": "qst_0183",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_80a4e96eed2942be93c328964e1d327f",
+        "dsid_5417f2a334854b98aeb525732af10123",
+        "dsid_cfa4197e52eb4145a7d91650d0252058",
+        "dsid_d46678060fe24425be5b4cdd4907b36e",
+        "dsid_1063628f9f5f4dde879e8da6e5406d94"
+      ],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 74.468
+    },
+    {
+      "id": "qst_0458",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_8cb8070d41604b67901e60da07713d92",
+        "dsid_4926f2f5ea46446f8178e9e0e3733a6e",
+        "dsid_9c7f8d6d2f2b4f0d9c2d3f6a1b8e4a21",
+        "dsid_38a4af67314d46179ae4f3e7ff616661"
+      ],
+      "gold": [
+        "dsid_8cb8070d41604b67901e60da07713d92"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 19.66
+    },
+    {
+      "id": "qst_0435",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_8116cb3e580543d7bde1c57df351a3f3"
+      ],
+      "gold": [
+        "dsid_7fc490f8522b486c8f4b665d5189066c",
+        "dsid_a134a3fd3c244a52a8d3e1ff515fdf58",
+        "dsid_ce60931a1aea428b8186228ee40bb497",
+        "dsid_03e22d519f9b40a5ac61a03e5c4620d3",
+        "dsid_431b0713c42847bbac15f3354776db68",
+        "dsid_8116cb3e580543d7bde1c57df351a3f3"
+      ],
+      "hit": true,
+      "recall": 0.8333333333333334,
+      "ms": 69.369
+    },
+    {
+      "id": "qst_0022",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_f2f019c122154edc8b21f56879661043",
+        "dsid_fd91c991108243199826352dd4c5983d",
+        "dsid_d3fa2429891d45fcb4fcda6a31229a14",
+        "dsid_5bc6ff02204e4728bb949ce0ed88e8a9",
+        "dsid_ce8f58eb630e4029a40e1d68d9b008ce"
+      ],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 15.225
+    },
+    {
+      "id": "qst_0040",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_b232d919849d4467a42f95384cafa7e5",
+        "dsid_38598d6cc5224f93a6bc9c823c4f7579",
+        "dsid_91bfc763b506488e8d7206f039d717cc",
+        "dsid_061b164292f44033ad3f6e0e10f5750b"
+      ],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 57.33
+    },
+    {
+      "id": "qst_0408",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70",
+        "dsid_5efc026a36144721a82af3dfb2dcdea8",
+        "dsid_5f119369627543848ddc03d6805509dd",
+        "dsid_ac6177124d354bbabf73eaed89989734"
+      ],
+      "gold": [
+        "dsid_e190b0de0d27466fa91bfc18b0815311",
+        "dsid_53035d2eb5024effac3aafd3e6ca6e70"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 33.381
+    },
+    {
+      "id": "qst_0110",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_2e4183d040b341cf843366e2c15402af",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_9f6994434ef14f0283a0c4371033f6d4",
+        "dsid_aeb8dd3f5b744ea0b307954410bd57a7",
+        "dsid_b3cd4dd278234bbaa69f883bbd107ac0"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 50.596
+    },
+    {
+      "id": "qst_0338",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba",
+        "dsid_8205407105944677b6eb3167167064a9",
+        "dsid_713b7766c60948e7b9b30bfc3008df4d",
+        "dsid_0af523d62c7647318a9afcf9d021d50e",
+        "dsid_39b172a2acb841cf85212020d426dc3e"
+      ],
+      "gold": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 48.428
+    },
+    {
+      "id": "qst_0040",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.472
+    },
+    {
+      "id": "qst_0248",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_462f37885ea5406284727925ca5ded7d",
+        "dsid_935cde0b517c4925972c711dcf05b3f4",
+        "dsid_5f5f8ee035b142de83852da48520231c",
+        "dsid_69055733c7dc464f94a640c7357a30e1",
+        "dsid_778bb0e62f3c4ed5af09ea58003c2803"
+      ],
+      "gold": [
+        "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.399
+    },
+    {
+      "id": "qst_0431",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_840703a1cc37438a84e9beb68029d80b",
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_42aad55e1b9848b7944b7437e7b8339e",
+        "dsid_a1c9554c774a401fb87c65bb12f5afb5",
+        "dsid_6807c651b55546559733c7c6f8dc133d"
+      ],
+      "gold": [
+        "dsid_f6e3b7ad413142019dbb5a5fed07f548",
+        "dsid_840703a1cc37438a84e9beb68029d80b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 19.833
+    },
+    {
+      "id": "qst_0016",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_3407ac164f6744d4a2c241e0c5412b59",
+        "dsid_3638bd02227d4882ad0605f1e8b767c0",
+        "dsid_df5306310578458ab6cd8b566707ed90",
+        "dsid_0ba4362ffedf469d8c92d44322c6acf4"
+      ],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 40.336
+    },
+    {
+      "id": "qst_0259",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_c7926d576d244b9098274778fcc84b87",
+        "dsid_ccc2727793b541cd9d237dca907a32b6",
+        "dsid_6626042e2e414e7785cd5e4f7fd96f48",
+        "dsid_117e5a150aa94adc86295786bd6b7843",
+        "dsid_8aa30532ab3f4ed5adfb7e9ef0c9e808"
+      ],
+      "gold": [
+        "dsid_fc009de77554459b89e6b4340e8eca82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 39.427
+    },
+    {
+      "id": "qst_0035",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_aa774509f1a14b67bf4dfd289c42f80f",
+        "dsid_ebdd324657f6482f9662b9521e65432e",
+        "dsid_c198dbbcf28a4c73ad1d705809634176",
+        "dsid_ca5fcf454cf042229190143c5b778401",
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 7.251
+    },
+    {
+      "id": "qst_0221",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_5323aeb9f89042c9a62505d409c4d94a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.201
+    },
+    {
+      "id": "qst_0128",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_a1c9554c774a401fb87c65bb12f5afb5",
+        "dsid_bf7e0df04c8748458b5515c864c48609",
+        "dsid_452dc45d76754cbca8a3674170599633",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f",
+        "dsid_eac14b05fee947639c11f82451aaa8c5"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 58.362
+    },
+    {
+      "id": "qst_0397",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_826be55e005943e8a3de2087e4634bb6",
+        "dsid_a277ed2dc74c4bad82bc71b534b6356f",
+        "dsid_9a7191d7761642c8b2553184b5664677",
+        "dsid_eae602f3def843a5ab022d14e9d84ddf"
+      ],
+      "gold": [
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996",
+        "dsid_6d3e0fd1c48b466e9f5a4a5b0a1127a0"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 10.375
+    },
+    {
+      "id": "qst_0404",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_c85ce50397ba4060941e5ba19ae72890",
+        "dsid_8f0301d7b2414031b392da5566f98ce6",
+        "dsid_0377049bbbbb4636a73c26cc0081e904",
+        "dsid_98943148c00b42db859ec2d84649fe04",
+        "dsid_583556ed29e64654983933c1580b6b09"
+      ],
+      "gold": [
+        "dsid_ad70fa7335294e2988193e2a6645a5ba",
+        "dsid_8f0301d7b2414031b392da5566f98ce6"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 7.416
+    },
+    {
+      "id": "qst_0234",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_7e5744fb69c044fd92ed0a6e85d5cac2",
+        "dsid_f6b4cb137c444b57bbd4a5d21843d240",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_b3f2c2cdfcaa4c53a1f0afd0643e86dd",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a"
+      ],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 101.668
+    },
+    {
+      "id": "qst_0234",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_ad58457891774bd7ba480e0bcd13df3a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 17.24
+    },
+    {
+      "id": "qst_0384",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_f8b651a683044ad8964f34f881c63152",
+        "dsid_1c4594f61ff446a587952bfe86c3717c",
+        "dsid_f877499fe0e946199ceb2486f0ad5ec3",
+        "dsid_0c679d20643a4b45a0820e2b36da463b",
+        "dsid_1018716404614a168d9583eb75971e9e"
+      ],
+      "gold": [
+        "dsid_f877499fe0e946199ceb2486f0ad5ec3",
+        "dsid_f8b651a683044ad8964f34f881c63152"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 104.829
+    },
+    {
+      "id": "qst_0110",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_55984260cebc414888bc5db6eaf8bb70",
+        "dsid_e70c3348c87e48bd8516cc17ef018df2",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d"
+      ],
+      "gold": [
+        "dsid_2e4183d040b341cf843366e2c15402af"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.825
+    },
+    {
+      "id": "qst_0216",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.151
+    },
+    {
+      "id": "qst_0021",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1",
+        "dsid_40b1c36e577d46f5a2f7baf4528d86ef",
+        "dsid_11b4dc5c498c472b9827a245f5a0720e",
+        "dsid_fdde8c916df1478a86f7382f019a61a5",
+        "dsid_c6eb5450194c48a8b799fdfaae740890"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 44.052
+    },
+    {
+      "id": "qst_0142",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_6ddbb46c266647f4922b8107fd6ea395",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40",
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_ceac1771afae4be394f35c60991a7b9a",
+        "dsid_5f5f8ee035b142de83852da48520231c"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 18.398
+    },
+    {
+      "id": "qst_0023",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670",
+        "dsid_662978747ddb47338b62f7d87c391ca2",
+        "dsid_a41836f345874d5398067b39f08302d8",
+        "dsid_a6efecc786c9436499eb000b8489ae52",
+        "dsid_ba9518f1c10344b4a0fb5f7d82ca070b"
+      ],
+      "gold": [
+        "dsid_a2983978ba0d4d70a795eb7e13de8670"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 2.645
+    },
+    {
+      "id": "qst_0210",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_46c1506239064ca99d05ae059e783c0c",
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_ee3c2e8d5aa24b0c8338998349eb50e8",
+        "dsid_121309fa4f424b8083455e99974cd00c"
+      ],
+      "gold": [
+        "dsid_b4bd83b46612452e858bc02b380082e2"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 51.184
+    },
+    {
+      "id": "qst_0183",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.217
+    },
+    {
+      "id": "qst_0272",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_08dad2eca6254098bf395cfb5ddbd037",
+        "dsid_252bed13c38e4570aedc2cf96959fa14",
+        "dsid_d1a2ffd106b14743acfd62e901cf7803",
+        "dsid_09dd6bc92dfe4209bb47f31603dbf625",
+        "dsid_d20e350b858a48449b60d13ca1c4fbf7"
+      ],
+      "gold": [
+        "dsid_329e7ecd6b304c30b61a30e07919e008"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 14.871
+    },
+    {
+      "id": "qst_0013",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_e1988f667f0b4fbf9af363d847a382ed",
+        "dsid_87497c51032e4ccbb5ebc898eb554668",
+        "dsid_324060b49e5842858b87cf599249d80f",
+        "dsid_d52e8ad65e6b44d58e1dbe08fae07ceb",
+        "dsid_d69544b66f8b47e8bb8a13bb308301fc"
+      ],
+      "gold": [
+        "dsid_f1b208f3637e4987aeab371242a5bea5"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 39.003
+    },
+    {
+      "id": "qst_0381",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_865449ae95b044768f33773263bfeaad",
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9",
+        "dsid_0abf8e94f38b4bec9465243d588594fd",
+        "dsid_d3edd63b9ec54523ad12bd9be3d7e996"
+      ],
+      "gold": [
+        "dsid_d844cc30147b49c69ea5275b4993b571",
+        "dsid_865449ae95b044768f33773263bfeaad"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 105.702
+    },
+    {
+      "id": "qst_0104",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a",
+        "dsid_30345ab013724570a9eb2bab3f4853a9",
+        "dsid_3848df9a653f4b2da022ecb753587654",
+        "dsid_30d2617745b74c77967c103b58568800",
+        "dsid_778bb0e62f3c4ed5af09ea58003c2803"
+      ],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 10.45
+    },
+    {
+      "id": "qst_0222",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_36d7605113204cdca94405cb30fc2c10"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.223
+    },
+    {
+      "id": "qst_0118",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 4.904
+    },
+    {
+      "id": "qst_0445",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "dsid_3f8b4eed72cd4540a7d1ac1eb0924519",
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a"
+      ],
+      "gold": [
+        "dsid_2b7848a8491749f8b9b9a8c13f78445f",
+        "dsid_cb0d800639e84d68ae035596c7f6f1f8",
+        "dsid_a54a2f8553804d34986f42a49907b9d0",
+        "dsid_e82eadf0700f4e6db8eecc460c4cac44",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_04e98bd61eac4ec89e3fc13c38de1b8e",
+        "dsid_2ce9ae40d5d347c1add2b31c4d5a8c3c",
+        "dsid_2dab968306594149a14ef27b2a1641d1"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 44.434
+    },
+    {
+      "id": "qst_0128",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_eac14b05fee947639c11f82451aaa8c5",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f",
+        "dsid_32c5e7ca0e2e4eadac78b01a35cfed7a",
+        "dsid_a1c9554c774a401fb87c65bb12f5afb5",
+        "dsid_452dc45d76754cbca8a3674170599633"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.655
+    },
+    {
+      "id": "qst_0022",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_f2f019c122154edc8b21f56879661043",
+        "dsid_fd91c991108243199826352dd4c5983d",
+        "dsid_5bc6ff02204e4728bb949ce0ed88e8a9",
+        "dsid_d3fa2429891d45fcb4fcda6a31229a14",
+        "dsid_ce8f58eb630e4029a40e1d68d9b008ce"
+      ],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 20.954
+    },
+    {
+      "id": "qst_0142",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_6ddbb46c266647f4922b8107fd6ea395",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40",
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_ceac1771afae4be394f35c60991a7b9a",
+        "dsid_5f5f8ee035b142de83852da48520231c"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.733
+    },
+    {
+      "id": "qst_0021",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_074bc1f357314d8da96c1ef84cf92b85",
+        "dsid_e3dfbf214e024bfb9f63963197fcc53a",
+        "dsid_54754e549f154f24a6f897d662cfde5d",
+        "dsid_f59a0860f18c49acab904cea19b3a610",
+        "dsid_55984260cebc414888bc5db6eaf8bb70"
+      ],
+      "gold": [
+        "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 42.537
+    },
+    {
+      "id": "qst_0022",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_f2f019c122154edc8b21f56879661043",
+        "dsid_bb63625a5b9b44bf8473cb03ca607c76",
+        "dsid_fd91c991108243199826352dd4c5983d",
+        "dsid_110a32e50d5b4d2faab2e959bc3d6d41",
+        "dsid_d572738d39d64baea53dcdb5fb8c44d9"
+      ],
+      "gold": [
+        "dsid_f2f019c122154edc8b21f56879661043"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 40.042
+    },
+    {
+      "id": "qst_0118",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76",
+        "dsid_e506ea0a35814443b8fff2d70169e376",
+        "dsid_90724ab5eb4a4db497df1368c483f9ed",
+        "dsid_d9f77f614f174eeab9e2e48dcc859b5a",
+        "dsid_c92ca731ba554124b3ca10fc1495019c"
+      ],
+      "gold": [
+        "dsid_9a0982d498384adeb435a2b3938bfd76"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 46.793
+    },
+    {
+      "id": "qst_0338",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba",
+        "dsid_85ade33e53334639be778b9c7aabe637",
+        "dsid_6cdb6ea1cb644d16a70147a462efc46f",
+        "dsid_a5b2109e90b14ba6ac841ff8dec11073",
+        "dsid_8ca452e2f9bf4951b42086862d21ce27"
+      ],
+      "gold": [
+        "dsid_06682ba9559b4b2192ffe6dee7a7abba"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 19.167
+    },
+    {
+      "id": "qst_0433",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_773eaf089d5842548e7d5799b3ef7923",
+        "dsid_97b25b6f83c542e7b81d6504b5653dcb",
+        "dsid_c9e7302df4ad482aa4dedd5872a7ce2f"
+      ],
+      "gold": [
+        "dsid_8c92178c254d467c9854db67aac7c9be",
+        "dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "dsid_cf06e75be4f94156ac338f62e3ee028b",
+        "dsid_97b25b6f83c542e7b81d6504b5653dcb",
+        "dsid_3e991a24c7bc4e91b99eb5846b927558",
+        "dsid_74ebb73359364bc791707a92a3227e3a"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 36.001
+    },
+    {
+      "id": "qst_0040",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04",
+        "dsid_91bfc763b506488e8d7206f039d717cc",
+        "dsid_445da511028349faa20c8541db03e5b9",
+        "dsid_9a418bac2737474ba420f8b45683975f",
+        "dsid_b6a80aa93c004b1e959478ff90e300af"
+      ],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 5.556
+    },
+    {
+      "id": "qst_0117",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427",
+        "dsid_c8bbecb794624051a18c379abb9021d3",
+        "dsid_5ac21a5a5a684986860e60439bf2bd2c",
+        "dsid_f0ec3922a9524a2ba8be464f49400b75",
+        "dsid_5f8427d308c9469aac98fcf446ad9bb0"
+      ],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 4.551
+    },
+    {
+      "id": "qst_0442",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_81a7e3e0204d4c6984e0a503d5423314"
+      ],
+      "gold": [
+        "dsid_319db001cae246bbbb16f441b64d9b82",
+        "dsid_eca097630e444b2d8e30da4b08fcbc4e",
+        "dsid_2ee4c1a35c5f4dba9b49efd3e97dd265",
+        "dsid_2db615f2f6f14cbfae67c62b3c976b27",
+        "dsid_914d75cb27ee4a06b3f69e445d715ab4",
+        "dsid_81a7e3e0204d4c6984e0a503d5423314",
+        "dsid_bf7e0df04c8748458b5515c864c48609",
+        "dsid_190d9732b59b411d8a6bcc59fd61b309"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 22.426
+    },
+    {
+      "id": "qst_0252",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_6f7992198948439fba3b7194cb3f8b4a",
+        "dsid_01f4ce1ac9ca4b85a471d39960e6be37",
+        "dsid_bd7caad8adb2405eaa7ad78c4ffb59d7",
+        "dsid_0e0ac7276c864c63a02586fa07ae85e1",
+        "dsid_15e23a53f5124b67ac74eec12a9c59a0"
+      ],
+      "gold": [
+        "dsid_01eaeaf6045941beaeaf74e6170aceea"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 31.351
+    },
+    {
+      "id": "qst_0457",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1",
+        "dsid_eb71c987a4fb4ece86da8450721e8999",
+        "dsid_964f838c97bc44feb56077e3d67ccc04",
+        "dsid_03042cec7a2344769bca5a624091092e",
+        "dsid_8463d4f48ba5495e891c6cc37b150d9c"
+      ],
+      "gold": [
+        "dsid_bb14e2f3925b4e27829c4f3c1aea3af1"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 24.451
+    },
+    {
+      "id": "qst_0117",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_40e1a761f7644c388c1bccb73d6bd427"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.222
+    },
+    {
+      "id": "qst_0011",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_46a4cb87db414e769f2df86f01626948"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.204
+    },
+    {
+      "id": "qst_0216",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.973
+    },
+    {
+      "id": "qst_0405",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_9964e71da61e4a92bf3f53699cabbf95",
+        "dsid_6483467a98ed4097b79676e8cf447f13",
+        "dsid_7fc490f8522b486c8f4b665d5189066c",
+        "dsid_40ecd61527594814ae4166c67f0909e3"
+      ],
+      "gold": [
+        "dsid_b41df051e6dc46c48b36a99c366ee5c5",
+        "dsid_9964e71da61e4a92bf3f53699cabbf95"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 4.06
+    },
+    {
+      "id": "qst_0174",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 1.735
+    },
+    {
+      "id": "qst_0386",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317",
+        "dsid_23dac50a480947cf8015674217eb9c04",
+        "dsid_e08cfbff5d6449deb1ec0e1397663e2e",
+        "dsid_140d90d0c1af492a89a8f6e52230ae5d",
+        "dsid_7fee819d630f414aa1fabfd78fd403e1"
+      ],
+      "gold": [
+        "dsid_5e65a1cb22b6464e9f36d0fa2d1f4317"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 3.65
+    },
+    {
+      "id": "qst_0142",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e",
+        "dsid_8788875db16f443d83688841a7a60166",
+        "dsid_b3e232fad2d341fb8c2abb2831e06e07",
+        "dsid_20db849e844c4e3ca79a2bd75c74db40",
+        "dsid_139024dc11964a89a608db08a52913e7"
+      ],
+      "gold": [
+        "dsid_06464e95b7cc44de8a9677f3260c336e"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 38.104
+    },
+    {
+      "id": "qst_0016",
+      "lang": "en",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_79e7906ca2404279a8a67c28f4725adc",
+        "dsid_c1df83bebd3142bcbd2153c0d9a293b2",
+        "dsid_a5646b96187c4c6db01319035f56dc3d",
+        "dsid_e3e904223b4c4b01b6a0f396208aaa1d",
+        "dsid_2a9f06b57cea4f76b107c09af2a59644"
+      ],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 3.694
+    },
+    {
+      "id": "qst_0441",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_80e095c2dc1745af86b80d24e27a9857",
+        "dsid_41f0c273866441349e1833597c5f786b",
+        "dsid_2a3f915633684276a3e5fb84090ffcec",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+      ],
+      "gold": [
+        "dsid_4bb945f3de9b4f6aa834d2941fae625f",
+        "dsid_89889daf6b89426ca90049f313d4324f",
+        "dsid_e2327ad35ceb466489dad854770739bf",
+        "dsid_871b6712caf44f8bbfea4d8a15e436b6",
+        "dsid_80e095c2dc1745af86b80d24e27a9857",
+        "dsid_7f6bde5cefa543a7b1943ffaf5a8a9f1"
+      ],
+      "hit": true,
+      "recall": 0.5,
+      "ms": 25.296
+    },
+    {
+      "id": "qst_0183",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_320348e47b5d4c4896b1f56b18a91b06",
+        "dsid_9e3a64a2ca0f4b528d969a800318e673",
+        "dsid_56e219ae04294cd5b5ce144095aa1cb1",
+        "dsid_c5b919deea7f429c96ccfba5ec746bef",
+        "dsid_186436d904ca4b95868a56ca36db8b14"
+      ],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 44.196
+    },
+    {
+      "id": "qst_0174",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.173
+    },
+    {
+      "id": "qst_0031",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_4a91b3c78b3445d0a600562bd66effa6",
+        "dsid_d107842ad02a4880ab0fabcaf872da25",
+        "dsid_6491aa14d38f4319be8aa16b3d40b492",
+        "dsid_96f0d66f019643a99faf3f1556713521"
+      ],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 36.889
+    },
+    {
+      "id": "qst_0016",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.149
+    },
+    {
+      "id": "qst_0016",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.994
+    },
+    {
+      "id": "qst_0394",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_7c08ef109c804c0bb165184b7d78b18c",
+        "dsid_a898d2541b944cdebeec03ec9d9ba130",
+        "dsid_dc0882c146414ae6b75c3d755983d8b0",
+        "dsid_99c5a8ae5124458ea4cc4345b47a351f",
+        "dsid_9a5968363fce4f79af38d7702465a121"
+      ],
+      "gold": [
+        "dsid_9a5968363fce4f79af38d7702465a121",
+        "dsid_7c08ef109c804c0bb165184b7d78b18c"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "ms": 28.89
+    },
+    {
+      "id": "qst_0031",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_67fdab00a23845609fb20d8558b9f3ce",
+        "dsid_54196869eb9b48a5ab7580b6f406003a",
+        "dsid_e90e34e54eb74a6d8afe2fa0aa8b7cff",
+        "dsid_41f0c273866441349e1833597c5f786b",
+        "dsid_9a26a410d7e649b1bf557bf56d69bc51"
+      ],
+      "gold": [
+        "dsid_c198dbbcf28a4c73ad1d705809634176"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 45.679
+    },
+    {
+      "id": "qst_0035",
+      "lang": "ru",
+      "arm": "XERJ lexical",
+      "hits": [
+        "dsid_d8480d7f1f7344c28b72853b35f9330d",
+        "dsid_017bfb1fae884cdaa6851f6e992b9efe",
+        "dsid_803c1c97739d4bef99720d3d08f9c62d",
+        "dsid_182e48cabc7b45bc873efd9be2acb256",
+        "dsid_c60f1f306789466693e764022ef9784d"
+      ],
+      "gold": [
+        "dsid_7c73cb76b80a41edb4959db4b1e7308b"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 5.395
+    },
+    {
+      "id": "qst_0104",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_0ba4362ffedf469d8c92d44322c6acf4",
+        "dsid_d1fb7f13444d4f87b234f97443bd864f",
+        "dsid_d830bacf954443f68e85a6929fa1fc1c",
+        "dsid_8f4531a5a0f24a14b7d51585cabd0a94",
+        "dsid_61824ee2448645f79a264fc38cc17673"
+      ],
+      "gold": [
+        "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 32.805
+    },
+    {
+      "id": "qst_0183",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_80a4e96eed2942be93c328964e1d327f",
+        "dsid_cfa4197e52eb4145a7d91650d0252058",
+        "dsid_5417f2a334854b98aeb525732af10123",
+        "dsid_b6ba77d72e0e41fe82563675ee5a7a96",
+        "dsid_ff2f2c0b1e714b42a827115f35a00848"
+      ],
+      "gold": [
+        "dsid_693c023c88264795a7e98c7737e6459e"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 27.381
+    },
+    {
+      "id": "qst_0190",
+      "lang": "ru",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_8e895f67a2ee451493354747adc420b6",
+        "dsid_06fa75830cc74d22bd8e6d6fa80ed1de",
+        "dsid_8205407105944677b6eb3167167064a9",
+        "dsid_7e5744fb69c044fd92ed0a6e85d5cac2",
+        "dsid_c0c93abadf4c438189e23cb45256c6e9"
+      ],
+      "gold": [
+        "dsid_b02e6ce0d9814b35af846c309c25e551"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 39.008
+    },
+    {
+      "id": "qst_0216",
+      "lang": "en",
+      "arm": "XERJ + E5 RRF",
+      "hits": [
+        "dsid_de6b49c261c64af3885c8d0603ef134d",
+        "dsid_c153834cc14941b785718e4d7fe6646d",
+        "dsid_d84b5c98fffd4e278786cd71a87b48fa",
+        "dsid_82c0781b50cb47668b5d37a67a9a157d",
+        "dsid_dbbeebb87274453e85f5abb97544c508"
+      ],
+      "gold": [
+        "dsid_c175ab6b52fe4226baac85697c562c7d"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 55.931
+    },
+    {
+      "id": "qst_0016",
+      "lang": "en",
+      "arm": "SQLite BM25",
+      "hits": [
+        "dsid_79e7906ca2404279a8a67c28f4725adc",
+        "dsid_c1df83bebd3142bcbd2153c0d9a293b2",
+        "dsid_a5646b96187c4c6db01319035f56dc3d",
+        "dsid_9bca965c886540cc80b5eb9c6b3c3da0",
+        "dsid_e3e904223b4c4b01b6a0f396208aaa1d"
+      ],
+      "gold": [
+        "dsid_ba7d1565b0694e359983bccaa4bf5977"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 19.317
+    },
+    {
+      "id": "qst_0040",
+      "lang": "ru",
+      "arm": "SQLite BM25",
+      "hits": [],
+      "gold": [
+        "dsid_43ecb807903f46848e8d099b6c8beb04"
+      ],
+      "hit": false,
+      "recall": 0.0,
+      "ms": 0.169
+    }
+  ]
+}

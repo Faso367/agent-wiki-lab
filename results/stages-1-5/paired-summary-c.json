@@ -1,0 +1,189 @@
+{
+  "tasks": {
+    "read": {
+      "arms": {
+        "xerj": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 1842,
+          "completion_tokens": 116,
+          "tokens_per_success": 1958.0,
+          "p50_ms": 26518.045790988253,
+          "p95_ms": 26518.045790988253
+        },
+        "confluence": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 1468,
+          "completion_tokens": 135,
+          "tokens_per_success": 1603.0,
+          "p50_ms": 26979.237874998944,
+          "p95_ms": 26979.237874998944
+        }
+      },
+      "shared_successes": 1,
+      "token_totals_shared_successes": {
+        "xerj": 1958,
+        "confluence": 1603
+      },
+      "shared_success_xerj": {
+        "p50_ms": 26518.045790988253,
+        "p95_ms": 26518.045790988253
+      },
+      "shared_success_confluence": {
+        "p50_ms": 26979.237874998944,
+        "p95_ms": 26979.237874998944
+      },
+      "p50_difference_ci95_ms": null
+    },
+    "edit": {
+      "arms": {
+        "xerj": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 6983,
+          "completion_tokens": 345,
+          "tokens_per_success": 7328.0,
+          "p50_ms": 104619.00487498497,
+          "p95_ms": 104619.00487498497
+        },
+        "confluence": {
+          "attempts": 1,
+          "successful": 1,
+          "prompt_tokens": 5385,
+          "completion_tokens": 353,
+          "tokens_per_success": 5738.0,
+          "p50_ms": 90812.65204100055,
+          "p95_ms": 90812.65204100055
+        }
+      },
+      "shared_successes": 1,
+      "token_totals_shared_successes": {
+        "xerj": 7328,
+        "confluence": 5738
+      },
+      "shared_success_xerj": {
+        "p50_ms": 104619.00487498497,
+        "p95_ms": 104619.00487498497
+      },
+      "shared_success_confluence": {
+        "p50_ms": 90812.65204100055,
+        "p95_ms": 90812.65204100055
+      },
+      "p50_difference_ci95_ms": null
+    }
+  },
+  "search": {
+    "xerj": {
+      "queries": 3,
+      "errors": 0,
+      "hit5": 3,
+      "mean_recall5": 1.0,
+      "p50_ms": 12.653291982132941,
+      "p95_ms": 30.385083984583616
+    },
+    "confluence": {
+      "queries": 3,
+      "errors": 0,
+      "hit5": 3,
+      "mean_recall5": 1.0,
+      "p50_ms": 805.1807080046274,
+      "p95_ms": 946.2606250017416
+    }
+  },
+  "attempts": [
+    {
+      "fixture": "orbitbench26n22c",
+      "case": "orbit-eu",
+      "source_file": "paired-english-c.json",
+      "arm": "xerj",
+      "task": "read",
+      "passed": true,
+      "ms": 26518.045790988253,
+      "prompt_tokens": 1842,
+      "completion_tokens": 116,
+      "tool_payloads": {
+        "search": {
+          "calls": 1,
+          "tokens": 357
+        },
+        "read": {
+          "calls": 1,
+          "tokens": 144
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22c",
+      "case": "orbit-eu",
+      "source_file": "paired-english-c.json",
+      "arm": "xerj",
+      "task": "edit",
+      "passed": true,
+      "ms": 104619.00487498497,
+      "prompt_tokens": 6983,
+      "completion_tokens": 345,
+      "tool_payloads": {
+        "search": {
+          "calls": 2,
+          "tokens": 800
+        },
+        "read": {
+          "calls": 3,
+          "tokens": 450
+        },
+        "update": {
+          "calls": 1,
+          "tokens": 85
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22c",
+      "case": "orbit-eu",
+      "source_file": "paired-english-c.json",
+      "arm": "confluence",
+      "task": "read",
+      "passed": true,
+      "ms": 26979.237874998944,
+      "prompt_tokens": 1468,
+      "completion_tokens": 135,
+      "tool_payloads": {
+        "search": {
+          "calls": 1,
+          "tokens": 188
+        },
+        "read": {
+          "calls": 1,
+          "tokens": 110
+        }
+      }
+    },
+    {
+      "fixture": "orbitbench26n22c",
+      "case": "orbit-eu",
+      "source_file": "paired-english-c.json",
+      "arm": "confluence",
+      "task": "edit",
+      "passed": true,
+      "ms": 90812.65204100055,
+      "prompt_tokens": 5385,
+      "completion_tokens": 353,
+      "tool_payloads": {
+        "search": {
+          "calls": 2,
+          "tokens": 378
+        },
+        "read": {
+          "calls": 3,
+          "tokens": 358
+        },
+        "update": {
+          "calls": 1,
+          "tokens": 55
+        }
+      }
+    }
+  ],
+  "tool_payload_tokens_counted_separately": true
+}

@@ -1,0 +1,187 @@
+{
+  "qst_0381": {
+    "by_part": {
+      "answer": "The routing automation oscillated (flip/rollback) due to **policy oscillation** triggered by **noisy reachability signals**, combined with insufficient guardrails that allowed multiple routing policy changes in a short period. This oscillation increased cross-region redirects and amplified retries at the gateway/client level, leading to transient overload and elevated error rates in the target region [E1].\n\nThe follow-up ticket created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects is **ENG-2422**, with a target ship date of **2026-02-07** [E3].",
+      "cited": [
+        "E1",
+        "E3"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 125,
+        "prompt_tokens": 794,
+        "total_tokens": 919,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 16951.762374985265
+    }
+  },
+  "qst_0400": {
+    "by_part": {
+      "answer": "For a shadow evaluation running in a private deployment using an evaluator sidecar, the required fields in each shadow probe telemetry record are as follows:\n\n- **probe_id**: unique id for the probe run (uuid) [E1]\n- **tenant_id**: hashed tenant id (sha256 hex) or obfuscated alias; raw customer IDs MUST NOT be sent outside the private boundary unless agreed [E1]\n- **deployed_model**: model name + version (e.g., redwood-7b-v2-quant8) [E1]\n- **deployment_variant**: one of [hosted, dedicated, private] [E1]\n- **quant_profile**: label of quant profile used (e.g., q8_fast_fp16_fallback) [E1]\n- **hardware_tag**: e.g., a100-40gb, t4-16gb, edge-x86-32g [E1]\n- **prompt_family**: short token describing probe set (e.g., billing_faq_anchors_v3) [E1]\n- **seed_context_hash**: sha1 of the prompt/context after canonicalization (for deduping; non-reversible) [E1]\n- **latency_ms**: observed end-to-end request latency in ms (int) [E1]\n- **tokens_input**: token count of input (int) [E1]\n- **tokens_generated**: token count generated (int) [E1]\n- **top_level_metrics**: comma-separated string of key metrics, e.g., coherence:0.82,hallucination:0.03,embed_cos_sim:0.67 [E1]\n- **error_code**: empty string or standardized code (see appendix error-code-table) [E1]\n- **timestamp_utc**: ISO8601 timestamp [E1]\n\nThe run-lifecycle telemetry events that the evaluator must emit are:\n\n- **eval.run.start**: (run_id, plugin_name, slice_id, mode) [E2]\n- **eval.run.progress**: (run_id, percent, sampled_latency_ms) [E2]\n- **eval.run.complete**: (run_id, result_counts, summary_metrics) [E2]\n\nAll required fields and telemetry events are supported by the provided excerpts. There are no requested facts that lack evidence.",
+      "cited": [
+        "E1",
+        "E2"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 479,
+        "prompt_tokens": 645,
+        "total_tokens": 1124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 35652.80008400441
+    }
+  },
+  "qst_0404": {
+    "by_part": {
+      "answer": "To address the issue of quality regressions after enabling an INT8/mixed-precision variant and suspecting KV-cache rounding on long-context requests, the following facts can be derived from the provided wiki excerpts:\n\n1. **Request header to bypass the KV cache**:  \n   The request header that can be set to bypass the KV cache for long-context sessions is `X-RW-Cache-Mode: bypass` [E1]. This header is recommended as a quick mitigation to bypass the KV cache, which is suspected to be causing misalignment issues on long-context prompts.\n\n2. **Minimum KV-cache hit-rate for the interactive-chat route**:  \n   For the interactive-chat route, the minimum KV-cache hit-rate required before routing to a quant variant is **60%** [E2]. This is specified in the routing policy matrix under the \"KV-cache min hit\" column for the interactive-chat route type.\n\n3. **Maximum sequence length for the interactive-chat route**:  \n   The maximum sequence length allowed for the interactive-chat route before routing to a quant variant is **2048** [E2]. This is specified in the \"Max sequence for quant\" column for the interactive-chat route type.\n\n4. **Allowed quant tiers for the interactive-chat route**:  \n   The allowed quant tiers for the interactive-chat route are **int8-hybrid** and **int8** [E2]. These are specified in the \"Allowed quant tiers\" column for the interactive-chat route type.\n\nNo requested facts lack evidence based on the provided wiki excerpts. All claims are supported by the excerpts.",
+      "cited": [
+        "E1",
+        "E2"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 321,
+        "prompt_tokens": 522,
+        "total_tokens": 843,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 23907.627916982165
+    }
+  },
+  "qst_0439": {
+    "by_part": {
+      "answer": "**How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?**\n\nBased on the provided wiki excerpts, there are **6** internal incident writeups that describe activating automatic fallback (to a different model or region) as part of mitigation. Here is the breakdown:\n\n1. **[E1]**: Describes activating *automatic model fallback* to keep requests flowing while reducing load on the primary model pool.  \n   *\"Mitigation included activating an automatic model fallback policy to keep requests flowing while we reduced load on the primary model pool.\"*\n\n2. **[E2]**: Describes enabling *automatic model fallback* on the router policy for the default route.  \n   *\"Mitigation: enabled *automatic model fallback* on the router policy for the default route.\"*\n\n3. **[E3]**: Describes activating *automatic region fallback* (eu-west-1 -> us-east-1) for eligible routes.  \n   *\"Mitigation required activating *automatic region fallback* (eu-west-1 -> us-east-1) for eligible routes until additional capacity was brought online.\"*\n\n4. **[E4]**: Describes enabling *region fallback* for \"chat-default\" and \"embeddings-default\" where customer policy allows cross-region.  \n   *\"Mitigation: enabled *region fallback* for \"chat-default\" and \"embeddings-default\" where customer policy allows cross-region.\"*\n\n5. **[E5]**: Describes activating *automatic model fallback* more aggressively than intended for several chat routes.  \n   *\"On 2025-04-19, a router policy change caused the system to activate *automatic model fallback* more aggressively than intended for several chat routes.\"*\n\n6. **[E7]**: Describes activating *automatic fallback* to a compatible Hosted pool (same model family) for the affected customer routes.  \n   *\"To maintain availability, we activated an *automatic fallback* to a compatible Hosted pool (same model family) for the affected customer routes until the Dedicated pool stabilized.\"*\n\n**Facts with no evidence**: None of the requested facts lack evidence, as all six incidents explicitly mention the activation of automatic fallback as part of mitigation.",
+      "cited": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E7"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 466,
+        "prompt_tokens": 1560,
+        "total_tokens": 2026,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 42128.254542010836
+    }
+  },
+  "qst_0433": {
+    "by_part": {
+      "answer": "### What is Redwood Inference's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?\n\n#### 1. **Secret Classification and Rotation Requirements**\n- **Tier 0**: root/admin credentials, signing keys, KMS master operations. Minimum rotation cadence is every **30 days** + after any personnel change impacting privileged access [E1].\n- **Tier 1**: service-to-service auth tokens, database credentials, message bus credentials. Minimum rotation cadence is every **90 days** [E1].\n- **Tier 2**: third-party API keys with limited scopes, internal read-only tokens. Minimum rotation cadence is every **180 days** [E1].\n\n#### 2. **Immediate Rotation Requirements**\nImmediate rotation is required if:\n- a secret is exposed in logs, tickets, or a public repository [E1].\n- a workstation is compromised and had access to Vault tokens [E1].\n- an access anomaly is detected in audit logs [E1].\n\n#### 3. **Design Requirements for Rotatable Secrets**\n- Services must be designed to support rotation with minimal downtime:\n  - Support dual-read / dual-verify where possible (accept old+new for a bounded window) [E1].\n  - Prefer short-lived tokens derived from an identity provider rather than static shared secrets [E1].\n  - Avoid single shared credentials across unrelated services [E1].\n\n#### 4. **Logging and Auditability**\n- Access to Tier 0 and Tier 1 secrets must be auditable (requester identity, time, action) [E1].\n- Rotation events must be recorded in a change record (or incident record for emergency) [E1].\n\n#### 5. **Ownership**\n- Secret owner is the owning service team; Security sets minimum standards and reviews exceptions [E1].\n- On-call teams may execute emergency rotations but must follow the break-glass process [E1].\n\n#### 6. **Emergency Rotation Procedure**\nIf compromise is suspected:\n1. Open an incident and declare emergency rotation [E3].\n2. Use break-glass if required; minimize secret exposure in chat (never paste secret values) [E3].\n3. Rotate the highest-risk secrets first (Tier 0 then Tier 1) [E3].\n4. For widely shared credentials, consider temporarily disabling the credential before cutover if safe [E3].\n5. After containment, enumerate all downstream consumers and rotate any derived tokens [E3].\n\n#### 7. **Emergency Secret Rotation During an Incident**\n- Rotate immediately if any of the following are true:\n  - credible evidence of secret exposure [E5].\n  - abnormal access patterns consistent with key misuse [E5].\n  - vendor reports compromised credentials [E5].\n  - attacker has access to systems that can read secrets [E5].\n\n#### 8. **Roles in Emergency Rotation**\n- **Incident Commander (IC)**: authorizes emergency rotation and prioritizes which secrets first [E5].\n- **Ops/SRE**: executes changes and monitors service health [E5].\n- **Security**: advises on scope and evidence capture [E5].\n- **Service owners**: update consumers and validate functionality [E5].\n\n#### 9. **Procedure for Emergency Rotation**\n1. Declare in incident channel: 'Emergency secret rotation in progress' and list candidate secrets (names/paths only) [E5].\n2. Link the break-glass event (if used) and ensure audit logging is on [E5].\n3. Identify rotation order:\n   - Tier 0 first (signing keys, privileged service tokens) [E5].\n   - Tier 1 next (DB creds, message bus creds, third-party keys with broad scopes) [E5].\n4. For each secret:\n   - confirm consumers from the Credential Dependencies inventory [E5].\n   - choose rotation pattern (dual-valid if available; cutover otherwise) [E5].\n   - rotate issuer-side credential [E5].\n   - update Vault/secret store [E5].\n   - restart/redeploy consumers as required [E5].\n   - validate per-service health (auth failures, latency, error rate) [E5].\n5. If failures persist beyond 10 minutes and customer impact is increasing, pause and reassess: rollback vs continue rotation [E5].\n6. Record exact timestamps for issuer-side change and consumer rollouts [E5].\n\n#### 10. **Communications During Emergency Rotation**\n- Do not paste secret values in Slack, tickets, or docs [E5].\n- If customer impact is expected, coordinate with Support for messaging [E5].\n\n#### 11. **After-Action Requirements**\n- Ensure break-glass access is revoked [E5].\n- File a post-incident review item that lists rotated secrets, impacted services, and any follow-up rotations needed (derived tokens, cached credentials) [E5].\n\n#### 12. **Post-Rotation Verification Checklist**\n- **Confirm consumer rollout completion**: Verify all services that consume the rotated secret have been restarted/redeployed if required [E6].\n- **Monitor auth and dependency metrics**: Watch for 30 minutes minimum (60 minutes for Tier 0): 401/403 rates for service-to-service calls, database authentication failures, third-party provider invalid key errors, sudden increases in retry rate [E6].\n- **Validate critical user journeys**: Run canary requests against: Hosted API chat completion (streaming and non-streaming), embeddings endpoint, console login (if SSO secrets rotated), model registry artifact fetch [E6].\n- **Audit checks**: Confirm audit logs show only expected actors accessed the secret during rotation window. Confirm break-glass access (if used) has been revoked [E6].\n- **Decommission old credential**: If using a dual-valid window, disable the old credential at the issuer, confirm no consumer is still using it (errors should not spike), remove old secret version from Vault after the defined window [E6].\n\n#### 13. **Exit Criteria for Rotation**\nRotation is considered complete when:\n- all consumers are updated [E6].\n- error rates are at baseline [E6].\n- no unexplained auth failures occur for the observation window [E6].\n- old credential is disabled or scheduled for disablement [E6].\n\n#### 14. **Rotation Patterns**\n- **Pattern A: Dual-valid window (preferred)**: Use when the downstream system can accept two credentials temporarily (e.g., JWT verification keys, API keys with overlap). Steps include generating a new credential, storing it in Vault, updating consumers, deploying changes, observing metrics, disabling the old credential, and removing it from Vault after a deprecation window [E3].\n- **Pattern B: Cutover (use with caution)**: Use when only one credential can be active (e.g., some database passwords). Steps include scheduling a change window, reducing autoscaling noise, generating a new credential, applying the change at the issuer, updating Vault, restarting/redeploying consumers, and validating service health [E3].\n\n#### 15. **Preconditions for Rotation**\n- Identify the secret name/path and all consumers (see Credential Dependencies page) [E3].\n- Confirm rotation type: planned vs emergency [E3].\n- Ensure appropriate access (normal approvals or break-glass for emergencies) [E3].\n\n#### 16. **Documentation Requirements**\n- **Planned rotation**: create a change record with impacted services, steps, and validation [E3].\n- **Emergency rotation**: document in incident timeline and follow up with a postmortem action list [E3].\n\n#### 17. **Control Plane Credential Dependencies**\n- For a given secret, identify all services that read it [E4].\n- Confirm whether the service reloads secrets dynamically or requires a restart [E4].\n- Confirm whether the secret supports a dual-valid overlap window [E4].\n\n#### 18. **Break-Glass and Emergency Access**\n- Break-glass may be used only when there is an active customer-impacting incident, or a credible suspicion of credential compromise requiring immediate containment, or an operational safety issue requires urgent mitigation and normal approvals are too slow [E2].\n- Break-glass grants time-limited access to Tier 0 / Tier 1 secret read and rotate capabilities, production configuration changes required to restore service, and restricted logs needed for incident diagnosis [E2].\n- Access is time-bound to **60 minutes** (extensions require explicit SRE + Security approval) [E2].\n- All actions must be logged (audit trails cannot be disabled) [E2].\n- Any secret retrieved via break-glass must be treated as compromised and rotated if exposure scope is uncertain [E2].\n\n#### 19. **Required Steps for Break-Glass**\n1. Open or link an incident record [E2].\n2. Announce in the incident channel that break-glass is being used (who, why, and what systems) [E2].\n3. Acquire break-glass role via the approved workflow [E2].\n4. Execute the minimum set of actions necessary [E2].\n5. Revoke break-glass role immediately after use [E2].\n6. Post-incident: file a summary of actions taken, including which secrets were rotated and which services were touched [E2].\n\n#### 20. **Lack of Evidence**\n- The specific **tools or platforms** used for secret management (e.g., Vault, AWS Secrets Manager) are not mentioned in the provided excerpts.\n- The **exact number of services** impacted by a rotation is not specified in the provided excerpts.\n- The **specific metrics** used to validate service health after rotation are not fully detailed in",
+      "cited": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "length",
+      "usage": {
+        "completion_tokens": 2000,
+        "prompt_tokens": 1963,
+        "total_tokens": 3963,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 148962.3472909734
+    }
+  },
+  "qst_0440": {
+    "by_part": {
+      "answer": "### Complete SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments\n\n#### **Required Prerequisites**\n- **Data classification**: Audit logs are classified as **Customer-Sensitive Metadata** and must **not** include request bodies or model outputs [E1].\n- **Encryption at rest**: The customer destination must be configured with server-side encryption:\n  - S3: SSE-S3 or SSE-KMS (customer preference)\n  - GCS: Google-managed keys or CMEK\n  - Azure: Microsoft-managed keys or CMK [E1].\n- **Least privilege access**: Hosted and Dedicated exports must use **assume-role / workload identity** patterns; no long-lived customer keys stored in Redwood [E1].\n- **Network & destination allowlisting**: The destination must be customer-owned and reside in an allowed provider account/subscription/project per the contract. For Private deployments, outbound egress must be constrained by the customer or by Redwood [E1].\n- **Retention**: Default recommended destination retention is **90 days** (unless the customer requires more). If the customer requests retention < 30 days, note it in the request but it is allowed. If the customer requests retention > 1 year, Customer Success must confirm contract language supports it and that the customer understands storage cost/ownership [E1].\n- **Auditability of export**: The platform must emit events for:\n  - export enabled/disabled\n  - destination changes (bucket/container/prefix)\n  - auth/role changes used by the connector\n  - delivery failures and retries\n  These events must be visible in Redwood internal dashboards and retrievable for incident response [E1].\n\n#### **Security Approvals**\n- **Gate A: Customer request validation (Customer Success + Support)**:\n  - Required before Security review:\n    - customer company + deployment mode (Hosted / Dedicated / Private)\n    - target cloud + region\n    - desired log categories (standard only unless exception)\n    - retention intent\n    - contact for incident notifications [E1].\n- **Gate B: Security review (required for all modes)**:\n  - Security must approve before any production enablement:\n    - destination configuration meets encryption and least privilege requirements\n    - no inference payload logging is included\n    - any cross-region delivery is evaluated [E1].\n- **Gate C: Privacy/Legal check (conditional)**:\n  - Required if any of the following are true:\n    - customer requests cross-region export that changes data residency guarantees\n    - customer requests inclusion of user email addresses or other PII fields beyond standard audit schema\n    - customer contract includes bespoke audit log clauses [E1].\n\n#### **Configuration Steps**\n- **Hosted**:\n  - Confirm export eligibility (customer tier and contract entitlement, platform audit logs only, region alignment) [E4].\n  - Use the internal admin CLI `rdw-admin` to create or update the export destination:\n    ```bash\n    rdw-admin audit-export destination upsert \\\n      --org-id <ORG_ID> \\\n      --sink <s3|gcs|azure> \\\n      --region <REGION> \\\n      --bucket-or-container <NAME> \\\n      --prefix <PREFIX> \\\n      --auth-mode <assume-role|workload-identity> \\\n      --external-role-arn-or-binding <VALUE>\n    ```\n  - Enable export:\n    ```bash\n    rdw-admin audit-export enable --org-id <ORG_ID>\n    ```\n  - Verify the feature flag `audit_export_customer_sink_enabled` is set to true [E5].\n  - Validate internal health (delivery success rate, delivery lag) and customer destination verification [E5].\n- **Dedicated**:\n  - Choose between **Redwood-managed connector** (default) or **Dedicated-placed connector** (exception) [E7].\n  - For Redwood-managed connector, use the `dedicated-config` Terraform module to store per-customer export config:\n    ```bash\n    cd infra/dedicated/<CUSTOMER_SLUG>\n    terraform plan\n    terraform apply\n    ```\n  - Validate connector metrics and destination objects [E8].\n- **Private**:\n  - Ensure the customer has deployed Redwood Private version that includes `audit-export-connector` (Private bundle v2.8.0+), created a destination bucket/container, and configured encryption and retention [E9].\n  - Configure the connector via the `redwood-private` Helm chart with the following values:\n    ```yaml\n    auditExport:\n      enabled: true\n      sink: s3\n      region: us-east-1\n      destination: customer-audit-logs-prod\n      prefix: redwood/org=acme/cluster=private-us-east\n      format: jsonl_gzip\n      batchSeconds: 60\n      maxBatchBytes: 10485760\n      auth:\n        mode: workload_identity\n        reference: <customer-specific-binding-or-role>\n      network:\n        requirePrivateEndpoint: true\n        dnsZone: <customer-private-dns-zone>\n    ```\n  - Restart the connector deployment and verify logs show successful writes [E11].\n\n#### **Validation**\n- **Internal health**: Confirm connector has created a consumer for this org, with non-zero `delivery_success_rate` and decreasing `delivery_lag_seconds` [E5].\n- **Customer destination verification**: Ask CS/customer to verify objects are landing in the destination prefix with expected naming pattern: `org=<ORG_ID>/region=<REGION>/dt=YYYY-MM-DD/hr=HH/*.jsonl.gz` [E5].\n- **Event schema spot-check**: Download one object and confirm:\n  - `event_id` present\n  - `source_service` present\n  - no prompt/completion fields [E5].\n- **Dedicated**: Verify `delivery_success_rate` > 0.99 after warmup, `delivery_lag_seconds` trending down, and no sustained 4xx write errors [E8].\n- **Private**: Confirm objects appear in the customer destination within 10 minutes and schema does not include inference payload fields [E11].\n\n#### **Customer Communication**\n- Provide the customer with a communication template:\n  - Subject: Audit log export enablement – next steps\n  - Body:\n    - Thanks for the request. We can enable automated export of Redwood platform audit logs to your [S3/GCS/Azure] destination.\n    - Please confirm you have created the destination bucket/container and enabled encryption at rest.\n    - Please provide the workload identity / role configuration using the attached template.\n    - Once received and approved, we will enable export and ask you to confirm objects are landing under the agreed prefix.\n    - Typical initial enablement time: 3–5 business days (may vary by deployment mode and approvals) [E12].\n\n#### **Ongoing Operations and Ownership**\n- **Customer owns the destination lifecycle, cost, and retention** [E11].\n- **Redwood Support can help troubleshoot connector errors** if the customer provides logs/metrics [E11].\n- **Recommended alerts (customer side)**:\n  - no new objects for > 30 minutes\n  - sustained 4xx/5xx from storage [E11].\n- **Post-enablement notes**:\n  - CS should confirm the customer understands delivery semantics (at-least-once, possible duplicates).\n  - CS should remind the customer that the destination is customer-owned (storage cost, lifecycle policies) [E12].\n\n#### **Facts Lacking Evidence**\n- **No evidence** is provided about the exact time required for the customer to confirm objects are landing in the destination prefix.\n- **No evidence** is provided about the exact time required for the customer to configure their SIEM and retention/alerts.\n- **No evidence** is provided about the exact time required for the customer to understand delivery semantics (at-least-once, possible duplicates).",
+      "cited": [
+        "E1",
+        "E11",
+        "E12",
+        "E4",
+        "E5",
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1665,
+        "prompt_tokens": 3535,
+        "total_tokens": 5200,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 148783.83408399532
+    }
+  },
+  "qst_0441": {
+    "by_part": {
+      "answer": "For an enterprise Redwood Private deployment upgrade, the complete go/no-go gate mandated by Redwood's internal standards includes the following required validations, approvals, and customer communications:\n\n### Required Validations\n1. **Change record + ownership**:\n   - Create a change request ticket using the Private Upgrade Change Request template (Jira internal-support) [E1].\n   - Name a single *Change Owner* (usually Private Deployments on-call or the assigned Solutions/Delivery engineer) [E1].\n   - Confirm customer-side *Change Approver* and *Operator* contacts [E1].\n\n2. **Version + compatibility**:\n   - Record current versions: installer, operator/controller, runtime images, chart versions [E1].\n   - Confirm target versions and the exact upgrade path (no skipping major versions unless explicitly supported) [E1].\n   - Confirm model/runtime compatibility notes for the customer’s pinned models [E1].\n\n3. **Backups + rollback readiness**:\n   - Confirm backups exist and are recent for control plane config state, Redwood-managed persistent volumes, and customer-provided external dependencies [E1].\n   - Validate rollback artifacts are available locally: previous installer bundle, previous image tags, and prior values files [E1].\n   - Ensure a rollback decision point is explicitly called out in the window plan [E1].\n\n4. **Preflight validations**:\n   - Run the standard preflight and attach the output to the change ticket, including cluster capacity, storage class/PV health, DNS/egress reachability, TLS/certificate expiration checks, and required Kubernetes API versions [E1].\n\n5. **Observability readiness**:\n   - Confirm dashboards/alerts are visible to Redwood during the window (temporary access granted if needed) [E1].\n   - Confirm the following signals are available: control plane API error rate, inference request error rate (5xx), P95 latency for primary routes, GPU utilization and OOM/restart rates [E1].\n\n### Required Approvals\n1. **Change Management approvals**:\n   - Completed according to the policy for approvers by risk level [E1].\n\n2. **SRE SLO/error budget review**:\n   - Completed (or documented risk acceptance) [E1].\n\n3. **Security sign-off**:\n   - Completed if triggered (auth/RBAC/audit/TLS/dependency changes) [E1].\n\n4. **Customer Success owner acknowledgment**:\n   - Acknowledges comms plan and customer readiness [E1].\n\n### Required Customer Communications\n1. **Maintenance notice**:\n   - Sent according to comms SOP (timing + channel) [E1].\n\n2. **During-window escalation path**:\n   - Confirmed (Redwood + customer) [E1].\n\n3. **“All clear” message**:\n   - Drafted for post-window [E1].\n\n### Final Technical Readiness\n1. **Preflight output**:\n   - Has no *red* blockers; any *yellow* warnings have an owner and mitigation [E1].\n\n2. **No open P0/P1 incidents**:\n   - On Redwood side that would reduce ability to respond/rollback [E1].\n\n3. **Change freeze exception**:\n   - Approved and linked if a change freeze is active [E1].\n\n### Rollback Criteria (Immediate NO-GO / Trigger Rollback)\n- Sustained inference 5xx above customer’s baseline +5% for >5 minutes [E2].\n- P95 latency regression >30% for >10 minutes on the primary routes [E2].\n- Authentication failures (SSO/JWT validation) or RBAC denial spikes [E2].\n- Audit log pipeline breaks (if contractual requirement) [E2].\n- Control plane cannot reconcile/upgrade further [E2].\n\n### Evidence to Attach to the Change Record\n- Preflight output [E2].\n- Version matrix (from/to) [E2].\n- Rollback plan (commands + expected time) [E2].\n- Links to SLO/error budget check and any risk acceptance [E2].\n- Security sign-off (or “not required” rationale) [E2].\n- Copy of customer comms and confirmation of receipt [E2].\n\n### Approval Matrix (Minimum Approvers)\n- **Low**: Engineering peer approval OR team lead approval [E3].\n- **Medium**: Owning team lead, On-call/SRE notified [E3].\n- **High**: Owning team lead, SRE approver (named individual), Customer Success approver if customer-facing, Security approver if security triggers are met [E3].\n- **Critical**: Director-level engineering approver, SRE approver, Security & Compliance approver, Customer Success approver [E3].\n\n### Security Sign-off Requirements\n- Required for changes that introduce or change authentication/authorization mechanisms, change RBAC defaults, change audit logging behavior, change cryptographic material handling, introduce new third-party images/dependencies, or change network boundaries [E4].\n\n### SLO / Error Budget Impact Review Requirements\n- Confirm current 30-day error budget remaining for impacted services/tenants [E5].\n- Confirm GPU and request capacity headroom for the expected window [E5].\n- Confirm no overlapping capacity events [E5].\n- Identify the “watch list” metrics for the change window [E5].\n- Validate that rollback can be executed within the defined “time-to-restore” target [E5].\n- Confirm no concurrent high-risk changes affecting the same customer/region [E5].\n\n### Communications Requirements\n- **Pre-notice (T-5 business days recommended; minimum T-48h for enterprise)**: Send a maintenance notice to the customer via the agreed channel (usually email + shared Slack Connect if available) [E6].\n- **Internal heads-up (T-48h)**: Post a short note in #eng-oncall and #customer-success with customer name, window time, change owner, link to change record, and whether a security sign-off is required [E6].\n- **Window start message (T=0)**: Send a starting now message to the customer and internal channels. Confirm the backout plan exists and the next update time [E6].\n- **Progress updates**: Default cadence: every 30 minutes during the window; immediate updates for any rollback or risk escalation [E6].\n- **All-clear (post-window)**: Send an all-clear message when the verification window is complete. Include completed work summary, any follow-ups, and post-change monitoring plan [E6].\n\n### Approval for Customer-Facing Maintenance Notices\n- Customer Success must approve customer-facing maintenance notices for enterprise accounts [E7].\n\n### Private Release Gating & Change Management Policy\n- Review plan for artifact list completeness, stage ordering, defined rollback entry points, and post-rollback verification steps [E8].\n- Store artifacts: attach `plan.json` and human-readable summary to the change record [E8].\n- Run prechecks: execute `redwood-private upgrade precheck --plan plan.json --output precheck-report.json` and attach the report to the change record [E8].\n- Blocking prechecks must pass: Kubernetes health, control-plane connectivity, RBAC/auth, storage headroom, DB connectivity + privileges, version compatibility, artifact availability, TLS/DNS [E8].\n\n### Communications Requirements Based on Risk Tier\n- **Internal comms (all tiers)**: Post to `#eng-releases` and `#eng-oncall` at least T-24h for Medium/High and T-2h for Low [E9].\n- **Customer comms**:\n  - **Low**: Notify customer contact at least 48 hours prior (or per contract), confirm window [E9].\n  - **Medium**: Notify 5 business days prior; include expected operator actions and verification checklist [E9].\n  - **High**: Notify 10 business days prior; schedule readiness call; confirm evidence expectations (audit logs, backup proof, rollback plan) [E9].\n\n### Customer Email Template (Copy/Paste)\n- Provided in the wiki excerpt [E9].\n\n**Facts lacking evidence**: None of the requested facts are lacking evidence, as all claims are supported by the provided wiki excerpts.",
+      "cited": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1698,
+        "prompt_tokens": 2659,
+        "total_tokens": 4357,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 143222.47633399093
+    }
+  },
+  "qst_0442": {
+    "by_part": {
+      "answer": "### Definition of a Production Change\nA production change is defined as \"Any change that can affect confidentiality, integrity, availability, latency, cost, or correctness for customer-facing workloads\" [E1].\n\n### Required Approvals\nFor a production change, the required approvals depend on the change type:\n- **Standard changes** require 1 peer approval [E1].\n- **Normal changes** require 1 peer approval + service owner approval [E1].\n- **Emergency changes** require on-call incident commander (IC) + service owner approval [E1].\n- Additional approvals are required for SRE gate and security gate depending on the change's impact [E3].\n\n### Pre-deploy Verification\nPre-deploy verification includes:\n- Unit tests must be green for all touched packages [E4].\n- Integration tests must be green for service-level integration suite unless exceptions are approved by the service owner [E4].\n- Perf sanity checks are required if request path or caching/batching is changed [E4].\n- SLO posture must confirm current p95 latency and error rate are within normal bounds [E4].\n- Capacity posture must confirm headroom ≥ 20% in target regions or include an SRE-approved plan [E4].\n- Schema/migration gate requires backward compatibility and a documented rollback/forward plan [E4].\n- Security gate is required when auth/RBAC/secrets/audit logging/PII retention is touched [E3].\n\n### Deploy Execution\nDeploy execution includes:\n- Using the documented runbook for the target system (Hosted API or Console) [E3].\n- Performing a canary rollout for traffic-bearing services unless explicitly exempted [E3].\n- Confirming observability before and after (golden signals and specific dashboards) [E3].\n- Having a clearly defined rollback trigger and a \"stop the line\" principle [E3].\n\n### Customer/Internal Communications\nCustomer and internal communications requirements include:\n- **Customer communications** are required if any of the following are true: expected downtime, degraded performance, increased error rates, planned breaking changes, or region-level maintenance that reduces redundancy [E9].\n- **Internal communications** are always required and include posting in #eng-releases with the change record link, owner and approver(s), services/regions, canary plan, and rollback trigger [E9].\n\n### Rollback/Post-change Requirements\nRollback and post-change requirements include:\n- Rollback is required immediately if any of the following occur during canary or full rollout: error rate increases by > 0.2% sustained for 5 minutes, p95 latency increases by > 10% sustained for 10 minutes, elevated timeouts or queue depth indicates saturation, or customer-reported incident plausibly tied to the change [E5].\n- Post-deploy validation includes confirming global dashboards are stable, no new alerts firing, and logs/traces are visible for the new build [E5].\n- A change record must be updated with canary results, rollout times, dashboard links, and final build identifiers [E5].\n- Post-change monitoring window requires enhanced monitoring for at least 60 minutes after the system is stable, confirming error rate, p95 latency, saturation metrics, and a representative customer workflow [E13].\n- A change record is not closed until it includes final deployed build identifiers, links to dashboards used and observed outcomes, and follow-up tickets for any discovered issues [E13].",
+      "cited": [
+        "E1",
+        "E13",
+        "E3",
+        "E4",
+        "E5",
+        "E9"
+      ],
+      "unknown_ids": [],
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 707,
+        "prompt_tokens": 3864,
+        "total_tokens": 4571,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ms": 88167.54516697256
+    }
+  }
+}
