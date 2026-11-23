@@ -1,0 +1,13 @@
+<!doctype html><meta charset=utf-8><title>Customer-managed audit log export security controls and approval gates - confluence-dsid_385fd2388669469e87964b25d6428871</title><pre id="p0">Customer-managed audit log export: security controls and approval gates</pre><pre id="p1"># Purpose
+This page defines the **mandatory security controls** and **approval gates** for enabling **customer-managed audit log export** from Redwood Inference to customer-controlled cloud storage (e.g., S3/GCS/Azure Blob) across Hosted, Dedicated, and Private deployments.</pre><pre id="p2">This is a control surface that touches: customer data boundaries, identity and access, encryption, and retention. **Do not enable export** without satisfying the requirements below.</pre><pre id="p3"># Scope
+In scope:
+- Export of **platform audit logs** (auth events, RBAC changes, API key lifecycle, console/admin actions, private control-plane actions).
+- Delivery to a **customer-owned destination**.</pre><pre id="p4">Out of scope:
+- Model inference payload logging (prompt/completion content). That remains disabled by default and requires a separate data logging exception.</pre><pre id="p5"># Definitions
+- **Audit log**: event records emitted by Redwood control plane and selected data-plane components.
+- **Customer-managed export**: Redwood pushes logs to an endpoint owned/controlled by the customer; the customer sets retention and access.
+- **Export Connector**: Redwood-managed service that ships logs (see architecture page for details).</pre><pre id="p6"># Control requirements (must pass)
+## 1) Data classification
+- Audit logs are classified as **Customer-Sensitive Metadata**.
+- Audit logs may include: user identifiers, IPs, org IDs, resource IDs, timestamps, and administrative actions.
+- Audit logs must **not** include request bodies or model outputs.</pre>

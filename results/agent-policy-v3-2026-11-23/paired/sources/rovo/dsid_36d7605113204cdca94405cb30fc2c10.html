@@ -1,0 +1,33 @@
+<!doctype html><meta charset=utf-8><title>Operational Flows and Policy Gallery - confluence-dsid_36d7605113204cdca94405cb30fc2c10</title><pre id="p0">Operational Flows and Policy Gallery</pre><pre id="p1">Purpose and scope:</pre><pre id="p2">This page consolidates company-wide operational flows and reusable policy artifacts relating to access and permissions, change management, data lifecycle, procurement &amp; expenses, vendor onboarding, travel policy, and internal templates. It is intended as a single-entry reference for teams to discover the canonical process, required approvals, and the standard templates used by Redwood Inference.</pre><pre id="p3">Audience:
+- Engineering, Product, Security, Finance, People Ops, and Procurement partners.
+- Team leads and managers who approve access, spend, or changes.</pre><pre id="p4">Summary (quick reference):
+| Area | Owner | Target SLA / Thresholds | Key system | Approval path |
+| --- | --- | --- | --- | --- |
+| Access &amp; Permissions | Security + IT | Standard request: 48 hours; Elevated: 5 business days; Emergency: &lt;4 hours | IdentityHub (IAM) | Manager -&gt; Security reviewer -&gt; IAM admin |
+| Change Management | Eng-Platform | Standard change window: 02:00–05:00 PST; Emergency changes: immediate runbook | OpsChange | Change owner -&gt; CAB -&gt; Release manager |
+| Data Management | Security + Data Platform | Retention: 1y/3y/7y by classification; Backup RPO 24h | DataLake / Vault | Data owner -&gt; Security review |
+| Procurement &amp; Expenses | Finance-Legal | &lt; $5k: manager; $5k–$75k: procurement; &gt; $75k: exec | ProcureFlow, Spendly | Req -&gt; Procurement -&gt; Finance -&gt; Exec (if needed) |
+| Vendor Management | Procurement | Onboarding: 7–14 days | Vendor Portal | Security review -&gt; Procurement -&gt; Contracting |
+| Travel &amp; Expenses | People Ops + Finance | Per-diem and policy; pre-approval for &gt; $2k | Spendly | Traveler -&gt; Manager -&gt; Finance |</pre><pre id="p5">Note: See &quot;Templates&quot; section at the end for direct links to request and approval forms.</pre><pre id="p6">1) Access &amp; Permissions (Identity lifecycle)</pre><pre id="p10">SLOs and monitoring:
+- 90% of standard requests fulfilled within 48 hours.
+- Emergency access (investigations, P1 incidents): target same-day (4 hours) turnaround via on-call IAM admin and Security Pager.
+- Monthly audit: all privileged roles reviewed quarterly.</pre><pre id="p11">Exceptions and emergency process:
+- Emergency access uses the Emergency Access Runbook (link: OpsChange/Emergency-Access-Runbook). Every emergency grant must be accompanied by an audit ticket and post-incident access review within 7 days.</pre><pre id="p12">2) Change Management (Services &amp; Infra)</pre><pre id="p13">Purpose:
+To minimize risk from configuration and code changes by standardizing assessment, scheduling, and rollouts.</pre><pre id="p14">Change categories:
+- Standard changes: pre-approved, low-risk, follow templated rollout (e.g., dependency bumps, non-prod config changes).
+- Normal changes: require CAB review; typically feature deploys, infra patches.
+- Emergency changes: require immediate action; follow Emergency Change runbook and postmortem.</pre><pre id="p15">Approval matrix and windows:
+- Standard changes: no CAB if they match the Standard Change Catalogue and use a validated automation playbook.
+- Normal changes: submit in OpsChange 72 hours before planned window. CAB meets daily for fast lanes and weekly for large changes.
+- Change window: default maintenance window 02:00–05:00 PST; services with global usage must consult SRE before scheduling.</pre><pre id="p16">Rollback policy:
+- All normal and emergency changes must include a rollback plan and a success metric (SLO delta or error rate).
+- If errors exceed alert threshold (error rate &gt; 0.5% or latency &gt; 2x baseline), trigger rollback and incident response.</pre><pre id="p17">Post-change verification:
+- Owner must run the Post-Change Checklist in OpsChange within 4 hours of completion and mark the change as successful or failed.</pre><pre id="p18">3) Data Management (Classification, Retention, Access)</pre><pre id="p19">Classification table:
+| Classification | Examples | Default retention | Access controls |
+| --- | --- | --- | --- |
+| Public | Marketing assets | 0 | Read-only public URLs |
+| Internal | Documentation, non-sensitive logs | 3 years | Corporate SSO with RBAC |
+| Confidential | Customer PII, analytics with identifiers | 7 years | Justified access, strict logging, DLP |
+| Restricted | KMS keys, secrets, regulated customer data | As required by contract | Restricted to named individuals, HSM/KMS controls |</pre><pre id="p20">Data handling requirements:
+- PII and Confidential datasets require a documented Data Processing Agreement and must be stored only in Vault-backed buckets with encryption at rest.
+- Backups: daily snapshot with retention according to classification. Restore drills: annually for Restricted data, bi-annually for Confidential.</pre>

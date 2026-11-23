@@ -1,0 +1,38 @@
+<!doctype html><meta charset=utf-8><title>cross-functional-incident-ownership-and-hotseat-sop-2026 - confluence-dsid_64928bf38d764e21aa3300e67ee461b7</title><pre id="p2">This page documents the cross-functional incident ownership model and the Hotseat Standard Operating Procedure (Hotseat SOP). The Hotseat is a temporary, time-boxed role that centralizes decision authority during multi-team incidents and noisy degradations. This SOP covers when to activate Hotseat, responsibilities, handoff steps, customer communication templates, and game-day exercises to validate the flow.</pre><pre id="p3">Goals and scope</pre><pre id="p4">- Reduce cognitive churn during cross-team incidents by naming a single Hotseat operator.
+- Ensure predictable, auditable ownership transfers for incidents affecting: api-gateway, inference-runtime, cache-kv-service, and ingest-queue.
+- Standardize customer-facing communications and quiet-window decisions.
+- Excludes routine single-service alerts where a single service owner can resolve within 30 minutes.</pre><pre id="p5">When to activate Hotseat (decision ladder)</pre><pre id="p6">1) PagerDuty alert (P0 or sustained P1 &gt; 20 min) impacting &gt;10% of customer traffic OR causing sustained SLO deviation.
+2) Multiple dependent services are affected (evidence from traces or topology).
+3) Active cross-team coordination required (two or more engineering teams plus SRE/product).</pre><pre id="p7">Roles and responsibilities</pre><pre id="p8">- Hotseat Operator (hotseat): Named single point of decision-making for the incident window. Coordinates status cadence, approves customer comms, and drives mitigation decisions.
+- Incident Lead (service-owner): Owns technical remediation and runbook steps for a specific service. Reports status to Hotseat every 10 minutes.
+- Bridge Facilitator (ops): Operates the bridge (Zoom/Bridge) and ensures documentation of commands and timeline.
+- Customer Liaison (cs): Crafts customer messaging with Hotseat approval and owns external stakeholder notifications.
+- Escalation Support (eng-sre): Availability for extra capacity actions (global routing, infra resizes, emergency failover).</pre><pre id="p9">Ownership matrix (quick table)</pre><pre id="p10">Service | Primary owner | Secondary contact | Typical runbook
+------- | ------------- | ----------------- | -----------------
+api-gateway | Erica Park | Jonah Meyer | api-gateway/runbook-v3
+inference-runtime | Rafael Ortiz | Mei Lin | runtime/latency-triage
+cache-kv-service | Priya Desai | Kofi Mensah | storage/cache-kv-deg
+ingest-queue | Omar Malik | Talia Rivera | ingest/queue-backpressure</pre><pre id="p11">Hotseat activation procedure (10-step checklist)</pre><pre id="p12">1. PagerDuty acknowledged by on-call; initial triage completed (impact, blast radius, tentative severity).
+2. If triggers met, on-call posts to #ops-bridge: &quot;Hotseat requested&quot; and page Hotseat rotation.
+3. Hotseat accepts within 5 minutes and creates incident thread in ticketing tool (INC-YYYYMMDD-###).
+4. Bridge facilitator opens bridge and pins incident ticket.
+5. Hotseat assigns Incident Lead(s) and confirms secondary contacts.
+6. Establish 10-minute cadence updates and document next action every cadence.
+7. If customer-impacting, Customer Liaison prepares first external note draft within 15 minutes.
+8. Hotseat reviews and approves any mitigation that changes customer-visible behavior (rollbacks, rate limits).
+9. When steady-state returns or failover completes, Hotseat transitions to Recovery mode and orders evidence collection.
+10. Hotseat enters a formal handoff (see transfer checklist) before relinquishing role.</pre><pre id="p13">Hotseat transfer checklist (must be completed for every handoff)</pre><pre id="p14">- Time of handoff (UTC)
+- Current severity and SLO deviation metrics (percent of impacted traffic)
+- Active mitigations and who controls them (IP addresses, topology changes, flags)
+- Known root causes or hypotheses and required actions
+- Outstanding blockers and last attempted remediation command(s)
+- Next check-in time and expected duration of new owner
+- Incident ticket link and artifacts location (logs, traces, dashboards)</pre><pre id="p15">Example handoff note (paste to incident ticket)</pre><pre id="p16">Handoff from Hotseat Nora Chen -&gt; Hotseat Liam O&#x27;Neill at 2026-02-18T16:30Z
+- Severity: P1 (20% API error increase, 12% customer impact)
+- Active mitigation: global rate-limit applied at edge (rule id: rl-8321)
+- Next action: expand autoscaler pool + restart api-gateway pods in eu-west-1 (Jonah assigned)
+- Evidence: link to trace span collection: https://dash/internal/trace/INC-12345</pre><pre id="p17">On-call rotation: Hotseat rotation pattern</pre><pre id="p18">- Hotseat is a 4-hour rotation sampled from SRE and Platform teams during business hours (08:00-20:00 PT). Outside business hours, the primary on-call acts as Hotseat unless escalated.
+- Shift example: 08:00-12:00, 12:00-16:00, 16:00-20:00. Each team provides a nominated backup.
+- Hotseat handover must complete with the checklist above; if incomplete, the outgoing Hotseat remains accountable until the transfer is complete.</pre><pre id="p19">Tactical shortcuts and guardrails</pre><pre id="p20">- Short-circuit: If a single service owner can remediate within 15 minutes with low risk, Hotseat deactivation is allowed. Document decision.
+- Emergency rollback: Hotseat may authorize an emergency rollback to the last verified tag. Authorization must be recorded in the ticket.
+- No unilateral customer data exports or escalations to sales without Customer Liaison consent.</pre><pre id="p21">Customer communication templates (concise, editable)</pre>

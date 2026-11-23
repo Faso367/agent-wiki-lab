@@ -1,0 +1,40 @@
+<!doctype html><meta charset=utf-8><title>On prem upgrade bundle format air gapped Redwood Private - confluence-dsid_5e3f4795283b450fa87df01d141c253b</title><pre id="p25">### Trust model
+- Redwood publishes release public keys out-of-band to on‑prem customers as part of the Private onboarding package.
+- Customers configure trusted keys on the operator host (or inside the installer container) prior to upgrade.</pre><pre id="p26">### Installer key configuration
+The installer searches keys in this order:
+1) `--trusted-keys &lt;path&gt;` (file containing one or more public keys)
+2) `REDWOOD_PRIVATE_TRUSTED_KEYS_PATH` (env var)
+3) Default path: `/etc/redwood-private/trust/keys/`</pre><pre id="p27">Verification requirements:
+- Signature verification is **blocking**.
+- `signing.key_id` in the manifest must match an available trusted key id.
+- Installer records key id and verification result in upgrade audit logs.</pre><pre id="p28">## Offline dependencies
+### Container images
+#### Offline bundle
+- `images/oci/*.tar` are OCI image tarballs.
+- `images/index.json` maps human names to digests and tar paths (installer uses this for fast validation).
+- Installer can either:
+ - Load into container runtime (e.g., `containerd`) and re-tag, or
+ - Push directly to a customer registry mirror.</pre><pre id="p29">Required: all images referenced by charts must be present by digest.</pre><pre id="p30">#### Mirror-assisted bundle
+- Bundle omits image tar files.
+- Manifest lists all required images + digests.
+- Installer verifies images exist in the configured mirror registry **by digest**.
+- If the mirror serves tags only, operator must ensure tags resolve to the declared digests.</pre><pre id="p31">### Helm charts
+- Must be shipped as `.tgz` under `charts/`.
+- The bundle should include a CRDs chart separately (`redwood-private-crds`) when CRDs must be applied ahead of control plane rollout.</pre><pre id="p32">### CLIs and tools
+- For air‑gapped environments, we recommend shipping a pinned installer binary in `binaries/`.
+- Optional: include `kubectl` and `helm` to avoid relying on host tooling.</pre><pre id="p46">## Operational guidance
+- Store bundles in a WORM-capable or access-controlled location (auditors frequently request evidence of what was installed).
+- Keep `manifest.json`, `checksums.sha256`, and `manifest.sig` together; do not rename files.
+- Prefer `.tar.zst` for large bundles (faster and smaller for offline transfer).
+- Ensure your transfer mechanism preserves file integrity (avoid email/IM attachments; use SFTP, signed artifact channels, or physical media with verification).</pre><pre id="p47">## Security and compliance notes
+- Bundle signatures are the primary integrity control; checksums provide defense-in-depth and earlier corruption detection.
+- Customer environments may require that bundles are scanned prior to import. The manifest can be used as an input inventory for scanners.
+- The installer must emit audit events for: bundle verification start/finish, key id used, and bundle id/private version consumed.</pre><pre id="p48">## Appendix A: Recommended extraction and validation commands
+On an operator workstation:</pre><pre id="p49">```
+# Extract (tar.zst)
+tarzstd -d -c bundle.tar.zst | tar -xvf -</pre><pre id="p50"># Quick local checksum verification
+sha256sum -c checksums.sha256</pre><pre id="p51"># Optional: inspect manifest
+cat manifest.json | jq .
+```</pre><pre id="p52">## Appendix B: Bundle compatibility with installer versions
+- Bundles are forward-compatible within a major installer line when `bundle_format_version` is unchanged.
+- If the installer reports `UNSUPPORTED_BUNDLE_FORMAT`, update the installer to the minimum version referenced in release notes.</pre><pre id="p53">(Installer compatibility enforcement is described in the upgrade plan / rollback ADR and the Private release gating policy.)</pre>

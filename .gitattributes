@@ -3,3 +3,4 @@ benchmarks/pages.csv -text whitespace=cr-at-eol
 # Preserve whitespace from verbatim synthetic source material.
 results/**/sources/*.html -text whitespace=-blank-at-eol
 *.pdf binary
+results/**/sources/rovo/*.html -text whitespace=-blank-at-eol

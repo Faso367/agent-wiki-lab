@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf-8><title>Dynamic quant handoff and latency budgeting manifest - confluence-dsid_8f0301d7b2414031b392da5566f98ce6</title><pre id="p0">Dynamic quant handoff and latency budgeting manifest</pre><pre id="p1">Summary:
+This document defines the operational contract, evaluation harness, and rollout playbook for dynamic quantization handoff — the runtime capability to switch between full-precision and quantized model variants (including mixed-precision hybrids) based on latency budget, KV-cache state, and quality guardrails. It codifies telemetry, safety checks, example configs, and regression-triage hooks required to safely operate quant handoffs across Hosted, Dedicated, and Private deployments.</pre><pre id="p2">Goals and scope:
+- Goal: reduce per-token cost while preserving application-level quality and meeting latency SLOs by opportunistically routing requests to quantized model variants.
+- Scope: applies to text and function-call serving pipelines. Multimodal and embedding-only services follow the same principles but require separate calibration (see Related configs).
+- Out-of-scope: autonomous cross-model reranking, model architecture changes, and offline-only quant experiments (those belong to research notebooks).</pre><pre id="p3">Key concepts and definitions:
+- Quant variant: a binary or mixed-precision build of a base model (e.g., fp16 baseline, int8 static, int8+kv-cache hybrid).
+- Handoff: the runtime decision to route a request to a quant variant for inference.
+- Latency budget: the target SLO for a route (p95/p99). Example: p95 &lt;= 150ms for short chat turn endpoints.
+- Anchored probe: a synthetic input used to validate that a quant variant preserves a critical response anchor (semantic or token-level) to within an allowed delta.</pre>

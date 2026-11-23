@@ -1,0 +1,33 @@
+<!doctype html><meta charset=utf-8><title>Developer Onramp Localization Docs-site Ops and Canonical Fixes Playbo - confluence-dsid_5af1ed23fd2a4bb3984ec368d0e3b23e</title><pre id="p0">Developer Onramp: Localization, Docs-site Ops, and Canonical Fixes Playbook</pre><pre id="p1">Overview</pre><pre id="p2">This playbook bundles three tightly related areas that frequently cause onboarding friction for new integrations: SDK localization (i18n) readiness, docs-site operational procedures (staging/canary/translation pipelines), and a compact set of canonical fixes for the top support issues we see from developer onramps. The goal is a one-page operational reference that engineering, Docs, and Support can use during new SDK ship weeks and customer trials.</pre><pre id="p3">Goals
+- Reduce mean-time-to-first-success (MTTFS) for new SDK adopters by 30% through localized examples and a repeatable docs deploy pipeline.
+- Provide concise canonical fixes for the top 8 devx support issues so Support can resolve 60% of triageable tickets without engineering intervention.
+- Maintain a low-friction docs release process (canary -&gt; staged -&gt; prod) with clear rollback semantics and telemetry hooks.</pre><pre id="p4">Audience
+- Developer Experience engineers and tech writers shipping SDK examples and docs.
+- Support engineers handling integration issues and reproductions.
+- Product engineers owning SDKs or client libraries.</pre><pre id="p5">Scope and non-goals
+- Included: JavaScript/TypeScript, Python, and Go SDK snippets; docs-site content lifecycle; translation handoff and CI checks; canonical fixes for common API/SDK errors.
+- Excluded: full localization of legal or marketing copy; mobile SDKs beyond sample snippets.</pre><pre id="p12">Canonical Support Issues and Fixes (top issues during onramp)
+Issue A: SDK example fails to authenticate (401)
+- Detection: error pattern in logs: &quot;error=unauthorized, code=401, hint=apiKey&quot;; Support: run reproduction script with -v flag.
+- Root cause: sample uses environment variable REDWOOD_API_KEY unset or using expired demo key.
+- Canonical fix steps:
+ 1. Confirm env var exists: echo $REDWOOD_API_KEY
+ 2. If missing, instruct customer to create API key via console (link: internal:product-docs/create-api-key).
+ 3. For expired keys, rotate and confirm permission scopes: scopes must include: [inference:invoke, metrics:read].
+ 4. Add small code snippet to sample that fails fast with helpful error message (example below).
+- Owner: Support -&gt; escalate to SDK owner if repro fails.</pre><pre id="p13">Code snippet: fail-fast auth check (Python)
+```python
+import os
+api_key = os.getenv(&#x27;REDWOOD_API_KEY&#x27;)
+if not api_key:
+ raise RuntimeError(&#x27;Missing REDWOOD_API_KEY environment variable. Create one at https://console.redwood-inference.internal/settings/api-keys&#x27;)
+# proceed with client
+```</pre><pre id="p14">Issue B: Streaming responses stall mid-stream
+- Detection: client receives first tokens then stalls; metrics show open connection but no bytes.
+- Root cause: client-level keepalive mismatch or proxy buffering (common with corporate proxies).
+- Canonical fix steps:
+ 1. Ask customer to test with curl -N to confirm raw stream: 
+ curl -H &quot;Authorization: Bearer $REDWOOD_API_KEY&quot; -N \&quot;https://api.redwood-inference.internal/v1/stream?...\&quot;
+ 2. If curl works, recommend SDK change: prefer chunked transfer decoding and set socket keepalive: true.
+ 3. Provide fallback example using poll-based generation with polling timeout 5s.
+- Owner: SDK eng + DevX docs for the streaming troubleshooting page.</pre>

@@ -1,0 +1,22 @@
+<!doctype html><meta charset=utf-8><title>Secret management standard production - confluence-dsid_8c92178c254d467c9854db67aac7c9be</title><pre id="p1"># Overview
+This standard defines how Redwood Inference stores, uses, and rotates **secrets and credentials** for production services. The objective is to reduce the blast radius of credential compromise and ensure rotation is routine and low-risk.</pre><pre id="p2"># Definitions
+- **Secret**: any value that grants access (API keys, database passwords, service tokens, signing keys, OAuth client secrets, private keys).
+- **Credential rotation**: replacing a secret with a new value and updating all consumers.
+- **Emergency rotation**: accelerated rotation performed due to suspected compromise or active incident.</pre><pre id="p3"># Approved storage systems
+Production secrets must be stored in one of the following:
+- Redwood Vault (primary)
+- Cloud KMS/HSM-backed secret store where required by compliance (Private deployments may vary)</pre><pre id="p4">Prohibited:
+- plaintext in Git repositories
+- plaintext in Confluence/Google Docs
+- long-lived secrets in CI logs
+- hard-coded values in container images</pre><pre id="p5"># Secret classification
+- **Tier 0**: root/admin credentials, signing keys, KMS master operations.
+- **Tier 1**: service-to-service auth tokens, database credentials, message bus credentials.
+- **Tier 2**: third-party API keys with limited scopes, internal read-only tokens.</pre><pre id="p6"># Rotation requirements
+Minimum rotation cadence (unless documented exception):
+- Tier 0: every **30 days** + after any personnel change impacting privileged access
+- Tier 1: every **90 days**
+- Tier 2: every **180 days**</pre><pre id="p7">Immediate rotation is required if:
+- a secret is exposed in logs, tickets, or a public repository
+- a workstation is compromised and had access to Vault tokens
+- an access anomaly is detected in audit logs</pre>

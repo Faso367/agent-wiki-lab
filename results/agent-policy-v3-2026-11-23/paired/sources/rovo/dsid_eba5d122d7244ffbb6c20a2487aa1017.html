@@ -1,0 +1,30 @@
+<!doctype html><meta charset=utf-8><title>Guide configure customer-managed audit log export Private deployments - confluence-dsid_eba5d122d7244ffbb6c20a2487aa1017</title><pre id="p0">Guide: configure customer-managed audit log export (Private deployments)</pre><pre id="p1"># Summary
+This guide explains how to enable **customer-managed audit log export** for **Redwood Private** deployments (VPC and on-prem). In Private mode, the customer typically operates the cluster and networking, and Redwood provides the export connector as part of the platform bundle.</pre><pre id="p2"># Preconditions
+- Customer has deployed Redwood Private version that includes `audit-export-connector` (Private bundle v2.8.0+).
+- Customer has created a destination bucket/container and configured encryption and retention.
+- Security controls are reviewed and accepted by the customer per contract/security questionnaire.</pre><pre id="p3"># Supported sinks
+- AWS S3
+- Google Cloud Storage
+- Azure Blob Storage</pre><pre id="p4"># Required inputs
+Collect the following before changes:
+- `sink`: s3|gcs|azure
+- `region`: destination region
+- `destination`: bucket/container name
+- `prefix`: path prefix for objects
+- `auth`: workload identity configuration details
+- `network`: whether private endpoints are required</pre><pre id="p5"># Configuration (Helm values)
+The connector is configured via the `redwood-private` Helm chart.</pre><pre id="p6">Set the following values (example keys; exact values may vary by customer install conventions):</pre><pre id="p7">```yaml
+auditExport:
+ enabled: true
+ sink: s3
+ region: us-east-1
+ destination: customer-audit-logs-prod
+ prefix: redwood/org=acme/cluster=private-us-east
+ format: jsonl_gzip
+ batchSeconds: 60
+ maxBatchBytes: 10485760</pre><pre id="p8">auth:
+ mode: workload_identity
+ reference: &lt;customer-specific-binding-or-role&gt;</pre><pre id="p9">network:
+ requirePrivateEndpoint: true
+ dnsZone: &lt;customer-private-dns-zone&gt;
+```</pre>

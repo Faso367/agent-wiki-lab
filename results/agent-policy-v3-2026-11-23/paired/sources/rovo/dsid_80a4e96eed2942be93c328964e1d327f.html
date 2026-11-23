@@ -1,0 +1,57 @@
+<!doctype html><meta charset=utf-8><title>Quality Gate Metrics and Thresholds v1 Optimize config changes - confluence-dsid_80a4e96eed2942be93c328964e1d327f</title><pre id="p0">Quality Gate Metrics and Thresholds v1 (Optimize config changes)</pre><pre id="p1">h1. Purpose
+Optimize recommendations (batching policy updates, prefix/KV caching settings, and quantization profile changes) can materially affect model outputs. This document defines v1 quality gate metrics, regression thresholds, and statistical rules to decide pass/fail *before* an Optimize recommendation can be applied to production traffic.</pre><pre id="p2">This is the v1 policy for *Hosted API* and *Dedicated (default policies)*. Private/on-prem automation is not part of v1 (manual workflow only).</pre><pre id="p3">h2. Scope
+* In-scope config change types (gated):
+ 1. Batching policy updates (continuous batching params, max batch tokens/requests, scheduling knobs)
+ 2. Prefix/KV cache settings (enablement, cache size/eviction policy, prefill reuse policies)
+ 3. Quantization profile changes (e.g., fp16 → int8/int4 variants) per model family and GPU SKU
+* Out of scope (v1):
+ * New model onboarding criteria
+ * Training-time fine-tune changes
+ * Prompt-set creation process (covered in the Prompt Set Coverage Plan)</pre><pre id="p4">h2. Definitions
+* *Baseline*: current production config for the same model version + route policy + hardware SKU (for quantization: model family + GPU SKU baseline selection).
+* *Candidate*: proposed Optimize config diff.
+* *Prompt set*: curated list of prompts + expected evaluation method (golden outputs, rubric, or task checks).
+* *Suite*: a group of prompt sets executed together (e.g., &quot;Extraction&quot;, &quot;RAG/Long-context&quot;, &quot;Code&quot;).
+* *Primary quality metric*: the metric used for pass/fail. Each prompt set declares its primary metric.</pre><pre id="p5">h2. Gate tiers
+We run tiered gates to bound cost/latency.</pre><pre id="p6">h3. Tier 0: Static checks (pre-eval)
+Blocking checks before any GPU eval runs (owned by Runtime/Platform; listed here for completeness):
+* Unsupported config combinations (e.g., cache enabled with incompatible scheduler mode)
+* Quant profile incompatible with model family / GPU SKU
+* Known-unsafe knobs (see Runtime safety constraints)</pre><pre id="p7">Result: immediate FAIL with a deterministic reason code (no rerun).</pre><pre id="p8">h3. Tier 1: Fast smoke gate
+Purpose: catch obvious regressions quickly.
+* Target wall time: &lt;= 15 minutes (p95) per gate run
+* Minimum coverage: &gt;= 120 prompts total across at least 3 workload categories (see coverage section)
+* Rerun policy: 1 automatic rerun if flake score high (see Flakiness section)</pre><pre id="p9">h3. Tier 2: Full gate
+Purpose: enforce production regression thresholds.
+* Target wall time: &lt;= 120 minutes (p95) per gate run
+* Minimum coverage: &gt;= 1,000 prompts total with category quotas (see coverage section)
+* Rerun policy: 1 automatic rerun for flaky suites; results aggregated</pre><pre id="p10">h2. Offline quality metrics (v1)
+Each prompt set must declare one *primary* metric and may emit secondary metrics.</pre><pre id="p11">h3. Primary metrics
+1) *Task Success Rate (TSR)*
+* Type: binary pass/fail per prompt
+* Examples:
+ * JSON schema valid + required keys present
+ * Exact match on extracted entities
+ * Tool call emitted with correct arguments
+* Aggregation: mean success rate across prompts</pre><pre id="p12">2) *Rubric Score (RS)*
+* Type: ordinal score 1–5
+* Rubric anchors are prompt-set specific and stored with the prompt set.
+* Aggregation: mean rubric score and % prompts with score &gt;= 4</pre><pre id="p13">3) *Model-specific heuristic score (MHS)*
+Used only when TSR/RS is not available, and must be explicitly approved by Applied ML.
+* Type: scalar score in [0, 1] (higher is better)
+* Examples:
+ * Summarization coverage score (semantic similarity to reference bullets + length constraints)
+ * RAG faithfulness proxy (citation presence + entailment heuristic)
+* Aggregation: mean score</pre><pre id="p14">h3. Secondary metrics (non-blocking in v1 unless specified by prompt set)
+* *Format adherence rate*: e.g., strict JSON, XML tags, markdown sections
+* *Refusal / safety policy adherence*: for safety-labeled prompt sets
+* *Length / truncation rate*: fraction of outputs hitting max tokens or truncation markers
+* *Hallucination proxy*: only for RAG/citation prompt sets where we have reference docs</pre><pre id="p15">h2. Regression thresholds (pass/fail)
+Thresholds are defined on *delta vs baseline* with confidence requirements.</pre><pre id="p16">h3. Global pass criteria
+A gate run PASSES if:
+1. All required prompt sets meet their primary metric thresholds (per below)
+2. No &quot;hard fail&quot; secondary metric crosses its hard threshold (prompt-set specific)
+3. Flakiness is within bounds (or quarantined suites are excluded and gate policy allows it)</pre><pre id="p17">A gate run FAILS if any required set fails. Overrides are governed by the exception policy.</pre><pre id="p18">h3. Full gate thresholds (Tier 2)
+Unless a prompt set specifies stricter bounds, use:</pre><pre id="p19">*For prompt sets with TSR primary:*
+* Allowed degradation: TSR_delta &gt;= -1.0 percentage point (pp)
+* Confidence rule: 95% one-sided confidence that TSR_candidate is not worse than (TSR_baseline - 1.0pp)</pre>

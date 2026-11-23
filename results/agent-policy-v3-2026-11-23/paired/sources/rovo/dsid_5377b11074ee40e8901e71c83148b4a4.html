@@ -1,0 +1,25 @@
+<!doctype html><meta charset=utf-8><title>Telemetry Led Probe Feedback and Onboarding Contract - confluence-dsid_5377b11074ee40e8901e71c83148b4a4</title><pre id="p0">Telemetry‑Led Probe Feedback and Onboarding Contract</pre><pre id="p1">Overview</pre><pre id="p2">This page defines the telemetry-first contract used to operate probe pipelines, the incremental annotation feedback loop, and the onboarding acceptance criteria for probes and probe-driven model rollouts. It bridges the eval harness, prompt/benchmark catalogs, and the model onboarding lifecycle so that telemetry quality, privacy gating, and operational SLAs are enforced consistently across dedicated, hosted, and private deployments.</pre><pre id="p3">Goals
+- Ensure that probes (synthetic or live) have measurable telemetry footprints and provenance.
+- Close the loop from runtime telemetry -&gt; probe prioritization -&gt; annotation -&gt; model onboarding decisions.
+- Provide a minimal contract that teams must implement to onboard probe sets to the central eval mesh.
+- Protect PII and tenant privacy with gating rules while keeping annotation latency predictable for operational rollouts.</pre><pre id="p4">Scope
+This contract applies to: probe fabricators, evaluator-sidecars, the probe registry, the annotation platform, and model-onboarding pipelines. It does NOT replace safety reviews, human-in-the-loop policy checks, or legal compliance signoffs for regulated datasets.</pre><pre id="p5">Definitions
+- Probe: a single prompt + context + metadata record used to exercise a model.
+- Probe Telemetry: runtime signals produced when a probe executes (latency, tokens, kv-cache hit, response stability score, failure flags).
+- Probe Fingerprint: stable identifier computed from prompt canonicalization + metadata (sha1 of schema + seed).
+- Incremental Annotation: repeated human labeling over time for the same probe to measure drift.</pre><pre id="p10">Probe Lifecycle: from Fabrication to Onboarding
+1. Fabrication: probe generator produces probes with required metadata (probe_id, fingerprint, priming_template_id).
+2. Registration: push preview to probe-registry API (see example below). Registry validates metadata and assigns initial priority.
+3. Shadow Execution: probes run in shadow for at least 1k executions or 72h to generate baseline telemetry.
+4. Telemetry Review: eval team inspects response_stability_score, kv_cache_hit distributions, and failure_code rates.
+5. Annotation: prioritized probes are scheduled for incremental annotation. Fast-turn probes (SLA &lt;= 48h) go to internal annotators; others to vendor/contract annotators per privacy gating.
+6. Onboarding Decision: based on acceptance rubric (see table below) the probe set is accepted, requires remediation, or rejected.</pre><pre id="p11">Registration API Example (curl)
+curl -X POST https://probe-registry.internal/api/v1/register -H &#x27;Authorization: Bearer $TOKEN&#x27; -H &#x27;Content-Type: application/json&#x27; -d &#x27;\n{\n &quot;probe_id&quot;: &quot;pf_7e1a2b3f&quot;,\n &quot;priming_template_id&quot;: &quot;anchored-system-2026-01&quot;,\n &quot;author&quot;: &quot;team-qa&quot;,\n &quot;privacy_level&quot;: &quot;low&quot;,\n &quot;dataset_acl&quot;: &quot;internal&quot;,\n &quot;samples&quot;: 100\n}\&#x27;\n
+Acceptance Rubric (summary)
+| Metric | Threshold | Action |
+|---|---:|---|
+| response_stability_score (median) | &gt;= 0.85 | Accept |
+| failure_rate (code != null) | &lt;= 1.5% | Accept |
+| kv_cache_hit (median) | &gt;= 10% for long-context probes | Accept |
+| annotation_agreement (krippendorff) | &gt;= 0.7 | Accept |
+| privacy_level | not high (unless gated) | Conditional |</pre><pre id="p12">If any &quot;Conditional&quot; rows fail, remediation steps must be logged and a re-run scheduled.</pre>

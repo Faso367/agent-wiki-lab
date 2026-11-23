@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf-8><title>Postmortem Controlled failover test regression us-east eu-west transie - confluence-dsid_d844cc30147b49c69ea5275b4993b571</title><pre id="p0">Postmortem: Controlled failover test regression (us-east → eu-west) – transient 5xx + tail latency</pre><pre id="p1">## Summary
+On **2026-01-15**, during a **planned controlled regional failover test** (Hosted API and a limited Dedicated slice) from **us-east** to **eu-west**, we introduced a **customer-visible regression**. A sequence of noisy regional-impairment signals and insufficient rollback/anti-flap guardrails caused repeated routing policy changes (“flip/rollback”) and a transient overload condition in the target region.</pre><pre id="p2">**Customer impact:**
+- **Hosted API:** elevated 5xx/timeouts and tail latency for a subset of routes while traffic re-converged.
+- **Dedicated:** minimal direct impact due to scoped tenants, but some control-plane operations (drain workflow status) were delayed.
+- **Streaming:** some clients experienced disconnects on redirect and did not recover cleanly without application-level retries.</pre><pre id="p3">**Why this postmortem exists:** This was an intentional test. The regression was not catastrophic, but it was **customer-visible** and exposed gaps in our automation safety model. The goal is to make sure controlled testing improves reliability without creating new incidents.</pre><pre id="p4">## Severity and scope
+- **Incident type:** Planned test causing unplanned customer-visible regression
+- **Severity:** SEV-2 (customer-visible errors for a limited subset; short duration; mitigated quickly)
+- **Services impacted:** Hosted API (gateway + smart routing), failover automation controller, region health evaluation pipeline
+- **Regions:** us-east (source), eu-west (target)</pre>

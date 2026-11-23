@@ -1,0 +1,16 @@
+<!doctype html><meta charset=utf-8><title>fast-path-fallback-execution-runbook - confluence-dsid_6d87679242a842b08571001f0b3d2dc1</title><pre id="p1">Summary:
+This runbook defines the fast-path fallback execution flow for model-serving incidents where primary inference pools or low-latency model variants become unavailable or breach critical SLOs. It is intended for on-call SREs, incident commanders, and platform engineers responsible for multi-tenant inference availability and graceful degradation.</pre><pre id="p2">Scope:
+- Applies to Redwood-hosted inference gateways and Dedicated clusters.
+- Covers automated and manual fallback to: cheaper/quantized model variants, cross-region pools, and cached responses.
+- Excludes long-term capacity reprovisioning; see capacity-onboarding-runway for that flow.</pre><pre id="p3">Goals and SLO thresholds that trigger this runbook:
+- Primary trigger: generation.latency.p99 &gt; 1.5x SLO for a sustained 5m window OR generation.errors.rate &gt; 0.5% for 3m.
+- Secondary trigger: error budget burn rate &gt; 4x over a 1h window for any tenant-level SLO.
+- Safety guard: do not execute cross-tenant eviction unless verified by the Incident Commander and Product Lead.</pre><pre id="p4">Pre-flight checks (first 5 minutes):
+1) Identify scope and blast radius
+ - Determine affected services: gateway (edge-proxy), router (redwood-router), serving pool(s) (model-pool-&lt;id&gt;), and downstream queues.
+ - Command: `rctl incident inspect --alert $ALERT_ID --format brief`
+2) Verify telemetry and alerts
+ - Check Grafana dashboard: `SLO / generation / latency &amp; errors`
+ - Run quick queries in `slo-monitor`: `slo-monitor query --metric generation.latency.p99 --window 5m --filter service=&lt;service&gt;`
+3) Pager and stakeholders
+ - Confirm the on-call owner for serving-runtime and platform. Notify product for tenants &gt;$contract_threshold.</pre>

@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf-8><title>Runbook customer-managed audit log export setup Dedicated - confluence-dsid_b96ce0f550a9437e902636a7628160ca</title><pre id="p0">Runbook: customer-managed audit log export setup (Dedicated)</pre><pre id="p1"># Summary
+This runbook describes how to enable **customer-managed audit log export** for a **Dedicated** customer (single-tenant control plane + dedicated data plane).</pre><pre id="p2">Dedicated differs from Hosted in that we may deploy region-specific connector capacity and, for some customers, isolate the connector runtime within the dedicated account/VPC boundary.</pre><pre id="p3"># Preconditions
+- Internal-support Jira ticket exists with:
+ - customer company + dedicated cluster identifier (`dedicated_cluster_id`)
+ - destination sink (S3/GCS/Azure) + region
+ - requested prefixes and retention intent
+ - Security approval comment and (if needed) Legal approval note
+- Customer has created the destination bucket/container and provided identity configuration.</pre><pre id="p4"># Decision: connector placement
+Choose one:
+- **Redwood-managed connector** (default): connector runs in Redwood core infra and assumes customer role to write.
+- **Dedicated-placed connector** (exception): connector runs in the dedicated environment when the customer requires tighter network boundaries. Requires additional deployment steps and SRE review.</pre><pre id="p5">Record the choice in the Jira ticket.</pre><pre id="p6"># Procedure (default: Redwood-managed connector)
+## 1) Validate IAM/workload identity
+- AWS: validate role trust policy allows Redwood export connector principal to assume role.
+- GCP: validate workload identity binding from Redwood service account to customer bucket writer role.
+- Azure: validate federated credential mapping (managed identity) or app registration permissions per approved template.</pre><pre id="p7">Security must have already approved, but Eng Infra should re-check for obvious over-permissioning.</pre>
