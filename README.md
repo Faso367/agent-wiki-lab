@@ -20,9 +20,11 @@ In this demo, an agent changed the EU timeout for a service called Orbit from 90
 
 ## Latest benchmark results
 
+**Citation experiment, November 23–24.** The same local Qwen3-4B completed 128 trials across XERJ and Confluence + Rovo MCP. On 16 held-out questions, selecting a source label increased submissions from 7 to 10 on XERJ and from 5 to 11 on Rovo. All four conditions scored 0/16 for fully correct, supported answers. On 16 familiar questions, selecting a label yielded one strict success per platform on the same question. Retyping the quote yielded zero. [Paired results, timings and limitations](CITATION-RESULTS.md) · [Blinded answers](results/citation-ab-2026-11-23/blind.json)
+
 **Document retrieval.** Both systems received 64 English questions from EnterpriseRAG-Bench against a shared set of 512 pages. XERJ returned at least one reference page in its top five results for **56/64** questions. Rovo’s semantic `search` tool did so for **52/64**. The paired 95% bootstrap confidence interval for the difference in Hit@5 ranged from −1.56 to +14.06 percentage points and included zero. XERJ ran locally. Rovo was accessed over the network, with site search scoped to the Confluence app. [All 64 pairs, timings, and settings](results/rovo-2026-11-22/paired-search.json)
 
-**Agent answers.** For 16 questions, both systems used the same local Qwen3-4B model and the same client. Each attempt allowed up to five searches, five reads, and 180 seconds. To pass, an answer had to address the entire question, support its claims, and provide working links. In the latest client, the model first breaks the question into parts, then supplies a source and a short verbatim quote for each claim.
+**Earlier agent-answer baseline.** For 16 questions, both systems used the same local Qwen3-4B model and the same client. Each attempt allowed up to five searches, five reads, and 180 seconds. To pass, an answer had to address the entire question, support its claims, and provide working links. In this baseline, the model first breaks the question into parts, then supplies a source and a short verbatim quote for each claim.
 
 | Across 16 tasks | XERJ | Confluence + Rovo |
 |---|---:|---:|

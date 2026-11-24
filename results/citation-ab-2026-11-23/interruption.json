@@ -1,0 +1,18 @@
+{
+  "completed_before_restart": 56,
+  "last_saved": [
+    "2026-11-23T15:31:42.056240+00:00",
+    "qst_0441",
+    "xerj_A"
+  ],
+  "incomplete_cell": [
+    "qst_0400",
+    "rovo_B"
+  ],
+  "log_at_interruption": "start with no result",
+  "cause": "unknown; no service or run process at inspection",
+  "resume": "same fingerprint, same schedule, rerun only the unsaved cell",
+  "extra_model_usage": "unknown for interrupted process, excluded from metrics of scheduled completed attempts",
+  "first_56_grades_by": "blinded Sol grading session (including one mechanical no-submission verdict)",
+  "remaining_grades_by": "blinded review in parent session after Sol usage limit"
+}

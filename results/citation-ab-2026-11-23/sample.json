@@ -1,0 +1,27 @@
+{
+  "seed": 20261123,
+  "excluded_holdout": [
+    "qst_0031",
+    "qst_0104",
+    "qst_0150",
+    "qst_0183",
+    "qst_0252",
+    "qst_0259",
+    "qst_0272",
+    "qst_0381",
+    "qst_0382",
+    "qst_0400",
+    "qst_0404",
+    "qst_0433",
+    "qst_0439",
+    "qst_0440",
+    "qst_0441",
+    "qst_0442"
+  ],
+  "eligible": 48,
+  "manifest_sha256": "c2b4040c804421e197bd414c1e3159bebda009105b05ad6396ab7938f4fdc60d",
+  "questions_sha256": "f9524b9157cd43aae36b99333a124738804306ea6d07f332d49faa6d3d147905",
+  "baseline_sha256": "d57627625d2afbb184e4f519c331b4392055bc421b54d01e780b42dd636a2257",
+  "tasks_sha256": "987c73eff9d0b2bb54ad06a3db1a7bbf97959314fd70df3ef21fb08bb9f4b171",
+  "grading_sha256": "9316d5b2bb9d59bc967c8e055fda0e2fa2f1ece4ae82e19c6df2426b1d4824fb"
+}

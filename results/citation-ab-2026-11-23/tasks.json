@@ -1,0 +1,162 @@
+[
+  {
+    "id": "qst_0150",
+    "query": "What are the required permission scopes for an API key when SDK examples fail with a 401 unauthorized error during developer onboarding?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0259",
+    "query": "In the disconnected installer package for the on prem product, what are the mandatory items that must exist at the top level of the extracted folder before the installer will accept it (including the signed inventory files and the human instructions file)?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0031",
+    "query": "What is the operator procedure to put a private deployment tenant into local-only telemetry mode and how can you verify the mode afterward?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0272",
+    "query": "What is the default time window the company targets for routine internal approvals across operational requests?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0382",
+    "query": "In the Feb 12, 2026 incident where daily usage exports briefly overstated output tokens (while invoices stayed correct), what was the root cause and what mitigation + follow-up steps were taken to prevent a repeat?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0104",
+    "query": "What is the standard amount of time a new hire buddy is expected to spend per day during the first two weeks when a long-term contractor is converted to a full-time employee?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0252",
+    "query": "In our incident response process, what is the rule for when a quick time-boxed after-action review is acceptable instead of writing the full formal analysis, based on impact duration and whether the issue hit one customer versus many?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0183",
+    "query": "What are the specific gate thresholds used to automatically decide whether a compressed model variant is allowed, canaried, or blocked, including the limits for chat similarity drop, code pass rate change, retrieval embedding quality, and acceptable latency and cost changes?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0442",
+    "query": "What is Redwood Inference's end-to-end process for making a production change (definition, required approvals, pre-deploy verification, deploy execution, customer/internal communications, and rollback/post-change requirements) for the Hosted API and Console?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0381",
+    "query": "In the planned controlled failover game day on 2026-01-15 (Hosted API us-east → eu-west), what caused the routing automation to oscillate (flip/rollback), and what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0439",
+    "query": "How many internal incident writeups at Redwood Inference describe activating automatic fallback (to a different model or region) as part of mitigation?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0433",
+    "query": "What is Redwood Inference's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0440",
+    "query": "What is the complete SOP Redwood Inference must follow to enable \"customer-managed audit log export\" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments-including required prerequisites, security approvals, configuration steps, validation, customer communication, and ongoing operations/ownership?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0441",
+    "query": "For an enterprise Redwood Private deployment upgrade, what is the complete go/no-go gate (required validations, required approvals, and required customer communications) mandated by Redwood's internal standards?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0400",
+    "query": "For a shadow evaluation running in a private deployment using an evaluator sidecar, what fields are required in each shadow probe telemetry record, and which run-lifecycle telemetry events must the evaluator emit?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0404",
+    "query": "We saw quality regressions after enabling an INT8/mixed-precision variant and suspect KV-cache rounding on long-context requests. What request header can we set as a quick mitigation to bypass the KV cache, and in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant?",
+    "cohort": "diagnostic"
+  },
+  {
+    "id": "qst_0358",
+    "query": "Finance is seeing QTD blended $/1M output tokens jump. How do we verify whether its a rate card change or a streaming output token undercount, and what is the backfill and escalation path?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0294",
+    "query": "In the internal workshop where we deliberately sabotage a client library via a local proxy to test resiliency, what exact fields are required in the saved run trace file format (the per-span identifiers, timestamps, and the single flattened attributes string) so our baseline and failure runs are comparable?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0435",
+    "query": "How many weekly status updates for Project Orion marked the project as 'At Risk'?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0405",
+    "query": "For the hosted API rollout in late June 2026 that introduced the Cost-Fallback policy engine and Telemetry Normalization v1, what HTTP response header was added for downstream billing/webhook consumers to understand the fallback reason, and which fields are required in the standardized per-fallback telemetry event envelope used for cost reconciliation?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0117",
+    "query": "In the PRD about adding managed orchestration for multi-model inference pipelines, what are the rollout milestones and target quarters for alpha, beta, and general availability?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0386",
+    "query": "In the Feb 2026 SEV-2 incident where the Dedicated autoscaler in us-west stopped scaling above minimum because its metrics query returned no data, what was the underlying cause and what hotfix restored scale-out?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0447",
+    "query": "What is Redwood Inference's complete end-to-end process for shipping an emergency serving-runtime hotfix to production (Hosted + Dedicated), including required approvals, checklists, rollout/rollback steps, and mandatory customer communications?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0444",
+    "query": "What is Redwood Inference's end-to-end internal process for launching a new third-party LLM into the Hosted API model catalog-from intake to post-launch monitoring-including every required gate, owner, and artifact?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0118",
+    "query": "How do we turn observed production workload patterns for inference routes into defensible latency SLO targets and cost sensitivity guidance, including clustering and profiling steps?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0016",
+    "query": "What is the company policy for how long contractor access should last by default before it expires, according to the access and permissions playbook?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0197",
+    "query": "During a major production outage, what is the prescribed sequence of actions for the first 60 to 90 minutes, from opening the live coordination call through confirming the service is healthy again?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0457",
+    "query": "Do I need approval to add a large planter or wall mounted art in a Redwood office, and what details should I include in the request?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0384",
+    "query": "In Runtime 1.22 on Hosted (Shared) pools, we're seeing burst-time p99 latency spikes that correlate with KV compaction activity. Which two compaction knobs should oncall tune first (and by roughly what amount), and what's the emergency kill-switch plus the specific counters/metrics to check to confirm the disable took effect?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0110",
+    "query": "What is the rollout ramp schedule and time window used for the canary phase when validating adaptive degradation behavior in the Redwood serving runtime?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0353",
+    "query": "Before we re-enable paging and hook perf-canary into rollout gates, what exact baseline key, min-sample requirements, and incident-bot dedupe key should we enforce to avoid another false-positive alert storm?",
+    "cohort": "holdout"
+  },
+  {
+    "id": "qst_0408",
+    "query": "After the Feb 22, 2026 SEV-2 where Console rollout actions caused a rollback loop, which HTTP status code was wrongly treated as retryable, what server-side idempotency change was added for rollback requests, and (per the Dedicated staged rollouts audit-log spec) which service must emit the canonical audit events and what identifiers are used to de-duplicate retries?",
+    "cohort": "holdout"
+  }
+]

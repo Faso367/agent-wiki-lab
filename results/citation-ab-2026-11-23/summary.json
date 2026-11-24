@@ -1,0 +1,279 @@
+{
+  "diagnostic": {
+    "cells": {
+      "xerj_A": {
+        "attempts": 16,
+        "submitted": 6,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 180.0048510415072,
+        "p95_s": 180.34769429199514,
+        "prompt_tokens": 157473,
+        "completion_tokens": 10511,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 10,
+        "timeouts": 10,
+        "read_any_gold": 13,
+        "wrong_meaning_with_evidence": 3,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_exact_quote_from_source": 9,
+          "cite_read_ids": 1
+        },
+        "repeat_finish_calls": 1,
+        "repeat_read_windows": 2,
+        "repeat_search_pages": 0
+      },
+      "xerj_B": {
+        "attempts": 16,
+        "submitted": 14,
+        "strict_pass": 1,
+        "rate": 0.0625,
+        "p50_s": 89.06820460451127,
+        "p95_s": 180.0183315410104,
+        "prompt_tokens": 134077,
+        "completion_tokens": 7156,
+        "tokens_per_success": 141233.0,
+        "model_calls_without_usage": 2,
+        "timeouts": 2,
+        "read_any_gold": 13,
+        "wrong_meaning_with_evidence": 8,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "cite_read_ids": 1
+        },
+        "repeat_finish_calls": 0,
+        "repeat_read_windows": 1,
+        "repeat_search_pages": 0
+      },
+      "rovo_A": {
+        "attempts": 16,
+        "submitted": 6,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 180.00543360399024,
+        "p95_s": 180.04380049998872,
+        "prompt_tokens": 156325,
+        "completion_tokens": 9471,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 10,
+        "timeouts": 10,
+        "read_any_gold": 11,
+        "wrong_meaning_with_evidence": 4,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_exact_quote_from_source": 7
+        },
+        "repeat_finish_calls": 1,
+        "repeat_read_windows": 6,
+        "repeat_search_pages": 0
+      },
+      "rovo_B": {
+        "attempts": 16,
+        "submitted": 10,
+        "strict_pass": 1,
+        "rate": 0.0625,
+        "p50_s": 133.65452629201172,
+        "p95_s": 180.0891100000008,
+        "prompt_tokens": 162058,
+        "completion_tokens": 8442,
+        "tokens_per_success": 170500.0,
+        "model_calls_without_usage": 6,
+        "timeouts": 6,
+        "read_any_gold": 11,
+        "wrong_meaning_with_evidence": 4,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_literal_from_quote": 5
+        },
+        "repeat_finish_calls": 3,
+        "repeat_read_windows": 2,
+        "repeat_search_pages": 0
+      }
+    },
+    "paired": {
+      "xerj_B-xerj_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 1,
+        "right_only": 0,
+        "difference_pp": 6.25,
+        "ci95_pp": [
+          -23.87882782121346,
+          33.79028704916094
+        ]
+      },
+      "rovo_B-rovo_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 1,
+        "right_only": 0,
+        "difference_pp": 6.25,
+        "ci95_pp": [
+          -23.87882782121346,
+          33.79028704916094
+        ]
+      },
+      "xerj_A-rovo_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      },
+      "xerj_B-rovo_B": {
+        "pairs": 16,
+        "both_pass": 1,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      }
+    }
+  },
+  "holdout": {
+    "cells": {
+      "xerj_A": {
+        "attempts": 16,
+        "submitted": 7,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 180.00158785449457,
+        "p95_s": 180.02285745900008,
+        "prompt_tokens": 132618,
+        "completion_tokens": 6858,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 9,
+        "timeouts": 9,
+        "read_any_gold": 14,
+        "wrong_meaning_with_evidence": 6,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_exact_quote_from_source": 4
+        },
+        "repeat_finish_calls": 0,
+        "repeat_read_windows": 6,
+        "repeat_search_pages": 3
+      },
+      "xerj_B": {
+        "attempts": 16,
+        "submitted": 10,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 129.64115150000725,
+        "p95_s": 180.00736899999902,
+        "prompt_tokens": 155595,
+        "completion_tokens": 8309,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 6,
+        "timeouts": 6,
+        "read_any_gold": 14,
+        "wrong_meaning_with_evidence": 7,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_literal_from_quote": 2
+        },
+        "repeat_finish_calls": 0,
+        "repeat_read_windows": 12,
+        "repeat_search_pages": 4
+      },
+      "rovo_A": {
+        "attempts": 16,
+        "submitted": 5,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 180.0033991040109,
+        "p95_s": 180.12324162499863,
+        "prompt_tokens": 136360,
+        "completion_tokens": 6846,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 11,
+        "timeouts": 11,
+        "read_any_gold": 12,
+        "wrong_meaning_with_evidence": 3,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_exact_quote_from_source": 6
+        },
+        "repeat_finish_calls": 1,
+        "repeat_read_windows": 8,
+        "repeat_search_pages": 0
+      },
+      "rovo_B": {
+        "attempts": 16,
+        "submitted": 11,
+        "strict_pass": 0,
+        "rate": 0.0,
+        "p50_s": 148.97379064600682,
+        "p95_s": 180.00768750000861,
+        "prompt_tokens": 143229,
+        "completion_tokens": 7040,
+        "tokens_per_success": null,
+        "model_calls_without_usage": 5,
+        "timeouts": 5,
+        "read_any_gold": 12,
+        "wrong_meaning_with_evidence": 4,
+        "attempts_with_broken_links": 0,
+        "finish_rejections": {
+          "copy_literal_from_quote": 1
+        },
+        "repeat_finish_calls": 0,
+        "repeat_read_windows": 13,
+        "repeat_search_pages": 0
+      }
+    },
+    "paired": {
+      "xerj_B-xerj_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      },
+      "rovo_B-rovo_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      },
+      "xerj_A-rovo_A": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      },
+      "xerj_B-rovo_B": {
+        "pairs": 16,
+        "both_pass": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "difference_pp": 0.0,
+        "ci95_pp": [
+          -23.95741431463414,
+          23.95741431463414
+        ]
+      }
+    }
+  }
+}

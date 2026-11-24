@@ -6,6 +6,7 @@ import re
 from materials import VisibleText
 
 READ_CHARS = 1800
+EXCERPT_CHARS = 400
 SNIPPET_CHARS = 220
 STOP = set("a an the and are that this what when where who how why which with from for into about was were have has can will should must based all per any each".split())
 
@@ -65,6 +66,25 @@ def anchor_phrase(part, page_text):
             if phrase and page_text.count(phrase.casefold()) == 1:
                 return phrase
     return None
+
+
+def excerpt_ranges(text):
+    """Half-open character offsets in a read block, with whitespace between spans omitted."""
+    start = 0
+    while start < len(text):
+        if text[start].isspace():
+            start += 1
+            continue
+        end = min(start + EXCERPT_CHARS, len(text))
+        if end < len(text) and not text[end].isspace():
+            for pattern in (r"\n", r"\s"):
+                boundaries = list(re.finditer(pattern, text[start + EXCERPT_CHARS // 2:end]))
+                if boundaries:
+                    end = start + EXCERPT_CHARS // 2 + boundaries[-1].start()
+                    break
+        trimmed = start + len(text[start:end].rstrip())
+        yield start, trimmed
+        start = end
 
 
 def window(parts, query, cursor=None):

@@ -163,3 +163,31 @@ PY
 ```
 
 Контроль записывает ответы по вопросам, SHA-256 пакетов и параметры модели. Один запуск на вопрос даёт отдельное наблюдение. Для сравнения качества примените одинаковый критерий полноты и проверки источников к каждому новому ответу. [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B-GGUF) · [Оценки 4B](results/agent-policy-v3-2026-11-23/oracle-4b/grades.json) · [Оценки 8B](results/agent-policy-v3-2026-11-23/oracle-8b/grades.json)
+
+## Эксперимент с двумя способами цитирования
+
+План, рубрика и пороги сохранены до замера. [План опыта](CITATION-EXPERIMENT.md) · [Замороженные вопросы](results/citation-ab-2026-11-23/tasks.json)
+
+Подготовьте окружение, архив, тот же манифест и индекс `rovo-paired-512` по инструкции парного прогона выше. Для отдельного каталога опыта задайте `run_dir=.state/citation-ab` до подготовки OAuth-моста и индекса. Запустите инвентаризацию с выводом в `"$run_dir/inventory.json"`. В каталоге должны находиться подтверждённая инвентаризация, сокет `atl.sock` и каталог данных XERJ `index/`. В окружении нужны `WIKI_ATLASSIAN_SITE`, `WIKI_ATLASSIAN_SPACE`, `WIKI_ATLASSIAN_SPACE_ID` и свободный `WIKI_XERJ_PORT`. OAuth-мост должен оставаться доступным на время опыта и проверки ссылок.
+
+```sh
+run_dir=.state/citation-ab
+.venv/bin/python citation_sample.py --output "$run_dir" --inventory "$run_dir/inventory.json"
+cmp "$run_dir/tasks.json" results/citation-ab-2026-11-23/tasks.json
+.venv/bin/python services.py --llama --data-dir "$PWD/$run_dir/index" --log-dir "$run_dir" -- \
+  .venv/bin/python citation_experiment.py --folder "$run_dir" run
+```
+
+Выполняются 128 последовательных попыток. После прерывания повторите последнюю команду с `run --resume`. Оценку проводят по `blind.json` и эталонам `grading.json`, до просмотра соответствий в `blind-key.json`. Для каждого утверждения учитывайте только текст фактически указанной цитаты. Повторное открытие привязок и экспорт трасс выполняются отдельно.
+
+```sh
+.venv/bin/python citation_experiment.py --folder "$run_dir" verify
+.venv/bin/python citation_experiment.py --folder "$run_dir" verify --online
+.venv/bin/python citation_publish.py "$run_dir" "$run_dir/attempts-public.json"
+```
+
+Запишите смысловые решения в `grades.json` по обезличенным меткам. Каждое решение содержит булевы поля `meaning_pass` и `wrong_meaning_with_evidence` и текстовую причину `reason`. Расчёт требует все четыре условия для каждого вопроса и объединяет слепую оценку с перепроверенными ссылками.
+
+```sh
+.venv/bin/python citation_metrics.py "$run_dir" > "$run_dir/summary.json"
+```

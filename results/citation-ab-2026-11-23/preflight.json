@@ -1,0 +1,14 @@
+{
+  "index_count": 512,
+  "rovo_search": true,
+  "runtime": {
+    "model_file": "Qwen3-4B-Q4_K_M.gguf",
+    "model_sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5",
+    "context": 8192,
+    "llama_build": "b12541-76f186df7",
+    "chat_template_sha256": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361"
+  },
+  "cloud_pages": 512,
+  "gold_texts_equal": 132,
+  "inventory_sha256": "e2e4184973ea5ae5fee45d53b00e1539bb8c3ae6e238d70341415c1c9063e920"
+}

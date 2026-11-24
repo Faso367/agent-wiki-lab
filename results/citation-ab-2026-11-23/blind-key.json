@@ -1,0 +1,514 @@
+{
+  "A001": {
+    "task": "qst_0447",
+    "arm": "rovo_A"
+  },
+  "A002": {
+    "task": "qst_0440",
+    "arm": "rovo_A"
+  },
+  "A003": {
+    "task": "qst_0405",
+    "arm": "xerj_A"
+  },
+  "A004": {
+    "task": "qst_0294",
+    "arm": "rovo_B"
+  },
+  "A005": {
+    "task": "qst_0442",
+    "arm": "xerj_A"
+  },
+  "A006": {
+    "task": "qst_0031",
+    "arm": "xerj_B"
+  },
+  "A007": {
+    "task": "qst_0150",
+    "arm": "rovo_B"
+  },
+  "A008": {
+    "task": "qst_0031",
+    "arm": "rovo_B"
+  },
+  "A009": {
+    "task": "qst_0110",
+    "arm": "rovo_A"
+  },
+  "A010": {
+    "task": "qst_0400",
+    "arm": "xerj_A"
+  },
+  "A011": {
+    "task": "qst_0441",
+    "arm": "xerj_B"
+  },
+  "A012": {
+    "task": "qst_0457",
+    "arm": "xerj_B"
+  },
+  "A013": {
+    "task": "qst_0118",
+    "arm": "rovo_B"
+  },
+  "A014": {
+    "task": "qst_0405",
+    "arm": "rovo_A"
+  },
+  "A015": {
+    "task": "qst_0442",
+    "arm": "rovo_A"
+  },
+  "A016": {
+    "task": "qst_0457",
+    "arm": "rovo_A"
+  },
+  "A017": {
+    "task": "qst_0400",
+    "arm": "xerj_B"
+  },
+  "A018": {
+    "task": "qst_0408",
+    "arm": "xerj_A"
+  },
+  "A019": {
+    "task": "qst_0016",
+    "arm": "rovo_A"
+  },
+  "A020": {
+    "task": "qst_0386",
+    "arm": "xerj_A"
+  },
+  "A021": {
+    "task": "qst_0031",
+    "arm": "xerj_A"
+  },
+  "A022": {
+    "task": "qst_0444",
+    "arm": "xerj_B"
+  },
+  "A023": {
+    "task": "qst_0404",
+    "arm": "xerj_B"
+  },
+  "A024": {
+    "task": "qst_0252",
+    "arm": "xerj_A"
+  },
+  "A025": {
+    "task": "qst_0382",
+    "arm": "rovo_A"
+  },
+  "A026": {
+    "task": "qst_0457",
+    "arm": "rovo_B"
+  },
+  "A027": {
+    "task": "qst_0435",
+    "arm": "xerj_A"
+  },
+  "A028": {
+    "task": "qst_0353",
+    "arm": "xerj_B"
+  },
+  "A029": {
+    "task": "qst_0435",
+    "arm": "rovo_A"
+  },
+  "A030": {
+    "task": "qst_0117",
+    "arm": "xerj_A"
+  },
+  "A031": {
+    "task": "qst_0447",
+    "arm": "xerj_B"
+  },
+  "A032": {
+    "task": "qst_0272",
+    "arm": "rovo_A"
+  },
+  "A033": {
+    "task": "qst_0384",
+    "arm": "xerj_A"
+  },
+  "A034": {
+    "task": "qst_0259",
+    "arm": "xerj_A"
+  },
+  "A035": {
+    "task": "qst_0197",
+    "arm": "rovo_B"
+  },
+  "A036": {
+    "task": "qst_0118",
+    "arm": "xerj_A"
+  },
+  "A037": {
+    "task": "qst_0197",
+    "arm": "xerj_A"
+  },
+  "A038": {
+    "task": "qst_0408",
+    "arm": "rovo_A"
+  },
+  "A039": {
+    "task": "qst_0272",
+    "arm": "rovo_B"
+  },
+  "A040": {
+    "task": "qst_0016",
+    "arm": "xerj_B"
+  },
+  "A041": {
+    "task": "qst_0440",
+    "arm": "xerj_A"
+  },
+  "A042": {
+    "task": "qst_0150",
+    "arm": "xerj_A"
+  },
+  "A043": {
+    "task": "qst_0404",
+    "arm": "rovo_B"
+  },
+  "A044": {
+    "task": "qst_0259",
+    "arm": "xerj_B"
+  },
+  "A045": {
+    "task": "qst_0440",
+    "arm": "rovo_B"
+  },
+  "A046": {
+    "task": "qst_0441",
+    "arm": "rovo_A"
+  },
+  "A047": {
+    "task": "qst_0440",
+    "arm": "xerj_B"
+  },
+  "A048": {
+    "task": "qst_0439",
+    "arm": "xerj_A"
+  },
+  "A049": {
+    "task": "qst_0382",
+    "arm": "xerj_B"
+  },
+  "A050": {
+    "task": "qst_0358",
+    "arm": "xerj_B"
+  },
+  "A051": {
+    "task": "qst_0358",
+    "arm": "rovo_A"
+  },
+  "A052": {
+    "task": "qst_0197",
+    "arm": "rovo_A"
+  },
+  "A053": {
+    "task": "qst_0272",
+    "arm": "xerj_B"
+  },
+  "A054": {
+    "task": "qst_0439",
+    "arm": "xerj_B"
+  },
+  "A055": {
+    "task": "qst_0441",
+    "arm": "rovo_B"
+  },
+  "A056": {
+    "task": "qst_0381",
+    "arm": "xerj_B"
+  },
+  "A057": {
+    "task": "qst_0110",
+    "arm": "rovo_B"
+  },
+  "A058": {
+    "task": "qst_0405",
+    "arm": "xerj_B"
+  },
+  "A059": {
+    "task": "qst_0183",
+    "arm": "xerj_B"
+  },
+  "A060": {
+    "task": "qst_0433",
+    "arm": "xerj_A"
+  },
+  "A061": {
+    "task": "qst_0408",
+    "arm": "xerj_B"
+  },
+  "A062": {
+    "task": "qst_0435",
+    "arm": "rovo_B"
+  },
+  "A063": {
+    "task": "qst_0444",
+    "arm": "rovo_A"
+  },
+  "A064": {
+    "task": "qst_0110",
+    "arm": "xerj_B"
+  },
+  "A065": {
+    "task": "qst_0435",
+    "arm": "xerj_B"
+  },
+  "A066": {
+    "task": "qst_0444",
+    "arm": "rovo_B"
+  },
+  "A067": {
+    "task": "qst_0447",
+    "arm": "xerj_A"
+  },
+  "A068": {
+    "task": "qst_0382",
+    "arm": "rovo_B"
+  },
+  "A069": {
+    "task": "qst_0384",
+    "arm": "rovo_B"
+  },
+  "A070": {
+    "task": "qst_0381",
+    "arm": "rovo_B"
+  },
+  "A071": {
+    "task": "qst_0150",
+    "arm": "xerj_B"
+  },
+  "A072": {
+    "task": "qst_0353",
+    "arm": "rovo_A"
+  },
+  "A073": {
+    "task": "qst_0386",
+    "arm": "xerj_B"
+  },
+  "A074": {
+    "task": "qst_0272",
+    "arm": "xerj_A"
+  },
+  "A075": {
+    "task": "qst_0183",
+    "arm": "xerj_A"
+  },
+  "A076": {
+    "task": "qst_0400",
+    "arm": "rovo_A"
+  },
+  "A077": {
+    "task": "qst_0252",
+    "arm": "xerj_B"
+  },
+  "A078": {
+    "task": "qst_0183",
+    "arm": "rovo_B"
+  },
+  "A079": {
+    "task": "qst_0433",
+    "arm": "rovo_B"
+  },
+  "A080": {
+    "task": "qst_0442",
+    "arm": "rovo_B"
+  },
+  "A081": {
+    "task": "qst_0404",
+    "arm": "rovo_A"
+  },
+  "A082": {
+    "task": "qst_0016",
+    "arm": "xerj_A"
+  },
+  "A083": {
+    "task": "qst_0259",
+    "arm": "rovo_B"
+  },
+  "A084": {
+    "task": "qst_0353",
+    "arm": "xerj_A"
+  },
+  "A085": {
+    "task": "qst_0252",
+    "arm": "rovo_A"
+  },
+  "A086": {
+    "task": "qst_0353",
+    "arm": "rovo_B"
+  },
+  "A087": {
+    "task": "qst_0382",
+    "arm": "xerj_A"
+  },
+  "A088": {
+    "task": "qst_0400",
+    "arm": "rovo_B"
+  },
+  "A089": {
+    "task": "qst_0104",
+    "arm": "rovo_B"
+  },
+  "A090": {
+    "task": "qst_0294",
+    "arm": "xerj_B"
+  },
+  "A091": {
+    "task": "qst_0381",
+    "arm": "xerj_A"
+  },
+  "A092": {
+    "task": "qst_0294",
+    "arm": "rovo_A"
+  },
+  "A093": {
+    "task": "qst_0433",
+    "arm": "xerj_B"
+  },
+  "A094": {
+    "task": "qst_0117",
+    "arm": "xerj_B"
+  },
+  "A095": {
+    "task": "qst_0104",
+    "arm": "rovo_A"
+  },
+  "A096": {
+    "task": "qst_0104",
+    "arm": "xerj_B"
+  },
+  "A097": {
+    "task": "qst_0408",
+    "arm": "rovo_B"
+  },
+  "A098": {
+    "task": "qst_0384",
+    "arm": "rovo_A"
+  },
+  "A099": {
+    "task": "qst_0433",
+    "arm": "rovo_A"
+  },
+  "A100": {
+    "task": "qst_0384",
+    "arm": "xerj_B"
+  },
+  "A101": {
+    "task": "qst_0381",
+    "arm": "rovo_A"
+  },
+  "A102": {
+    "task": "qst_0117",
+    "arm": "rovo_A"
+  },
+  "A103": {
+    "task": "qst_0405",
+    "arm": "rovo_B"
+  },
+  "A104": {
+    "task": "qst_0259",
+    "arm": "rovo_A"
+  },
+  "A105": {
+    "task": "qst_0439",
+    "arm": "rovo_A"
+  },
+  "A106": {
+    "task": "qst_0252",
+    "arm": "rovo_B"
+  },
+  "A107": {
+    "task": "qst_0444",
+    "arm": "xerj_A"
+  },
+  "A108": {
+    "task": "qst_0442",
+    "arm": "xerj_B"
+  },
+  "A109": {
+    "task": "qst_0358",
+    "arm": "rovo_B"
+  },
+  "A110": {
+    "task": "qst_0016",
+    "arm": "rovo_B"
+  },
+  "A111": {
+    "task": "qst_0358",
+    "arm": "xerj_A"
+  },
+  "A112": {
+    "task": "qst_0118",
+    "arm": "xerj_B"
+  },
+  "A113": {
+    "task": "qst_0441",
+    "arm": "xerj_A"
+  },
+  "A114": {
+    "task": "qst_0457",
+    "arm": "xerj_A"
+  },
+  "A115": {
+    "task": "qst_0386",
+    "arm": "rovo_B"
+  },
+  "A116": {
+    "task": "qst_0031",
+    "arm": "rovo_A"
+  },
+  "A117": {
+    "task": "qst_0110",
+    "arm": "xerj_A"
+  },
+  "A118": {
+    "task": "qst_0447",
+    "arm": "rovo_B"
+  },
+  "A119": {
+    "task": "qst_0150",
+    "arm": "rovo_A"
+  },
+  "A120": {
+    "task": "qst_0118",
+    "arm": "rovo_A"
+  },
+  "A121": {
+    "task": "qst_0197",
+    "arm": "xerj_B"
+  },
+  "A122": {
+    "task": "qst_0117",
+    "arm": "rovo_B"
+  },
+  "A123": {
+    "task": "qst_0183",
+    "arm": "rovo_A"
+  },
+  "A124": {
+    "task": "qst_0294",
+    "arm": "xerj_A"
+  },
+  "A125": {
+    "task": "qst_0104",
+    "arm": "xerj_A"
+  },
+  "A126": {
+    "task": "qst_0386",
+    "arm": "rovo_A"
+  },
+  "A127": {
+    "task": "qst_0404",
+    "arm": "xerj_A"
+  },
+  "A128": {
+    "task": "qst_0439",
+    "arm": "rovo_B"
+  }
+}

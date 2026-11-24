@@ -1,0 +1,671 @@
+{
+  "format": 1,
+  "tasks": [
+    "qst_0150",
+    "qst_0259",
+    "qst_0031",
+    "qst_0272",
+    "qst_0382",
+    "qst_0104",
+    "qst_0252",
+    "qst_0183",
+    "qst_0442",
+    "qst_0381",
+    "qst_0439",
+    "qst_0433",
+    "qst_0440",
+    "qst_0441",
+    "qst_0400",
+    "qst_0404",
+    "qst_0358",
+    "qst_0294",
+    "qst_0435",
+    "qst_0405",
+    "qst_0117",
+    "qst_0386",
+    "qst_0447",
+    "qst_0444",
+    "qst_0118",
+    "qst_0016",
+    "qst_0197",
+    "qst_0457",
+    "qst_0384",
+    "qst_0110",
+    "qst_0353",
+    "qst_0408"
+  ],
+  "schedule": [
+    [
+      "qst_0150",
+      "xerj_A"
+    ],
+    [
+      "qst_0150",
+      "rovo_B"
+    ],
+    [
+      "qst_0150",
+      "xerj_B"
+    ],
+    [
+      "qst_0150",
+      "rovo_A"
+    ],
+    [
+      "qst_0259",
+      "rovo_A"
+    ],
+    [
+      "qst_0259",
+      "xerj_B"
+    ],
+    [
+      "qst_0259",
+      "rovo_B"
+    ],
+    [
+      "qst_0259",
+      "xerj_A"
+    ],
+    [
+      "qst_0031",
+      "rovo_B"
+    ],
+    [
+      "qst_0031",
+      "rovo_A"
+    ],
+    [
+      "qst_0031",
+      "xerj_A"
+    ],
+    [
+      "qst_0031",
+      "xerj_B"
+    ],
+    [
+      "qst_0272",
+      "xerj_B"
+    ],
+    [
+      "qst_0272",
+      "xerj_A"
+    ],
+    [
+      "qst_0272",
+      "rovo_A"
+    ],
+    [
+      "qst_0272",
+      "rovo_B"
+    ],
+    [
+      "qst_0382",
+      "xerj_A"
+    ],
+    [
+      "qst_0382",
+      "rovo_B"
+    ],
+    [
+      "qst_0382",
+      "xerj_B"
+    ],
+    [
+      "qst_0382",
+      "rovo_A"
+    ],
+    [
+      "qst_0104",
+      "rovo_A"
+    ],
+    [
+      "qst_0104",
+      "xerj_B"
+    ],
+    [
+      "qst_0104",
+      "rovo_B"
+    ],
+    [
+      "qst_0104",
+      "xerj_A"
+    ],
+    [
+      "qst_0252",
+      "rovo_B"
+    ],
+    [
+      "qst_0252",
+      "rovo_A"
+    ],
+    [
+      "qst_0252",
+      "xerj_A"
+    ],
+    [
+      "qst_0252",
+      "xerj_B"
+    ],
+    [
+      "qst_0183",
+      "xerj_B"
+    ],
+    [
+      "qst_0183",
+      "xerj_A"
+    ],
+    [
+      "qst_0183",
+      "rovo_A"
+    ],
+    [
+      "qst_0183",
+      "rovo_B"
+    ],
+    [
+      "qst_0442",
+      "xerj_A"
+    ],
+    [
+      "qst_0442",
+      "rovo_B"
+    ],
+    [
+      "qst_0442",
+      "xerj_B"
+    ],
+    [
+      "qst_0442",
+      "rovo_A"
+    ],
+    [
+      "qst_0381",
+      "rovo_A"
+    ],
+    [
+      "qst_0381",
+      "xerj_B"
+    ],
+    [
+      "qst_0381",
+      "rovo_B"
+    ],
+    [
+      "qst_0381",
+      "xerj_A"
+    ],
+    [
+      "qst_0439",
+      "rovo_B"
+    ],
+    [
+      "qst_0439",
+      "rovo_A"
+    ],
+    [
+      "qst_0439",
+      "xerj_A"
+    ],
+    [
+      "qst_0439",
+      "xerj_B"
+    ],
+    [
+      "qst_0433",
+      "xerj_B"
+    ],
+    [
+      "qst_0433",
+      "xerj_A"
+    ],
+    [
+      "qst_0433",
+      "rovo_A"
+    ],
+    [
+      "qst_0433",
+      "rovo_B"
+    ],
+    [
+      "qst_0440",
+      "xerj_A"
+    ],
+    [
+      "qst_0440",
+      "rovo_B"
+    ],
+    [
+      "qst_0440",
+      "xerj_B"
+    ],
+    [
+      "qst_0440",
+      "rovo_A"
+    ],
+    [
+      "qst_0441",
+      "rovo_A"
+    ],
+    [
+      "qst_0441",
+      "xerj_B"
+    ],
+    [
+      "qst_0441",
+      "rovo_B"
+    ],
+    [
+      "qst_0441",
+      "xerj_A"
+    ],
+    [
+      "qst_0400",
+      "rovo_B"
+    ],
+    [
+      "qst_0400",
+      "rovo_A"
+    ],
+    [
+      "qst_0400",
+      "xerj_A"
+    ],
+    [
+      "qst_0400",
+      "xerj_B"
+    ],
+    [
+      "qst_0404",
+      "xerj_B"
+    ],
+    [
+      "qst_0404",
+      "xerj_A"
+    ],
+    [
+      "qst_0404",
+      "rovo_A"
+    ],
+    [
+      "qst_0404",
+      "rovo_B"
+    ],
+    [
+      "qst_0358",
+      "xerj_A"
+    ],
+    [
+      "qst_0358",
+      "rovo_B"
+    ],
+    [
+      "qst_0358",
+      "xerj_B"
+    ],
+    [
+      "qst_0358",
+      "rovo_A"
+    ],
+    [
+      "qst_0294",
+      "rovo_A"
+    ],
+    [
+      "qst_0294",
+      "xerj_B"
+    ],
+    [
+      "qst_0294",
+      "rovo_B"
+    ],
+    [
+      "qst_0294",
+      "xerj_A"
+    ],
+    [
+      "qst_0435",
+      "rovo_B"
+    ],
+    [
+      "qst_0435",
+      "rovo_A"
+    ],
+    [
+      "qst_0435",
+      "xerj_A"
+    ],
+    [
+      "qst_0435",
+      "xerj_B"
+    ],
+    [
+      "qst_0405",
+      "xerj_B"
+    ],
+    [
+      "qst_0405",
+      "xerj_A"
+    ],
+    [
+      "qst_0405",
+      "rovo_A"
+    ],
+    [
+      "qst_0405",
+      "rovo_B"
+    ],
+    [
+      "qst_0117",
+      "xerj_A"
+    ],
+    [
+      "qst_0117",
+      "rovo_B"
+    ],
+    [
+      "qst_0117",
+      "xerj_B"
+    ],
+    [
+      "qst_0117",
+      "rovo_A"
+    ],
+    [
+      "qst_0386",
+      "rovo_A"
+    ],
+    [
+      "qst_0386",
+      "xerj_B"
+    ],
+    [
+      "qst_0386",
+      "rovo_B"
+    ],
+    [
+      "qst_0386",
+      "xerj_A"
+    ],
+    [
+      "qst_0447",
+      "rovo_B"
+    ],
+    [
+      "qst_0447",
+      "rovo_A"
+    ],
+    [
+      "qst_0447",
+      "xerj_A"
+    ],
+    [
+      "qst_0447",
+      "xerj_B"
+    ],
+    [
+      "qst_0444",
+      "xerj_B"
+    ],
+    [
+      "qst_0444",
+      "xerj_A"
+    ],
+    [
+      "qst_0444",
+      "rovo_A"
+    ],
+    [
+      "qst_0444",
+      "rovo_B"
+    ],
+    [
+      "qst_0118",
+      "xerj_A"
+    ],
+    [
+      "qst_0118",
+      "rovo_B"
+    ],
+    [
+      "qst_0118",
+      "xerj_B"
+    ],
+    [
+      "qst_0118",
+      "rovo_A"
+    ],
+    [
+      "qst_0016",
+      "rovo_A"
+    ],
+    [
+      "qst_0016",
+      "xerj_B"
+    ],
+    [
+      "qst_0016",
+      "rovo_B"
+    ],
+    [
+      "qst_0016",
+      "xerj_A"
+    ],
+    [
+      "qst_0197",
+      "rovo_B"
+    ],
+    [
+      "qst_0197",
+      "rovo_A"
+    ],
+    [
+      "qst_0197",
+      "xerj_A"
+    ],
+    [
+      "qst_0197",
+      "xerj_B"
+    ],
+    [
+      "qst_0457",
+      "xerj_B"
+    ],
+    [
+      "qst_0457",
+      "xerj_A"
+    ],
+    [
+      "qst_0457",
+      "rovo_A"
+    ],
+    [
+      "qst_0457",
+      "rovo_B"
+    ],
+    [
+      "qst_0384",
+      "xerj_A"
+    ],
+    [
+      "qst_0384",
+      "rovo_B"
+    ],
+    [
+      "qst_0384",
+      "xerj_B"
+    ],
+    [
+      "qst_0384",
+      "rovo_A"
+    ],
+    [
+      "qst_0110",
+      "rovo_A"
+    ],
+    [
+      "qst_0110",
+      "xerj_B"
+    ],
+    [
+      "qst_0110",
+      "rovo_B"
+    ],
+    [
+      "qst_0110",
+      "xerj_A"
+    ],
+    [
+      "qst_0353",
+      "rovo_B"
+    ],
+    [
+      "qst_0353",
+      "rovo_A"
+    ],
+    [
+      "qst_0353",
+      "xerj_A"
+    ],
+    [
+      "qst_0353",
+      "xerj_B"
+    ],
+    [
+      "qst_0408",
+      "xerj_B"
+    ],
+    [
+      "qst_0408",
+      "xerj_A"
+    ],
+    [
+      "qst_0408",
+      "rovo_A"
+    ],
+    [
+      "qst_0408",
+      "rovo_B"
+    ]
+  ],
+  "tasks_sha256": "987c73eff9d0b2bb54ad06a3db1a7bbf97959314fd70df3ef21fb08bb9f4b171",
+  "manifest_sha256": "c2b4040c804421e197bd414c1e3159bebda009105b05ad6396ab7938f4fdc60d",
+  "inventory_sha256": "e2e4184973ea5ae5fee45d53b00e1539bb8c3ae6e238d70341415c1c9063e920",
+  "archive_sha256": "9d1174928696ad08bc15f3f104739519de633c1605a4ec2034e0e3c0087bc5cd",
+  "sources_sha256": {
+    "citation_experiment.py": "55f3c031dc6a883542679b9fb34d056d9f072e786cdbd5fb9a4724d901143081",
+    "rovo_read_pilot.py": "d13b13aad2e0cd72c52fe2239f7aec9c6d4518e09f3dc9624179e148c23419ad",
+    "pilot_evidence.py": "4b626b3b0026e85cdebfcb3dff63dcd66701201105ad140b97927e1fcc200730",
+    "rovo_benchmark.py": "f06cd726af48e67d3568c2cb686a11578ede324a0c722405e5d6dca653bacf56",
+    "atlassian_client.py": "dba5c3f5c428321f221afe784f1d133fc0a9e3443f1f7780df8d04e8357573ca",
+    "atlassian_oauth.py": "4ed560c0f4eb1b854add046a53c5e3bb3538aa6afb16d34b36bb91539a4ee710",
+    "stage1_benchmark.py": "f9cf73cd47c1f9d03297a92479cd7d0e77f3fa5448f6bcbdab086f4ab7e41eef",
+    "wiki_mcp.py": "ba89f42a1d89b93a48fe1e2cc8a19c04367d3dfdcf32bdc9d769147d579708d7",
+    "retrieval.py": "88a140eb9bad3c764cfb765cd24b2146b0b9d22b16f45e92c0e92cc5b27e6194",
+    "lexical_wiki.py": "ee05aa5bdadfc59ae52a89fc898e5e81d116d26dd725c61c091f1720cf9ad404",
+    "wiki.py": "d0621328d5b86a57867ad411f0452b05598d038f3bb3cf782cb6d639edefc802",
+    "materials.py": "9a0c76333fbec983a80fa828990d6be2d037d164b545058fc4157bffb8375bff",
+    "services.py": "78e7050fda8bcf6f2afb27bcbe6975eeb66361e6d057d8a90110533697f34406",
+    "retry_cloud_search.py": "040c88be3cd745f434459f413c888c85d23c3ea39933d51364e7971362bc7624"
+  },
+  "prompts_sha256": "6406c9ff0bbc21d0a698b0408ac25eef8a0fda21a480cefc1ce8d6efda1a2ea1",
+  "index": "rovo-paired-512",
+  "index_config": {
+    "mapping": {
+      "mappings": {
+        "properties": {
+          "content": {
+            "type": "text"
+          }
+        }
+      }
+    },
+    "settings": {
+      "settings": {
+        "index": {
+          "number_of_shards": "1",
+          "number_of_replicas": "0",
+          "version": {
+            "created": "8130099"
+          },
+          "provided_name": "rovo-paired-512"
+        }
+      }
+    }
+  },
+  "xerj_sha256": "03362c6e3d0696d693254154436de19c635deb9dfcb886eb5095b8e7abd70d0c",
+  "runtime": {
+    "model_file": "Qwen3-4B-Q4_K_M.gguf",
+    "model_sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5",
+    "context": 8192,
+    "llama_build": "b12541-76f186df7",
+    "chat_template_sha256": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361",
+    "slots": 1,
+    "generation_defaults": {
+      "seed": 4294967295,
+      "temperature": 0.800000011920929,
+      "dynatemp_range": 0.0,
+      "dynatemp_exponent": 1.0,
+      "top_k": 40,
+      "top_p": 0.949999988079071,
+      "min_p": 0.05000000074505806,
+      "top_n_sigma": -1.0,
+      "xtc_probability": 0.0,
+      "xtc_threshold": 0.10000000149011612,
+      "typical_p": 1.0,
+      "repeat_last_n": 64,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "dry_multiplier": 0.0,
+      "dry_base": 1.75,
+      "dry_allowed_length": 2,
+      "dry_penalty_last_n": 64,
+      "mirostat": 0,
+      "mirostat_tau": 5.0,
+      "mirostat_eta": 0.10000000149011612,
+      "adaptive_target": -1.0,
+      "adaptive_decay": 0.8999999761581421,
+      "max_tokens": -1,
+      "n_predict": -1,
+      "n_keep": 0,
+      "n_discard": 0,
+      "ignore_eos": false,
+      "stream": false,
+      "n_probs": 0,
+      "min_keep": 0,
+      "chat_format": "Content-only",
+      "reasoning_format": "none",
+      "reasoning_in_content": false,
+      "generation_prompt": "",
+      "samplers": [
+        "penalties",
+        "dry",
+        "top_n_sigma",
+        "top_k",
+        "typ_p",
+        "top_p",
+        "min_p",
+        "xtc",
+        "temperature"
+      ],
+      "speculative.types": "none",
+      "timings_per_token": false,
+      "post_sampling_probs": false,
+      "backend_sampling": false,
+      "lora": []
+    }
+  },
+  "request_settings": {
+    "model": "local",
+    "temperature": 0,
+    "seed": 73,
+    "max_tokens": 1000,
+    "parallel_tool_calls": false,
+    "cache_prompt": false,
+    "tool_choice": "required"
+  },
+  "max_searches": 5,
+  "max_reads": 5,
+  "timeout_s": 180
+}
